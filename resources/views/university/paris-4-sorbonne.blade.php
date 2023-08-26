@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',"دانشگاه پاریس ۴ - سوربن")
+@section('title',"معرفی دانشگاه پاریس ۴ - سوربن")
 @section('content')
 
     <div class="page-title-area bg-paris-4">
@@ -24,16 +24,16 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board"></ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -58,7 +58,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -89,12 +89,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>دانشگاه پاریس ۴ - سوربن</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/paris_4_university.jpg" alt="دانشگاه پاریس ۴ - سوربن">
+                            <img src="{{asset("assets/img/paris_4_university.jpg")}}" alt="دانشگاه پاریس ۴ - سوربن">
                         </div>
                         <h3>تاسیس</h3>
                         <p>
@@ -112,7 +112,7 @@
                         <p class="mb-30">
                             دانشگاه سوربن پاریس—پاریس ۴ در قلب محله لاتین در پاریس واقع شده است. پاریس چهارم همچنین
                             پردیس‌هایی را در ۱۲ مکان در سراسر پاریس تملک کرد‌ه و شش کتابخانه در شهر دارد. کتابخانه سوربن
-                            (کتابخانه سابق دانشگاه پاریس) شامل ۲.۵ میلیون کتاب است و توسط چندین دانشگاه مشترک مورد
+                            (کتابخانه سابق دانشگاه پاریس) شامل ۲٫۵ میلیون کتاب است و توسط چندین دانشگاه مشترک مورد
                             استفاده قرار می‌گیرد.
                         </p>
                         <h3>دانشگاه پاریس ۴ - سوربن دولتی یا خصوصی؟</h3>
@@ -122,7 +122,7 @@
                             عالی بهره‌مند شوید.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/paris_4_university_1.jpg" alt="دانشگاه پاریس ۴ - سوربن">
+                            <img src="{{asset("assets/img/paris_4_university_1.jpg")}}" alt="دانشگاه پاریس ۴ - سوربن">
                         </div>
                         <h3>جمعیت دانشجویان</h3>
                         <p class="mb-30">
@@ -186,7 +186,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="../assets/img/surbon.jpg" alt="دانشگاه پاریس ۴ - سوربن">
+                                        <img src="{{asset("assets/img/surbon.jpg")}}" alt="دانشگاه پاریس ۴ - سوربن">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -283,39 +283,5 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
-
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
-
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 @endsection

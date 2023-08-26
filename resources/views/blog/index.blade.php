@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',"اخبار")
+@section('title', 'اخبار')
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
@@ -19,12 +19,12 @@
     </div>
     <!-- End Page Title Area -->
 
-    <!-- End News Area -->
+    <!-- Start News Area -->
     <section class="news-area ptb-100">
         <div class="container">
             <div class="section-title">
                 <span>وبلاگ ما</span>
-                <h2>اخبار سایت </h2>
+                <h2>اخبار سایت</h2>
             </div>
             <div class="row">
                 @forelse($blogs as $blog)
@@ -58,8 +58,10 @@
                         </div>
                     </div>
                 @empty
-                    <div class="alert alert-danger" role="alert">
-                        هیچ خبر پیدا نشد!
+                    <div class="col-12">
+                        <div class="alert alert-danger" role="alert">
+                            هیچ خبر پیدا نشد!
+                        </div>
                     </div>
                 @endforelse
             </div>

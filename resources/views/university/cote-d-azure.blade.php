@@ -1,7 +1,5 @@
 @extends('layout')
-@section('title',"
-دانشگاه نیس
-")
+@section('title',"معرفی دانشگاه نیس")
 @section('content')
 
     <div class="page-title-area bg-nice">
@@ -26,17 +24,17 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board"></ol>
                         </div>
 
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -61,7 +59,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -92,12 +90,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>دانشگاه نیس</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/nice_university.jpg" alt="دانشگاه نیس">
+                            <img src="{{asset("assets/img/nice_university.jpg")}}" alt="دانشگاه نیس">
                         </div>
                         <h3>تاسیس</h3>
                         <p class="mb-30">Université de Nice دانشگاه نیس در سال 1639 تأسیس شد که به طور سنتی شامل دانشکده
@@ -105,7 +103,7 @@
                             2019، جایگزین دانشگاه نیس، صاحب موسسه سوفیا آنتی‌پولیس و انجمن (ComUE) شد که در سال 2013
                             ایجاد شده بودند.
                         </p>
-                        <h3 class="mt-20">لوکیشن دانشگاه دانشگاه نیس</h3>
+                        <h3 class="mt-20">لوکیشن دانشگاه نیس</h3>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92283.61537243958!2d7.1946494!3d43.7133965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd01552258547%3A0xf160114745d1e06!2sUniversit%C3%A9%20Nice%20Sophia%20Antipolis!5e0!3m2!1sfr!2sfr!4v1691003788688!5m2!1sfr!2sfr"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -125,7 +123,7 @@
                         <p class="mb-30">L’Université de Niceیکی از برترین دانشگاههای دولتی در نیس فرانسه است.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/nice_university_1.jpg" alt="دانشگاه نیس">
+                            <img src="{{asset("assets/img/nice_university_1.jpg")}}" alt="دانشگاه نیس">
                         </div>
                         <h3>
                             جمعیت دانشجویان
@@ -257,7 +255,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="../assets/img/nice.png" alt="دانشگاه نیس">
+                                        <img src="{{asset("assets/img/nice.png")}}" alt="دانشگاه نیس">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -354,39 +352,6 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
-
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 
 @endsection

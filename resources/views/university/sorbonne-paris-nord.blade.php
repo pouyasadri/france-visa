@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title',"معرفی دانشگاه پاریس شمال")
 @section('content')
 
     <div class="page-title-area bg-paris-nord">
@@ -23,16 +24,16 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board"></ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -57,7 +58,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -88,12 +89,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>دانشگاه پاریس شمال</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/paris_nord_university.jpg" alt="دانشگاه پاریس شمال">
+                            <img src="{{asset("assets/img/paris_nord_university.jpg")}}" alt="دانشگاه پاریس شمال">
                         </div>
                         <h3>تاسیس</h3>
                         <p>
@@ -104,9 +105,9 @@
                         </p>
 
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41918.64710230801!2d2.3334787!3d48.9550959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66922af4c2e23%3A0xfe3113a781a13fca!2sUniversit%C3%A9%20Sorbonne%20Paris%20Nord!5e0!3m2!1sfr!2sfr!4v1690991649424!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41918.64710230801!2d2.3334787!3d48.9550959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66922af4c2e23%3A0xfe3113a781a13fca!2sUniversit%C3%A9%20Sorbonne%20Paris%20Nord!5e0!3m2!1sfr!2sfr!4v1690991649424!5m2!1sfr!2sfr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <h3 class="mt-20">لوکیشن دانشگاه پاریس شمال</h3>
                         <p class="mb-30">این دانشگاه از 5 پردیس (Villetaneuse، Bobigny، Saint-Denis، la Plaine
                             Saint-Denis و Argenteuil) تشکیل شده است. درواقع، این یک دانشگاه چند رشته‌ای در شمال پاریس،
@@ -134,7 +135,7 @@
                             دانشگاه پاریس نورد یک مرکز آموزش عالی دولتی در کشور فرانسه است.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/paris_nord_university_1.jpg" alt="دانشگاه پاریس شمال">
+                            <img src="{{asset("assets/img/paris_nord_university_1.jpg")}}" alt="دانشگاه پاریس شمال">
                         </div>
                         <h3>جمعیت دانشجویان</h3>
                         <p class="mb-30">
@@ -190,7 +191,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="../assets/img/paris_nord.png" alt="دانشگاه پاریس شمال">
+                                        <img src="{{asset("assets/img/paris_nord.png")}}" alt="دانشگاه پاریس شمال">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -287,39 +288,5 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
-
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
-
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 @endsection

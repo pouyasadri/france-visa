@@ -1,13 +1,11 @@
 @extends('layout')
-@section('title',"
-دانشگاه لیون ۱
-")
+@section('title',"معرفی دانشگاه لیون ۱")
 @section('content')
 
     <div class="page-title-area bg-lyon-1">
         <div class="container">
             <div class="page-title-content">
-                <h2>دانشگاه لیون ۱</h2>
+                <h2>معرفی دانشگاه لیون ۱</h2>
                 <ul>
                     <li>
                         <a href="/">
@@ -26,18 +24,18 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -62,7 +60,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -93,12 +91,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>دانشگاه لیون ۱</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/lyon_1_university.webp" alt="دانشگاه لیون ۱">
+                            <img src="{{asset("assets/img/lyon_1_university.webp")}}" alt="دانشگاه لیون ۱">
                         </div>
                         <h3>تاسیس</h3>
                         <p>دانشکده پزشکی لیون که امروزه دانشگاه لیون ۱ نامیده می‌شود در ۸ نوامبر ۱۸۷۴ تأسیس شد. در قدم
@@ -137,7 +135,7 @@
                             یکی از سه دانشگاه دولتی شهر لیون در فرانسه است.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/lyon_1_university_1.jpg" alt="دانشگاه لیون ۱">
+                            <img src="{{asset("assets/img/lyon_1_university_1.jpg")}}" alt="دانشگاه لیون ۱">
                         </div>
                         <h3>رتبه جهانی دانشگاه لیون ۱</h3>
                         <p class="mb-30">این دانشگاه در رتبه ۳۲۰ در بهترین دانشگاه‌های جهانی قرار دارد.
@@ -161,7 +159,7 @@
 
                             شهریه دانشگاه برای تمام افرادی که به عنوان دانشجو وارد فرانسه می‌شوند یکسان است و مساوی با
                             خود فرانسوی‌ها. برای دانشگاه لیون ۱، کل هزینه (هزینه های مستقیم و غیر مستقیم برای دوره
-                            چهارساله) برای سال تحصیلی جدید یعنی ۲۰۲۲، چیزی در حدود ۴۵,۱۴۴ دلار است. هزینه فعالیت
+                            چهارساله) برای سال تحصیلی جدید یعنی ۲۰۲۲، چیزی در حدود ۴۵،۱۴۴ دلار است. هزینه فعالیت
                             دانشجویی هم ۲۴۰ دلار در سال است.
 
                         </p>
@@ -170,7 +168,7 @@
                         </h3>
                         <p class="mb-30">
                             در دانشگاه لیون ۱ در حدود ۴۰۰۰۰ دانشجو مشغول مطالعه و تحقیق هستند. لیون ۱ مفتخر است که جمعیت
-                            بالایی از از دانشجویان خارجی دارد (۱۰.۵٪ از دانشجویان و ۱۳۴ ملیت). انتخاب دانشگاه کلود
+                            بالایی از دانشجویان خارجی دارد (۱۰.۵٪ از دانشجویان و ۱۳۴ ملیت). انتخاب دانشگاه کلود
                             برنارد به معنای انتخاب فرصت‌های عالی از نظر آموزش و تحقیق در یک محیط گرم است.
                         </p>
                         <h3>
@@ -264,7 +262,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="../assets/img/lyon_1.png" alt="دانشگاه لیون ۱">
+                                        <img src="{{asset("assets/img/lyon_1.png")}}" alt="دانشگاه لیون ۱">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -361,38 +359,6 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
 @endsection
