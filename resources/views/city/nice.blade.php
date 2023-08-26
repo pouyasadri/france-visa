@@ -8,7 +8,7 @@
                 <h2>معرفی شهر نیس</h2>
                 <ul>
                     <li>
-                        <a href="/">
+                        <a href="{{ route('index') }}">
                             صفحه اصلی
                         </a>
                     </li>
@@ -24,18 +24,18 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container"  id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -60,7 +60,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -91,12 +91,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>شهر نیس ،به تماشای آب‌های سپید</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/nice.jpg" alt="شهر نیس">
+                            <img src="{{asset("assets/img/nice.jpg")}}" alt="شهر نیس">
                         </div>
                         <p class="mb-30">
 
@@ -122,9 +122,9 @@
 
                             نیس از نظر تاریخی بسیار چند مایه است؛ قبل از تبدیل شدن به بخشی از پادشاهی استروگوتیک
                             ایتالیا، و سپس پیوستن به امپراتوری روم شرقی و دوبار زیر پرچم پادشاهی ایتالیا (امپراتوری روم
-                            مقدس) رفتن، دوباره تبدیل به بخشی از از خاک جنوا و پروونسال شد، و در نهایت فرانسوی.
+                            مقدس) رفتن، دوباره تبدیل به بخشی از خاک جنوا و پروونسال شد، و در نهایت فرانسوی.
 
-                            پس این شهر ساحلی محبوب پی‌در‌پی از نظر هویتی لیگوری، یونانی و رومی بودن را تجربه کرده است.
+                            پس این شهر ساحلی محبوب پی‌درپی از نظر هویتی لیگوری، یونانی و رومی بودن را تجربه کرده است.
                             امروز نیس ۳۴۱ هزار نفر جمعیت دارد و بخشی از اقتصاد گردشگری اروپا را به خودش اختصاص داده است.
 
                             در این مطلب می‌خواهیم کمی در ساحل آرام نیس وقت‌گذرانی کنیم و درباره این مکان به‌ یاد ماندنی،
@@ -143,8 +143,8 @@
 
                             یکی دیگر از ویژگی های نیس این است که جمعیت آن سالمندان هستند. اگر درحال ورود به میانسالی
                             هستید، نیس شهری دوستدار سالخوردگان و میان‌سالان ارزیابی می‌شود. نیمی از ساکنان بالای ۴۳ سال
-                            هستند و در مقام مقایسه، در سایر شهرهای هم رده ۳۶ سال است. در سال ۲۰۱۰، ۲۱.۸ درصد از جمعیت
-                            کلان شهرها ۶۵ سال یا بیشتر سن داشتند (در مقایسه با تنها ۱۴.۶ درصد در جاهای دیگر).
+                            هستند و در مقام مقایسه، در سایر شهرهای هم رده ۳۶ سال است. در سال ۲۰۱۰، ۲۱٫۸ درصد از جمعیت
+                            کلان شهرها ۶۵ سال یا بیشتر سن داشتند (در مقایسه با تنها ۱۴٫۶ درصد در جاهای دیگر).
 
                             به این اعتبار، نیس دارای بهترین زندگی شبانه در ساحل آزور است.
 
@@ -158,20 +158,20 @@
 
                             همچنین به طور کلی نیس شهر امنی است، و به طور کلی نرخ نسبتاً پایینی از جنایات خشونت آمیز
                             دارد. بهترین کارهایی که در شب در نیس انجام می‌شود:
-                        <ul style="list-style: inside">
-                            <li>
-                                از منطقه هزار‌گنج دیدن کنید
-                            </li>
-                            <li>
-                                به قلعه‌های تاریخی بروید
-                            </li>
-                            <li>
-                                در هتل‌ها نوشیدنی بگیرید
-                            </li>
-                            <li>
-                                به مهمانی‌های گروهی بروید
-                            </li>
-                        </ul>
+                            <ul style="list-style: inside">
+                                <li>
+                                    از منطقه هزار‌گنج دیدن کنید
+                                </li>
+                                <li>
+                                    به قلعه‌های تاریخی بروید
+                                </li>
+                                <li>
+                                    در هتل‌ها نوشیدنی بگیرید
+                                </li>
+                                <li>
+                                    به مهمانی‌های گروهی بروید
+                                </li>
+                            </ul>
                         </p>
                         <h3>آب و هوا در نیس</h3>
                         <p class="mb-30">
@@ -181,7 +181,7 @@
                             نادر است بسیار دلپذیر و آرامش‌بخش به نظر خواهد رسید.
 
                             نیس دارای میانگین دمای ۱۶ درجه سانتیگراد در طول سال است که یکی از بالاترین دماها در سرزمین
-                            اصلی فرانسه، پس از منتون (۱۶.۴ درجه سانتیگراد) گزارش گردیده که آن را به یکی از ویژگی های آب
+                            اصلی فرانسه، پس از منتون (۱۶٫۴ درجه سانتیگراد) گزارش گردیده که آن را به یکی از ویژگی های آب
                             و هوای مدیترانه ای در فرانسه تبدیل می‌کند. این آب و هوا خاصه‌ی شرق ساحل ریویرا یافت است به
                             این معنی که در هیچ کجای دیگر از این کر‌ه‌ی خاکی مشابهش را پیدا نخواهید کرد.
 
@@ -190,7 +190,7 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/nice1.jpg" alt="شهر نیس">
+                            <img src="{{asset("assets/img/nice1.jpg")}}" alt="شهر نیس">
                         </div>
                         <h3>زبان مردم نیس</h3>
                         <p class="mb-30">
@@ -220,7 +220,7 @@
                         <p class="mb-30">
                             تخمینی سرانگشتی در مورد هزینه زندگی در شهر نیس برای خانواده چهار نفره هزینه ماهانه ۳۵۱۵ دلار
                             (۳۳۶۸ یورو) بدون اجاره را به شما نشان می‌دهد. هزینه‌های ماهانه یک نفر هم بدون اجاره ۹۷۵ دلار
-                            (۹۳۴ یورو) تخمین زده می‌شود—با این حساب، نیس ۲۳.۶۳ % ارزان تر از نیویورک است، بدون محاسبه
+                            (۹۳۴ یورو) تخمین زده می‌شود—با این حساب، نیس ۲۳٫۶۳ % ارزان‌تر از نیویورک است، بدون محاسبه
                             اجاره‌منزل.
                         </p>
                         <h3>
@@ -296,38 +296,6 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
 @endsection

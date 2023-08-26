@@ -9,7 +9,7 @@
                 <h2>معرفی شهر پاریس</h2>
                 <ul>
                     <li>
-                        <a href="/">
+                        <a href="{{ route('index') }}">
                             صفحه اصلی
                         </a>
                     </li>
@@ -25,18 +25,18 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -61,7 +61,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -92,12 +92,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>شهر پاریس، شهر فرهنگ، مقاومت و تفریح</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/paris2.jpg" alt="شهر پاریس">
+                            <img src="{{asset("assets/img/paris2.jpg")}}" alt="شهر پاریس">
                         </div>
                         <h3>پاریس کجاست</h3>
                         <p>شهر پاریس پایتخت و پرجمعیت ترین شهر فرانسه است. واقع در رودخانه سن، در شمال کشور، در مرکز
@@ -119,7 +119,7 @@
                             هدیه می‌کند.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/paris4.jpg" alt="شهر پاریس">
+                            <img src="{{asset("assets/img/paris4.jpg")}}" alt="شهر پاریس">
                         </div>
                         <h3>کمی تاریخ درباره شهر پاریس </h3>
                         <p class="mb-30">
@@ -207,7 +207,7 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/paris6.jpg" alt="شهر پاریس">
+                            <img src="{{asset("assets/img/paris6.jpg")}}" alt="شهر پاریس">
                         </div>
                         <h3>
                             راه آهن و قطار در شهر پاریس
@@ -219,7 +219,7 @@
                             Thalys، Gare du Nord به بلژیک، هلند و آلمان نیز خدمات می‌دهد.
 
                             متروی پاریس سریعترین راه برای رفت و آمد در شهر است. سیستم زیرزمینی 16 خط به هم پیوسته دارد و
-                            همچنین به قطار سریع السیر RER متصل است.
+                            همچنین به قطار سریع‌السیر RER متصل است.
 
                             همچنین، TGV (به فرانسوی: Train à Grande Vitesse، «قطار سریع‌السیر»؛ که سابقا TurboTrain à
                             Grande Vitesse نامیده می‌شد) سرویس راه‌آهن پرسرعت بین شهری فرانسه است که توسط دولت اداره
@@ -237,7 +237,7 @@
                             منتشر شده‌است، کسانی که معاملات ملک را انجام می‌دهند، قیمت ملکشان در طی ۳۰ سال بیش از سه
                             برابر شده است.
 
-                            ساده ترین راه برای سرمایه‌گذاری در بازار سهام فرانسه، سرمایه‌گذاری در یک شاخص بازار گسترده
+                            ساده‌ترین راه برای سرمایه‌گذاری در بازار سهام فرانسه، سرمایه‌گذاری در یک شاخص بازار گسترده
                             است. با استفاده از ETF که پلتفورم این کار است می‌توان ترید را با هزینه کم انجام داد. در
                             بازار سهام فرانسه 2 شاخص پیدا خواهید کرد که توسط ETF ها ردیابی می‌شوند. از طرف دیگر،
                             می‌توانید در شاخص های منطقه یورو سرمایه گذاری کنید.
@@ -249,7 +249,7 @@
                         <p class="mb-30">
 
                             زندگی در پاریس عاشقانه و هیجان انگیز است، اما گران است. امکانات رفاهی روزانه و مسکن در
-                            پرجمعیت‌ترین شهر فرانسه قیمت بالایی دارد. حدود ۲.۲ میلیون نفر در ۲۰ منطقه (منطقه شهرداری) در
+                            پرجمعیت‌ترین شهر فرانسه قیمت بالایی دارد. حدود ۲٫۲ میلیون نفر در ۲۰ منطقه (منطقه شهرداری) در
                             اینجا زندگی می‌کنند.
 
                             در فرانسه به طور کلی کارمندان و خانواده‌های آنها به طور کامل واجد شرایط سیستم جامع تامین
@@ -362,38 +362,6 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
 @endsection

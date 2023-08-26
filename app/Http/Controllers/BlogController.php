@@ -32,7 +32,9 @@ class BlogController extends Controller
      */
     public function show(Blog $blog): View
     {
-        return view("blog.show", compact('blog'));
+        $nextBlog = Blog::where('id', '>', $blog->id)->orderBy('id', 'asc')->first();
+        $prevBlog = Blog::where('id', '<', $blog->id)->orderBy('id', 'desc')->first();
+        return view("blog.show", compact('blog', 'nextBlog', 'prevBlog'));
     }
 
     /**

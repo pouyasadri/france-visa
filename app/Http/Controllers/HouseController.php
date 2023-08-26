@@ -55,11 +55,26 @@ class HouseController extends Controller
     {
         try {
             $validatedData = $request->validate([
-                // Validation rules for house fields
+                // Add your validation rules for house fields here
+                "house_name" => 'required',
+                "house_price" => 'required',
+                "house_description" => "required",
+                "house_room_count" => "required",
+                "house_garage_count" => "required",
+                "house_region" => "required",
+                "house_postal_code" => "required",
+                "house_exact_location" => "required",
+                "house_main_image" => "required|image",
+                "house_images.*" => "required|image",
+                "house_id" => "required",
+                "house_type" => "required",
+                "house_status" => "required"
             ]);
 
             // Upload and store main image
             $house_main_image = $request->file('house_main_image')->store('public/images/houses');
+            $house_main_image_name = basename($house_main_image); // Get the name of the main image
+
             $house_images = [];
 
             // Upload and store additional images
@@ -71,7 +86,7 @@ class HouseController extends Controller
 
             // Create a new house with validated data
             House::create(array_merge($validatedData, [
-                "house_main_image" => $house_main_image,
+                "house_main_image" => $house_main_image_name, // Store only the main image name
                 "house_images" => $house_images
             ]));
 
@@ -92,8 +107,13 @@ class HouseController extends Controller
     public function destroy(House $house): RedirectResponse
     {
         try {
-            $house->delete();
+            // Delete associated images from storage
             Storage::delete($house->house_main_image);
+            foreach ($house->house_images as $image) {
+                Storage::delete('public/images/houses/' . $image);
+            }
+
+            $house->delete();
 
             return redirect()->route('houses.admin')->with("success", "House deleted successfully");
         } catch (Exception $e) {

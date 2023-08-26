@@ -9,7 +9,7 @@
                 <h2>معرفی شهر استراسبورگ</h2>
                 <ul>
                     <li>
-                        <a href="/">
+                        <a href="{{ route('index') }}">
                             صفحه اصلی
                         </a>
                     </li>
@@ -25,18 +25,18 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -61,7 +61,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -92,12 +92,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>استراسبورگ، پایتخت استراتژیک اروپا</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/strasbourg.jpg" alt="شهر استراسبورگ">
+                            <img src="{{asset("assets/img/strasbourg.jpg")}}" alt="شهر استراسبورگ">
                         </div>
                         <p class="mb-30">
 
@@ -119,7 +119,7 @@
                             همینطور رسم ادب را به جا.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/strasbourg1.jpg" alt="شهر استراسبورگ">
+                            <img src="{{asset("assets/img/strasbourg1.jpg")}}" alt="شهر استراسبورگ">
                         </div>
                         <h3>آب و هوا استراسبورگ</h3>
                         <p class="mb-30">
@@ -157,7 +157,7 @@
                             ایده‌آل برای دیدن شهر رکاب زدن خواهد بود. اگر به تعطیلات خود در حومه آلزاس ادامه می‌دهید
                             اجاره ماشین بهتر است، مخصوصا زمانی که می خواهید استراسبورگ را به مقصد شهرهای اطراف ترک کنید.
 
-                            مرکز شهر با مسیرهای پیاده روی و تراموا نیز به یک مقصد گردشگری محبوب تبدیل شده است. یک
+                            مرکز شهر با مسیرهای پیاده‌روی و تراموا نیز به یک مقصد گردشگری محبوب تبدیل شده است. یک
                             فرودگاه منطقه‌ای در ۱۵ کیلومتری جنوب غربی شهر نیز قرار دارد.
 
                         </p>
@@ -208,13 +208,13 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/strasbourg3.jpg" alt="شهر استراسبورگ">
+                            <img src="{{asset("assets/img/strasbourg3.jpg")}}" alt="شهر استراسبورگ">
                         </div>
                         <h3>
                             بازدید از شهر قدیم استراسبورگ </h3>
                         <p class="mb-30">
                             همانطور که در بالا اشاره کردیم، بافت قدیمی به عنوان میراث جهانی ثبت شده است. برای دیدن مناظر
-                            شهر می‌توانید با یک تور خصوصی یا گروهی کوچک به آن‌جا برسید. یک تور پیاده روی شما را از
+                            شهر می‌توانید با یک تور خصوصی یا گروهی کوچک به آن‌جا برسید. یک تور پیاده‌روی شما را از
                             جاذبه‌های برتر مانند کلیسای نوتردام که به طور گسترده یک شاهکار گوتیک محسوب می‌شود و همچنین
                             کاخ روهان باروک که بین سال های ۱۷۳۲ تا ۱۷۴۲ ساخته شده است بهره‌مند خواهد کرد. اینجا
                             خیابان‌های سنگ‌فرشش را هرگز از یاد نخواهید برد.
@@ -401,38 +401,6 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
 @endsection

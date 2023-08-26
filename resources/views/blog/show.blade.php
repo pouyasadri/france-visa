@@ -83,11 +83,17 @@
                         <div class="post-navigation">
                             <div class="navigation-links">
                                 <div class="nav-previous">
-                                    <a href="/blog/{{$blog->id - 1}}"><i class='bx bx-right-arrow-alt'></i> پست قبلی</a>
+                                    @if ($prevBlog)
+                                        <a href="{{ route('blog.show', ['blog' => $prevBlog]) }}" class="previous-blog"><i
+                                                class='bx bx-right-arrow-alt'></i> {{ $prevBlog->blog_title }}</a>
+                                    @endif
                                 </div>
 
                                 <div class="nav-next">
-                                    <a href="/blog/{{$blog->id + 1}}">پست بعدی <i class='bx bx-left-arrow-alt'></i></a>
+                                    @if ($nextBlog)
+                                        <a href="{{ route('blog.show', ['blog' => $nextBlog]) }}" class="next-blog">{{ $nextBlog->blog_title }}<i
+                                                class='bx bx-left-arrow-alt'></i> </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
                 </h2>
                 <ul>
                     <li>
-                        <a href="/">
+                        <a href="{{ route('index') }}">
                             صفحه اصلی
                         </a>
                     </li>
@@ -29,18 +29,18 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -65,7 +65,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -96,12 +96,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>شهر تولوز (شهر ایرباس)</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/toulouse1.jpg" alt="شهر تولوز">
+                            <img src="{{asset("assets/img/toulouse1.jpg")}}" alt="شهر تولوز">
                         </div>
                         <p class="mb-30">
 
@@ -114,7 +114,7 @@
 
                             در این مطلب قصد داریم تا نگاهی به زوایای مختلف از زندگی مردم تولوز داشته باشیم، به عنوان
                             شهری که مقصد گردشگری بسیاری از توریست‌ها و همچنین مقصدی برای دانشجویانی می باشد که میخواهند
-                            این شهر را به عنوان محل برای مهاجرت تحصیلی خود انتخواب کنند.
+                            این شهر را به عنوان محل برای مهاجرت تحصیلی خود انتخاب کنند.
 
                         </p>
                         <iframe
@@ -130,7 +130,7 @@
                             اکسیتانیا نیز مورد علاقه اقلیت کوچکی قرار دارد. با این حال، تعداد فزاینده‌ای از افراد محلی
                             که در صنعت گردشگری و بحث مهاجرت فعالند می‌توانند تا حدودی انگلیسی صحبت کنند، و این توانایی
                             در حال بهتر و بهتر شدن است. یکی از ایرانیان مقیم در تولوز گفت “وقتی ده سال پیش به این شهر
-                            آمدم، کمتر کسی توانایی یک ارتباط موثر به انگلیسی را داشت ولی امروز جوانان همگی به انگلیسی
+                            آمدم، کمتر کسی توانایی یک ارتباط مؤثر به انگلیسی را داشت ولی امروز جوانان همگی به انگلیسی
                             روان و خوبی مسلط شده‌اند. “
                         </p>
                         <h3>وضعیت آب و هوا در شهر تولوز</h3>
@@ -172,20 +172,20 @@
                         </ul>
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/toulouse2.jpg" alt="شهر تولوز">
+                            <img src="{{asset("assets/img/toulouse2.jpg")}}" alt="شهر تولوز">
                         </div>
                         <h3>هزینه های زندگی</h3>
                         <p class="mb-30">
 
                             خلاصه ای در مورد هزینه زندگی در شهر تولوز برای یک خانواده چهار نفره ماهانه ۸۰۰ یورو برآورد
                             شده ‌است بدون اجاره خانه. هزینه‌های ماهانه یک دانشجو بدون اجاره هم ۱۰۰ الی ۱۵۰ یورو تخمین
-                            زده می‌شود. خلاصه کلام، این شهر ۳۲.۰۹% ارزان تر از نیویورک بدون محاسبه اجاره خانه در این
+                            زده می‌شود. خلاصه کلام، این شهر ۳۲.۰۹% ارزان‌تر از نیویورک بدون محاسبه اجاره خانه در این
                             برآورد است. فارغ از این، این شهر به شما امکان پس انداز می‌دهد به جای خودروی شخصی از
                             حمل‌ونقل‌ عمومی استفاده کنید و به جای رستوران‌های لوکس در کافه‌های دنج سوسیس تولوزی بخورید.
 
                             البته که این شهر مناطق سطح‌ بالای جدیدی برای مشتریان خاص‌تر نیز دارد. محله Côte Pavée با
                             ویلاهای بسیار زیبای خود در طول سالیان به یک منطقه شیک تبدیل شده است که در حالی که نزدیک به
-                            مرکز شهر هستند محیط زندگی دلپذیرتری برای ساکنان آن بوجود آورده.
+                            مرکز شهر هستند محیط زندگی دلپذیرتری برای ساکنان آن به‌وجود آورده.
 
                         </p>
                         <h3>
@@ -225,7 +225,7 @@
                         <p class="mb-30">
 
 
-                            فاصله پاریس تا تولوز با قطار سریع‌السیر ۵۸۸ کیلومتر است. مسافت بزرگراهی تا پاریس هم ۶۷۴.۲
+                            فاصله پاریس تا تولوز با قطار سریع‌السیر ۵۸۸ کیلومتر است. مسافت بزرگراهی تا پاریس هم ۶۷۴٫۲
                             کیلومتر است. پس با یک حساب سرانگشتی تقریبا سه‌ ساعت و نیم فاصله میان پایتخت و این شهر وجود
                             دارد.
 
@@ -382,38 +382,6 @@
         </div>
     </section>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
 @endsection

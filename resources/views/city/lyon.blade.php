@@ -12,7 +12,7 @@
                 </h2>
                 <ul>
                     <li>
-                        <a href="/">
+                        <a href="{{ route('index') }}">
                             صفحه اصلی
                         </a>
                     </li>
@@ -30,18 +30,18 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">محتویات مقاله</h3>
+                            <h4 class="service-details-title">محتویات مقاله</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">اطلاعات مشتری</h3>
+                            <h4 class="service-details-title">اطلاعات مشتری</h4>
                             <ul>
                                 <li>
                                     <a href="tel:021-12345678">
@@ -66,7 +66,7 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h3 class="service-details-title">دانلود بروشورها</h3>
+                            <h4 class="service-details-title">دانلود بروشورها</h4>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -97,12 +97,12 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
+                    <div class="service-details-wrap">
 
 
                         <h2>شهر لیون</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="../assets/img/lyon1.jpg" alt="شهر لیون">
+                            <img src="{{asset("assets/img/lyon1.jpg")}}" alt="شهر لیون">
                         </div>
                         <p class="mb-30">
 
@@ -112,9 +112,9 @@
                             به لیون یا مهاجرت به فرانسه را دارید؛ در این مطلب با ما همراه باشید.
                         </p>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178167.27644170693!2d4.8262037!3d45.7538785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178167.27644170693!2d4.8262037!3d45.7538785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <h3>
                             تاریخچه شهر لیون
                         </h3>
@@ -175,7 +175,7 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/lyon.jpg" alt="شهر لیون">
+                            <img src="{{asset("assets/img/lyon.jpg")}}" alt="شهر لیون">
                         </div>
                         <h3>اقتصاد شهر لیون</h3>
                         <p class="mb-30">
@@ -193,7 +193,7 @@
                             <li>GL Events</li>
                             <li>بانک چین</li>
                         </ul>
-                        Solvay Rhodiaلیون شهری است که درب آن به روی جهان باز است و سرمایه گذاری خارجی قابل توجهی دریافت
+                        Solvay Rhodiaلیون شهری است که در آن به روی جهان باز است و سرمایه گذاری خارجی قابل توجهی دریافت
                         می‌کند. 66 درصد از مشاغلی که در سال 2012 در شهر لیون راه‌اندازی شدند، خارجی بودند. این منطقه
                         میزبان ¼ تجارت خارجی فرانسه است و در حال حاضر 1800 شرکت خارجی در منطقه وجود دارد که در مجموع
                         92000 نفر را استخدام می‌کند.
@@ -297,39 +297,6 @@
             </div>
         </div>
     </section>
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
     <!-- End Service Details Area -->
-    <script>
-        const divElement = document.getElementById('mydiv');
-
-        // Select all the h3 elements inside the div
-        const h3Elements = divElement.querySelectorAll('h3');
-
-        const olElement = document.getElementById("board")
-        // Loop through each h3 element and save its innerHTML to the array
-        h3Elements.forEach((h3) => {
-            // Create a new <li> element
-            const listItem = document.createElement('li');
-            listItem.style
-            // Create a new <a> element
-            const link = document.createElement('a');
-            link.textContent = h3.innerHTML;
-
-            // Add a click event to the <a> tag
-            link.addEventListener('click', () => {
-                // Calculate the offsetTop position of the h3 element
-                const offsetTop = h3.offsetTop - 100;
-
-                // Scroll to the corresponding h3 tag when the link is clicked
-                window.scrollTo({top: offsetTop, behavior: 'smooth'});
-            });
-            listItem.classList.add('list-item-pointer');
-            listItem.classList.add('mb-20');
-            // Append the <a> tag to the <li> tag
-            listItem.appendChild(link);
-
-            // Append the <li> tag to the <ol> tag
-            olElement.appendChild(listItem);
-        });
-
-    </script>
 @endsection

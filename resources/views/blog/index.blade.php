@@ -31,7 +31,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-news">
                             <div class="news-img">
-                                <a href="/blog/{{$blog->id}}">
+                                <a href="{{ route('blog.show', ['blog' => $blog]) }}">
                                     <img src="{{asset("/storage/images/blogs/".$blog->blog_main_image)}}"
                                          alt="{{$blog->blog_title}}">
                                 </a>
@@ -46,11 +46,11 @@
                                         مدیر
                                     </li>
                                 </ul>
-                                <a href="/blog/{{$blog->id}}">
+                                <a href="{{ route('blog.show', ['blog' => $blog]) }}">
                                     <h3>{{$blog->blog_title}}</h3>
                                 </a>
                                 <p>{{$blog->blog_slug}}</p>
-                                <a class="read-more" href="/blog/{{$blog->id}}">
+                                <a class="read-more" href="{{ route('blog.show', ['blog' => $blog]) }}">
                                     ادامه خواندن
                                     <i class="flaticon-left-arrow"></i>
                                 </a>
