@@ -10,4 +10,8 @@ class House extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'house_images' => 'array',
+    ];
 }

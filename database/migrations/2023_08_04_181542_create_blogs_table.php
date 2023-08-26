@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string("blog_title");
             $table->string("blog_category");
-            $table->string("blog_slug");
+            $table->string("blog_slug")->unique();
             $table->text("blog_body");
             $table->string("blog_main_image");
             $table->timestamps();

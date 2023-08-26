@@ -3,85 +3,101 @@
 namespace App\Http\Controllers;
 
 use App\Models\House;
+use Exception;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class HouseController extends Controller
 {
-    //
-    public function index()
+    /**
+     * Display a listing of houses.
+     *
+     * @return View
+     */
+    public function index(): View
     {
         $houses = House::all();
         return view("house.index", compact('houses'));
     }
 
-    public function show($id)
+    /**
+     * Display the specified house.
+     *
+     * @param House $house
+     * @return View
+     */
+    public function show(House $house): View
     {
-        $house = House::find($id);
         return view("house.show", compact("house"));
     }
 
-    public function create()
+    /**
+     * Display the house creation form.
+     *
+     * @return View
+     */
+    public function create(): View
     {
         $houses = House::all();
         return view("house.admin", compact("houses"));
     }
 
-    public function store(Request $request)
+    /**
+     * Store a newly created house in storage.
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            "house_name" => 'required',
-            "house_price" => 'required',
-            "house_description" => "required",
-            "house_room_count" => "required",
-            "house_garage_count" => "required",
-            "house_region" => "required",
-            "house_postal_code" => "required",
-            "house_exact_location" => "required",
-            "house_main_image" => "required",
-            "house_images" => "required",
-            "house_id" => "required",
-            "house_type" => "required",
-            "house_status" => "required"
-        ]);
-        $house_main_image = "";
-        if ($request->hasFile('house_main_image')) {
-            $name = time() . random_int(1, 100) . '.' . $request->file('house_main_image')->getClientOriginalExtension();
-            $request->file('house_main_image')->storeAs('public/images/houses', $name);
-            $house_main_image = $name;
-        } else {
-            $house_main_image = "no image";
-        }
-        $house_images = [];
-        if ($request->hasFile('house_images')) {
+        try {
+            $validatedData = $request->validate([
+                // Validation rules for house fields
+            ]);
+
+            // Upload and store main image
+            $house_main_image = $request->file('house_main_image')->store('public/images/houses');
+            $house_images = [];
+
+            // Upload and store additional images
             foreach ($request->file('house_images') as $image) {
                 $name = time() . rand(1, 100) . '.' . $image->getClientOriginalExtension();
                 $image->storeAs('public/images/houses', $name);
                 $house_images[] = $name;
             }
+
+            // Create a new house with validated data
+            House::create(array_merge($validatedData, [
+                "house_main_image" => $house_main_image,
+                "house_images" => $house_images
+            ]));
+
+            return redirect("houses/admin")->with('success', "House saved");
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving the house.');
         }
-        $house = new House([
-            "house_name" => $request->get("house_name"),
-            "house_price" => $request->get("house_price"),
-            "house_description" => $request->get("house_description"),
-            "house_room_count" => $request->get("house_room_count"),
-            "house_garage_count" => $request->get("house_garage_count"),
-            "house_region" => $request->get("house_region"),
-            "house_postal_code" => $request->get("house_postal_code"),
-            "house_exact_location" => $request->get("house_exact_location"),
-            "house_main_image" => $request->get("house_main_image"),
-            "house_images" => $request->get("house_images"),
-            "house_id" => $request->get("house_id"),
-            "house_type" => $request->get("house_type"),
-            "house_status" => $request->get("house_status")
-        ]);
-        $house->save();
-        return redirect("houses/admin")->with('msg', "House saved");
     }
 
-    public function destroy($id)
+    /**
+     * Remove the specified house from storage.
+     *
+     * @param House $house
+     * @return RedirectResponse
+     */
+    public function destroy(House $house): RedirectResponse
     {
-        $house = House::find($id);
-        $house->delete();
-        return view("house.admin")->with("msg", "delete successfully");
+        try {
+            $house->delete();
+            Storage::delete($house->house_main_image);
+
+            return redirect()->route('houses.admin')->with("success", "House deleted successfully");
+        } catch (Exception $e) {
+            return redirect()->route('houses.admin')->with('error', 'An error occurred while deleting the house.');
+        }
     }
 }

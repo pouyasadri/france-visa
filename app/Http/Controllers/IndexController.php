@@ -4,15 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\House;
-use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    //
+    /**
+     * Display the main page.
+     *
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
-        $blogs = Blog::all()->take(3);
-        $houses = House::all()->take(4);
-        return view("index", compact(["blogs",'houses']));
+        // Fetch the latest 3 blogs
+        $blogs = Blog::latest()->take(3)->get();
+
+        // Fetch the latest 4 houses
+        $houses = House::latest()->take(4)->get();
+
+        // Load the "index" view and pass data to it
+        return view("index", compact('blogs', 'houses'));
     }
 }
