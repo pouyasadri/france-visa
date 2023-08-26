@@ -1,4 +1,5 @@
 @extends('layout')
+@section("title","درباره ما")
 @section('content')
 
     <!-- Start Page Title Area -->

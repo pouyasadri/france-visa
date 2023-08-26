@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title',"معرفی دانشگاه های فرانسه")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
@@ -50,15 +51,16 @@
                             </div>
                             <div class="col-lg-6 pr-0">
                                 <div class="exclusive-content">
-                                    <h3>دانشگاه سوربن پاریس</h3>
+                                    <h3>دانشگاه پاریس سود</h3>
                                     <ul class="rating">
                                         <li>
-                                            رنکینگ جهانی : ۲۰
+                                            رنکینگ جهانی : ۲۶۲
                                         </li>
                                     </ul>
-                                    <p>لورم ایپسوم چاپ و متن را در بر می گیرد لورم ایپسوم به سادگی چاپ و متن را در بر می
-                                        گیرد.</p>
-                                    <a href="#" class="default-btn">
+                                    <p>دانشگاه پاریس سود SUD تاسیس دانشگاه پاریس SUD یا پاریس-XINote 1 یک دانشگاه
+                                        فرانسوی بود که در 1 ژانویه 1971 ایجاد شد. در 1 ژانویه 2020 با دانشگاه
+                                        پاریس-ساکلی ادغام شد. </p>
+                                    <a href="/universities/paris-sud-university" class="default-btn">
                                         ادامه مطلب
                                         <i class="flaticon-left-arrow"></i>
                                     </a>
@@ -71,19 +73,20 @@
                     <div class="exclusive-wrap">
                         <div class="row align-items-center">
                             <div class="col-lg-6 pl-0">
-                                <div class="exclusive-img bg-3"></div>
+                                <div class="exclusive-img bg-4"></div>
                             </div>
                             <div class="col-lg-6 pr-0">
                                 <div class="exclusive-content">
-                                    <h3>دانشگاه سوربن پاریس</h3>
+                                    <h3>دانشگاه پاریس شمال</h3>
                                     <ul class="rating">
                                         <li>
-                                            رنکینگ جهانی : ۲۰
+                                            رنکینگ جهانی : ۸۶۰
                                         </li>
                                     </ul>
-                                    <p>لورم ایپسوم چاپ و متن را در بر می گیرد لورم ایپسوم به سادگی چاپ و متن را در بر می
-                                        گیرد.</p>
-                                    <a href="#" class="default-btn">
+                                    <p>دانشگاه پاریس شمال تاسیس دانشگاه پاریس شمال یا Université Sorbonne Paris Nord، که
+                                        سابقاً Université de Paris XIII نامیده می‌شد، یکی از 13 دانشگاه خودمختار سوربن
+                                        پاریس است .</p>
+                                    <a href="/universities/sorbonne-paris-nord" class="default-btn">
                                         ادامه مطلب
                                         <i class="flaticon-left-arrow"></i>
                                     </a>
@@ -96,19 +99,19 @@
                     <div class="exclusive-wrap">
                         <div class="row align-items-center">
                             <div class="col-lg-6 pl-0">
-                                <div class="exclusive-img bg-3"></div>
+                                <div class="exclusive-img bg-5"></div>
                             </div>
                             <div class="col-lg-6 pr-0">
                                 <div class="exclusive-content">
-                                    <h3>دانشگاه سوربن پاریس</h3>
+                                    <h3>دانشگاه پاریس ۷</h3>
                                     <ul class="rating">
                                         <li>
-                                            رنکینگ جهانی : ۲۰
+                                            رنکینگ جهانی : ۲۴۸
                                         </li>
                                     </ul>
-                                    <p>لورم ایپسوم چاپ و متن را در بر می گیرد لورم ایپسوم به سادگی چاپ و متن را در بر می
-                                        گیرد.</p>
-                                    <a href="#" class="default-btn">
+                                    <p>دانشگاه پاریس 7 دیدرو (Paris-VII) یک دانشگاه چند رشته‌ای واقع در پاریس است، و یکی
+                                        از هفت دانشگاه آکادمی پاریس است.</p>
+                                    <a href="/universities/paris-7" class="default-btn">
                                         ادامه مطلب
                                         <i class="flaticon-left-arrow"></i>
                                     </a>
@@ -121,19 +124,258 @@
                     <div class="exclusive-wrap">
                         <div class="row align-items-center">
                             <div class="col-lg-6 pl-0">
-                                <div class="exclusive-img bg-3"></div>
+                                <div class="exclusive-img bg-6"></div>
                             </div>
                             <div class="col-lg-6 pr-0">
                                 <div class="exclusive-content">
-                                    <h3>دانشگاه سوربن پاریس</h3>
+                                    <h3>دانشگاه پاریس ۴</h3>
                                     <ul class="rating">
                                         <li>
-                                            رنکینگ جهانی : ۲۰
+                                            رنکینگ جهانی : ۱۹۴
                                         </li>
                                     </ul>
-                                    <p>لورم ایپسوم چاپ و متن را در بر می گیرد لورم ایپسوم به سادگی چاپ و متن را در بر می
-                                        گیرد.</p>
-                                    <a href="#" class="default-btn">
+                                    <p>دانشگاه پاریس ۴ یکی دیگر از انشعابات دانشگاه سوربن است. درحقیقت، این دانشگاه در
+                                        سال ۱۹۷۱ و به دنبال تقسیم دانشگاه پاریس (۱۲۵۳) تأسیس شد.</p>
+                                    <a href="/universities/paris-4-sorbonne" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-7"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه پاریس ۳</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۹۶
+                                        </li>
+                                    </ul>
+                                    <p>دانشگاه سوربن نوول، همچنین به نام دانشگاه سوربن نوول یا دانشگاه پاریس 3 یا قبلا
+                                        Censier (برگرفته از نام یکی از سایت‌های سابق آن در خیابان Santeuil) یک دانشگاه
+                                        فرانسوی واقع در کلانشهر پاریس است.</p>
+                                    <a href="/universities/paris-3" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-8"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه پاریس ۲</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۵۶۳
+                                        </li>
+                                    </ul>
+                                    <p>این مرکز آموزش عالی در سال ۱۹۷۱ پس از اعتراضات ماه مه ۱۹۶۸، که منجر به تقسیم یکی
+                                        از قدیمی‌ترین دانشگاه‌های جهان شد، از دو دانشکده دانشگاه تاریخی پاریس که به طور
+                                        عامیانه به آن سوربن گفته می‌شود، ایجاد شد.
+                                    </p>
+                                    <a href="/universities/paris-2" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-9"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه لیون ۳</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۱۲۰۱
+                                        </li>
+                                    </ul>
+                                    <p>نشگاه لیون ۳ در اوایل دهه ۱۹۷۰ (۲۶ ژوئیه ۱۹۷۳) تأسیس شد، یک بخش از اساتید در آن
+                                        انقلاب علمی به راه انداختند که پس از حوادث مه ۶۸ که جهان آکادمیک را تکان داد.
+                                        همچنین گروه‌های برنامه‌ریزی جغرافیا، مهندس روستا و تاریخ، و یک دانشکده فلسفه با
+                                        بیش از ۹۰ دانشجوی دکترا وجود دارد</p>
+                                    <a href="/universities/lyon-3" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-10"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه لیون ۲</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۱۹۱۹
+                                        </li>
+                                    </ul>
+                                    <p>در سال ۱۹۸۷ دانشگاه لیون ۲ به دانشگاه لومیر لیون ۲ تغییر نام داد. این نام و نشان
+                                        به ابتکار دانشکده هنر و طراحی لیون ایجاد شد که منعکس کننده جاه طلبی‌های جدید
+                                        دانشگاه است.</p>
+                                    <a href="/universities/lyon-2" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-11"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه لیون ۱</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۴۵۲
+                                        </li>
+                                    </ul>
+                                    <p>دانشکده پزشکی لیون که امروزه دانشگاه لیون ۱ نامیده می‌شود در ۸ نوامبر ۱۸۷۴ تأسیس
+                                        شد. در قدم دوم، دانشگاه کلود برنارد لیون ۱ در سال ۱۹۷۱ با ادغام “دانشکده علوم
+                                        لیون” با “دانشکده پزشکی” تأسیس شد.</p>
+                                    <a href="/universities/lyon-1" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-12"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه پانتئون سوربن پاریس</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۳۲۸
+                                        </li>
+                                    </ul>
+                                    <p>دانشگاه پانتئون سوربن تاریخ جالبی دارد. این مرکز آموزش عالی در سال ۱۹۷۱ پس از
+                                        اعتراضات ماه مه ۱۹۶۸، که منجر به تقسیم یکی از قدیمی‌ترین دانشگاه‌های جهان شد، از
+                                        دو دانشکده دانشگاه تاریخی پاریس که به طور عامیانه به آن سوربن گفته می‌شود، ایجاد
+                                        شد.</p>
+                                    <a href="/universities/pantheon-sorbonne" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-13"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه نیس</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۴۱۷
+                                        </li>
+                                    </ul>
+                                    <p>Université de Nice دانشگاه نیس در سال 1639 تأسیس شد که به طور سنتی شامل دانشکده
+                                        حقوق و دانشکده پزشکی است. امروز این دانشگاه به نام دانشگاه آزور هم شناخته
+                                        می‌شود. در سال 2019، جایگزین دانشگاه نیس، صاحب موسسه سوفیا آنتی‌پولیس و انجمن
+                                        (ComUE) شد که در سال 2013 ایجاد شده بودند.</p>
+                                    <a href="/universities/cote-d-azure" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-14"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه تولوز</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۱۷۵
+                                        </li>
+                                    </ul>
+                                    <p>در سال ۱۹۶۹، دانشگاه قدیم تولوز به سه دانشگاه مجزا و چندین مؤسسه تخصصی آموزش عالی
+                                        تقسیم شد. اما دانشگاه امروزی تولوز در ۲۷ مارس ۲۰۰۷ دوباره از نو تأسیس شده است.
+                                    </p>
+                                    <a href="/universities/toulouse" class="default-btn">
+                                        ادامه مطلب
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="exclusive-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pl-0">
+                                <div class="exclusive-img bg-15"></div>
+                            </div>
+                            <div class="col-lg-6 pr-0">
+                                <div class="exclusive-content">
+                                    <h3>دانشگاه استراسبورگ</h3>
+                                    <ul class="rating">
+                                        <li>
+                                            رنکینگ جهانی : ۴۲۱
+                                        </li>
+                                    </ul>
+                                    <p>دانشگاه استراسبورگ تاریخی بس طولانی دارد. این دانشگاه که در قرن شانزدهم تأسیس شد،
+                                        سابقه طولانی در آموزش عالی دارد که ریشه‌های این امر به اومانیسم رنسانس
+                                        بازمی‌گردد. این رشته تنوع گسترده‌ای از برنامه‌ها و دوره‌های آموزشی را در
+                                        رشته‌های اصلی دانشگاهی ارائه می‌دهد: از هنر تا تربیت بدنی و تربیت معلم.</p>
+                                    <a href="/universities/strasbourg" class="default-btn">
                                         ادامه مطلب
                                         <i class="flaticon-left-arrow"></i>
                                     </a>

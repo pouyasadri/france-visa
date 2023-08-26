@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title',"معرفی شهرهای فرانسه")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
@@ -7,7 +8,7 @@
                 <h2>معرفی شهرهای فرانسه</h2>
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="/">
                             صفحه اصلی
                         </a>
                     </li>
@@ -42,11 +43,11 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="../assets/img/paris2.jpg" style="height: 350px" alt="Image">
+                            <img src="../assets/img/paris2.jpg" style="height: 350px" alt="معرفی شهر پاریس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر پاریس</h3>
                                 <span class="price">شرایط و هزینه های زندگی در شهر پاریس </span>
-                                <a href="#" class="default-btn">
+                                <a href="/cities/paris" class="default-btn">
                                     ادامه مطلب
                                     <i class="flaticon-left-arrow"></i>
                                 </a>
@@ -57,56 +58,11 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="../assets/img/strasbourg.jpg" style="height: 350px" alt="Image">
-                            <div class="single-rooms-three-content">
-                                <h3>معرفی شهر استراسبورگ</h3>
-                                <span class="price"> شرایط و هزینه های زندگی در شهر استراسبورگ</span>
-                                <a href="#" class="default-btn">
-                                    ادامه مطلب
-                                    <i class="flaticon-left-arrow"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-rooms-three-wrap">
-                        <div class="single-rooms-three">
-                            <img src="../assets/img/nice1.jpg" style="height: 350px" alt="Image">
-                            <div class="single-rooms-three-content">
-                                <h3>معرفی شهر نیس</h3>
-                                <span class="price"> شرایط و هزینه های زندگی در شهر نیس</span>
-                                <a href="#" class="default-btn">
-                                    ادامه مطلب
-                                    <i class="flaticon-left-arrow"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-rooms-three-wrap">
-                        <div class="single-rooms-three">
-                            <img src="../assets/img/toulouse.jpg" style="height: 350px" alt="Image">
-                            <div class="single-rooms-three-content">
-                                <h3>معرفی شهر تولوز</h3>
-                                <span class="price"> شرایط و هزینه های زندگی در شهر تولوز</span>
-                                <a href="#" class="default-btn">
-                                    ادامه مطلب
-                                    <i class="flaticon-left-arrow"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-rooms-three-wrap">
-                        <div class="single-rooms-three">
-                            <img src="../assets/img/lyon.jpg" style="height: 350px" alt="Image">
+                            <img src="../assets/img/lyon.jpg" style="height: 350px" alt="معرفی شهر لیون">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر لیون</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر لیون</span>
-                                <a href="#" class="default-btn">
+                                <a href="/cities/lyon" class="default-btn">
                                     ادامه مطلب
                                     <i class="flaticon-left-arrow"></i>
                                 </a>
@@ -114,6 +70,52 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-rooms-three-wrap">
+                        <div class="single-rooms-three">
+                            <img src="../assets/img/strasbourg.jpg" style="height: 350px" alt="معرفی شهر استراسبورگ">
+                            <div class="single-rooms-three-content">
+                                <h3>معرفی شهر استراسبورگ</h3>
+                                <span class="price"> شرایط و هزینه های زندگی در شهر استراسبورگ</span>
+                                <a href="/cities/strasbourg" class="default-btn">
+                                    ادامه مطلب
+                                    <i class="flaticon-left-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-rooms-three-wrap">
+                        <div class="single-rooms-three">
+                            <img src="../assets/img/nice1.jpg" style="height: 350px" alt="معرفی شهر نیس">
+                            <div class="single-rooms-three-content">
+                                <h3>معرفی شهر نیس</h3>
+                                <span class="price"> شرایط و هزینه های زندگی در شهر نیس</span>
+                                <a href="/cities/nice" class="default-btn">
+                                    ادامه مطلب
+                                    <i class="flaticon-left-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-rooms-three-wrap">
+                        <div class="single-rooms-three">
+                            <img src="../assets/img/toulouse.jpg" style="height: 350px" alt="معرفی شهر تولوز">
+                            <div class="single-rooms-three-content">
+                                <h3>معرفی شهر تولوز</h3>
+                                <span class="price"> شرایط و هزینه های زندگی در شهر تولوز</span>
+                                <a href="/cities/toulouse" class="default-btn">
+                                    ادامه مطلب
+                                    <i class="flaticon-left-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Visa</title>
+    <title>@yield('title')</title>
 
     <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,7 +40,8 @@
 
     <link rel="stylesheet" href="../assets/css/rtl.css">
 
-
+    <script src="https://www.amcharts.com/lib/3/ammap.js?3.17.0"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/franceLow.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
 
@@ -79,8 +80,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/services" class="nav-link dropdown-toggle">
-                                    خدمات ما
+                                <a href="/blog" class="nav-link dropdown-toggle">
+                                    اخبار
                                     <i class='bx bx-chevron-up'></i>
                                 </a>
                             </li>
@@ -97,13 +98,13 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/aboutus" class="nav-link dropdown-toggle">
-                                    درباره ما
+                                <a href="/house" class="nav-link dropdown-toggle">
+                                    املاک
                                     <i class='bx bx-chevron-up'></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/contactus" class="nav-link dropdown-toggle">
+                                <a href="/contactUs" class="nav-link dropdown-toggle">
                                     تماس با ما
                                     <i class='bx bx-chevron-up'></i>
                                 </a>
@@ -338,7 +339,7 @@
 
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/consult">
                                     <i class="right-icon bx bx-chevrons-left"></i>
                                     مشاوره تحصیلی
                                 </a>
@@ -400,16 +401,9 @@
         </div>
         <div class="footer-bottom-area">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="copy-right">
-                        <p>کپی رایت <i class="bx bx-copyright"></i> 1402 <a href="index.html">اکوریک</a>. تمام حقوق قالب
-                            محفوظ است</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="designed">
-
-                        <p>طراحی و توسعه توسط <i class='bx bx-heart'></i> <a
+                        <p>طراحی و توسعه توسط <a
                                 href="https://www.pouyasadri.com" target="_blank">PouyaSadri</a></p>
                     </div>
                 </div>

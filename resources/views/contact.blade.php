@@ -1,10 +1,11 @@
 @extends('layout')
+@section("title","تماس با ما")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>تماس با ما 2</h2>
+                <h2>تماس با ما</h2>
                 <ul>
                     <li>
                         <a href="index.html">
