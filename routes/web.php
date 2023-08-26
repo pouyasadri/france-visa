@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,21 +39,22 @@ Route::prefix("/universities")->group(function () {
     Route::view("/toulouse", "university.toulouse");
     Route::view("/strasbourg", "university.strasbourg");
 });
-Route::prefix("/blog")->group(function () {
-    Route::get("/admin", [\App\Http\Controllers\BlogController::class, 'create']);
-    Route::post('/admin', [\App\Http\Controllers\BlogController::class, 'store']);
-    Route::get("/{blog_id}/delete", [\App\Http\Controllers\BlogController::class, 'destroy']);
-    Route::get("/", [\App\Http\Controllers\BlogController::class, 'index']);
-    Route::get("/{blog_id}", [\App\Http\Controllers\BlogController::class, 'show']);
-});
-Route::prefix('/house')->group(function () {
-    Route::get('/admin', [\App\Http\Controllers\HouseController::class, 'create']);
-    Route::post('/admin', [\App\Http\Controllers\HouseController::class, 'store']);
-    Route::get('/{house_id}/delete', [\App\Http\Controllers\HouseController::class, 'destroy']);
-    Route::get('/', [\App\Http\Controllers\HouseController::class, 'index']);
-    Route::get('/{house_id}', [\App\Http\Controllers\HouseController::class, 'show']);
+Route::prefix('/blog')->group(function () {
+    // Display the blog creation form
+    Route::get('/admin', [BlogController::class, 'create']);
 
-});
+    // Store a newly created blog
+    Route::post('/admin', [BlogController::class, 'store']);
+
+    // Delete a specific blog
+    Route::get('/{blog}/delete', [BlogController::class, 'destroy'])->name('blog.delete');
+
+    // Display all blogs
+    Route::get('/', [BlogController::class, 'index']);
+
+    // Display a specific blog
+    Route::get('/{blog}', [BlogController::class, 'show'])->name('blog.show');
+})->whereNumber('blog'); // Ensure the parameter is a number and bind to Blog instance
 Route::prefix("/consult")->group(function () {
     Route::view("/", "consult");
 });

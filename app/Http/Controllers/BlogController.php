@@ -65,17 +65,18 @@ class BlogController extends Controller
             ]);
 
             // Upload and store blog main image
-            $blog_image = $request->file('blog_main_image')->store('public/images/blogs');
+            $blog_image_name = time() . '.' . $request->file('blog_main_image')->getClientOriginalExtension();
+            $request->file('blog_main_image')->storeAs('public/images/blogs', $blog_image_name);
 
             // Create a new blog with validated data
-            $blog = new Blog(array_merge($validatedData, ['blog_main_image' => $blog_image]));
+            $blog = new Blog(array_merge($validatedData, ['blog_main_image' => $blog_image_name]));
             $blog->save();
 
-            return redirect('/blog/admin')->with('success', 'Blog saved!');
+            return redirect('/blog/admin')->with('success', 'وبلاگ با موفقیت ذخیره شد!');
         } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->errors())->withInput();
         } catch (Exception $e) {
-            return redirect()->back()->with('error', 'An error occurred while saving the blog.');
+            return redirect()->back()->with('error', 'خطایی در هنگام ذخیره وبلاگ رخ داده است.');
         }
     }
 
@@ -88,18 +89,18 @@ class BlogController extends Controller
     public function destroy(Blog $blog): RedirectResponse
     {
         try {
-            $blog->delete();
-
             // Delete associated image from storage
             if ($blog->blog_main_image) {
-                Storage::delete($blog->blog_main_image);
+                Storage::delete('public/images/blogs/' . $blog->blog_main_image);
             }
 
-            return redirect('/blog/admin')->with('success', 'Blog Removed!');
+            $blog->delete();
+
+            return redirect('/blog/admin')->with('success', 'وبلاگ با موفقیت حذف شد!');
         } catch (ModelNotFoundException $e) {
-            return redirect('/blog/admin')->with('error', 'Blog not found.');
+            return redirect('/blog/admin')->with('error', 'وبلاگ یافت نشد.');
         } catch (Exception $e) {
-            return redirect('/blog/admin')->with('error', 'An error occurred while removing the blog.');
+            return redirect('/blog/admin')->with('error', 'خطایی در هنگام حذف وبلاگ رخ داده است.');
         }
     }
 }
