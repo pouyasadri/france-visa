@@ -89,9 +89,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap">
-
-
+                    <div class="single-services-text mb-80">
                         <h2>دانشگاه پاریس 2 Pantheon Assas</h2>
                         <div class="single-services-imgs mb-30">
                             <img src="{{asset("assets/img/paris_2_university.jpg")}}"
@@ -99,12 +97,9 @@
                         </div>
                         <h3>تاسیس</h3>
                         <p>
-
-
                             دانشگاه پانتئون سوربن تاریخ جالبی دارد. این مرکز آموزش عالی در سال ۱۹۷۱ پس از اعتراضات ماه
                             مه ۱۹۶۸، که منجر به تقسیم یکی از قدیمی‌ترین دانشگاه‌های جهان شد، از دو دانشکده دانشگاه
                             تاریخی پاریس که به طور عامیانه به آن سوربن گفته می‌شود، ایجاد شد.
-
                         </p>
 
                         <h3 class="mt-20">لوکیشن دانشگاه پاریس ۲</h3>
@@ -113,18 +108,16 @@
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <p class="mb-30">
-
-
                             اکثر 19 پردیس Panthéon-Assas در محله لاتین پاریس واقع شده‌اند و پردیس‌های اصلی در Place du
                             Panthéon و Rue d’Assas قرار دارند، از این رو نام کنونی آن گرفته شده است. این دانشگاه همچنین
                             یک پردیس بسیار پرطرفدار در شهر دوبی کشور امارات دارد.
-
-
                         </p>
+
                         <h3>دانشگاه Panthéon-Assas دولتی یا خصوصی؟</h3>
                         <p class="mb-30">
                             دانشگاه پاریس ۲ پانتئون اَسَس یک دانشگاه دولتی است.
                         </p>
+
                         <div class="rooms-details mb-30">
                             <img src="{{asset("assets/img/paris_2_university_1.jpg")}}"
                                  alt="دانشگاه پاریس 2 Pantheon Assas">
@@ -182,6 +175,7 @@
                             می تواند در بین بخش ها متفاوت باشد. اگر دانش‌آموزان از شرایط تحصیلی خود مطمئن نیستند، باید
                             با معلم خصوصی تحصیل در خارج از کشور مشورت کنند.
                         </p>
+
                         <h3>کلام آخر</h3>
                         <p class="mb-30">
                             اگر در زمینه مهاجرت تحصیلی و اقامت در فرانسه به مشاوره و خدمات اجتماعی حمایتی در این کشور
@@ -200,94 +194,80 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="car-service-list">
                                         <ul>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۱. تاریخچه معتبر
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۲. تخصص‌های متنوع
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۳. محیط آموزشی بین‌المللی
-                                            </li>
-
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۴. امکانات و تجهیزات مدرن
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۵. پژوهش‌های برتر
-                                            </li>
+                                            <li><i class='bx bx-check'></i> ۱. تاریخچه معتبر</li>
+                                            <li><i class='bx bx-check'></i> ۲. تخصص‌های متنوع</li>
+                                            <li><i class='bx bx-check'></i> ۳. محیط آموزشی بین‌المللی</li>
+                                            <li><i class='bx bx-check'></i> ۴. امکانات و تجهیزات مدرن</li>
+                                            <li><i class='bx bx-check'></i> ۵. پژوهش‌های برتر</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ask-question">
-                            <h3>سوال بپرس</h3>
-                            <form id="contactForm">
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" class="form-control" required
-                                                   data-error="نام خود را وارد کنید" placeholder="نام شما">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
+                    </div>
 
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" class="form-control" required
-                                                   data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+                    <div class="ask-question">
+                        <h3>سوال بپرس</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" required
+                                               data-error="نام خود را وارد کنید" placeholder="نام شما">
+                                        <div class="help-block with-errors"></div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required
-                                                   data-error="تلفن خود را وارد کنید" class="form-control"
-                                                   placeholder="تلفن شما">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control" required
+                                               data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
+                                        <div class="help-block with-errors"></div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                   required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone_number" id="phone_number" required
+                                               data-error="تلفن خود را وارد کنید" class="form-control"
+                                               placeholder="تلفن شما">
+                                        <div class="help-block with-errors"></div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="form-group">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                                               required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="5"
                                                   required data-error="پیام خود را وارد کنید"
                                                   placeholder="پیام شما"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+                                        <div class="help-block with-errors"></div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-two">
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn btn-two">
 												<span class="label">
 													ارسال پیام
 													<i class="flaticon-left-arrow"></i>
 												</span>
-                                        </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
+                                    </button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- End Service Details Area -->

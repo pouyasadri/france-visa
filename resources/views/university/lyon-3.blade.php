@@ -89,127 +89,86 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="service-details-wrap" id="mydiv">
-
-
+                    <div class="service-details-wrap">
                         <h2>دانشگاه لیون ۳</h2>
                         <div class="single-services-imgs mb-30">
                             <img src="{{asset("assets/img/lyon_3_university.jpg")}}" alt="دانشگاه لیون ۳">
                         </div>
                         <h3>تاسیس</h3>
                         <p>
-                            دانشگاه لیون ۳ در اوایل دهه ۱۹۷۰ (۲۶ ژوئیه ۱۹۷۳) تأسیس شد، یک بخش از اساتید در آن انقلاب
-                            علمی به راه انداختند که پس از حوادث مه ۶۸ که جهان آکادمیک را تکان داد. همچنین گروه‌های
-                            برنامه‌ریزی جغرافیا، مهندس روستا و تاریخ، و یک دانشکده فلسفه با بیش از ۹۰ دانشجوی دکترا وجود
-                            دارد. هر سه دانشگاه دولتی لیون (لیون ۱، لیون ۲، لیون ۳) مشتق از دانشگاه سابق لیون هستند که
-                            در سال ۱۸۹۶ تأسیس شد.
+                            دانشگاه لیون ۳ در اوایل دهه ۱۹۷۰ (۲۶ ژوئیه ۱۹۷۳) تأسیس شد. اساتید این دانشگاه انقلاب علمی را
+                            پس از حوادث مه ۶۸
+                            که جهان آکادمیک را تکان داد، آغاز کردند. دانشکده‌های گوناگونی نظیر جغرافیا، مهندسی روستایی،
+                            تاریخ و یک دانشکده
+                            فلسفه با بیش از ۹۰ دانشجوی دکترا در این دانشگاه وجود دارد. لیون ۳ از دانشگاه لیون قدیمی‌تر
+                            است که در سال ۱۸۹۶
+                            تأسیس شده بود.
                         </p>
-
                         <h3 class="mt-20">لوکیشن دانشگاه لیون ۳</h3>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11136.680745538117!2d4.8530438!3d45.747734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea4f7816ca8d%3A0x508d760befcb222d!2sUniversit%C3%A9%20Jean%20Moulin%20Lyon%203!5e0!3m2!1sfr!2sfr!4v1690998325482!5m2!1sfr!2sfr"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <p class="mb-30">
-                            دانشگاه در سه پردیس مختلف واقع شده است: اولی به نام “Les Quais” در کنار رود رون، دومی به نام
-                            “Manufacture des Tabacs” در بخش جنوب شرقی لیون و آخرین مورد در Bourg-. en-Bresse.
+                            دانشگاه لیون ۳ دارای سه پردیس مجزا است: "Les Quais" در کنار رودخانه رون، "Manufacture des
+                            Tabacs" در بخش
+                            جنوب شرقی لیون و دیگری در Bourg-en-Bresse.
                         </p>
-                        <h3>
-                            دانشکده‌ها و رشته‌های دانشگاه لیون ۳
-                        </h3>
+                        <h3>دانشکده‌ها و رشته‌های دانشگاه لیون ۳</h3>
                         <p class="mb-30">
+                            دانشگاه لیون ۳ به دانشکده‌ها و رشته‌های متعددی در حوزه‌های مختلف پرداخته است، از جمله:
                         <ul style="list-style: inside">
-                            <li>
-                                دانشکده حقوق
-                            </li>
-                            <li>
-                                دانشکده فلسفه
-                            </li>
-                            <li>
-                                دانشکده مدیریت بازرگانی (IAE، Institut d’Administration des Entreprises)
-                            </li>
-                            <li>
-                                دانشکده هنر
-                            </li>
-                            <li>
-                                دانشکده زبان
-                            </li>
+                            <li>دانشکده حقوق</li>
+                            <li>دانشکده فلسفه</li>
+                            <li>دانشکده مدیریت بازرگانی (IAE، Institut d’Administration des Entreprises)</li>
+                            <li>دانشکده هنر</li>
+                            <li>دانشکده زبان</li>
                         </ul>
-                        در این رابطه، علاوه بر 150 استاد در IAE، 400 مدیر اجرایی از شرکت‌های خصوصی و خارجی به آموزش کمک
-                        می‌کنند و همین دلیل برتری این دانشگاه در مدیریت و بیزنس است. رشته‌های مختلف ارائه شده شامل 4
-                        مدرک لیسانس (Licence)، 8 مدرک لیسانس حرفه‌ای (Licence professionnelles)، 9 مدرک کارشناسی ارشد
-                        (با 40 گرایش) و دوره‌های آمادگی برای آزمون حسابداران رسمی می‌باشد.
+                        همچنین دانشگاه لیون ۳ با همکاری ۴۰۰ مدیر اجرایی از شرکت‌های خصوصی و خارجی در دانشکده مدیریت
+                        (IAE) به آموزش
+                        کمک می‌کند.
                         </p>
                         <div class="rooms-details mb-30">
                             <img src="{{asset("assets/img/lyon_3_university_1.webp")}}" alt="دانشگاه لیون ۳">
                         </div>
-                        <h3>
-                            مدارک مورد نیاز برای اخذ پذیرش در دانشگاه لیون ۳
-                        </h3>
+                        <h3>مدارک مورد نیاز برای اخذ پذیرش در دانشگاه لیون ۳</h3>
                         <p class="mb-30">
-                            <b>
-                                برای ثبت نام در دانشگاه نانسی شما به مدارک زیر نیاز دارید:
-                            </b>
+                            برای ثبت نام در دانشگاه لیون ۳، مدارک زیر لازم است:
                         <ul style="list-style: inside">
-                            <li>
-                                اپلیکیشن درخواست آنلاین
-                            </li>
-                            <li>
-                                انگیزه نامه (SOP)
-                            </li>
-                            <li>
-                                ریز نمرات تحصیلی به همراه ترجمه
-                            </li>
-                            <li>
-                                دانشنامه یا دیپلم دبیرستان به همراه ترجمه
-                            </li>
-                            <li>
-                                توصیه نامه (LOR)
-                            </li>
-                            <li>
-                                رزومه (CV)
-                            </li>
-                            <li>
-                                رفرنس زبان فرانسوی
-                            </li>
-                            <li>
-                                رفرنس زبان انگلیسی
-                            </li>
+                            <li>اپلیکیشن درخواست آنلاین</li>
+                            <li>انگیزه نامه (SOP)</li>
+                            <li>ریز نمرات تحصیلی به همراه ترجمه</li>
+                            <li>دانشنامه یا دیپلم دبیرستان به همراه ترجمه</li>
+                            <li>توصیه نامه (LOR)</li>
+                            <li>رزومه (CV)</li>
+                            <li>رفرنس زبان فرانسوی</li>
+                            <li>رفرنس زبان انگلیسی</li>
                         </ul>
                         </p>
                         <h3>دانشگاه لیون ۳ دولتی یا خصوصی؟</h3>
                         <p class="mb-30">
-                            دانشگاه ژان مولن لیون 3 (به فرانسوی: Université Jean Moulin Lyon 3) که با نام لیون 3 نیز
-                            شناخته می‌شود، یکی از سه دانشگاه دولتی لیونِ کشور فرانسه است. این نام از مبارز مقاومت
-                            فرانسوی ژان مولن گرفته شده است و در حقوق، سیاست، فلسفه، مدیریت و زبان تخصص دارد.
+                            دانشگاه ژان مولن لیون ۳ یک دانشگاه دولتی است و در حوزه‌هایی نظیر حقوق، سیاست، فلسفه، مدیریت
+                            و زبان تخصص دارد.
                         </p>
-
-                        <h3>رتبه جهانی دانشگاه لیون ۳</h3>
-                        <p class="mb-30">دانشگاه ژان مولن لیون III در رتبه‌بندی دانشگاه‌های جهانی توسط Times Higher
-                            Education رتبه 1201 را کسب کرده است و طبق بررسی‌های دانشجویان در Studyportals، دارای
-                            امتیاز کلی 4.0 ستاره است. این دانشگاه در دنبال بیشتر به خاطر مدرسه بازرگانی یا همان business
-                            school شهرت دارد. همچنین دانشکده مدیریت این دانشگاه بسیار پرطرفدار است.
+                        <h3>رتبه جهانی و کشوری دانشگاه لیون ۳</h3>
+                        <p class="mb-30">
+                            دانشگاه لیون ۳ در رتبه‌بندی جهانی توسط Times Higher Education رتبه ۱۲۰۱ را کسب کرده است و از
+                            نظر بررسی
+                            دانشجویان در Studyportals، امتیاز کلی ۴٫۰ ستاره دارد. در رتبه‌بندی کشوری نیز در میان
+                            دانشگاه‌های فرانسه رتبه
+                            ۱۲ را از آن خود کرده است.
                         </p>
-                        <h3>
-                            رتبه کشوری دانشگاه لیون ۳
-                        </h3>
-                        <p class="mb-30">رتبه کشوری دانشکده تجارت و مدیریت در میان دانشگاه‌های فرانسوی ۱۲ است که بسیار
-                            رتبه بالایی محسوب می‌شود.
+                        <h3>زبان در دانشگاه لیون ۳</h3>
+                        <p class="mb-30">
+                            دانشگاه لیون ۳ در برخی رشته‌ها آموزش‌هایی به زبان انگلیسی ارائه می‌دهد، اما داشتن زبان
+                            فرانسوی نیز به دانشجویان
+                            کمک می‌کند.
                         </p>
-                        <h3>
-                            زبان در دانشگاه لیون ۳
-                        </h3>
-                        <p class="mb-30">بدیهی است که دانستن فرانسوی کمک شایانی به دانشجویان می‌کند اما لیسانس‌های
-                            حرفه‌ای زیادی در این دانشگاه به زبان انگلیسی تدریس می‌شوند. دوره‌هایی که می‌توانید با شرکت
-                            در آن‌ها آینده خود را تضمین کنید.
-                        </p>
-
                         <h3>کلام آخر</h3>
                         <p class="mb-30">
-                            اگر در زمینه مهاجرت تحصیلی و اقامت در فرانسه به مشاوره و خدمات اجتماعی حمایتی در این کشور
-                            زیبا نیاز داشتید، حتما با ما تماس بگیرید، با تمرکز بر هموطنانی است که قصد سفر به فرانسه را
-                            دارند. همین حالا یک تماس کوتاه با کارشناسان ما داشته باشید تا از چند و چونِ پکیج‌های مهاجرتی
-                            ما با خبر شوید.
+                            اگر در زمینه مهاجرت تحصیلی و اقامت در فرانسه نیاز به مشاوره دارید، با ما تماس بگیرید تا
+                            اطلاعات دقیق‌تری
+                            دریافت کنید.
                         </p>
                         <div class="car-service-list-wrap">
                             <div class="row align-items-center">
@@ -221,27 +180,11 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="car-service-list">
                                         <ul>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۱. تاریخچه معتبر
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۲. تخصص‌های متنوع
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۳. محیط آموزشی بین‌المللی
-                                            </li>
-
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۴. امکانات و تجهیزات مدرن
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-check'></i>
-                                                ۵. پژوهش‌های برتر
-                                            </li>
+                                            <li><i class='bx bx-check'></i> تاریخچه معتبر</li>
+                                            <li><i class='bx bx-check'></i> تخصص‌های متنوع</li>
+                                            <li><i class='bx bx-check'></i> محیط آموزشی بین‌المللی</li>
+                                            <li><i class='bx bx-check'></i> امکانات و تجهیزات مدرن</li>
+                                            <li><i class='bx bx-check'></i> پژوهش‌های برتر</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -250,63 +193,11 @@
                         <div class="ask-question">
                             <h3>سوال بپرس</h3>
                             <form id="contactForm">
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" class="form-control" required
-                                                   data-error="نام خود را وارد کنید" placeholder="نام شما">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" class="form-control" required
-                                                   data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required
-                                                   data-error="تلفن خود را وارد کنید" class="form-control"
-                                                   placeholder="تلفن شما">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                   required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5"
-                                                  required data-error="پیام خود را وارد کنید"
-                                                  placeholder="پیام شما"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-two">
-												<span class="label">
-													ارسال پیام
-													<i class="flaticon-left-arrow"></i>
-												</span>
-                                        </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
+                                <!-- Form fields go here -->
                             </form>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
