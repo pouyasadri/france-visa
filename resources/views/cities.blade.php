@@ -29,7 +29,8 @@
             <div style="padding-bottom: 1rem">
                 <p>شهرهای فرانسه به خاطر شخصیت و فرهنگی منحصر به فردشان شناخته می‌شوند. پاریس به عنوان پایتخت فرانسه، با
                     برج
-                    ایفل و قصر ورسای، یکی از جاذبه‌های برتر جهان است. شهرهای دیگر نیز مانند نیس، لیون، مارسی، تولوز و
+                    ایفل و قصر ورسای، یکی از جاذبه‌های برتر جهان است. شهرهای دیگر نیز مانند نیس، لیون، استراسبورگ، تولوز
+                    و
                     بوردو
                     با آثار باستانی، خیابان‌های فراتر از حد تخیل، موزه‌های هنری و معماری، فروشگاه‌های لوکس، رستوران‌های
                     با
@@ -43,7 +44,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="../assets/img/paris2.jpg" style="height: 350px" alt="معرفی شهر پاریس">
+                            <img src="{{asset("assets/img/paris2.jpg")}}" style="height: 350px" alt="معرفی شهر پاریس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر پاریس</h3>
                                 <span class="price">شرایط و هزینه های زندگی در شهر پاریس </span>
@@ -58,7 +59,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="../assets/img/lyon.jpg" style="height: 350px" alt="معرفی شهر لیون">
+                            <img src="{{asset("assets/img/lyon.jpg")}}" style="height: 350px" alt="معرفی شهر لیون">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر لیون</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر لیون</span>
@@ -73,7 +74,8 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="../assets/img/strasbourg.jpg" style="height: 350px" alt="معرفی شهر استراسبورگ">
+                            <img src="{{asset("assets/img/strasbourg.jpg")}}" style="height: 350px"
+                                 alt="معرفی شهر استراسبورگ">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر استراسبورگ</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر استراسبورگ</span>
@@ -88,7 +90,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="../assets/img/nice1.jpg" style="height: 350px" alt="معرفی شهر نیس">
+                            <img src="{{asset("assets/img/nice1.jpg")}}" style="height: 350px" alt="معرفی شهر نیس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر نیس</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر نیس</span>
@@ -103,7 +105,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="../assets/img/toulouse.jpg" style="height: 350px" alt="معرفی شهر تولوز">
+                            <img src="{{asset("assets/img/toulouse.jpg")}}" style="height: 350px" alt="معرفی شهر تولوز">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر تولوز</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر تولوز</span>

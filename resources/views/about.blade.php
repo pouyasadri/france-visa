@@ -9,11 +9,10 @@
                 <h2>درباره ما</h2>
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="/">
                             صفحه اصلی
                         </a>
                     </li>
-                    <li>صفحات</li>
                     <li>درباره ما</li>
                 </ul>
             </div>

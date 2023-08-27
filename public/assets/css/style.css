@@ -1668,6 +1668,9 @@ Facilities Area Style
 ======================================================*/
 .single-facilities-wrap {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .single-facilities-wrap .single-facilities {
@@ -1682,6 +1685,8 @@ Facilities Area Style
     z-index: 1;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .single-facilities-wrap .single-facilities::before {
@@ -2274,6 +2279,8 @@ Booking Area Style
     max-width: 25%;
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .booking-col-2 .single-booking {
@@ -2286,6 +2293,10 @@ Booking Area Style
     text-align: center;
     padding: 20px;
     margin-bottom: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .booking-col-2 .book-icon {
@@ -2312,6 +2323,15 @@ Booking Area Style
     font-size: 18px;
 }
 
+.booking-col-2 p {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #717486;
+    font-size: 14px;
+    text-align: right;
+    padding: 1rem;
+}
+
 .booking-col-2 .btn {
     background-color: transparent;
     -webkit-box-shadow: none;
@@ -2334,6 +2354,10 @@ Booking Area Style
 }
 
 .booking-col-2:hover h3 {
+    color: #ffffff;
+}
+
+.booking-col-2:hover p {
     color: #ffffff;
 }
 
