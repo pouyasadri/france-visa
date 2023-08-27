@@ -92,7 +92,7 @@
                             با
                             بیش از دهه‌ها تجربه، استراس‌گروپ همراه شما در داستان موفقیتتان است.</p>
 
-                        <a href="/aboutUs" class="default-btn">
+                        <a href="/contactUs" class="default-btn">
                             بیشتر بدانید
                             <i class="flaticon-left-arrow"></i>
                         </a>

@@ -39,5 +39,4 @@ Route::prefix('/blog')->group(function () {
 
 // Other Routes
 Route::view("/consult", "consult"); // Display consultation page
-Route::view("/aboutUs", "about"); // Display aboutUs page
 Route::view("/contactUs", "contact"); // Display contactUs page
