@@ -170,12 +170,12 @@
                                             <div class="select-box">
                                                 <i class='bx bxs-user-detail'></i>
 
-                                                <select class="form-control">
+                                                <select name="user_service" class="form-control">
                                                     <option value="default">نوع مشاوره را انتخاب کنید</option>
-                                                    <option value="residence">مشاوره اقامت در فرانسه</option>
-                                                    <option value="education">مشاوره تحصیل در فرانسه</option>
-                                                    <option value="immigration">مشاوره مهاجرت به فرانسه</option>
-                                                    <option value="legal">مشاوره حقوقی در فرانسه و ایران</option>
+                                                    <option value="مشاوره اقامت در فرانسه">مشاوره اقامت در فرانسه</option>
+                                                    <option value="مشاوره تحصیل در فرانسه">مشاوره تحصیل در فرانسه</option>
+                                                    <option value="مشاوره مهاجرت به فرانسه">مشاوره مهاجرت به فرانسه</option>
+                                                    <option value="مشاوره حقوقی در فرانسه و ایران">مشاوره حقوقی در فرانسه و ایران</option>
                                                 </select>
                                             </div>
                                         </div>

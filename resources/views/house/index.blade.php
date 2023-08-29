@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',"اخبار")
+@section('title',"خرید ملک در فرانسه")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
@@ -23,7 +23,7 @@
     <section class="news-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>املاک</span>
+                <span>استراس گروپ</span>
                 <h2>خرید ملک در فرانسه</h2>
             </div>
             <div class="row">
@@ -31,8 +31,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-news">
                             <div class="news-img">
-                                <a href="/house/{{$house->id}}">
-                                    <img src="{{asset("/storage/images/house/".$house->house_main_image)}}"
+                                <a href="{{ route('house.show', ['house' => $house]) }}">
+                                    <img src="{{asset("/storage/images/houses/".$house->house_main_image)}}"
                                          alt="{{$house->house_name}}">
                                 </a>
                                 <div class="dates">
@@ -46,11 +46,11 @@
                                         مدیر
                                     </li>
                                 </ul>
-                                <a href="/house/{{$house->id}}">
+                                <a href="{{ route('house.show', ['house' => $house]) }}">
                                     <h3>{{$house->house_name}}</h3>
                                 </a>
                                 <p>{{$house->house_region}} | {{$house->house_type}}</p>
-                                <a class="read-more" href="/house/{{$house->id}}">
+                                <a class="read-more" href="{{ route('house.show', ['house' => $house]) }}">
                                     ادامه
                                     <i class="flaticon-left-arrow"></i>
                                 </a>

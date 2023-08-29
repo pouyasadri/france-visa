@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ConsultController;
+use App\Http\Controllers\HouseController;
 use Illuminate\Support\Facades\Route;
 
 // Home Route
@@ -37,6 +38,15 @@ Route::prefix('/blog')->group(function () {
     Route::get('/', [BlogController::class, 'index']); // Display all blogs
     Route::get('/{blog}', [BlogController::class, 'show'])->name('blog.show'); // Display a specific blog
 })->whereNumber('blog'); // Ensure the parameter is a number and bind to Blog instance
+
+// Houses Routes
+Route::prefix('/house')->group(function () {
+    Route::get('/admin', [HouseController::class, 'create']); // Display the blog creation form
+    Route::post('/admin', [HouseController::class, 'store']); // Store a newly created blog
+    Route::get('/{house}/delete', [HouseController::class, 'destroy'])->name('house.delete'); // Delete a specific blog
+    Route::get('/', [HouseController::class, 'index']); // Display all blogs
+    Route::get('/{house}', [HouseController::class, 'show'])->name('house.show'); // Display a specific blog
+})->whereNumber('house'); // Ensure the parameter is a number and bind to Blog instance
 
 // Other Routes
 Route::view("/consult", "consult"); // Display consultation page

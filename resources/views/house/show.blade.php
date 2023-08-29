@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',$blog->blog_title)
+@section('title',$house->house_name)
 @section('content')
 
     <!-- Start Page Title Area -->
@@ -35,7 +35,7 @@
                 <div class="col-lg-8 col-md-12">
                     <div class="news-details-desc">
                         <div class="article-image">
-                            <img src="{{asset("/storage/images/house/".$house->house_main_image)}}"
+                            <img src="{{asset("/storage/images/houses/".$house->house_main_image)}}"
                                  alt="{{$house->house_name}}">
                         </div>
 
@@ -83,11 +83,12 @@
                         <div class="post-navigation">
                             <div class="navigation-links">
                                 <div class="nav-previous">
-                                    <a href="/blog/{{$house->id - 1}}"><i class='bx bx-right-arrow-alt'></i> ملک قبلی</a>
+                                    <a href="{{ route('house.show', ['house' => $prevHouse]) }}"><i
+                                                class='bx bx-right-arrow-alt'></i> ملک قبلی</a>
                                 </div>
 
                                 <div class="nav-next">
-                                    <a href="/blog/{{$house->id + 1}}">ملک بعدی <i class='bx bx-left-arrow-alt'></i></a>
+                                    <a href="{{ route('house.show', ['house' => $nextHouse]) }}">ملک بعدی <i class='bx bx-left-arrow-alt'></i></a>
                                 </div>
                             </div>
                         </div>

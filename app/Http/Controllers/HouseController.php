@@ -31,7 +31,9 @@ class HouseController extends Controller
      */
     public function show(House $house): View
     {
-        return view("house.show", compact("house"));
+        $nextHouse = House::where('id', '>', $house->id)->orderBy('id', 'asc')->first();
+        $prevHouse = House::where('id', '<', $house->id)->orderBy('id', 'desc')->first();
+        return view("house.show", compact("house", "nextHouse", "prevHouse"));
     }
 
     /**

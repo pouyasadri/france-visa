@@ -26,7 +26,7 @@ class BlogsTableSeeder extends Seeder
                 'blog_category' => 'دسته بندی نمونه ' . $i,
                 'blog_slug' => Str::slug('وبلاگ نمونه ' . $i),
                 'blog_body' => 'این متن مطلب وبلاگ نمونه ' . $i . ' است.',
-                'blog_main_image' => 'تصویر_نمونه_' . $i . '.jpg',
+                'blog_main_image' => '169126098291.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

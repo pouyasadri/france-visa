@@ -143,21 +143,21 @@
                                 @forelse($houses as $house)
                                     <tr>
                                         <td class="product-thumbnail">
-                                            <a href="/house/{{$house->id}}">
+                                            <a href="/house/{{$house}}">
                                                 <img src="{{asset("storage/images/house/".$house->house_main_image)}}"
                                                      alt="{{$house->house_name}}">
                                             </a>
                                         </td>
 
                                         <td class="product-name">
-                                            <a href="/house/{{$house->id}}">{{$house->house_name}}</a>
+                                            <a href="/house/{{$house}}">{{$house->house_name}}</a>
                                         </td>
 
                                         <td class="product-price">
                                             <span class="unit-amount">{{$house->house_price}}</span>
                                         </td>
                                         <td class="product-subtotal">
-                                            <a href="/house/{{$house->id}}/delete" class="remove">
+                                            <a href="/house/{{$house}}/delete" class="remove">
                                                 <i class='bx bx-trash'></i>
                                             </a>
                                         </td>
