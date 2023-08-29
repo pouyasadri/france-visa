@@ -9304,6 +9304,7 @@ Contact Info Area Style
     padding: 30px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+    height: 100%;
 }
 
 .contact-info-area .single-contact-info i {
@@ -9330,6 +9331,8 @@ Contact Info Area Style
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     display: block;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .contact-info-area .single-contact-info:hover {

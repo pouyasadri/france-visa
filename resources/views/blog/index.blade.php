@@ -23,7 +23,7 @@
     <section class="news-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>وبلاگ ما</span>
+                <span>استراس گروپ</span>
                 <h2>اخبار سایت</h2>
             </div>
             <div class="row">

@@ -23,7 +23,7 @@
     <section class="exclusive-area exclusive-area-two pt-100 pb-70">
         <div class="container">
             <div class="section-title">
-                <span>معرفی دانشگاه های فرانسه</span>
+                <span>استراس گروپ</span>
                 <h2>رتبه‌بندی دانشگاه‌های برتر فرانسه و فرصت‌های آموزشی برای دانشجویان بین‌المللی</h2>
             </div>
             <div>

@@ -23,7 +23,7 @@
     <section class="our-rooms-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>شهرهای فرانسه</span>
+                <span>استراس گروپ</span>
                 <h2>معرفی شهرهای محبوب فرانسه</h2>
             </div>
             <div style="padding-bottom: 1rem">
