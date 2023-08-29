@@ -10,35 +10,35 @@
     <meta name="description" content="Ecorik - Hotel & Resort HTML Template">
     <meta name="author" content="Barat Hadian">
 
-    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/bootstrap.rtl.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/owl.theme.default.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/owl.carousel.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/boxicons.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/flaticon.css">
+    <link rel="stylesheet" href="{{asset("assets/css/flaticon.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/meanmenu.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/animate.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/nice-select.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/odometer.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/odometer.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/date-picker.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/date-picker.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/magnific-popup.min.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/beautiful-fonts.css">
+    <link rel="stylesheet" href="{{asset("assets/css/beautiful-fonts.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="{{asset("assets/css/style.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="{{asset("assets/css/responsive.css")}}">
 
-    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="stylesheet" href="{{asset("assets/css/rtl.css")}}">
 
     <script src="https://www.amcharts.com/lib/3/ammap.js?3.17.0"></script>
     <script src="https://www.amcharts.com/lib/3/maps/js/franceLow.js"></script>
@@ -133,7 +133,7 @@
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     <h2 class="modal-title" id="myModalLabel2">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="../assets/img/home-one/logo.jpg" alt="Logo">
                         </a>
                     </h2>
@@ -141,49 +141,70 @@
                 <div class="modal-body">
                     <div class="sidebar-modal-widget">
                         <h3 class="title">درباره ما</h3>
-                        <p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم
-                            ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم
-                            ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+                        <p>در استراس‌گروپ، ما فقط مشاور نیستیم؛ ما هم‌راه شما در سفر هیجان‌انگیز به سمت زندگی بهتر در
+                            فرانسه
+                            هستیم. تیم ما از کارشناسان ماهر، خدمات گسترده‌ای از مشاوره تحصیلی تا ویزای تحصیلی، اقامت
+                            موقت و دائم،
+                            حتی خرید ملک در فرانسه را ارائه می‌دهند. وکلا ما با تخصص در ایران و فرانسه، آماده هدایت
+                            حقوقی
+                            شما هستند.</p>
+                        <p>به ما اعتماد کنید تا رویاهای تحصیل، زندگی و سرمایه‌گذاری خود در فرانسه را به واقعیت تبدیل
+                            کنیم.
+                            با
+                            بیش از دهه‌ها تجربه، استراس‌گروپ همراه شما در داستان موفقیتتان است.</p>
                     </div>
                     <div class="sidebar-modal-widget">
                         <h3 class="title">پیوندهای اضافی</h3>
                         <ul>
                             <li>
-                                <a href="../log-in.html">ورود کاربران</a>
+                                <a href="/blog">
+                                    اخبار
+                                </a>
                             </li>
                             <li>
-                                <a href="../sign-up.html">ثبت نام</a>
+                                <a href="/universities">
+                                    معرفی دانشگاه های فرانسه
+                                </a>
                             </li>
                             <li>
-                                <a href="../faq.html">سوالات متداول</a>
+                                <a href="/cities">
+                                    معرفی شهر های محبوب فرانسه
+                                </a>
                             </li>
                             <li>
-                                <a href="#">خروج</a>
+                                <a href="/house">
+                                    خرید ملک در فرانسه
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div class="sidebar-modal-widget">
-                        <h3 class="title">اطلاعات مشتری</h3>
+                        <h3 class="title">تماس با ما</h3>
                         <ul class="contact-info">
-                            <li>
-                                <i class="bx bx-location-plus"></i>
-                                آدرس
-                                <span> ایران ، استان تهران ، میدان آزادی ، خیابان 9 شرقی </span>
-                            </li>
+                            {{--                            <li>--}}
+                            {{--                                <i class="bx bx-location-plus"></i>--}}
+                            {{--                                آدرس--}}
+                            {{--                                <span> ایران ، استان تهران ، میدان آزادی ، خیابان 9 شرقی </span>--}}
+                            {{--                            </li>--}}
                             <li>
                                 <i class="bx bx-envelope"></i>
                                 ایمیل
-                                <span><a href="mailto:hello@ecorik.com">hello@ecorik.com</a></span>
+                                <span><a href="mailto:emami@strasgroup.com">emami@strasgroup.com</a></span>
+                            </li>
+                            <li>
+                                <i class='bx bxl-whatsapp'></i>
+                                تلفن-واتساپ (فرانسه)
+                                <span><a href="tel:+33768688326">۰۰۳۳۷۶۸۶۸۸۳۲۶</a></span>
                             </li>
                             <li>
                                 <i class="bx bxs-phone-call"></i>
-                                تلفن
-                                <span>+882-569-756, +265-497-466</span>
+                                تلفن (ایران)
+                                <span><a href="tel:+989120087194">۰۹۱۲۰۰۸۷۱۹۴</a></span>
                             </li>
                         </ul>
                     </div>
                     <div class="sidebar-modal-widget">
-                        <h3 class="title">تماس بگیرید</h3>
+                        <h3 class="title">شبکه اجتماعی</h3>
                         <ul class="social-list">
                             <li>
                                 <a href="#">
@@ -225,19 +246,18 @@
     <div class="container">
         <div class="section-title">
             <h2>عضویت در خبرنامه</h2>
-            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده
-                است.</p>
+            <p>با عضویت در خبرنامه، از آخرین اخبار و اطلاعیه‌ها باخبر شوید.</p>
         </div>
         <div class="footer-tops-area pb-60">
             <div class="row">
                 <!-- Start Subscribe Area -->
                 <div class="subscribe-wrap">
                     <form class="newsletter-form" data-toggle="validator">
-                        <input type="email" class="input-tracking" placeholder="ایمیل شما" name="EMAIL" required
+                        <input type="email" class="input-tracking" placeholder="آدرس ایمیل" name="EMAIL" required
                                autocomplete="off">
 
                         <button class="default-btn active" type="submit">
-                            مشترک
+                            عضویت
                             <i class="flaticon-left-arrow"></i>
                         </button>
 
@@ -252,10 +272,9 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
                         <a href="/">
-                            <img src="../assets/img/home-one/footer-logo.png" alt="Image">
+                            <img src="../assets/img/home-one/footer-logo.png" alt="تصویر">
                         </a>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد
-                            صنعت بوده است.</p>
+                        <p>ما در خدمت شما هستیم تا بهترین مشاوره‌ها را در مسیر مهاجرت به فرانسه ارائه دهیم.</p>
                         <ul class="social-icon">
                             <li>
                                 <a href="#">
@@ -302,25 +321,25 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/universities">
                                     <i class="right-icon bx bx-chevrons-left"></i>
-                                    معرفی دانشگاه ها
+                                    معرفی دانشگاه های برتر فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/cities">
                                     <i class="right-icon bx bx-chevrons-left"></i>
-                                    معرفی شهر ها
+                                    معرفی شهر های محبوب فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/">
                                     <i class="right-icon bx bx-chevrons-left"></i>
-                                    درباره ما
+                                    درباره استراس گروپ
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/contactUs">
                                     <i class="right-icon bx bx-chevrons-left"></i>
                                     تماس با ما
                                 </a>
@@ -330,42 +349,41 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
-                        <h3>خدمات ما</h3>
+                        <h3>خدمات استراس گروپ</h3>
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="/consult">
                                     <i class="right-icon bx bx-chevrons-left"></i>
                                     اقامت کشور فرانسه </a>
-
                             </li>
                             <li>
                                 <a href="/consult">
                                     <i class="right-icon bx bx-chevrons-left"></i>
-                                    مشاوره تحصیلی
+                                    مشاوره تحصیلی کشور فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/consult">
                                     <i class="right-icon bx bx-chevrons-left"></i>
-                                    رزو محل اسکان
+                                    رزو محل اسکان در فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/consult">
                                     <i class="right-icon bx bx-chevrons-left"></i>
                                     ترجمه مدارک
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/consult">
                                     <i class="right-icon bx bx-chevrons-left"></i>
                                     پشتیبانی اداری در فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/consult">
                                     <i class="right-icon bx bx-chevrons-left"></i>
-                                    انجام امور اداری در بدو ورود
+                                    انجام امور اداری در بدو ورود به فرانسه
                                 </a>
                             </li>
                         </ul>
@@ -373,25 +391,32 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
-                        <h3>اطلاعات مشتری</h3>
+                        <h3>تماس با ما</h3>
                         <ul class="information">
+                            {{--                            <li class="address">--}}
+                            {{--                                <i class="flaticon-maps-and-flags"></i>--}}
+                            {{--                                <span>آدرس</span>--}}
+                            {{--                                ایران ، استان تهران ، میدان آزادی ، خیابان 9 شرقی--}}
+                            {{--                            </li>--}}
                             <li class="address">
-                                <i class="flaticon-maps-and-flags"></i>
-                                <span>آدرس</span>
-                                ایران ، استان تهران ، میدان آزادی ، خیابان 9 شرقی
+                                <i class="flaticon-call"></i>
+                                <span>تلفن-واتساپ (فرانسه)</span>
+                                <a href="tel:+33768688326">
+                                    0033-768-68-83-26
+                                </a>
                             </li>
                             <li class="address">
                                 <i class="flaticon-call"></i>
-                                <span>تلفن</span>
-                                <a href="tel:021-12345678">
-                                    021-12345678
+                                <span>تلفن (ایران)</span>
+                                <a href="tel:+989120087194">
+                                    0098-912-008-7194
                                 </a>
                             </li>
                             <li class="address">
                                 <i class="flaticon-envelope"></i>
                                 <span>ایمیل</span>
-                                <a href="mailto:hello@ecorik.com">
-                                    hello@ecorik.com
+                                <a href="mailto:Emami@strasgroup.com">
+                                    Emami@strasgroup.com
                                 </a>
                             </li>
                         </ul>
@@ -411,7 +436,7 @@
         </div>
     </div>
     <div class="footer-shape">
-        <img src="../assets/img/shape/white-shape-bottom.png" alt="Image">
+        <img src="../assets/img/shape/white-shape-bottom.png" alt="تصویر">
     </div>
 </footer>
 <!-- End Footer Area -->

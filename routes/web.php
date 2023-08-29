@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ConsultController;
 use Illuminate\Support\Facades\Route;
 
 // Home Route
@@ -39,4 +40,5 @@ Route::prefix('/blog')->group(function () {
 
 // Other Routes
 Route::view("/consult", "consult"); // Display consultation page
+Route::post('/consult/submit', [ConsultController::class, 'submit'])->name('consult.submit');
 Route::view("/contactUs", "contact"); // Display contactUs page

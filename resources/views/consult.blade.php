@@ -122,7 +122,8 @@
                             <div class="d-table-cell">
                                 <div class="book-from books-froms">
                                     <h3>درخواست وقت مشاوره</h3>
-                                    <form>
+                                    <form action="{{ route('consult.submit') }}" method="POST">
+                                        @csrf
                                         <div class="form-group">
                                             <div class="select-box">
                                                 <i class='bx bx-user'></i>
