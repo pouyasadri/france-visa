@@ -69,7 +69,7 @@
     <section class="explore-area pt-100 pb-100">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>ACV</span>
                 <h2>درباره ما</h2>
             </div>
             <div class="row align-items-center">
@@ -108,7 +108,7 @@
     <section class="facilities-area pb-60">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>AVC</span>
                 <h2>از صفر تا صد مهاجرت</h2>
             </div>
             <div class="row">
@@ -243,10 +243,10 @@
     <!-- End Incredible Area -->
 
     <!-- Start Booking Area -->
-    <section class="bokking-area pt-70 pb-70">
+    <section id="services" class="bokking-area pt-70 pb-70">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>AVC</span>
                 <h2>خدمات تیم ما</h2>
             </div>
             <div class="row">
@@ -556,7 +556,7 @@
     <section class="restaurants-area ptb-100 ">
         <div class="container-fluid p-0">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>AVC</span>
                 <h2>خرید ملک در فرانسه</h2>
             </div>
 
@@ -587,7 +587,7 @@
     <section class="testimonials-area pb-100">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>AVC</span>
                 <h2>آنچه مشتریان می گویند</h2>
             </div>
             <div class="testimonials-wrap owl-carousel owl-theme">
@@ -684,7 +684,7 @@
     <section class="news-area pb-60">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>AVC</span>
                 <h2>اخبار سایت </h2>
             </div>
             <div class="row">

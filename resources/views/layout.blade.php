@@ -61,7 +61,7 @@
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
             <a href="/" class="logo">
-                <img src="../assets/img/mobile-manu-logo.png" alt="Logo">
+                <img src="../assets/img/logo-mobile.png" alt="Logo">
             </a>
         </div>
         <!-- Menu For Desktop Device -->
@@ -70,13 +70,18 @@
                 <div class="container">
                     <a class="navbar-brand" href="/">
                         <!--                        TODO logo-->
-                        <img src="../assets/img/home-five/logo.png" alt="Logo">
+                        <img src="../assets/img/logo.png" alt="Logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="/" class="nav-link dropdown-toggle active">
                                     خانه
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#services" class="nav-link dropdown-toggle">خدمات
+                                    <i class='bx bx-chevron-up'></i>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -194,7 +199,7 @@
                             <li>
                                 <i class='bx bxl-whatsapp'></i>
                                 تلفن-واتساپ (فرانسه)
-                                <span><a href="tel:+33768688326">۰۰۳۳۷۶۸۶۸۸۳۲۶</a></span>
+                                <span><a href="tel:+33780953333">۰۰۳۳۷۸۰۹۵۳۳۳۳</a></span>
                             </li>
                             <li>
                                 <i class="bx bxs-phone-call"></i>
@@ -401,8 +406,8 @@
                             <li class="address">
                                 <i class="flaticon-call"></i>
                                 <span>تلفن-واتساپ (فرانسه)</span>
-                                <a href="tel:+33768688326">
-                                    0033-768-68-83-26
+                                <a href="tel:+33780953333">
+                                    0033-780-95-33-33
                                 </a>
                             </li>
                             <li class="address">

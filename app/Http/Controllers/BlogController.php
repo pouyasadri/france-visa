@@ -74,7 +74,7 @@ class BlogController extends Controller
             $blog = new Blog(array_merge($validatedData, ['blog_main_image' => $blog_image_name]));
             $blog->save();
 
-            return redirect('/blog/admin')->with('success', 'وبلاگ با موفقیت ذخیره شد!');
+            return redirect('/home')->with('success', 'وبلاگ با موفقیت ذخیره شد!');
         } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->errors())->withInput();
         } catch (Exception $e) {
@@ -98,7 +98,7 @@ class BlogController extends Controller
 
             $blog->delete();
 
-            return redirect('/blog/admin')->with('success', 'وبلاگ با موفقیت حذف شد!');
+            return redirect('/home')->with('success', 'وبلاگ با موفقیت حذف شد!');
         } catch (ModelNotFoundException $e) {
             return redirect('/blog/admin')->with('error', 'وبلاگ یافت نشد.');
         } catch (Exception $e) {

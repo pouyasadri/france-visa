@@ -23,7 +23,7 @@
     <section class="facilities-area pt-60 pb-60">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>AVC</span>
                 <h2>از صفر تا صد مهاجرت</h2>
             </div>
             <div class="row">
@@ -203,7 +203,7 @@
                 <div class="col-lg-6 col-md-6 p-0">
                     <div class="contact-info-wrap">
                         <div class="contact-info">
-                            <h3>تماس با مجموعه مشاوره و مهاجرت استراس گروپ</h3>
+                            <h3>تماس با مجموعه مشاوره و مهاجرت Apply Vip Conseil</h3>
                             <p>در خدمت شما هستیم. پیام خود را ارسال کنید و با ما در ارتباط باشید.</p>
                             <ul>
                                 <li>
@@ -241,7 +241,7 @@
     <section class="bokking-area pt-70 pb-70">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>AVC</span>
                 <h2>خدمات تیم ما</h2>
             </div>
             <div class="row">

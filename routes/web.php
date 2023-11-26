@@ -32,17 +32,17 @@ Route::prefix("universities")->group(function () {
 
 // Blog Routes
 Route::prefix('/blog')->group(function () {
-    Route::get('/admin', [BlogController::class, 'create']); // Display the blog creation form
-    Route::post('/admin', [BlogController::class, 'store']); // Store a newly created blog
-    Route::get('/{blog}/delete', [BlogController::class, 'destroy'])->name('blog.delete'); // Delete a specific blog
+    Route::get('/admin', [BlogController::class, 'create'])->middleware("auth"); // Display the blog creation form
+    Route::post('/admin', [BlogController::class, 'store'])->middleware("auth"); // Store a newly created blog
+    Route::get('/{blog}/delete', [BlogController::class, 'destroy'])->name('blog.delete')->middleware("auth"); // Delete a specific blog
     Route::get('/', [BlogController::class, 'index']); // Display all blogs
     Route::get('/{blog}', [BlogController::class, 'show'])->name('blog.show'); // Display a specific blog
 })->whereNumber('blog'); // Ensure the parameter is a number and bind to Blog instance
 
 // Houses Routes
 Route::prefix('/house')->group(function () {
-    Route::get('/admin', [HouseController::class, 'create']); // Display the blog creation form
-    Route::post('/admin', [HouseController::class, 'store']); // Store a newly created blog
+    Route::get('/admin', [HouseController::class, 'create'])->middleware("auth");; // Display the blog creation form
+    Route::post('/admin', [HouseController::class, 'store'])->middleware("auth");; // Store a newly created blog
     Route::get('/{house}/delete', [HouseController::class, 'destroy'])->name('house.delete'); // Delete a specific blog
     Route::get('/', [HouseController::class, 'index']); // Display all blogs
     Route::get('/{house}', [HouseController::class, 'show'])->name('house.show'); // Display a specific blog
@@ -52,3 +52,11 @@ Route::prefix('/house')->group(function () {
 Route::view("/consult", "consult"); // Display consultation page
 Route::post('/consult/submit', [ConsultController::class, 'submit'])->name('consult.submit');
 Route::view("/contactUs", "contact"); // Display contactUs page
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
