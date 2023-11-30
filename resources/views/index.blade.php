@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',"خوش آمدید | خانه")
+@section('title',"تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C")
 @section('content')
 
     <!-- Start Ecorik Slider Area -->
@@ -733,3 +733,8 @@
     <!-- End News Area -->
 
 @endsection
+@push("scripts")
+    <script src="{{asset("https://www.amcharts.com/lib/3/ammap.js?3.17.0")}}"></script>
+    <script src="{{asset("https://www.amcharts.com/lib/3/maps/js/franceLow.js")}}"></script>
+    
+@endpush

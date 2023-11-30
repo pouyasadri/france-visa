@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
 
     <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="HTML5,CSS3,HTML,Template,multi-page,Ecorik - Hotel & Resort HTML Template">
-    <meta name="description" content="Ecorik - Hotel & Resort HTML Template">
-    <meta name="author" content="Barat Hadian">
+    {{--    <meta name="keywords"--}}
+    {{--          content="آژانس مهاجرت و مسافرت ایران به فرانسه, مهاجرت به فرانسه, ویزای فرانسه, سفر به فرانسه, ایرانیان در فرانسه, زندگی در فرانسه, مهاجرت تحصیلی به فرانسه, خرید خانه در فرانسه, سرمایه گذاری در املاک فرانسه">--}}
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="description" content="@yield('description')">
+    {{--    <meta name="description"--}}
+    {{--          content="آژانس مهاجرت و مسافرت A.V.C، همراه شما در سفر هیجان‌انگیز به سمت زندگی بهتر در فرانسه. خدمات ما شامل مشاوره تحصیلی، ویزای تحصیلی، اقامت موقت و دائم، خرید ملک در فرانسه و خدمات حقوقی است. با بیش از دهه‌ها تجربه، A.V.C همراه شما در داستان موفقیتتان است.">--}}
+
+    <meta name="author" content="Apply Vip Conseil| AVC">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}"/>
 
     <link rel="stylesheet" href="{{asset("assets/css/bootstrap.rtl.min.css")}}">
 
@@ -39,11 +46,9 @@
     <link rel="stylesheet" href="{{asset("assets/css/responsive.css")}}">
 
     <link rel="stylesheet" href="{{asset("assets/css/rtl.css")}}">
-
-    <script src="https://www.amcharts.com/lib/3/ammap.js?3.17.0"></script>
-    <script src="https://www.amcharts.com/lib/3/maps/js/franceLow.js"></script>
+    @stack('scripts')
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}" alt="Favicon">
 
 </head>
 <body>
@@ -56,81 +61,85 @@
 </div>
 <!-- End Preloader Area -->
 <!-- Start Ecorik Navbar Area -->
-<div class="eorik-nav-style eorik-nav-style-four fixed-top">
-    <div class="navbar-area">
-        <!-- Menu For Mobile Device -->
-        <div class="mobile-nav">
-            <a href="/" class="logo">
-                <img src="../assets/img/logo-mobile.png" alt="Logo">
-            </a>
-        </div>
-        <!-- Menu For Desktop Device -->
-        <div class="main-nav">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <div class="container">
-                    <a class="navbar-brand" href="/">
-                        <!--                        TODO logo-->
-                        <img src="../assets/img/logo.png" alt="Logo">
-                    </a>
-                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav m-auto">
-                            <li class="nav-item">
-                                <a href="/" class="nav-link dropdown-toggle active">
-                                    خانه
+<header>
+    <div class="eorik-nav-style eorik-nav-style-four fixed-top">
+        <div class="navbar-area">
+            <!-- Menu For Mobile Device -->
+            <div class="mobile-nav">
+                <a href="/" class="logo">
+                    <img src="{{asset("../assets/img/logo-mobile.png")}}"
+                         alt="A.V.C: تحصیل، زندگی، سرمایه گذاری در فرانسه">
+                </a>
+            </div>
+            <!-- Menu For Desktop Device -->
+            <div class="main-nav">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="container">
+                        <a class="navbar-brand" href="{{route('index')}}">
+                            <img src="{{asset("../assets/img/logo.png")}}"
+                                 alt="A.V.C: تحصیل، زندگی، سرمایه گذاری در فرانسه">
+                        </a>
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav m-auto">
+                                <li class="nav-item">
+                                    <a href="{{route('index')}}" class="nav-link dropdown-toggle active">
+                                        خانه
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#services" class="nav-link dropdown-toggle">خدمات
+                                        <i class='bx bx-chevron-up'></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/blog" class="nav-link dropdown-toggle">
+                                        اخبار
+                                        <i class='bx bx-chevron-up'></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/universities" class="nav-link dropdown-toggle">
+                                        معرفی دانشگاه ها
+                                        <i class='bx bx-chevron-up'></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/cities" class="nav-link dropdown-toggle">
+                                        معرفی شهر ها
+                                        <i class='bx bx-chevron-up'></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/house" class="nav-link dropdown-toggle">
+                                        املاک
+                                        <i class='bx bx-chevron-up'></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/contactUs" class="nav-link dropdown-toggle">
+                                        تماس با ما
+                                        <i class='bx bx-chevron-up'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Start Other Option -->
+                            <div class="others-option">
+                                <a class="sidebar-button" href="#" data-bs-toggle="modal"
+                                   data-bs-target="#staticBackdrop">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#services" class="nav-link dropdown-toggle">خدمات
-                                    <i class='bx bx-chevron-up'></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/blog" class="nav-link dropdown-toggle">
-                                    اخبار
-                                    <i class='bx bx-chevron-up'></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/universities" class="nav-link dropdown-toggle">
-                                    معرفی دانشگاه ها
-                                    <i class='bx bx-chevron-up'></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/cities" class="nav-link dropdown-toggle">
-                                    معرفی شهر ها
-                                    <i class='bx bx-chevron-up'></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/house" class="nav-link dropdown-toggle">
-                                    املاک
-                                    <i class='bx bx-chevron-up'></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/contactUs" class="nav-link dropdown-toggle">
-                                    تماس با ما
-                                    <i class='bx bx-chevron-up'></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- Start Other Option -->
-                        <div class="others-option">
-                            <a class="sidebar-button" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
+                            </div>
+                            <!-- End Other Option -->
                         </div>
-                        <!-- End Other Option -->
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </div>
-</div>
+</header>
 <div class="sidebar-modal">
     <div class="modal right fade" id="staticBackdrop">
         <div class="modal-dialog" role="document">
@@ -139,46 +148,56 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     <h2 class="modal-title" id="myModalLabel2">
                         <a href="/">
-                            <img src="../assets/img/home-one/logo.jpg" alt="Logo">
+                            <img src="{{asset("../assets/img/logo.png")}}"
+                                 alt="A.V.: دروازه شما به سوی زندگی بهتر در فرانسه">
                         </a>
                     </h2>
                 </div>
                 <div class="modal-body">
                     <div class="sidebar-modal-widget">
                         <h3 class="title">درباره ما</h3>
-                        <p>در استراس‌گروپ، ما فقط مشاور نیستیم؛ ما هم‌راه شما در سفر هیجان‌انگیز به سمت زندگی بهتر در
-                            فرانسه
-                            هستیم. تیم ما از کارشناسان ماهر، خدمات گسترده‌ای از مشاوره تحصیلی تا ویزای تحصیلی، اقامت
-                            موقت و دائم،
-                            حتی خرید ملک در فرانسه را ارائه می‌دهند. وکلا ما با تخصص در ایران و فرانسه، آماده هدایت
-                            حقوقی
-                            شما هستند.</p>
-                        <p>به ما اعتماد کنید تا رویاهای تحصیل، زندگی و سرمایه‌گذاری خود در فرانسه را به واقعیت تبدیل
-                            کنیم.
-                            با
-                            بیش از دهه‌ها تجربه، استراس‌گروپ همراه شما در داستان موفقیتتان است.</p>
+                        <p class="intro">
+                            <strong>A.V.C: همراه شما در سفر هیجان‌انگیز زندگی بهتر در فرانسه</strong>
+                        </p>
+                        <p>
+                            A.V.C یک شرکت مشاوره مهاجرتی است که خدمات گسترده‌ای از مشاوره تحصیلی تا ویزای تحصیلی، اقامت
+                            موقت و دائم، حتی خرید ملک در فرانسه را ارائه می‌دهد.
+                        </p>
+                        <p>
+                            تیم ما از کارشناسان ماهر در زمینه‌های مختلف مهاجرت تشکیل شده است. ما با سابقه‌ای درخشان در
+                            زمینه مهاجرت به فرانسه، آماده‌ایم تا به شما در رسیدن به اهدافتان کمک کنیم.
+                        </p>
+                        <p>
+                            شما می‌توانید روی تجربه و دانش ما حساب کنید تا رویاهای تحصیل، زندگی و سرمایه‌گذاری خود در
+                            فرانسه را به واقعیت تبدیل کنید.
+                        </p>
+                        <a class="default-btn" href="/consult">
+                            درخواست مشاوره در مهاجرت به فرانسه
+                            <i class="flaticon-left-arrow"></i>
+                        </a>
                     </div>
+
                     <div class="sidebar-modal-widget">
                         <h3 class="title">پیوندهای اضافی</h3>
                         <ul>
                             <li>
-                                <a href="/blog">
-                                    اخبار
+                                <a href="/blog" class="link">
+                                    آخرین اخبار فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="/universities">
-                                    معرفی دانشگاه های فرانسه
+                                <a href="/universities" class="link">
+                                    بهترین دانشگاه های فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="/cities">
-                                    معرفی شهر های محبوب فرانسه
+                                <a href="/cities" class="link">
+                                    محبوب ترین شهرهای فرانسه
                                 </a>
                             </li>
                             <li>
-                                <a href="/house">
-                                    خرید ملک در فرانسه
+                                <a href="/house" class="link">
+                                    راهنمای خرید ملک در فرانسه
                                 </a>
                             </li>
                         </ul>
@@ -186,11 +205,6 @@
                     <div class="sidebar-modal-widget">
                         <h3 class="title">تماس با ما</h3>
                         <ul class="contact-info">
-                            {{--                            <li>--}}
-                            {{--                                <i class="bx bx-location-plus"></i>--}}
-                            {{--                                آدرس--}}
-                            {{--                                <span> ایران ، استان تهران ، میدان آزادی ، خیابان 9 شرقی </span>--}}
-                            {{--                            </li>--}}
                             <li>
                                 <i class="bx bx-envelope"></i>
                                 ایمیل
@@ -243,9 +257,9 @@
         </div>
     </div>
 </div>
-
-@yield('content')
-
+<main>
+    @yield('content')
+</main>
 <!-- Start Footer Area -->
 <footer class="footer-top-area pt-140 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
@@ -258,8 +272,10 @@
                 <!-- Start Subscribe Area -->
                 <div class="subscribe-wrap">
                     <form class="newsletter-form" data-toggle="validator">
-                        <input type="email" class="input-tracking" placeholder="آدرس ایمیل" name="EMAIL" required
-                               autocomplete="off">
+                        <label>
+                            <input type="email" class="input-tracking" placeholder="آدرس ایمیل" name="EMAIL" required
+                                   autocomplete="off">
+                        </label>
 
                         <button class="default-btn active" type="submit">
                             عضویت
@@ -276,10 +292,11 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
-                        <a href="/">
-                            <img src="../assets/img/home-one/footer-logo.png" alt="تصویر">
+                        <a href="">
+                            <img src="{{asset("../assets/img/logo.png")}}"
+                                 alt="A.V.C : مهاجرت به فرانسه، ویزای فرانسه، سفر به فرانسه">
                         </a>
-                        <p>ما در خدمت شما هستیم تا بهترین مشاوره‌ها را در مسیر مهاجرت به فرانسه ارائه دهیم.</p>
+                        <p>ما با بهترین مشاوران مهاجرتی فرانسه، همراه شما در مسیر مهاجرت به این کشور هستیم.</p>
                         <ul class="social-icon">
                             <li>
                                 <a href="#">
@@ -340,7 +357,7 @@
                             <li>
                                 <a href="/">
                                     <i class="right-icon bx bx-chevrons-left"></i>
-                                    درباره استراس گروپ
+                                    درباره A.V.C
                                 </a>
                             </li>
                             <li>
@@ -441,7 +458,7 @@
         </div>
     </div>
     <div class="footer-shape">
-        <img src="../assets/img/shape/white-shape-bottom.png" alt="تصویر">
+        <img src="{{asset("../assets/img/shape/white-shape-bottom.png")}}" alt="تصویر">
     </div>
 </footer>
 <!-- End Footer Area -->
@@ -454,71 +471,45 @@
 <!-- End Go Top Area -->
 
 
-<script src="../assets/js/jquery.min.js"></script>
+<script src="{{asset("../assets/js/jquery.min.js")}}"></script>
 
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset("../assets/js/bootstrap.bundle.min.js")}}"></script>
 
-<script src="../assets/js/meanmenu.min.js"></script>
+<script src="{{asset("../assets/js/meanmenu.min.js")}}"></script>
 
-<script src="../assets/js/owl.carousel.min.js"></script>
-<script src="../assets/js/jquery.min.js"></script>
+<script src="{{asset("../assets/js/owl.carousel.min.js")}}"></script>
+<script src="{{asset("../assets/js/jquery.min.js")}}"></script>
 
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset("../assets/js/bootstrap.bundle.min.js")}}"></script>
 
-<script src="../assets/js/meanmenu.min.js"></script>
+<script src="{{asset("../assets/js/meanmenu.min.js")}}"></script>
 
-<script src="../assets/js/owl.carousel.min.js"></script>
+<script src="{{asset("../assets/js/owl.carousel.min.js")}}"></script>
 
-<script src="../assets/js/wow.min.js"></script>
+<script src="{{asset("../assets/js/wow.min.js")}}"></script>
 
-<script src="../assets/js/nice-select.min.js"></script>
+<script src="{{asset("../assets/js/nice-select.min.js")}}"></script>
 
-<script src="../assets/js/magnific-popup.min.js"></script>
+<script src="{{asset("../assets/js/magnific-popup.min.js")}}"></script>
 
-<script src="../assets/js/jquery.mixitup.min.js"></script>
+<script src="{{asset("../assets/js/jquery.mixitup.min.js")}}"></script>
 
-<script src="../assets/js/appear.min.js"></script>
+<script src="{{asset("../assets/js/appear.min.js")}}"></script>
 
-<script src="../assets/js/odometer.min.js"></script>
+<script src="{{asset("../assets/js/odometer.min.js")}}"></script>
 
-<script src="../assets/js/bootstrap-datepicker.min.js"></script>
+<script src="{{asset("../assets/js/bootstrap-datepicker.min.js")}}"></script>
 
-<script src="../assets/js/ofi.min.js"></script>
+<script src="{{asset("../assets/js/ofi.min.js")}}"></script>
 
-<script src="../assets/js/jarallax.min.js"></script>
+<script src="{{asset("../assets/js/jarallax.min.js")}}"></script>
 
-<script src="../assets/js/form-validator.min.js"></script>
+<script src="{{asset("../assets/js/form-validator.min.js")}}"></script>
 
-<script src="../assets/js/contact-form-script.js"></script>
+<script src="{{asset("../assets/js/contact-form-script.js")}}"></script>
 
-<script src="../assets/js/ajaxchimp.min.js"></script>
+<script src="{{asset("../assets/js/ajaxchimp.min.js")}}"></script>
 
-<script src="../assets/js/custom.js"></script>
-
-<script src="../assets/js/wow.min.js"></script>
-
-<script src="../assets/js/nice-select.min.js"></script>
-
-<script src="../assets/js/magnific-popup.min.js"></script>
-
-<script src="../assets/js/jquery.mixitup.min.js"></script>
-
-<script src="../assets/js/appear.min.js"></script>
-
-<script src="../assets/js/odometer.min.js"></script>
-
-<script src="../assets/js/bootstrap-datepicker.min.js"></script>
-
-<script src="../assets/js/ofi.min.js"></script>
-
-<script src="../assets/js/jarallax.min.js"></script>
-
-<script src="../assets/js/form-validator.min.js"></script>
-
-<script src="../assets/js/contact-form-script.js"></script>
-
-<script src="../assets/js/ajaxchimp.min.js"></script>
-
-<script src="../assets/js/custom.js"></script>
+<script src="{{asset("../assets/js/custom.js")}}"></script>
 </body>
 </html>
