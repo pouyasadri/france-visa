@@ -5,14 +5,14 @@
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>اخبار</h2>
+                <h2>مقالات مهاجرت به فرانسه</h2>
                 <ul>
                     <li>
                         <a href="/">
                             صفحه اصلی
                         </a>
                     </li>
-                    <li>اخبار</li>
+                    <li>مقالات</li>
                 </ul>
             </div>
         </div>
@@ -23,8 +23,8 @@
     <section class="news-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
-                <h2>اخبار سایت</h2>
+                <span>به روز ترین مقالات مهاجرت به فرانسه</span>
+                <h2>آخرین مقالات</h2>
             </div>
             <div class="row">
                 @forelse($blogs as $blog)

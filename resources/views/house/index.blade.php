@@ -5,7 +5,7 @@
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>املاک</h2>
+                <h2>خرید ملک در فرانسه</h2>
                 <ul>
                     <li>
                         <a href="/">
@@ -23,7 +23,7 @@
     <section class="news-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>استراس گروپ</span>
+                <span>اخذ اقامت فرانسه از طریق سرمایه گذاری و خرید ملک</span>
                 <h2>خرید ملک در فرانسه</h2>
             </div>
             <div class="row">

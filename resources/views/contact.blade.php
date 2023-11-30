@@ -5,14 +5,14 @@
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>تماس با ما</h2>
+                <h2>تماس با مشاورین ما</h2>
                 <ul>
                     <li>
                         <a href="/">
                             صفحه اصلی
                         </a>
                     </li>
-                    <li>تماس با ما 2</li>
+                    <li>تماس با ما</li>
                 </ul>
             </div>
         </div>

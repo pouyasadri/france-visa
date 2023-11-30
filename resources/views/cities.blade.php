@@ -23,7 +23,7 @@
     <section class="our-rooms-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>Apply Vip Conseil</span>
+                <span>کشور فرانسه مهد فرهنگ و هنر</span>
                 <h2>معرفی شهرهای محبوب فرانسه</h2>
             </div>
             <div style="padding-bottom: 1rem">
@@ -44,7 +44,8 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/paris-slider.webp")}}" style="height: 350px" alt="معرفی شهر پاریس">
+                            <img src="{{asset("assets/img/cities/Paris/paris-slider.webp")}}" style="height: 350px"
+                                 alt="مهاجرت به فرانسه |معرفی شهر پاریس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر پاریس</h3>
                                 <span class="price">شرایط و هزینه های زندگی در شهر پاریس </span>
@@ -59,7 +60,8 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/lyon.jpg")}}" style="height: 350px" alt="معرفی شهر لیون">
+                            <img src="{{asset("assets/img/cities/Lyon/lyon.jpg")}}" style="height: 350px"
+                                 alt="مهاجرت به فرانسه |معرفی شهر لیون">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر لیون</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر لیون</span>
@@ -74,7 +76,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/strasbourg.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.jpg")}}" style="height: 350px"
                                  alt="معرفی شهر استراسبورگ">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر استراسبورگ</h3>
@@ -90,7 +92,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/nice1.jpg")}}" style="height: 350px" alt="معرفی شهر نیس">
+                            <img src="{{asset("assets/img/cities/Nice/nice1.jpg")}}" style="height: 350px" alt="معرفی شهر نیس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر نیس</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر نیس</span>
