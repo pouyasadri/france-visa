@@ -174,7 +174,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/lyon_3.png")}}" alt="دانشگاه لیون ۳">
+                                        <img src="{{asset("assets/img/lyon_3.webp")}}" alt="دانشگاه لیون ۳">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">

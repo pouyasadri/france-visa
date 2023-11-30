@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="{{asset("assets/css/responsive.css")}}">
 
     <link rel="stylesheet" href="{{asset("assets/css/rtl.css")}}">
-    @stack('scripts')
+    @stack('styles')
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}" alt="Favicon">
 
@@ -67,7 +67,7 @@
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
                 <a href="/" class="logo">
-                    <img src="{{asset("../assets/img/logo-mobile.png")}}"
+                    <img src="{{asset("../assets/img/logo/logo-mobile.webp")}}"
                          alt="A.V.C: تحصیل، زندگی، سرمایه گذاری در فرانسه">
                 </a>
             </div>
@@ -76,7 +76,7 @@
                 <nav class="navbar navbar-expand-md navbar-light">
                     <div class="container">
                         <a class="navbar-brand" href="{{route('index')}}">
-                            <img src="{{asset("../assets/img/logo.png")}}"
+                            <img style="width: 10rem" src="{{asset("../assets/img/logo/logo.webp")}}"
                                  alt="A.V.C: تحصیل، زندگی، سرمایه گذاری در فرانسه">
                         </a>
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -139,124 +139,130 @@
             </div>
         </div>
     </div>
-</header>
-<div class="sidebar-modal">
-    <div class="modal right fade" id="staticBackdrop">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    <h2 class="modal-title" id="myModalLabel2">
-                        <a href="/">
-                            <img src="{{asset("../assets/img/logo.png")}}"
-                                 alt="A.V.: دروازه شما به سوی زندگی بهتر در فرانسه">
-                        </a>
-                    </h2>
-                </div>
-                <div class="modal-body">
-                    <div class="sidebar-modal-widget">
-                        <h3 class="title">درباره ما</h3>
-                        <p class="intro">
-                            <strong>A.V.C: همراه شما در سفر هیجان‌انگیز زندگی بهتر در فرانسه</strong>
-                        </p>
-                        <p>
-                            A.V.C یک شرکت مشاوره مهاجرتی است که خدمات گسترده‌ای از مشاوره تحصیلی تا ویزای تحصیلی، اقامت
-                            موقت و دائم، حتی خرید ملک در فرانسه را ارائه می‌دهد.
-                        </p>
-                        <p>
-                            تیم ما از کارشناسان ماهر در زمینه‌های مختلف مهاجرت تشکیل شده است. ما با سابقه‌ای درخشان در
-                            زمینه مهاجرت به فرانسه، آماده‌ایم تا به شما در رسیدن به اهدافتان کمک کنیم.
-                        </p>
-                        <p>
-                            شما می‌توانید روی تجربه و دانش ما حساب کنید تا رویاهای تحصیل، زندگی و سرمایه‌گذاری خود در
-                            فرانسه را به واقعیت تبدیل کنید.
-                        </p>
-                        <a class="default-btn" href="/consult">
-                            درخواست مشاوره در مهاجرت به فرانسه
-                            <i class="flaticon-left-arrow"></i>
-                        </a>
-                    </div>
 
-                    <div class="sidebar-modal-widget">
-                        <h3 class="title">پیوندهای اضافی</h3>
-                        <ul>
-                            <li>
-                                <a href="/blog" class="link">
-                                    آخرین اخبار فرانسه
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/universities" class="link">
-                                    بهترین دانشگاه های فرانسه
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/cities" class="link">
-                                    محبوب ترین شهرهای فرانسه
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/house" class="link">
-                                    راهنمای خرید ملک در فرانسه
-                                </a>
-                            </li>
-                        </ul>
+    <div class="sidebar-modal">
+        <div class="modal right fade" id="staticBackdrop">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <h2 class="modal-title" id="myModalLabel2"
+                            style="display: flex; justify-content: center; align-items: center;">
+                            <a href="/">
+                                <img style="width: 15rem;margin-top: 2rem"
+                                     src="{{asset("../assets/img/logo/logo.webp")}}"
+                                     alt="A.V.: دروازه شما به سوی زندگی بهتر در فرانسه">
+                            </a>
+                        </h2>
                     </div>
-                    <div class="sidebar-modal-widget">
-                        <h3 class="title">تماس با ما</h3>
-                        <ul class="contact-info">
-                            <li>
-                                <i class="bx bx-envelope"></i>
-                                ایمیل
-                                <span><a href="mailto:emami@strasgroup.com">emami@strasgroup.com</a></span>
-                            </li>
-                            <li>
-                                <i class='bx bxl-whatsapp'></i>
-                                تلفن-واتساپ (فرانسه)
-                                <span><a href="tel:+33780953333">۰۰۳۳۷۸۰۹۵۳۳۳۳</a></span>
-                            </li>
-                            <li>
-                                <i class="bx bxs-phone-call"></i>
-                                تلفن (ایران)
-                                <span><a href="tel:+989120087194">۰۹۱۲۰۰۸۷۱۹۴</a></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="sidebar-modal-widget">
-                        <h3 class="title">شبکه اجتماعی</h3>
-                        <ul class="social-list">
-                            <li>
-                                <a href="#">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class='bx bxl-linkedin'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class='bx bxl-youtube'></i>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="modal-body">
+                        <div class="sidebar-modal-widget">
+                            <h3 class="title">درباره ما</h3>
+                            <p class="intro">
+                                <strong>A.V.C: همراه شما در سفر هیجان‌انگیز زندگی بهتر در فرانسه</strong>
+                            </p>
+                            <p>
+                                A.V.C یک شرکت مشاوره مهاجرتی است که خدمات گسترده‌ای از مشاوره تحصیلی تا ویزای تحصیلی،
+                                اقامت
+                                موقت و دائم، حتی خرید ملک در فرانسه را ارائه می‌دهد.
+                            </p>
+                            <p>
+                                تیم ما از کارشناسان ماهر در زمینه‌های مختلف مهاجرت تشکیل شده است. ما با سابقه‌ای درخشان
+                                در
+                                زمینه مهاجرت به فرانسه، آماده‌ایم تا به شما در رسیدن به اهدافتان کمک کنیم.
+                            </p>
+                            <p>
+                                شما می‌توانید روی تجربه و دانش ما حساب کنید تا رویاهای تحصیل، زندگی و سرمایه‌گذاری خود
+                                در
+                                فرانسه را به واقعیت تبدیل کنید.
+                            </p>
+                            <a class="default-btn" href="/consult">
+                                درخواست مشاوره در مهاجرت به فرانسه
+                                <i class="flaticon-left-arrow"></i>
+                            </a>
+                        </div>
+
+                        <div class="sidebar-modal-widget">
+                            <h3 class="title">پیوندهای اضافی</h3>
+                            <ul>
+                                <li>
+                                    <a href="/blog" class="link">
+                                        آخرین اخبار فرانسه
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/universities" class="link">
+                                        بهترین دانشگاه های فرانسه
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cities" class="link">
+                                        محبوب ترین شهرهای فرانسه
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/house" class="link">
+                                        راهنمای خرید ملک در فرانسه
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-modal-widget">
+                            <h3 class="title">تماس با ما</h3>
+                            <ul class="contact-info">
+                                <li>
+                                    <i class="bx bx-envelope"></i>
+                                    ایمیل
+                                    <span><a href="mailto:emami@strasgroup.com">emami@strasgroup.com</a></span>
+                                </li>
+                                <li>
+                                    <i class='bx bxl-whatsapp'></i>
+                                    تلفن-واتساپ (فرانسه)
+                                    <span><a href="tel:+33780953333">۰۰۳۳۷۸۰۹۵۳۳۳۳</a></span>
+                                </li>
+                                <li>
+                                    <i class="bx bxs-phone-call"></i>
+                                    تلفن (ایران)
+                                    <span><a href="tel:+989120087194">۰۹۱۲۰۰۸۷۱۹۴</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-modal-widget">
+                            <h3 class="title">شبکه اجتماعی</h3>
+                            <ul class="social-list">
+                                <li>
+                                    <a href="#">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class='bx bxl-linkedin'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class='bx bxl-youtube'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</header>
 <main>
     @yield('content')
 </main>
@@ -511,5 +517,6 @@
 <script src="{{asset("../assets/js/ajaxchimp.min.js")}}"></script>
 
 <script src="{{asset("../assets/js/custom.js")}}"></script>
+@stack('scripts')
 </body>
 </html>

@@ -44,7 +44,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/paris2.jpg")}}" style="height: 350px" alt="معرفی شهر پاریس">
+                            <img src="{{asset("assets/img/paris-slider.webp")}}" style="height: 350px" alt="معرفی شهر پاریس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر پاریس</h3>
                                 <span class="price">شرایط و هزینه های زندگی در شهر پاریس </span>

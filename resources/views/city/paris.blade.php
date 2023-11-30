@@ -97,7 +97,7 @@
 
                         <h2>شهر پاریس، شهر فرهنگ، مقاومت و تفریح</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/paris2.jpg")}}" alt="شهر پاریس">
+                            <img src="{{asset("assets/img/paris-slider.webp")}}" alt="شهر پاریس">
                         </div>
                         <h3>پاریس کجاست</h3>
                         <p>شهر پاریس پایتخت و پرجمعیت ترین شهر فرانسه است. واقع در رودخانه سن، در شمال کشور، در مرکز
