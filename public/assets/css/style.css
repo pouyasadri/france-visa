@@ -3242,7 +3242,7 @@ Exclusive Area Two Style
 }
 
 .exclusive-area-two .exclusive-img.bg-8 {
-    background-image: url(../img/universities/paris_2.png);
+    background-image: url(../img/universities/Paris2/paris_2_logo.webp);
     background-size: contain;
 
 }
@@ -3848,7 +3848,7 @@ Page Title Area Style
 }
 
 .bg-paris-2 {
-    background-image: url(../img/universities/paris_2.webp);
+    background-image: url(../img/universities/Paris2/paris_2_logo.webp);
     background-size: contain;
 }
 

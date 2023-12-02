@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',"معرفی دانشگاه پاریس 2 Pantheon Assas")
+@section('title',"معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 2 Pantheon Assas")
 @section('content')
 
     <div class="page-title-area bg-paris-2">
@@ -14,7 +14,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>دانشگاه پاریس ۲</li>
                 </ul>
             </div>
@@ -33,55 +33,18 @@
                             <ol id="board"></ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -92,8 +55,8 @@
                     <div class="single-services-text mb-80">
                         <h2>دانشگاه پاریس 2 Pantheon Assas</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/paris_2_university.jpg")}}"
-                                 alt="دانشگاه پاریس 2 Pantheon Assas">
+                            <img src="{{asset("assets/img/universities/Paris2/paris_2_university.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 2 Pantheon Assas">
                         </div>
                         <h3>تاسیس</h3>
                         <p>
@@ -104,9 +67,9 @@
 
                         <h3 class="mt-20">لوکیشن دانشگاه پاریس ۲</h3>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84014.38810690024!2d2.2731241!3d48.8496359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c57f3afe85%3A0x835685727d0a10a6!2sUniversit%C3%A9%20Paris%20Panth%C3%A9on-Assas!5e0!3m2!1sfr!2sfr!4v1690997716460!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84014.38810690024!2d2.2731241!3d48.8496359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c57f3afe85%3A0x835685727d0a10a6!2sUniversit%C3%A9%20Paris%20Panth%C3%A9on-Assas!5e0!3m2!1sfr!2sfr!4v1690997716460!5m2!1sfr!2sfr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <p class="mb-30">
                             اکثر 19 پردیس Panthéon-Assas در محله لاتین پاریس واقع شده‌اند و پردیس‌های اصلی در Place du
                             Panthéon و Rue d’Assas قرار دارند، از این رو نام کنونی آن گرفته شده است. این دانشگاه همچنین
@@ -119,8 +82,8 @@
                         </p>
 
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/paris_2_university_1.jpg")}}"
-                                 alt="دانشگاه پاریس 2 Pantheon Assas">
+                            <img src="{{asset("assets/img/universities/Paris2/paris_2_university_1.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 2 Pantheon Assas">
                         </div>
                         <h3>جمعیت دانشجویان</h3>
                         <p class="mb-30">
@@ -187,8 +150,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("../assets/img/paris_2.png")}}"
-                                             alt="دانشگاه پاریس 2 Pantheon Assas">
+                                        <img src="{{asset("../assets/img/universities/Paris2/paris_2_logo.webp")}}"
+                                             alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 2 Pantheon Assas">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
