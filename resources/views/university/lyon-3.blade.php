@@ -1,5 +1,7 @@
 @extends('layout')
 @section('title',"معرفی برترین دانشگاه های فرانسه | معرفی دانشگاه لیون ۳")
+@section("keywords","دانشگاه لیون ۳,دانشگاه ژان مولن لیون ۳,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های لیون,تحصیل در فرانسه,تحصیل در دانشگاه لیون ۳,بهترین دانشگاه های فرانسه,رتبه دانشگاه لیون ۳,رشته های دانشگاه لیون ۳,امکانات دانشگاه لیون ۳")
+@section("description","در این مقاله به معرفی دانشگاه لیون ۳، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه لیون ۳ در سال 1973 تاسیس شد و در حال حاضر بیش از 20000 دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم انسانی، علوم اجتماعی، حقوق و علوم سیاسی دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-lyon-3">
@@ -55,7 +57,8 @@
                     <div class="service-details-wrap">
                         <h2>دانشگاه لیون ۳</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/universities/Lyon3/lyon_3_university.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
+                            <img src="{{asset("assets/img/universities/Lyon3/lyon_3_university.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
                         </div>
                         <h3>تاسیس</h3>
                         <p>
@@ -92,7 +95,8 @@
                         کمک می‌کند.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/universities/Lyon3/lyon_3_university_1.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
+                            <img src="{{asset("assets/img/universities/Lyon3/lyon_3_university_1.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
                         </div>
                         <h3>مدارک مورد نیاز برای اخذ پذیرش در دانشگاه لیون ۳</h3>
                         <p class="mb-30">
@@ -137,7 +141,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/universities/Lyon3/lyon_3.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
+                                        <img src="{{asset("assets/img/universities/Lyon3/lyon_3.webp")}}"
+                                             alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
