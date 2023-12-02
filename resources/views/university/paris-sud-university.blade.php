@@ -34,55 +34,18 @@
                             <ol id="board"></ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -93,8 +56,8 @@
                     <div class="service-details-wrap">
                         <h2>دانشگاه پاریس سود SUD</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("../assets/img/paris_sud_university.jpg")}}"
-                                 alt="تصویر دانشگاه پاریس سود">
+                            <img src="{{asset("../assets/img/universities/Paris_Sud/paris_sud_university.webp")}}"
+                                 alt="برترین دانشگاه های پاریس | پاریس سود">
                         </div>
 
                         <h3>تاریخچه و تاسیس</h3>
@@ -125,7 +88,8 @@
                             و امکانات بهبود یافته را به دست دانشجویان و پژوهشگران خود برسانند.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/paris_sud_university_1.png")}}" alt="تصویر دانشگاه پاریس سود">
+                            <img src="{{asset("assets/img/universities/Paris_Sud/paris_sud_university_1.webp")}}"
+                                 alt="برترین دانشگاه های پاریس | پاریس سود">
                         </div>
                         <h3>جمعیت دانشجویان</h3>
                         <p class="mb-30">
@@ -145,7 +109,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/paris_sud.png")}}" alt="تصویر دانشگاه پاریس سود">
+                                        <img src="{{asset("assets/img/universities/Paris_Sud/paris_sud_logo.webp")}}"
+                                             alt="برترین دانشگاه های پاریس | پاریس سود">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">

@@ -7,16 +7,29 @@ use Twilio\Rest\Client;
 
 class ConsultController extends Controller
 {
-    public function submit(Request $request)
+    protected Client $client;
+
+    public function __construct(Client $client)
     {
+        $this->client = $client;
+    }
+
+    public function submit(Request $request): \Illuminate\Http\RedirectResponse
+    {
+        $validatedData = $request->validate([
+            'user_name' => 'required|string',
+            'user_email' => 'required|email',
+            'user_service' => 'required|string',
+            'user_details' => 'required|string',
+        ]);
         try {
             $client = new Client(env("TWILIO_SID"), env("TWILIO_AUTH_TOKEN"));
 
-            $userName = $request->input('user_name');
-            $userEmail = $request->input("user_email");
-            // $userPhoneNumber = $request->input('user_phone_number');
-            $userService = $request->input("user_service");
-            $userDetails = $request->input("user_details");
+            $userName = $validatedData['user_name'];
+            $userEmail = $validatedData['user_email'];
+            $userService = $validatedData['user_service'];
+            $userDetails = $validatedData['user_details'];
+
             $userPhoneNumber = "+33744140840";
 
             $yourPhoneNumber = "+33744140840";
@@ -24,17 +37,17 @@ class ConsultController extends Controller
             $this->sendWhatsAppMessage($client, $userPhoneNumber, "با سلام $userName \n درخواست $userService شما با موفقیت ثبت شد!\n تیم مشاورین ما به زودی با شماره واتساپ شما($userPhoneNumber)تماس برقرار خواهند کرد!\n استراس گروپ ");
             $this->sendWhatsAppMessage($client, $yourPhoneNumber, "درخواست $userService با موفقیت ثبت شد. \n نام متقضی: $userName \n ایمیل متقضی: $userEmail \n شماره تلفن متقضی: $userPhoneNumber \n  توضیحات : $userDetails");
 
-            return redirect("/");
+            return redirect(route('home'));
         } catch (\Exception $e) {
-            return redirect("/consult");
+            return redirect(route('consult'));
 
         }
     }
 
-    private function sendWhatsAppMessage(Client $client, $to, $message)
+    private function sendWhatsAppMessage($to, $message): void
     {
         $from = "whatsapp:" . env("TWILIO_PHONE_NUMBER");
-        $client->messages->create("whatsapp:$to", [
+        $this->client->messages->create("whatsapp:$to", [
             'from' => $from,
             'body' => $message,
         ]);
