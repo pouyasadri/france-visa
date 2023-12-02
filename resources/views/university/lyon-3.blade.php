@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',"معرفی دانشگاه لیون ۳")
+@section('title',"معرفی برترین دانشگاه های فرانسه | معرفی دانشگاه لیون ۳")
 @section('content')
 
     <div class="page-title-area bg-lyon-3">
@@ -14,7 +14,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>دانشگاه لیون ۳</li>
                 </ul>
             </div>
@@ -33,55 +33,18 @@
                             <ol id="board"></ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -92,7 +55,7 @@
                     <div class="service-details-wrap">
                         <h2>دانشگاه لیون ۳</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/lyon_3_university.jpg")}}" alt="دانشگاه لیون ۳">
+                            <img src="{{asset("assets/img/universities/Lyon3/lyon_3_university.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
                         </div>
                         <h3>تاسیس</h3>
                         <p>
@@ -129,7 +92,7 @@
                         کمک می‌کند.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/lyon_3_university_1.webp")}}" alt="دانشگاه لیون ۳">
+                            <img src="{{asset("assets/img/universities/Lyon3/lyon_3_university_1.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
                         </div>
                         <h3>مدارک مورد نیاز برای اخذ پذیرش در دانشگاه لیون ۳</h3>
                         <p class="mb-30">
@@ -174,7 +137,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/lyon_3.webp")}}" alt="دانشگاه لیون ۳">
+                                        <img src="{{asset("assets/img/universities/Lyon3/lyon_3.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۳">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -193,7 +156,60 @@
                         <div class="ask-question">
                             <h3>سوال بپرس</h3>
                             <form id="contactForm">
-                                <!-- Form fields go here -->
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" id="name" class="form-control" required
+                                                   data-error="نام خود را وارد کنید" placeholder="نام شما">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" class="form-control" required
+                                                   data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" name="phone_number" id="phone_number" required
+                                                   data-error="تلفن خود را وارد کنید" class="form-control"
+                                                   placeholder="تلفن شما">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                                                   required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5"
+                                                  required data-error="پیام خود را وارد کنید"
+                                                  placeholder="پیام شما"></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn btn-two">
+												<span class="label">
+													ارسال پیام
+													<i class="flaticon-left-arrow"></i>
+												</span>
+                                        </button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>

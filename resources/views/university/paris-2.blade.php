@@ -1,5 +1,7 @@
 @extends('layout')
 @section('title',"معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 2 Pantheon Assas")
+@section("keywords","دانشگاه پاریس 2,دانشگاه پانتئون آساس,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های پاریس,تحصیل در فرانسه,تحصیل در دانشگاه پاریس 2,بهترین دانشگاه های فرانسه,رتبه دانشگاه پاریس 2,رشته های دانشگاه پاریس 2,امکانات دانشگاه پاریس 2")
+@section("description","در این مقاله به معرفی دانشگاه پاریس 2 پانتئون آساس، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه پاریس 2 در سال 1970 تاسیس شد و در حال حاضر بیش از 20000 دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های حقوق، علوم سیاسی، اقتصاد و مدیریت دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-paris-2">
@@ -67,9 +69,9 @@
 
                         <h3 class="mt-20">لوکیشن دانشگاه پاریس ۲</h3>
                         <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84014.38810690024!2d2.2731241!3d48.8496359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c57f3afe85%3A0x835685727d0a10a6!2sUniversit%C3%A9%20Paris%20Panth%C3%A9on-Assas!5e0!3m2!1sfr!2sfr!4v1690997716460!5m2!1sfr!2sfr"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84014.38810690024!2d2.2731241!3d48.8496359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c57f3afe85%3A0x835685727d0a10a6!2sUniversit%C3%A9%20Paris%20Panth%C3%A9on-Assas!5e0!3m2!1sfr!2sfr!4v1690997716460!5m2!1sfr!2sfr"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <p class="mb-30">
                             اکثر 19 پردیس Panthéon-Assas در محله لاتین پاریس واقع شده‌اند و پردیس‌های اصلی در Place du
                             Panthéon و Rue d’Assas قرار دارند، از این رو نام کنونی آن گرفته شده است. این دانشگاه همچنین
