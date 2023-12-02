@@ -3260,7 +3260,7 @@ Exclusive Area Two Style
 }
 
 .exclusive-area-two .exclusive-img.bg-11 {
-    background-image: url(../img/universities/lyon_1.webp);
+    background-image: url(../img/universities/Lyon1/lyon_1_logo.webp);
     background-size: contain;
 
 }
@@ -3863,7 +3863,7 @@ Page Title Area Style
 }
 
 .bg-lyon-1 {
-    background-image: url(../img/universities/lyon_1.webp);
+    background-image: url(../img/universities/Lyon1/lyon_1_logo.webp);
     background-size: contain;
 }
 

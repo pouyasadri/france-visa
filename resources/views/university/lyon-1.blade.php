@@ -1,5 +1,7 @@
 @extends('layout')
-@section('title',"معرفی دانشگاه لیون ۱")
+@section('title',"معرفی برترین دانشگاه های فرانسه | معرفی دانشگاه لیون ۱")
+@section("keywords","دانشگاه لیون ۱,دانشگاه کلود برنارد لیون ۱,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های لیون,تحصیل در فرانسه,تحصیل در دانشگاه لیون ۱,بهترین دانشگاه های فرانسه,رتبه دانشگاه لیون ۱,رشته های دانشگاه لیون ۱,امکانات دانشگاه لیون ۱")
+@section("description","در این مقاله به معرفی دانشگاه لیون ۱، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه لیون ۱ در سال ۱۸۷۴ تاسیس شد و در حال حاضر بیش از ۴۷۰۰۰ دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-lyon-1">
@@ -14,7 +16,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>دانشگاه لیون ۱</li>
                 </ul>
             </div>
@@ -35,55 +37,18 @@
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -95,7 +60,8 @@
 
                         <h2>دانشگاه لیون ۱</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/lyon_1_university.webp")}}" alt="دانشگاه لیون ۱">
+                            <img src="{{asset("assets/img/universities/Lyon1/lyon_1_university.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۱">
                         </div>
                         <h3>تاریخچه تأسیس</h3>
                         <p>دانشگاه لیون ۱ که پیشتر دانشکده پزشکی لیون بود، در تاریخ ۸ نوامبر ۱۸۷۴ تأسیس شد. این دانشگاه
@@ -136,6 +102,10 @@
                             جایگاه ۱۶۲
                             جهانی قرار دارد.
                         </p>
+                        <div class="single-services-imgs mb-30">
+                            <img src="{{asset("assets/img/universities/Lyon1/lyon_1_university_1.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۱">
+                        </div>
                         <h3>هزینه تحصیل و شهریه</h3>
                         <p class="mb-30">
                             شهریه دانشگاه برای دانشجویان خارجی در دانشگاه لیون ۱ به تساوی شهروندان فرانسوی است. کل هزینه
@@ -159,7 +129,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/lyon_1.png")}}" alt="دانشگاه لیون ۱">
+                                        <img src="{{asset("assets/img/universities/Lyon1/lyon_1_logo.webp")}}"
+                                             alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۱">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
