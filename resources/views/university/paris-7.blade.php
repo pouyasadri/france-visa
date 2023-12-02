@@ -1,5 +1,7 @@
 @extends('layout')
-@section('title',"معرفی دانشگاه پاریس ۷")
+@section('title',"معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس ۷")
+@section("keywords","دانشگاه پاریس ۷,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های پاریس,تحصیل در فرانسه,تحصیل در دانشگاه پاریس ۷,بهترین دانشگاه های فرانسه,رتبه دانشگاه پاریس ۷,رشته های دانشگاه پاریس ۷,امکانات دانشگاه پاریس ۷")
+@section("description","در این مقاله به معرفی دانشگاه پاریس ۷، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه پاریس ۷ در سال ۱۹۷۱ تاسیس شد و در حال حاضر بیش از ۶۴۰۰۰ دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-paris-7">
@@ -14,7 +16,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>دانشگاه پاریس ۷</li>
                 </ul>
             </div>
@@ -33,55 +35,18 @@
                             <ol id="board"></ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -92,7 +57,7 @@
                     <div class="service-details-wrap">
                         <h2>دانشگاه پاریس 7: مرکز آموزشی برجسته</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/paris_7_university.jpg")}}" alt="دانشگاه پاریس 7">
+                            <img src="{{asset("assets/img/universities/Paris7/paris_7_university.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 7">
                         </div>
                         <h3>تأسیس و تاریخچه</h3>
                         <p>
@@ -109,9 +74,9 @@
 
                         <h3 class="mt-20">مکان دانشگاه پاریس 7</h3>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d42005.045959652336!2d2.3013979!3d48.8521963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc5ddba625d%3A0xe458ef3406693a9a!2sUniversit%C3%A9%20Paris%20Diderot%20Paris%207!5e0!3m2!1sfr!2sfr!4v1690993265823!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d42005.045959652336!2d2.3013979!3d48.8521963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc5ddba625d%3A0xe458ef3406693a9a!2sUniversit%C3%A9%20Paris%20Diderot%20Paris%207!5e0!3m2!1sfr!2sfr!4v1690993265823!5m2!1sfr!2sfr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <p class="mb-30">
                             مکان دانشگاه پاریس 7 در خیابان 12 rue de l’École de Médecine (منطقه 6 پاریس) واقع شده است.
                             این موقعیت در نزدیکی ساحل رودخانهٔ سن قرار گرفته و فاصله کمی از شهر دیجون دارد. دسترسی به
@@ -127,7 +92,7 @@
                             در رتبه‌بندی QS برای سال 2023، در جایگاه 248 قرار دارد.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/paris_7_university.jpg")}}" alt="دانشگاه پاریس 7">
+                            <img src="{{asset("assets/img/universities/Paris7?paris_7_university_1.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 7">
                         </div>
                         <h3>جمعیت دانشجویان</h3>
                         <p class="mb-30">
@@ -205,7 +170,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/paris_7.png")}}" alt="دانشگاه پاریس 7">
+                                        <img src="{{asset("assets/img/universities/Paris7/paris_7_logo.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس 7">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
