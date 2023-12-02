@@ -1,5 +1,7 @@
 @extends('layout')
 @section('title',"معرفی دانشگاه پاریس ۴ - سوربن")
+@section("keywords","دانشگاه پاریس ۴,دانشگاه سوربن,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های پاریس,تحصیل در فرانسه,تحصیل در دانشگاه پاریس ۴,بهترین دانشگاه های فرانسه,رتبه دانشگاه پاریس ۴,رشته های دانشگاه پاریس ۴,امکانات دانشگاه پاریس ۴")
+@section("description","در این مقاله به معرفی دانشگاه پاریس ۴ - سوربن، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه پاریس ۴ در سال ۱۲۵۳ تاسیس شد و یکی از قدیمی ترین دانشگاه های جهان است. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-paris-4">
@@ -14,7 +16,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>دانشگاه پاریس ۴</li>
                 </ul>
             </div>
@@ -33,55 +35,18 @@
                             <ol id="board"></ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -92,7 +57,8 @@
                     <div class="service-details-wrap">
                         <h2>دانشگاه پاریس ۴ - سوربن</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/paris_4_university.jpg")}}" alt="دانشگاه پاریس ۴ - سوربن">
+                            <img src="{{asset("assets/img/universities/Paris4/paris_4_university.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس ۴ - سوربن">
                         </div>
                         <h3>تأسیس</h3>
                         <p>
@@ -121,7 +87,8 @@
                         </p>
 
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/paris_4_university_1.jpg")}}" alt="دانشگاه پاریس ۴ - سوربن">
+                            <img src="{{asset("assets/img/universities/Paris4/paris_4_university_1.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس ۴ - سوربن">
                         </div>
 
                         <h3>تعداد دانشجویان</h3>
@@ -177,7 +144,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/surbon.jpg")}}" alt="دانشگاه پاریس ۴ - سوربن">
+                                        <img src="{{asset("assets/img/universities/Paris4/surbon_logo.webp")}}"
+                                             alt="معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس ۴ - سوربن">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
