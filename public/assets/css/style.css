@@ -3236,7 +3236,7 @@ Exclusive Area Two Style
 }
 
 .exclusive-area-two .exclusive-img.bg-7 {
-    background-image: url(../img/universities/paris_3.jpg);
+    background-image: url(../img/universities/Paris3/paris_3_logo.webp);
     background-size: contain;
 
 }
@@ -3843,7 +3843,7 @@ Page Title Area Style
 }
 
 .bg-paris-3 {
-    background-image: url(../img/universities/paris_3.webp);
+    background-image: url(../img/universities/Paris3/paris_3_logo.webp);
     background-size: contain;
 }
 
