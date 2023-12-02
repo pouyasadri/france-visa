@@ -1,7 +1,9 @@
 @extends('layout')
 @section('title',"
-معرفی دانشگاه پاریس سود
+معرفی برترین دانشگاه های فرانسه | دانشگاه پاریس سود
 ")
+@section('keywords',"دانشگاه پاریس سود, دانشگاه های برتر فرانسه , دانشگاه های فرانسه ,دانشگاه های پاریس ,تحصیل در فرانسه ,تحصیل در دانشگاه پاریس سود,بهترین دانشگاه های فرانسه,رتبه دانشگاه پاریس سود,رشته های دانشگاه پاریس سود,امکانات دانشگاه پاریس سود")\
+@section('description',"در این مقاله به معرفی دانشگاه پاریس سود، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه پاریس سود در سال 1971 تاسیس شد و در حال حاضر بیش از 10000 دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
 @section('content')
     <div class="page-title-area bg-paris-sud">
         <div class="container">
@@ -15,7 +17,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>دانشگاه پاریس سود</li>
                 </ul>
             </div>
@@ -69,9 +71,9 @@
                             پاریس-ساکلی است، به ارتقا و ارائه دانش برتر مشغول به کار هستند.</p>
 
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10532.85897962028!2d2.1478373!3d48.7013763!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67fdbd65f8b35%3A0x99bf9ed96d86b4c0!2sUniversit%C3%A9%20Paris-Saclay!5e0!3m2!1sfr!2sfr!4v1690985486852!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10532.85897962028!2d2.1478373!3d48.7013763!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67fdbd65f8b35%3A0x99bf9ed96d86b4c0!2sUniversit%C3%A9%20Paris-Saclay!5e0!3m2!1sfr!2sfr!4v1690985486852!5m2!1sfr!2sfr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <h3>موقعیت جغرافیایی دانشگاه پاریس سود SUD</h3>
                         <p class="mb-30">این مؤسسه آموزش عالی در مناطق متنوعی از شهر پاریس و حومه‌های آن فعالیت می‌کند؛
                             شهرهایی چون
