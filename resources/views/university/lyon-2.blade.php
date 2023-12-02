@@ -1,5 +1,7 @@
 @extends('layout')
-@section('title',"معرفی دانشگاه لیون ۲")
+@section('title',"معرفی برترین دانشگاه های فرانسه | معرفی دانشگاه لیون ۲")
+@section("keywords","دانشگاه لیون ۲,دانشگاه فرانسوا رابله لیون ۲,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های لیون,تحصیل در فرانسه,تحصیل در دانشگاه لیون ۲,بهترین دانشگاه های فرانسه,رتبه دانشگاه لیون ۲,رشته های دانشگاه لیون ۲,امکانات دانشگاه لیون ۲")
+@section("description","در این مقاله به معرفی دانشگاه لیون ۲، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه لیون ۲ در سال ۱۹۷۱ تاسیس شد و در حال حاضر بیش از ۲۰۰۰۰ دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-lyon-2">
@@ -14,7 +16,8 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
+
                     <li>دانشگاه لیون ۲</li>
                 </ul>
             </div>
@@ -35,55 +38,18 @@
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -94,7 +60,8 @@
                     <div class="service-details-wrap">
                         <h2>دانشگاه لیون ۲</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/lyon_2_university.jpg")}}" alt="دانشگاه لیون ۲">
+                            <img src="{{asset("assets/img/universities/Lyon2/lyon_2_university.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۲">
                         </div>
                         <h3>تاریخچه تأسیس</h3>
                         <p>در سال ۱۹۸۷، دانشگاه لومیر لیون ۲ با تغییر نام از دانشگاه لیون ۲ شروع به کار کرد. این نام و
@@ -130,7 +97,8 @@
                             زمینه‌های علوم
                             اجتماعی و علوم کامپیوتر را در فرانسه بر عهده دارد.</p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/lyon_2_university_1.webp")}}" alt="دانشگاه لیون ۲">
+                            <img src="{{asset("assets/img/universities/Lyon2/lyon_2_university_1.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۲">
                         </div>
                         <h3>رتبه جهانی</h3>
                         <p class="mb-30">بر اساس رتبه‌بندی QS در سال 2023، دانشگاه لومیر لیون ۲ در بازه 1001-1200
@@ -188,7 +156,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/lyon_2.webp")}}" alt="دانشگاه لیون ۲">
+                                        <img src="{{asset("assets/img/universities/Lyon2/lyon_2_logo.webp")}}"
+                                             alt="معرفی برترین دانشگاه های فرانسه | دانشگاه لیون ۲">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
