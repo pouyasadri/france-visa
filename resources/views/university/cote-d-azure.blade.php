@@ -1,5 +1,7 @@
 @extends('layout')
-@section('title',"معرفی دانشگاه نیس")
+@section('title',"معرفی برترین دانشگاه های فرانسه | معرفی دانشگاه نیس")
+@section("keywords","دانشگاه نیس,دانشگاه Côte d'Azur,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های نیس,تحصیل در فرانسه,تحصیل در دانشگاه نیس,بهترین دانشگاه های فرانسه,رتبه دانشگاه نیس,رشته های دانشگاه نیس,امکانات دانشگاه نیس")
+@section("description","در این مقاله به معرفی دانشگاه نیس، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه نیس در سال ۱۹۶۵ تاسیس شد و در حال حاضر بیش از ۳۰۰۰۰۰ دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-nice">
@@ -14,7 +16,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>دانشگاه نیس</li>
                 </ul>
             </div>
@@ -34,55 +36,18 @@
                         </div>
 
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -93,7 +58,8 @@
                     <div class="service-details-wrap">
                         <h2>دانشگاه نیس: فرصت‌های یادگیری در دانشگاه Cote d'Azur</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/nice_university.jpg")}}" alt="دانشگاه نیس">
+                            <img src="{{asset("assets/img/universities/Nice/nice_university.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه نیس">
                         </div>
                         <h3>تاریخچه و تأسیس</h3>
                         <p class="mb-30">دانشگاه نیس، به عنوان Université de Nice در سال 1639 تأسیس شد. این دانشگاه سنتی
@@ -116,6 +82,10 @@
                         <h3>وضعیت دانشگاه نیس</h3>
                         <p class="mb-30">دانشگاه نیس به عنوان یک دانشگاه دولتی معتبر در نیس، فرانسه شناخته می‌شود.
                         </p>
+                        <div class="single-services-imgs mb-30">
+                            <img src="{{asset("assets/img/universities/Nice/nice_university_1.webp")}}"
+                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه نیس">
+                        </div>
                         <!-- ... ویژگی‌ها، مزایا و اطلاعات بیشتر درباره دانشگاه نیس ... -->
                         <h3>رشته‌ها و دپارتمان‌ها</h3>
                         <p class="mb-30">
@@ -146,7 +116,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
-                                        <img src="{{asset("assets/img/nice.png")}}" alt="دانشگاه نیس">
+                                        <img src="{{asset("assets/img/universities/Nice/nice_logo.webp")}}"
+                                             alt="معرفی برترین دانشگاه های فرانسه | دانشگاه نیس">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
