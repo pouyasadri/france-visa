@@ -3266,7 +3266,7 @@ Exclusive Area Two Style
 }
 
 .exclusive-area-two .exclusive-img.bg-12 {
-    background-image: url(../img/universities/pantheon.png);
+    background-image: url(../img/universities/Sorbonne/pantheon_logo.webp);
     background-size: contain;
 
 }
@@ -3868,7 +3868,7 @@ Page Title Area Style
 }
 
 .bg-pantheon {
-    background-image: url(../img/universities/pantheon.webp);
+    background-image: url(../img/universities/Sorbonne/pantheon_logo.webp);
     background-size: auto;
 }
 
