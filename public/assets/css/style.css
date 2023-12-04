@@ -3278,7 +3278,7 @@ Exclusive Area Two Style
 }
 
 .exclusive-area-two .exclusive-img.bg-14 {
-    background-image: url(../img/universities/toulouse.png);
+    background-image: url(../img/universities/Toulouse/toulouse_logo.webp);
     background-size: contain;
 
 }
@@ -3878,7 +3878,7 @@ Page Title Area Style
 }
 
 .bg-toulouse {
-    background-image: url(../img/universities/toulouse.webp);
+    background-image: url(../img/universities/Toulouse/toulouse_logo.webp);
     background-size: contain;
 }
 
