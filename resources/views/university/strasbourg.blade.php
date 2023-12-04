@@ -1,6 +1,7 @@
 @extends('layout')
-@section('title',"
-معرفی دانشگاه استراسبورگ")
+@section('title',"معرفی برترین دانشگاه های فرانسه | معرفی دانشگاه استراسبورگ")
+@section("keywords","دانشگاه استراسبورگ,دانشگاه اروپایی استراسبورگ,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های استراسبورگ,تحصیل در فرانسه,تحصیل در دانشگاه استراسبورگ,بهترین دانشگاه های فرانسه,رتبه دانشگاه استراسبورگ,رشته های دانشگاه استراسبورگ,امکانات دانشگاه استراسبورگ")
+@section("description","در این مقاله به معرفی دانشگاه استراسبورگ، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه استراسبورگ در سال ۱۵۳۸ تاسیس شد و در حال حاضر بیش از ۵۵۰۰۰ دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
 @section('content')
 
     <div class="page-title-area bg-strasbourg">
@@ -17,7 +18,7 @@
                     </li>
                     <li>
                         <a href="/universities">
-                            دانشگاه ها</a></li>
+                            برترین دانشگاه ها فرانسه</a></li>
                     <li>
                         دانشگاه استراسبورگ
                     </li>
@@ -40,27 +41,19 @@
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
                                     </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
                                 </li>
                             </ul>
                         </div>
@@ -73,7 +66,7 @@
                         دانشگاه استراسبورگ
                     </h2>
                     <div class="single-services-imgs mb-30">
-                        <img src="{{asset("assets/img/strasbourg_university.jpg")}}" alt="تصویر دانشگاه استراسبورگ">
+                        <img src="{{asset("assets/img/universities/Strasbourg/strasbourg_university.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | تصویر دانشگاه استراسبورگ">
                     </div>
                     <h3>تاریخچه و تأسیس</h3>
                     <p>
@@ -119,7 +112,7 @@
                         بیش از ۱۰،۰۰۰ دانشگاه جهان قرار دارد.
                     </p>
                     <div class="rooms-details mb-30">
-                        <img src="{{asset("assets/img/strasbourg_university_1.jpg")}}" alt="تصویر دانشگاه استراسبورگ">
+                        <img src="{{asset("assets/img/universities/Strasbourg/strasbourg_university_1.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه استراسبورگ">
                     </div>
                     <h3>رتبه‌بندی کشوری دانشگاه استراسبورگ</h3>
                     <p>
@@ -198,7 +191,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6">
                                 <div class="service-list-img">
-                                    <img src="{{asset("assets/img/strasbourg.png")}}" alt="دانشگاه استراسبورگ">
+                                    <img src="{{asset("assets/img/universities/Strasbourg/strasbourg_logo.webp")}}" alt="معرفی برترین دانشگاه های فرانسه | دانشگاه استراسبورگ">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">

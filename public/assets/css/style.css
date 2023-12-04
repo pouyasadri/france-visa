@@ -3284,7 +3284,7 @@ Exclusive Area Two Style
 }
 
 .exclusive-area-two .exclusive-img.bg-15 {
-    background-image: url(../img/universities/strasbourg.png);
+    background-image: url(../img/universities/Strasbourg/strasbourg_logo.webp);
     background-size: contain;
 
 }
@@ -3883,7 +3883,7 @@ Page Title Area Style
 }
 
 .bg-strasbourg {
-    background-image: url(../img/universities/strasbourg.webp);
+    background-image: url(../img/universities/Strasbourg/strasbourg_logo.webp);
     background-size: auto;
 }
 
