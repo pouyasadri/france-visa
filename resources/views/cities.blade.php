@@ -62,7 +62,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/cities/Lyon/lyon.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Lyon/lyon.webp")}}" style="height: 350px"
                                  alt="زیباترین و پربازدیدترین شهرهای فرانسه |معرفی شهر لیون">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر لیون</h3>
@@ -94,7 +94,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/cities/Nice/nice1.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Nice/nice1.webp")}}" style="height: 350px"
                                  alt="زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر نیس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر نیس</h3>

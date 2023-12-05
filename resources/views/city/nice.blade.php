@@ -65,7 +65,8 @@
 
                         <h2>شهر نیس ،به تماشای آب‌های سپید</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/nice.jpg")}}" alt="شهر نیس">
+                            <img src="{{asset("assets/img/nice.jpg")}}"
+                                 alt=" زیباترین و پربازدیدترین شهرهای فرانسه | شهر نیس">
                         </div>
                         <p class="mb-30">
 
@@ -159,7 +160,8 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/nice1.jpg")}}" alt="شهر نیس">
+                            <img src="{{asset("assets/img/cities/Nice/nice1.webp")}}"
+                                 alt=" زیباترین و پربازدیدترین شهرهای فرانسه | شهر نیس">
                         </div>
                         <h3>زبان مردم نیس</h3>
                         <p class="mb-30">

@@ -66,7 +66,7 @@
 
                         <h2>شهر لیون</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/lyon1.jpg")}}" alt="شهر لیون">
+                            <img src="{{asset("assets/img/cities/Lyon/lyon1.webp")}}" alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر لیون">
                         </div>
                         <p class="mb-30">
 
@@ -139,7 +139,7 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/lyon.jpg")}}" alt="شهر لیون">
+                            <img src="{{asset("assets/img/cities/Lyon/lyon.webp")}}" alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر لیون">
                         </div>
                         <h3>اقتصاد شهر لیون</h3>
                         <p class="mb-30">
@@ -173,6 +173,9 @@
                             دهند. برای اقامت بیش از ۹۰ روز، ویزای طولانی مدت مورد نیاز است.
 
                         </p>
+                        <div class="rooms-details mb-30">
+                            <img src="{{asset("assets/img/cities/Lyon/lyon2.webp")}}" alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر لیون">
+                        </div>
                         <h3>
                             زندگی در لیون فرانسه
                         </h3>
