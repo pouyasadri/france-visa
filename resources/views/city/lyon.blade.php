@@ -1,7 +1,7 @@
 @extends('layout')
-@section('title',"
-شهر لیون
-")
+@section('title',"لیون: پایتخت فرهنگی فرانسه")
+@section("keywords","لیون,شهر لیون,جاذبه های گردشگری لیون,تاریخچه لیون,فرهنگ لیون,لیون فرهنگی,لیون تاریخی,لیون هنری,مهاجرت به لیون")
+@section("description","لیون، دومین شهر بزرگ فرانسه، شهری تاریخی و فرهنگی است که به دلیل جاذبه های گردشگری متعدد و فرهنگ غنی خود شناخته شده است. در این صفحه، شما را به سفری به لیون می بریم تا با تاریخچه، فرهنگ، و جاذبه های گردشگری این شهر زیبا آشنا شوید.")
 @section('content')
 
     <div class="page-title-area">
@@ -16,9 +16,10 @@
                             صفحه اصلی
                         </a>
                     </li>
-                    <li>
-                        <a href="/cities">
-                            شهر های فرانسه</a></li>
+                    <li><a href="/cities">
+                            زیباترین و پربازدیدترین شهرهای فرانسه
+
+                        </a></li>
                     <li>
                         شهر لیون
                     </li>
@@ -112,9 +113,9 @@
                             به لیون یا مهاجرت به فرانسه را دارید؛ در این مطلب با ما همراه باشید.
                         </p>
                         <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178167.27644170693!2d4.8262037!3d45.7538785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178167.27644170693!2d4.8262037!3d45.7538785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <h3>
                             تاریخچه شهر لیون
                         </h3>
