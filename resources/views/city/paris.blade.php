@@ -1,6 +1,7 @@
 @extends('layout')
-@section('title',"
-شهر پاریس")
+@section('title',"پاریس: شهر عشق، نور، و هنر")
+@section("keywords","پاریس,شهر پاریس,جاذبه های گردشگری پاریس,تاریخچه پاریس,فرهنگ پاریس,پاریس عاشقانه,پاریس هنری,پاریس نورانی,مهاجرت به پاریس")
+@section("description","پاریس، پایتخت مجذوب کننده فرانسه، شهری است که هر قلبی را به خود جلب می کند. در این صفحه، شما را به سفری دلپذیر به پاریس می بریم تا با تاریخچه، فرهنگ، و جاذبه های گردشگری این شهر افسانه ای آشنا شوید.")
 @section('content')
 
     <div class="page-title-area">
@@ -13,9 +14,10 @@
                             صفحه اصلی
                         </a>
                     </li>
-                    <li>
-                        <a href="/cities">
-                            شهر های فرانسه</a></li>
+                    <li><a href="/cities">
+                            زیباترین و پربازدیدترین شهرهای فرانسه
+
+                        </a></li>
                     <li>شهر پاریس</li>
                 </ul>
             </div>
@@ -36,59 +38,23 @@
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
                                     </a>
                                 </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
                             </ul>
                         </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -106,9 +72,9 @@
                             قرار است.
                         </p>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d168015.65294043656!2d2.3236891!3d48.8535464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1691021825212!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d168015.65294043656!2d2.3236891!3d48.8535464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1691021825212!5m2!1sfr!2sfr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <h3>آب و هوای شهر پاریس</h3>
                         <p class="mb-30">پاریس در چهار فصل سال آب و هوای معتدلی را تجربه می‌کند. میانگین حداکثر روزانه
                             از ۶ درجه سانتیگراد در زمستان تا ۲۵ درجه سانتیگراد در اوج تابستان متغیر است. بنابراین، سرما

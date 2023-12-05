@@ -1,18 +1,20 @@
 @extends('layout')
-@section('title',"معرفی شهرهای فرانسه")
+@section('title',"زیباترین و پربازدیدترین شهرهای فرانسه")
+@section("keywords","شهرهای فرانسه,شهرهای محبوب فرانسه,پاریس,لیون,نیس,تولوز,استراسبورگ,مهاجرت به فرانسه,مناسب ترین شهر های فرانسه برای زندگی,مهاجرت به اروپا,مهاجرت تحصیلی,اقامت فرانسه,زندگی دانشجویی در اروپا")
+@section("description","در این صفحه به معرفی زیباترین و پربازدیدترین شهرهای فرانسه می پردازیم. این شهرها جاذبه های گردشگری فراوانی دارند و سالانه میلیون ها گردشگر از سراسر جهان از آنها بازدید می کنند.")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>معرفی شهرهای فرانسه</h2>
+                <h2>معرفی زیباترین و پربازدیدترین شهرهای فرانسه</h2>
                 <ul>
                     <li>
                         <a href="{{ route('index') }}">
                             صفحه اصلی
                         </a>
                     </li>
-                    <li>معرفی شهرهای فرانسه</li>
+                    <li>زیباترین و پربازدیدترین شهرهای فرانسه</li>
                 </ul>
             </div>
         </div>
@@ -45,7 +47,7 @@
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
                             <img src="{{asset("assets/img/cities/Paris/paris-slider.webp")}}" style="height: 350px"
-                                 alt="مهاجرت به فرانسه |معرفی شهر پاریس">
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه |معرفی شهر پاریس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر پاریس</h3>
                                 <span class="price">شرایط و هزینه های زندگی در شهر پاریس </span>
@@ -61,7 +63,7 @@
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
                             <img src="{{asset("assets/img/cities/Lyon/lyon.jpg")}}" style="height: 350px"
-                                 alt="مهاجرت به فرانسه |معرفی شهر لیون">
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه |معرفی شهر لیون">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر لیون</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر لیون</span>
@@ -77,7 +79,7 @@
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
                             <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.jpg")}}" style="height: 350px"
-                                 alt="معرفی شهر استراسبورگ">
+                                 alt=" زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر استراسبورگ">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر استراسبورگ</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر استراسبورگ</span>
@@ -92,7 +94,8 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/cities/Nice/nice1.jpg")}}" style="height: 350px" alt="معرفی شهر نیس">
+                            <img src="{{asset("assets/img/cities/Nice/nice1.jpg")}}" style="height: 350px"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر نیس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر نیس</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر نیس</span>
@@ -107,7 +110,8 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/toulouse.jpg")}}" style="height: 350px" alt="معرفی شهر تولوز">
+                            <img src="{{asset("assets/img/toulouse.jpg")}}" style="height: 350px"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر تولوز">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر تولوز</h3>
                                 <span class="price"> شرایط و هزینه های زندگی در شهر تولوز</span>
