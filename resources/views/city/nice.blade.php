@@ -1,5 +1,10 @@
 @extends('layout')
-@section('title',"شهر نیس")
+@section('title',"نیس: شهری زیبا و ساحلی در جنوب فرانسه")
+@section("keywords","نیس,شهر نیس,جاذبه های گردشگری نیس,تاریخچه نیس,فرهنگ نیس,نیس ساحلی,نیس زیبا,نیس فرانسه,")
+@section("description",'نیس، شهری در جنوب فرانسه، شهری زیبا و ساحلی است که به دلیل آب و هوای مدیترانه ای معتدل خود، به عنوان "پاریس ساحلی" شناخته می شود. این شهر دارای سواحل شنی زیبا، آب های آبی کریستالی، و آب و هوایی گرم و آفتابی است.
+
+در این صفحه، شما را به سفری به نیس می بریم تا با تاریخچه، فرهنگ، و جاذبه های گردشگری این شهر زیبا آشنا شوید.
+')
 @section('content')
 
     <div class="page-title-area">
@@ -12,9 +17,10 @@
                             صفحه اصلی
                         </a>
                     </li>
-                    <li>
-                        <a href="/cities">
-                            شهر های فرانسه</a></li>
+                    <li><a href="/cities">
+                            زیباترین و پربازدیدترین شهرهای فرانسه
+
+                        </a></li>
                     <li>شهر نیس</li>
                 </ul>
             </div>
@@ -24,7 +30,7 @@
 
     <!-- End Service Details Area -->
     <section class="service-details-area ptb-100">
-        <div class="container"  id="mydiv">
+        <div class="container" id="mydiv">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
@@ -35,55 +41,18 @@
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -158,20 +127,20 @@
 
                             همچنین به طور کلی نیس شهر امنی است، و به طور کلی نرخ نسبتاً پایینی از جنایات خشونت آمیز
                             دارد. بهترین کارهایی که در شب در نیس انجام می‌شود:
-                            <ul style="list-style: inside">
-                                <li>
-                                    از منطقه هزار‌گنج دیدن کنید
-                                </li>
-                                <li>
-                                    به قلعه‌های تاریخی بروید
-                                </li>
-                                <li>
-                                    در هتل‌ها نوشیدنی بگیرید
-                                </li>
-                                <li>
-                                    به مهمانی‌های گروهی بروید
-                                </li>
-                            </ul>
+                        <ul style="list-style: inside">
+                            <li>
+                                از منطقه هزار‌گنج دیدن کنید
+                            </li>
+                            <li>
+                                به قلعه‌های تاریخی بروید
+                            </li>
+                            <li>
+                                در هتل‌ها نوشیدنی بگیرید
+                            </li>
+                            <li>
+                                به مهمانی‌های گروهی بروید
+                            </li>
+                        </ul>
                         </p>
                         <h3>آب و هوا در نیس</h3>
                         <p class="mb-30">
