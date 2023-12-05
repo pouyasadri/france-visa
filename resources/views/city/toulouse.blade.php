@@ -65,7 +65,8 @@
 
                         <h2>شهر تولوز (شهر ایرباس)</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/toulouse1.jpg")}}" alt="شهر تولوز">
+                            <img src="{{asset("assets/img/cities/Toulouse/toulouse1.webp")}}"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر تولوز">
                         </div>
                         <p class="mb-30">
 
@@ -136,7 +137,8 @@
                         </ul>
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/toulouse2.jpg")}}" alt="شهر تولوز">
+                            <img src="{{asset("assets/img/cities/Toulouse/toulouse2.webp")}}"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر تولوز">
                         </div>
                         <h3>هزینه های زندگی</h3>
                         <p class="mb-30">
@@ -252,7 +254,7 @@
                         </ul>
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="../assets/img/toulouse.jpg" alt="شهر تولوز">
+                            <img src="{{asset("../assets/img/cities/Toulouse/toulouse.webp")}}" alt="شهر تولوز">
                         </div>
                         <h3>
                             صنعت و اقتصاد

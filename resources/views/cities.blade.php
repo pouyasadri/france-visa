@@ -110,7 +110,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/toulouse.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Toulouse/toulouse.webp")}}" style="height: 350px"
                                  alt="زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر تولوز">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر تولوز</h3>
