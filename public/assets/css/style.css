@@ -1773,7 +1773,7 @@ Facilities Area Style
 Incredible Area Style
 ======================================================*/
 .incredible-area {
-    background-image: url(../../assets/img/louvre.jpg);
+    background-image: url(../../assets/img/louvre.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2016,11 +2016,11 @@ Rooms Area Style
 }
 
 .our-rooms-single-img.room-bg-1 {
-    background-image: url(../../assets/img/education.jpg);
+    background-image: url(../../assets/img/education.webp);
 }
 
 .our-rooms-single-img.room-bg-2 {
-    background-image: url(../../assets/img/subjects.jpg);
+    background-image: url(../../assets/img/subjects.webp);
 }
 
 .our-rooms-single-img.room-bg-3 {
@@ -2028,7 +2028,7 @@ Rooms Area Style
 }
 
 .our-rooms-single-img.room-bg-4 {
-    background-image: url(../../assets/img/bourse.jpeg);
+    background-image: url(../../assets/img/bourse.webp);
 }
 
 .our-rooms-single-img.room-bg-5 {
@@ -2036,7 +2036,7 @@ Rooms Area Style
 }
 
 .our-rooms-single-img.room-bg-6 {
-    background-image: url(../../assets/img/counteries.jpg);
+    background-image: url(../../assets/img/counteries.webp);
 }
 
 .tab .tabs_item {
