@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title',"لیون: پایتخت فرهنگی فرانسه")
-@section("keywords","لیون,شهر لیون,جاذبه های گردشگری لیون,تاریخچه لیون,فرهنگ لیون,لیون فرهنگی,لیون تاریخی,لیون هنری,مهاجرت به لیون")
+@section("keywords","لیون,شهر لیون,جاذبه های گردشگری لیون,تاریخچه لیون,فرهنگ لیون,لیون فرهنگی,لیون تاریخی,لیون هنری,مهاجرت به لیون,تحصیل در لیون,خرید ملک در لیون,مهاجرت به فرانسه")
 @section("description","لیون، دومین شهر بزرگ فرانسه، شهری تاریخی و فرهنگی است که به دلیل جاذبه های گردشگری متعدد و فرهنگ غنی خود شناخته شده است. در این صفحه، شما را به سفری به لیون می بریم تا با تاریخچه، فرهنگ، و جاذبه های گردشگری این شهر زیبا آشنا شوید.")
 @section('content')
 
@@ -42,55 +42,18 @@
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">اطلاعات مشتری</h4>
+                            <h4 class="service-details-title">ارتباط با ما</h4>
                             <ul>
                                 <li>
-                                    <a href="tel:021-12345678">
-                                        021-12345678
-                                        <i class='bx bx-phone-call bx-rotate-270'></i>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                        <i class='bx bx-time'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:hello@ecorik.com">
-                                        hello@ecorik.com
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
                                         <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    ایران ، استان تهران ، میدان آزادی
-                                    <i class='bx bx-location-plus'></i>
-                                </li>
-                                <li>
-                                    9:00 عصر – 8:00 صبح
-                                    <i class='bx bx-time'></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">دانلود بروشورها</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (1)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (2)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (3)
-                                        <i class='bx bxs-cloud-download'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        دانلود فایل (4)
-                                        <i class='bx bxs-cloud-download'></i>
                                     </a>
                                 </li>
                             </ul>
