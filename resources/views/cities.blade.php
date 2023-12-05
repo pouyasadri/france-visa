@@ -78,7 +78,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.webp")}}" style="height: 350px"
                                  alt=" زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر استراسبورگ">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر استراسبورگ</h3>

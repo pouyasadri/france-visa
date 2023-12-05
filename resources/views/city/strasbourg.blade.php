@@ -64,7 +64,8 @@
 
                         <h2>استراسبورگ، پایتخت استراتژیک اروپا</h2>
                         <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/strasbourg.jpg")}}" alt="شهر استراسبورگ">
+                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.webp")}}"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر استراسبورگ">
                         </div>
                         <p class="mb-30">
 
@@ -86,7 +87,8 @@
                             همینطور رسم ادب را به جا.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/strasbourg1.jpg")}}" alt="شهر استراسبورگ">
+                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg1.webp")}}"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر استراسبورگ">
                         </div>
                         <h3>آب و هوا استراسبورگ</h3>
                         <p class="mb-30">
@@ -175,7 +177,8 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/strasbourg3.jpg")}}" alt="شهر استراسبورگ">
+                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg3.webp")}}"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر استراسبورگ">
                         </div>
                         <h3>
                             بازدید از شهر قدیم استراسبورگ </h3>
