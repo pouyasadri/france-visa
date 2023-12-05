@@ -72,9 +72,9 @@
                             قرار است.
                         </p>
                         <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d168015.65294043656!2d2.3236891!3d48.8535464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1691021825212!5m2!1sfr!2sfr"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d168015.65294043656!2d2.3236891!3d48.8535464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1691021825212!5m2!1sfr!2sfr"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <h3>آب و هوای شهر پاریس</h3>
                         <p class="mb-30">پاریس در چهار فصل سال آب و هوای معتدلی را تجربه می‌کند. میانگین حداکثر روزانه
                             از ۶ درجه سانتیگراد در زمستان تا ۲۵ درجه سانتیگراد در اوج تابستان متغیر است. بنابراین، سرما
@@ -85,7 +85,8 @@
                             هدیه می‌کند.
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/paris4.jpg")}}" alt="شهر پاریس">
+                            <img src="{{asset("assets/img/cities/Paris/paris4.webp")}}"
+                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر پاریس">
                         </div>
                         <h3>کمی تاریخ درباره شهر پاریس </h3>
                         <p class="mb-30">
@@ -173,7 +174,7 @@
 
                         </p>
                         <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/paris6.jpg")}}" alt="شهر پاریس">
+                            <img src="{{asset("assets/img/cities/Paris/paris6.webp")}}" alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر پاریس">
                         </div>
                         <h3>
                             راه آهن و قطار در شهر پاریس

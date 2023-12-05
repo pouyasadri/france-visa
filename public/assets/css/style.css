@@ -2608,7 +2608,7 @@ Footer Top Area Style
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    background-image: url(../img/cities/Paris/paris8.jpg);
+    background-image: url(../img/cities/Paris/paris8.webp);
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -2993,7 +2993,7 @@ Banner Area Two Style
 ======================================================*/
 .ecorik-banner-area {
     /*background-image: url(../../assets/img/home-two/banner/1.png);*/
-    background-image: url("../img/cities/Paris/paris1.jpg");
+    background-image: url("../img/cities/Paris/paris1.webp");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
