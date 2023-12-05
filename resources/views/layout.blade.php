@@ -67,7 +67,7 @@
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
                 <a href="/" class="logo">
-                    <img src="{{asset("../assets/img/logo/logo-mobile.webp")}}"
+                    <img style="width: 5rem;padding-bottom: 0.5rem" src="{{asset("../assets/img/logo/logo-mobile.webp")}}"
                          alt="A.V.C: تحصیل، زندگی، سرمایه گذاری در فرانسه">
                 </a>
             </div>

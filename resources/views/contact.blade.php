@@ -1,5 +1,7 @@
 @extends('layout')
-@section("title","تماس با ما")
+@section("title","مهاجرت آسان به فرانسه | تماس با ما")
+@section("keywords","تماس با ما,اطلاعات تماس,آدرس,تلفن,ایمیل,شبکه های اجتماعی")
+@section("description","در این صفحه می توانید با ما تماس بگیرید.")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
