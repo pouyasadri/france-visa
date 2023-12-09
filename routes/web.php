@@ -63,3 +63,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/sitemap.xml', function () {
     return response()->file(public_path('sitemap.xml'));
 });
+Route::get('/houses/filter', [HouseController::class, 'filter']);
