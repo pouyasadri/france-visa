@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # MySQL Database Service
+  mysql:
+    image: mysql:8.0
+    container_name: avc_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: avc_database
+      MYSQL_USER: avc_user
+      MYSQL_PASSWORD: avc_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+    networks:
+      - avc_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  # PhpMyAdmin for database management (optional)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: avc_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: avc_user
+      PMA_PASSWORD: avc_password
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    networks:
+      - avc_network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  avc_network:
+    driver: bridge
