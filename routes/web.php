@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\HouseController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 // Home Route
@@ -21,7 +23,7 @@ Route::prefix("cities")->group(function () {
 Route::prefix("universities")->group(function () {
     Route::view("/", "universities"); // Display main universities page
     $universities = [
-        'paris-sud-university', 'sorbonne-paris-nord', 'paris-7', 'paris-4-sorbonne',
+        'paris-saclay-university', 'sorbonne-paris-nord', 'paris-cite', 'paris-4-sorbonne',
         'paris-3', 'paris-2', 'lyon-3', 'lyon-2', 'lyon-1', 'pantheon-sorbonne',
         'cote-d-azure', 'toulouse', 'strasbourg'
     ];
@@ -37,7 +39,17 @@ Route::prefix('/blog')->group(function () {
     Route::get('/{blog}/delete', [BlogController::class, 'destroy'])->name('blog.delete')->middleware("auth"); // Delete a specific blog
     Route::get('/', [BlogController::class, 'index']); // Display all blogs
     Route::get('/{blog}', [BlogController::class, 'show'])->name('blog.show'); // Display a specific blog
-})->whereNumber('blog'); // Ensure the parameter is a number and bind to Blog instance
+
+    // Category CRUD
+    Route::prefix('/categories')->group(function () {
+        Route::get('/', [BlogCategoryController::class, 'index'])->name('blog.categories.index');
+        Route::get('/admin', [BlogCategoryController::class, 'create'])->middleware('auth')->name('blog.categories.create');
+        Route::post('/admin', [BlogCategoryController::class, 'store'])->middleware('auth')->name('blog.categories.store');
+        Route::get('/{category}/edit', [BlogCategoryController::class, 'edit'])->middleware('auth')->name('blog.categories.edit');
+        Route::put('/{category}', [BlogCategoryController::class, 'update'])->middleware('auth')->name('blog.categories.update');
+        Route::get('/{category}/delete', [BlogCategoryController::class, 'destroy'])->middleware('auth')->name('blog.categories.delete');
+    });
+});
 
 // Houses Routes
 Route::prefix('/house')->group(function () {
@@ -46,7 +58,7 @@ Route::prefix('/house')->group(function () {
     Route::get('/{house}/delete', [HouseController::class, 'destroy'])->name('house.delete'); // Delete a specific blog
     Route::get('/', [HouseController::class, 'index']); // Display all blogs
     Route::get('/{house}', [HouseController::class, 'show'])->name('house.show'); // Display a specific blog
-})->whereNumber('house'); // Ensure the parameter is a number and bind to Blog instance
+});
 
 // Other Routes
 Route::view("/consult", "consult"); // Display consultation page
@@ -60,3 +72,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/sitemap.xml', [App\Http\Controllers\SitemapController::class, 'index']);
+
+Route::get('/houses/filter', [HouseController::class, 'filter']);

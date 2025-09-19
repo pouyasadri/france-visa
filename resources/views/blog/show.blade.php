@@ -1,12 +1,15 @@
 @extends('layout')
 @section('title',$blog->blog_title)
+@section("keywords",$blog->title)
+@section("description",$blog->blog_slug)
 @section('content')
 
-    <!-- Start Page Title Area -->
-    <div class="page-title-area">
+    <div class="page-title-area" >
         <div class="container">
             <div class="page-title-content">
-                <h2>{{$blog->blog_title}}</h2>
+                <h2>
+                {{$blog->blog_title}}
+                </h2>
                 <ul>
                     <li>
                         <a href="/">
@@ -15,71 +18,55 @@
                     </li>
                     <li>
                         <a href="/blog">
+                        راهنمای جامع مهاجرت به فرانسه</a></li>
 
-                            اخبار
-                        </a>
-                    </li>
-
-
-                    <li>{{$blog->blog_title}}</li>
+                    <li> {{$blog->blog_title}}</li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- End Page Title Area -->
 
-    <!-- Start News Details Area -->
-    <section class="news-details-area ptb-100">
-        <div class="container">
+    <!-- End Service Details Area -->
+    <section class="service-details-area ptb-100">
+        <div class="container" id="mydiv">
             <div class="row">
-                <div class="col-lg-8 col-md-12">
-                    <div class="news-details-desc">
-                        <div class="article-image">
-                            <img src="{{asset("/storage/images/blogs/".$blog->blog_main_image)}}"
-                                 alt="{{$blog->blog_title}}">
+                <div class="col-lg-4">
+                    <div class="service-sidebar-area">
+                        <div class="service-list service-card">
+                            <h4 class="service-details-title">محتویات مقاله</h4>
+                            <ol id="board">
+
+                            </ol>
                         </div>
-
-                        <div class="article-content">
-
-                            <h3>{{$blog->blog_title}}</h3>
-
-                            {!! $blog->blog_body !!}
+                        <div class="service-list service-card">
+                            <h4 class="service-details-title">ارتباط با ما</h4>
+                            <ul>
+                                <li>
+                                    <a href="/consult">
+                                        درخواست مشاوره مهاجرت به فرانسه
+                                        <i class='bx bx-time'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:info@applyvipconseil.com">
+                                        info@applyvipconseil.com
+                                        <i class='bx bx-envelope'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/apply_vip_conseil/">
+                                        اینستاگرام ما
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-
-                        <div class="article-footer">
-                            <div class="article-tags">
-                                <span><i class='bx bx-share-alt'></i></span>
-
-                                <a href="#">اشتراک گذاری</a>
-                            </div>
-
-                            <div class="article-share">
-                                <ul class="social">
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-facebook'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-twitter'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-linkedin'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-pinterest-alt'></i>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="service-details-wrap">
+                    {!! $blog->blog_body !!}
                         <div class="post-navigation">
                             <div class="navigation-links">
                                 <div class="nav-previous">
@@ -97,47 +84,99 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="ask-question">
+                            <h3>سوال بپرس</h3>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" id="name" class="form-control" required
+                                                   data-error="نام خود را وارد کنید" placeholder="نام شما">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
 
-                        <div class="comments-area">
-                            <h3 class="comments-title">0 نظر:</h3>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" class="form-control" required
+                                                   data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
 
-                            <div class="comment-respond">
-                                <h3 class="comment-reply-title">نظر دهید</h3>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" name="phone_number" id="phone_number" required
+                                                   data-error="تلفن خود را وارد کنید" class="form-control"
+                                                   placeholder="تلفن شما">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
 
-                                <form class="comment-form">
-                                    <p class="comment-notes">
-                                        <span id="email-notes">آدرس ایمیل شما منتشر نخواهد شد.</span>
-                                        قسمت های مورد نیاز علامت گذاری شده اند
-                                        <span class="required">*</span>
-                                    </p>
-                                    <p class="comment-form-author">
-                                        <label>نام <span class="required">*</span></label>
-                                        <input type="text" id="author" name="author" required="required">
-                                    </p>
-                                    <p class="comment-form-email">
-                                        <label>ایمیل <span class="required">*</span></label>
-                                        <input type="email" id="email" name="email" required="required">
-                                    </p>
-                                    <p class="comment-form-url">
-                                        <label>وبسایت </label>
-                                        <input type="url" id="url" name="url">
-                                    </p>
-                                    <p class="comment-form-comment">
-                                        <label>نظر </label>
-                                        <textarea name="comment" id="comment" cols="45" rows="5" maxlength="65525"
-                                                  required="required"></textarea>
-                                    </p>
-                                    <p class="form-submit">
-                                        <input type="submit" name="submit" id="submit" class="submit" value="ارسال نظر">
-                                    </p>
-                                </form>
-                            </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                                                   required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5"
+                                                  required data-error="پیام خود را وارد کنید"
+                                                  placeholder="پیام شما"></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn btn-two">
+												<span class="label">
+													ارسال پیام
+													<i class="flaticon-left-arrow"></i>
+												</span>
+                                        </button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- End News Details Area -->
+    <!-- End Service Details Area -->
+    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 @endsection
+@push("json")
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://applyvipconseil.com/universities/lyon-2"
+  },
+  "headline": "دانشگاه ژان مولن لیون 2: دانشگاهی پیشرو در فرانسه",
+  "image": "https://applyvipconseil.com/assets/img/universities/Lyon2/lyon_2_logo.webp",  
+  "author": {
+    "@type": "Organization",
+    "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
+    "url": "https://applyvipconseil.com/"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": ""
+    }
+  },
+  "datePublished": "2023-11-07",
+  "dateModified": "2024-01-11"
+}
+</script>
+@endpush

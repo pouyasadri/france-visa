@@ -10,7 +10,7 @@ class BlogService
 {
     public function getAllBlogs(): Collection
     {
-        return Blog::all();
+        return Blog::orderBy('created_at', 'desc')->get();
     }
 
     public function getNextBlog(Blog $blog): ?Blog

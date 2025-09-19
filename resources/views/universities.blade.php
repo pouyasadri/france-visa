@@ -49,17 +49,16 @@
                             </div>
                             <div class="col-lg-6 pr-0">
                                 <div class="exclusive-content">
-                                    <h3>دانشگاه پاریس جنوب</h3>
+                                    <h3>دانشگاه پاریس-ساکلی</h3>
                                     <ul class="rating">
                                         <li>
-                                            رتبه جهانی: ۲۶۲
+                                            رتبه جهانی: ۱۷۹
                                         </li>
                                     </ul>
-                                    <p>دانشگاه پاریس جنوب، یکی از برترین مؤسسات آموزش عالی در فرانسه با رتبه جهانی ۲۶۲
-                                        است. این دانشگاه با تخصصی‌های متنوع و تیم تدریس مجرب، فرصت‌های آموزش و تحقیقات
-                                        عالی را فراهم می‌کند.
+                                    <p>
+                                        دانشگاه پاریس-ساکلی (Université Paris-Saclay) یک دانشگاه پیشرو در فرانسه است که از همکاری دانشگاه‌های معتبر، grandes écoles (مؤسسات نخبه آموزش عالی و پژوهش) و سازمان‌های تحقیقات ملی شکل گرفته است. این دانشگاه که در سال ۲۰۱۹ تأسیس شد، به سرعت به عنوان یک نیروگاه در علوم پایه، مهندسی، علوم زیستی و سلامت و علوم انسانی و علوم اجتماعی شناخته شد.
                                     </p>
-                                    <a href="/universities/paris-sud-university" class="default-btn">
+                                    <a href="/universities/paris-saclay-university" class="default-btn">
                                         اطلاعات بیشتر
                                         <i class="flaticon-left-arrow"></i>
                                     </a>
@@ -102,16 +101,14 @@
                             </div>
                             <div class="col-lg-6 pr-0">
                                 <div class="exclusive-content">
-                                    <h3>دانشگاه پاریس ۷</h3>
+                                    <h3>دانشگاه پاریس-سیته</h3>
                                     <ul class="rating">
                                         <li>
-                                            رتبه جهانی: ۲۴۸
+                                            رتبه جهانی: ۱۵۵
                                         </li>
                                     </ul>
-                                    <p>دانشگاه پاریس ۷ دیدرو (Paris-VII) با رتبه ۲۴۸، یکی از برترین دانشگاه‌های چند
-                                        رشته‌ای در پاریس می‌باشد. این دانشگاه، عضوی از هفت دانشگاه آکادمی پاریس است که
-                                        به تعالی در تحصیلات و تحقیقات مشهور است.</p>
-                                    <a href="/universities/paris-7" class="default-btn">
+                                    <p>دانشگاه پاریس-سیته (Université Paris Cité) یک دانشگاه تحقیقاتی دولتی پیشرو در پاریس، فرانسه است. این دانشگاه در سال ۲۰۱۹ از ادغام دو دانشگاه معتبر، دانشگاه پاریس-دِکارت (Paris Descartes) و دانشگاه پاریس-دیدرو (Paris Diderot) تأسیس شد و وارث دانشکده پزشکی پاریس نیز به شمار می‌رود.</p>
+                                    <a href="/universities/paris-cite" class="default-btn">
                                         اطلاعات بیشتر
                                         <i class="flaticon-left-arrow"></i>
                                     </a>
@@ -753,3 +750,32 @@
 
 
 @endsection
+@push("json")
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://applyvipconseil.com/universities"
+  },
+  "headline": "معرفی برترین دانشگاه های فرانسه",
+  "image": "https://applyvipconseil.com/assets/img/France/france1.webp",  
+  "author": {
+    "@type": "Organization",
+    "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
+    "url": "https://applyvipconseil.com/"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": ""
+    }
+  },
+  "datePublished": "2023-10-01",
+  "dateModified": "2024-01-28"
+}
+</script>
+@endpush

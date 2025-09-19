@@ -41,9 +41,16 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="house_price">قیمیت ملک</label>
+                                                            <label for="house_price">قیمت ملک</label>
                                                             <input class="form-control" id="house_price" type="text" name="house_price"
                                                                    placeholder="قیمیت ملک">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="house_square">متراژ ملک</label>
+                                                            <input class="form-control" id="house_square" type="number" name="house_square"
+                                                                   placeholder="متراژ ملک">
                                                         </div>
                                                     </div>
                                                     <div class="col-12">

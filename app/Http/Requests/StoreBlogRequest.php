@@ -8,24 +8,23 @@ class StoreBlogRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true; // Update this if you need to add authorization logic
+        return true; // authentication middleware already protects routes
     }
 
     public function rules(): array
     {
         return [
-            'blog_title' => 'required|string|max:255',
-            'blog_category' => 'required|string|max:255',
-            'blog_slug' => 'required|string|max:255|unique:blogs,slug',
-            'blog_body' => 'required|string',
-            'blog_main_image' => 'required|image|max:2048', // Update max size as per your requirements
+            'category_id' => ['nullable', 'string'],
+            'blog_main_image' => ['required', 'image', 'max:5120'], // max 5MB
         ];
     }
 
-    public function messages()
+    public function messages(): array
     {
         return [
-            // You can add custom validation messages here
+            'blog_main_image.required' => __('validation.required', ['attribute' => 'main image']),
+            'blog_main_image.image' => __('validation.image', ['attribute' => 'main image']),
         ];
     }
 }
+

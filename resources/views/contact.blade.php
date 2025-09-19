@@ -1,5 +1,7 @@
 @extends('layout')
-@section("title","تماس با ما")
+@section("title","مهاجرت آسان به فرانسه | تماس با ما")
+@section("keywords","تماس با ما,اطلاعات تماس,آدرس,تلفن,ایمیل,شبکه های اجتماعی")
+@section("description","در این صفحه می توانید با ما تماس بگیرید.")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
@@ -101,7 +103,7 @@
                             <div class="single-contact-info">
                                 <i class="bx bx-envelope"></i>
                                 <h3>ایمیل ما:</h3>
-                                <a href="mailto:emami@strasgroup.com">emami@strasgroup.com</a>
+                                <a href="mailto:info@applyvipconseil.com">info@applyvipconseil.com</a>
                             </div>
                         </div>
                         <!-- Phone Contact Info -->

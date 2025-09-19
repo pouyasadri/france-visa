@@ -50,7 +50,7 @@
                                  alt="زیباترین و پربازدیدترین شهرهای فرانسه |معرفی شهر پاریس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر پاریس</h3>
-                                <span class="price">شرایط و هزینه های زندگی در شهر پاریس </span>
+                                <span class="price">پاریس، پایتخت کشور فرانسه، همواره یکی از محبوب‌ترین مقاصد مهاجرتی ایرانیان بوده است. این شهر زیبا با تاریخ غنی، فرهنگ ناب، و فرصت‌های تحصیلی و کاری درخشان، همواره رویای بسیاری از دانشجویان و متخصصان جوان ایرانی بوده است.</span>
                                 <a href="/cities/paris" class="default-btn">
                                     ادامه مطلب
                                     <i class="flaticon-left-arrow"></i>
@@ -62,7 +62,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/cities/Lyon/lyon.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Lyon/lyon.webp")}}" style="height: 350px"
                                  alt="زیباترین و پربازدیدترین شهرهای فرانسه |معرفی شهر لیون">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر لیون</h3>
@@ -78,7 +78,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.webp")}}" style="height: 350px"
                                  alt=" زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر استراسبورگ">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر استراسبورگ</h3>
@@ -94,7 +94,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/cities/Nice/nice1.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Nice/nice1.webp")}}" style="height: 350px"
                                  alt="زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر نیس">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر نیس</h3>
@@ -110,7 +110,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-rooms-three-wrap">
                         <div class="single-rooms-three">
-                            <img src="{{asset("assets/img/toulouse.jpg")}}" style="height: 350px"
+                            <img src="{{asset("assets/img/cities/Toulouse/toulouse.webp")}}" style="height: 350px"
                                  alt="زیباترین و پربازدیدترین شهرهای فرانسه | معرفی شهر تولوز">
                             <div class="single-rooms-three-content">
                                 <h3>معرفی شهر تولوز</h3>
@@ -129,3 +129,32 @@
     </section>
     <!-- End Our Rooms Area -->
 @endsection
+@push("json")
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://applyvipconseil.com/cities"
+  },
+  "headline": "معرفی زیباترین و پربازدیدترین شهرهای فرانسه",
+  "image": "https://applyvipconseil.com/assets/img/France/france1.webp",  
+  "author": {
+    "@type": "Organization",
+    "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
+    "url": "https://applyvipconseil.com/"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": ""
+    }
+  },
+  "datePublished": "2023-10-01",
+  "dateModified": "2024-01-28"
+}
+</script>
+@endpush

@@ -1,5 +1,7 @@
 @extends('layout')
-@section('title',"درخواست وقت مشاوره")
+@section('title',"مشاوره تخصصی مهاجرت به فرانسه - خدمات ویزا، تحصیل، و اقامت| A.V.C")
+@section("keywords","مشاوره مهاجرت فرانسه , ویزای تحصیلی فرانسه , اقامت موقت فرانسه , خرید ملک فرانسه , متخصصان مهاجرت فرانسه , مشاوره مهاجرت A.V.C , مشاوره مهاجرت به فرانسه , ویزای تحصیلی فرانسه , اقامت در فرانسه , خدمات مهاجرتی , رزرو خوابگاه دانشجویی , مشاوره تحصیلی , اخذ پذیرش دانشگاهی , ترجمه مدارک , پشتیبانی اداری فرانسه ,مشاوره حقوقی فرانسه و ایران")
+@section("description","با A.V.C، رویای زندگی، تحصیل، و سرمایه‌گذاری در فرانسه را به واقعیت تبدیل کنید. تیم متخصص ما در زمینه‌های ویزای تحصیلی، اقامت دائم، خرید ملک، و مشاوره تحصیلی آماده ارائه خدمات اختصاصی به شما است. با بیش از ده سال تجربه، ما شما را در هر قدم از مسیر مهاجرت همراهی می‌کنیم.")
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
@@ -225,9 +227,9 @@
                             </ul>
                             <ul>
                                 <li>
-                                    <a href="mailto:emami@strasgroup.com">
+                                    <a href="mailto:info@applyvipconseil.com">
                                         <i class='bx bx-envelope'></i>
-                                        Emami@strasgroup.com
+                                        info@applyvipconseil.com
                                     </a>
                                 </li>
                             </ul>
@@ -452,3 +454,32 @@
     <!-- End Booking Area -->
 
 @endsection
+@push("json")
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://applyvipconseil.com/consult"
+  },
+  "headline": "مشاوره تخصصی مهاجرت به فرانسه - خدمات ویزا، تحصیل، و اقامت| A.V.C",
+  "image": "https://applyvipconseil.com/../assets/img/logo/logo.webp",  
+  "author": {
+    "@type": "Organization",
+    "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
+    "url": "https://applyvipconseil.com/"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": ""
+    }
+  },
+  "datePublished": "2023-10-12",
+  "dateModified": "2024-02-13"
+}
+</script>
+@endpush

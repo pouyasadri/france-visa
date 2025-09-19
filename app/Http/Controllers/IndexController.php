@@ -18,8 +18,9 @@ class IndexController extends Controller
         $blogs = Blog::latest()->take(3)->get();
 
         // Fetch the latest 4 houses
-        $houses = House::latest()->take(4)->get();
+//        $houses = House::latest()->take(4)->get();
 
+        $houses = [];
         // Load the "index" view and pass data to it
         return view("index", compact('blogs', 'houses'));
     }

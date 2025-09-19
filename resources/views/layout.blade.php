@@ -46,10 +46,28 @@
     <link rel="stylesheet" href="{{asset("assets/css/responsive.css")}}">
 
     <link rel="stylesheet" href="{{asset("assets/css/rtl.css")}}">
+        <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Slick Slider theme CSS (optional) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     @stack('styles')
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}" alt="Favicon">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('assets/img/favicon/site.webmanifest') }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    @stack('json')
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "kxqm47bwto");
+</script>
 </head>
 <body>
 <!-- Start Preloader Area -->
@@ -67,7 +85,7 @@
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
                 <a href="/" class="logo">
-                    <img src="{{asset("../assets/img/logo/logo-mobile.webp")}}"
+                    <img style="width: 5rem;padding-bottom: 0.5rem" src="{{asset("../assets/img/logo/logo-mobile.webp")}}"
                          alt="A.V.C: تحصیل، زندگی، سرمایه گذاری در فرانسه">
                 </a>
             </div>
@@ -87,7 +105,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#services" class="nav-link dropdown-toggle">خدمات
+                                    <a href="/#services" class="nav-link dropdown-toggle">خدمات
                                         <i class='bx bx-chevron-up'></i>
                                     </a>
                                 </li>
@@ -151,7 +169,7 @@
                             <a href="/">
                                 <img style="width: 15rem;margin-top: 2rem"
                                      src="{{asset("../assets/img/logo/logo.webp")}}"
-                                     alt="A.V.: دروازه شما به سوی زندگی بهتر در فرانسه">
+                                     alt="A.V.C: دروازه شما به سوی زندگی بهتر در فرانسه">
                             </a>
                         </h2>
                     </div>
@@ -241,7 +259,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.instagram.com/apply_vip_conseil/">
                                         <i class='bx bxl-instagram'></i>
                                     </a>
                                 </li>
@@ -269,37 +287,12 @@
 <!-- Start Footer Area -->
 <footer class="footer-top-area pt-140 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
-        <div class="section-title">
-            <h2>عضویت در خبرنامه</h2>
-            <p>با عضویت در خبرنامه، از آخرین اخبار و اطلاعیه‌ها باخبر شوید.</p>
-        </div>
-        <div class="footer-tops-area pb-60">
-            <div class="row">
-                <!-- Start Subscribe Area -->
-                <div class="subscribe-wrap">
-                    <form class="newsletter-form" data-toggle="validator">
-                        <label>
-                            <input type="email" class="input-tracking" placeholder="آدرس ایمیل" name="EMAIL" required
-                                   autocomplete="off">
-                        </label>
-
-                        <button class="default-btn active" type="submit">
-                            عضویت
-                            <i class="flaticon-left-arrow"></i>
-                        </button>
-
-                        <div id="validator-newsletter" class="form-result"></div>
-                    </form>
-                </div>
-                <!-- End Subscribe Area -->
-            </div>
-        </div>
         <div class="footer-middle-area pt-60">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
                         <a href="">
-                            <img src="{{asset("../assets/img/logo.png")}}"
+                            <img src="{{asset("../assets/img/logo/logo.webp")}}"
                                  alt="A.V.C : مهاجرت به فرانسه، ویزای فرانسه، سفر به فرانسه">
                         </a>
                         <p>ما با بهترین مشاوران مهاجرتی فرانسه، همراه شما در مسیر مهاجرت به این کشور هستیم.</p>
@@ -315,8 +308,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="bx bxl-pinterest-alt"></i>
+                                <a href="https://www.instagram.com/apply_vip_conseil/">
+                                    <i class='bx bxl-instagram'></i>
                                 </a>
                             </li>
                             <li>
@@ -372,12 +365,18 @@
                                     تماس با ما
                                 </a>
                             </li>
+                            <li>
+                                <a href="https://applyvipconseil.com/sitemap.xml">
+                                    <i class="right-icon bx bx-chevrons-left"></i>
+                                    نقشه سایت
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
-                        <h3>خدمات استراس گروپ</h3>
+                        <h3>خدمات ما</h3>
                         <ul>
                             <li>
                                 <a href="/consult">
@@ -443,8 +442,8 @@
                             <li class="address">
                                 <i class="flaticon-envelope"></i>
                                 <span>ایمیل</span>
-                                <a href="mailto:Emami@strasgroup.com">
-                                    Emami@strasgroup.com
+                                <a href="mailto:info@applyvipcoseil.com">
+                                    info@applyvipconseil.com
                                 </a>
                             </li>
                         </ul>
@@ -517,6 +516,8 @@
 <script src="{{asset("../assets/js/ajaxchimp.min.js")}}"></script>
 
 <script src="{{asset("../assets/js/custom.js")}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 @stack('scripts')
 </body>
 </html>

@@ -25,6 +25,7 @@ class StoreHouseRequest extends FormRequest
             "house_main_image" => "required|image",
             "house_images.*" => "image",
             "house_type" => "required",
+            "house_square" => "required",
         ];
     }
 }
