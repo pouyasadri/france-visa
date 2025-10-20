@@ -1,0 +1,63 @@
+<?php
+
+return [
+    // Meta Tags
+    'meta' => [
+        'title' => 'Easy Migration to France | Contact Us',
+        'keywords' => 'contact us,contact information,address,phone,email,social media,France migration consultation,contact A.V.C,immigration consultants contact',
+        'description' => 'Contact the A.V.C immigration consulting team. We are ready to answer your questions about migration, study and residence in France. Get in touch with us.',
+    ],
+
+    // Page Title
+    'page_title' => 'Contact Our Consultants',
+    'breadcrumb' => [
+        'home' => 'Home',
+        'contact' => 'Contact Us',
+    ],
+
+    // Section Title
+    'section' => [
+        'subtitle' => 'Get In Touch',
+        'title' => 'Have a Question or Message?',
+        'description' => 'We are here to help you. Send us your message and stay connected with us.',
+    ],
+
+    // Form Fields
+    'form' => [
+        'name' => [
+            'placeholder' => 'Your Name',
+            'error' => 'Please enter your name',
+        ],
+        'email' => [
+            'placeholder' => 'Your Email',
+            'error' => 'Please enter your email',
+        ],
+        'phone' => [
+            'placeholder' => 'Phone',
+            'error' => 'Please enter your phone',
+        ],
+        'subject' => [
+            'placeholder' => 'Subject',
+            'error' => 'Please enter the message subject',
+        ],
+        'message' => [
+            'placeholder' => 'Your Message',
+            'error' => 'Please write your message',
+        ],
+        'submit' => 'Send Message',
+    ],
+
+    // Contact Information
+    'info' => [
+        'email' => [
+            'title' => 'Our Email:',
+            'value' => 'info@applyvipconseil.com',
+        ],
+        'phone' => [
+            'title' => 'Call Us:',
+            'france' => '0033-780-95-33-33',
+            'iran' => '0098-912-008-7194',
+        ],
+    ],
+];
+

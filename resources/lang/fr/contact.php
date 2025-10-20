@@ -1,0 +1,62 @@
+<?php
+
+return [
+    // Meta Tags
+    'meta' => [
+        'title' => 'Migration Facile vers la France | Contactez-nous',
+        'keywords' => 'contactez-nous,coordonnées,adresse,téléphone,email,réseaux sociaux,consultation immigration France,contacter A.V.C,contact consultants immigration',
+        'description' => 'Contactez l\'équipe de consultants en immigration A.V.C. Nous sommes prêts à répondre à vos questions sur la migration, les études et la résidence en France. Restez en contact avec nous.',
+    ],
+
+    // Page Title
+    'page_title' => 'Contactez Nos Consultants',
+    'breadcrumb' => [
+        'home' => 'Accueil',
+        'contact' => 'Contactez-nous',
+    ],
+
+    // Section Title
+    'section' => [
+        'subtitle' => 'Nous Contacter',
+        'title' => 'Avez-vous une Question ou un Message?',
+        'description' => 'Nous sommes là pour vous aider. Envoyez-nous votre message et restez connecté avec nous.',
+    ],
+
+    // Form Fields
+    'form' => [
+        'name' => [
+            'placeholder' => 'Votre Nom',
+            'error' => 'Veuillez entrer votre nom',
+        ],
+        'email' => [
+            'placeholder' => 'Votre Email',
+            'error' => 'Veuillez entrer votre email',
+        ],
+        'phone' => [
+            'placeholder' => 'Téléphone',
+            'error' => 'Veuillez entrer votre téléphone',
+        ],
+        'subject' => [
+            'placeholder' => 'Sujet',
+            'error' => 'Veuillez entrer le sujet du message',
+        ],
+        'message' => [
+            'placeholder' => 'Votre Message',
+            'error' => 'Veuillez écrire votre message',
+        ],
+        'submit' => 'Envoyer le Message',
+    ],
+
+    // Contact Information
+    'info' => [
+        'email' => [
+            'title' => 'Notre Email:',
+            'value' => 'info@applyvipconseil.com',
+        ],
+        'phone' => [
+            'title' => 'Appelez-nous:',
+            'france' => '0033-780-95-33-33',
+            'iran' => '0098-912-008-7194',
+        ],
+    ],
+];
