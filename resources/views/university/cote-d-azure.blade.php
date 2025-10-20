@@ -1,23 +1,27 @@
 @extends('layout')
-@section('title',"معرفی برترین دانشگاه های فرانسه | معرفی دانشگاه نیس")
-@section("keywords","دانشگاه نیس,دانشگاه Côte d'Azur,دانشگاه های برتر فرانسه,دانشگاه های فرانسه,دانشگاه های نیس,تحصیل در فرانسه,تحصیل در دانشگاه نیس,بهترین دانشگاه های فرانسه,رتبه دانشگاه نیس,رشته های دانشگاه نیس,امکانات دانشگاه نیس")
-@section("description","در این مقاله به معرفی دانشگاه نیس، یکی از بهترین دانشگاه های فرانسه می پردازیم. دانشگاه نیس در سال ۱۹۶۵ تاسیس شد و در حال حاضر بیش از ۳۰۰۰۰۰ دانشجو در آن تحصیل می کنند. این دانشگاه در زمینه های علوم، مهندسی، پزشکی، هنر و علوم انسانی دارای رتبه های برتری در جهان است.")
+@section('title', __('university/cote-d-azure.title'))
+@section('keywords', __('university/cote-d-azure.keywords'))
+@section('description', __('university/cote-d-azure.description'))
 @section('content')
+    @php
+        $isRtl = in_array(app()->getLocale(), ['fa'], true);
+        $arrowClass = $isRtl ? 'flaticon-left-arrow' : 'flaticon-right-arrow';
+    @endphp
 
     <div class="page-title-area bg-nice">
         <div class="container">
             <div class="page-title-content">
-                <h2>معرفی دانشگاه نیس</h2>
+                <h2>{{ __('university/cote-d-azure.main_heading') }}</h2>
                 <ul>
                     <li>
-                        <a href="/">
-                            صفحه اصلی
+                        <a href="{{url(app()->getLocale()."/")}}">
+                            {{ __('university/cote-d-azure.breadcrumb_home') }}
                         </a>
                     </li>
                     <li>
-                        <a href="/universities">
-                            برترین دانشگاه ها فرانسه</a></li>
-                    <li>دانشگاه نیس</li>
+                        <a href="{{url(app()->getLocale()."/universities")}}">
+                            {{ __('university/cote-d-azure.breadcrumb_universities') }}</a></li>
+                    <li>{{ __('university/cote-d-azure.breadcrumb_current') }}</li>
                 </ul>
             </div>
         </div>
@@ -31,16 +35,16 @@
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">محتویات مقاله</h4>
+                            <h4 class="service-details-title">{{ __('university/cote-d-azure.table_of_contents') }}</h4>
                             <ol id="board"></ol>
                         </div>
 
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">ارتباط با ما</h4>
+                            <h4 class="service-details-title">{{ __('university/cote-d-azure.contact_us') }}</h4>
                             <ul>
                                 <li>
-                                    <a href="/consult">
-                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                    <a href="{{url(app()->getLocale()."/consult")}}">
+                                        {{ __('university/cote-d-azure.consultation_request') }}
                                         <i class='bx bx-time'></i>
                                     </a>
                                 </li>
@@ -53,18 +57,18 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">لینک های کاربردی</h4>
+                            <h4 class="service-details-title">{{ __('university/cote-d-azure.useful_links') }}</h4>
                             <ul>
                                 <li>
                                     <a href="https://univ-cotedazur.fr/" target="_blank">
-                                        سایت رسمی دانشگاه نیس 
+                                        {{ __('university/cote-d-azure.official_website') }}
                                         <i class='bx bxl-internet-explorer'></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://applyvipconseil.com/cities/nice" target="_blank">
-                                        معرفی شهر نیس
-                                       <i class='bx bxl-internet-explorer'></i>
+                                        {{ __('university/cote-d-azure.nice_city_guide') }}
+                                        <i class='bx bxl-internet-explorer'></i>
                                     </a>
                                 </li>
                             </ul>
@@ -73,79 +77,74 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="service-details-wrap">
-                        
-                        <h2>دانشگاه Cote d'Azur: قله علم و فرهنگ در ساحل مدیترانه</h2>
+
+                        <h2>{{ __('university/cote-d-azure.page_title') }}</h2>
                         <div class="single-services-imgs mb-30">
                             <img src="{{asset("assets/img/universities/Nice/nice_university.webp")}}"
-                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه نیس">
+                                 alt="{{ __('university/cote-d-azure.title') }}">
                         </div>
-                        <h3>تاریخچه و تأسیس دانشگاه نیس</h3>
+                        <h3>{{ __('university/cote-d-azure.history_title') }}</h3>
                         <p>
-                            دانشگاه نیس (Université Côte d'Azur) یکی از دانشگاه‌های معتبر و پیشرو فرانسه است که در سال 2019 از ادغام چند دانشگاه در منطقه جنوب فرانسه شکل گرفت. این دانشگاه با بیش از 35,000 دانشجو در مقاطع مختلف تحصیلی، به عنوان یکی از بزرگترین دانشگاه‌های فرانسه شناخته می‌شود.
+                            {{ __('university/cote-d-azure.history_paragraph_1') }}
                         </p>
                         <p class="mb-30">
-                            دانشگاهCote d'Azur به دلیل کیفیت بالای آموزش، پژوهش‌های پیشگامانه و موقعیت مکانی عالی در ساحل مدیترانه، جایگاه ویژه‌ای در میان دانشگاه‌های معتبر جهان دارد. این دانشگاه در زمینه‌های مختلف علوم پایه، علوم و فناوری، علوم انسانی و علوم اجتماعی، جایگاه برجسته‌ای دارد.
+                            {{ __('university/cote-d-azure.history_paragraph_2') }}
                         </p>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92283.61537243958!2d7.1946494!3d43.7133965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd01552258547%3A0xf160114745d1e06!2sUniversit%C3%A9%20Nice%20Sophia%20Antipolis!5e0!3m2!1sfr!2sfr!4v1691003788688!5m2!1sfr!2sfr"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <h3>رتبه‌بندی جهانی دانشگاه Cote d'Azur</h3>
-                        <p class="mb-30">دانشگاهCote d'Azur همواره در رتبه‌بندی‌های جهانی دانشگاه‌ها حضور پررنگی داشته است. در رتبه‌بندی QS 2022، این دانشگاه در رتبه 243 دانشگاه برتر جهان قرار گرفت و در رتبه‌بندی تایمز برای آموزش عالی 2023، این دانشگاه در رتبه 227 دانشگاه برتر جهان قرار گرفت.
-                        </p>
-                        <h3>امکانات آموزشی و پژوهشی در دانشگاه نیس</h3>
+                        <h3>{{ __('university/cote-d-azure.ranking_title') }}</h3>
+                        <p class="mb-30">{{ __('university/cote-d-azure.ranking_paragraph') }}</p>
+
+                        <h3>{{ __('university/cote-d-azure.facilities_title') }}</h3>
                         <p>
-                            دانشگاه نیس طیف گسترده‌ای از رشته‌های تحصیلی در مقاطع کارشناسی، کارشناسی ارشد و دکتری ارائه می‌دهد. این دانشگاه همچنین دارای چندین دانشکده و مدرسه تخصصی است که در زمینه‌های خاص مانند علوم طبیعی، علوم زیستی، علوم پزشکی، علوم مهندسی، علوم اطلاعات، علوم ورزشی، حقوق، اقتصاد، مدیریت، علوم سیاسی، فلسفه، زبان‌ها، ادبیات و ارتباطات آموزش عالی ارائه می‌دهند.
+                            {{ __('university/cote-d-azure.facilities_paragraph_1') }}
                         </p>
                         <p class="mb-30">
-                            علاوه بر آموزش با کیفیت، دانشگاه نیس به شدت بر پژوهش‌های علمی تمرکز دارد. این دانشگاه دارای چندین آزمایشگاه تحقیقاتی پیشرفته است که در زمینه‌های مختلف علوم پایه، علوم و فناوری، علوم انسانی و علوم اجتماعی فعالیت می‌کنند.
+                            {{ __('university/cote-d-azure.facilities_paragraph_2') }}
                         </p>
                         <div class="single-services-imgs mb-30">
                             <img src="{{asset("assets/img/universities/Nice/nice_university_1.webp")}}"
-                                 alt="معرفی برترین دانشگاه های فرانسه | دانشگاه نیس">
+                                 alt="{{ __('university/cote-d-azure.title') }}">
                         </div>
                         <!-- ... ویژگی‌ها، مزایا و اطلاعات بیشتر درباره دانشگاه نیس ... -->
-                        <h3>رشته‌ها و دپارتمان‌ها در دانشگاه نیس</h3>
+                        <h3>{{ __('university/cote-d-azure.departments_title') }}</h3>
                         <p class="mb-30">
-                            دانشگاه نیس با تنوع رشته‌ها در دپارتمان‌های مختلف شما را در پیشرفت تحصیلی یاری می‌رساند. از
-                            حقوق و علوم سیاسی گرفته تا فناوری اطلاعات و تربیت بدنی، رشته‌های متعددی در این دانشگاه در
-                            دسترس شماست. همچنین، دانشگاه در زمینه هوش مصنوعی با مؤسسه 3IA Côte d’Azur نیز متمایز است که
-                            در حوزه هوش مصنوعی و کاربردهای آن فعالیت می‌کند.
+                            {{ __('university/cote-d-azure.departments_paragraph') }}
                         </p>
-                        <h3>شرایط تحصیل برای دانشجویان ایرانی در دانشگاه نیس</h3>
+                        <h3>{{ __('university/cote-d-azure.iranian_students_title') }}</h3>
                         <p>
-                            دانشجویان ایرانی برای تحصیل در دانشگاه نیس باید دارای مدرک زبان فرانسه معتبر باشند. همچنین، داوطلبان باید برای درخواست پذیرش به این دانشگاه، مدارک تحصیلی خود را ترجمه و رسمی کنند.
+                            {{ __('university/cote-d-azure.iranian_students_paragraph_1') }}
                         </p>
-                        <p class="mb-30">متقاضیان ایرانی همچنین باید برای تحصیل در فرانسه ویزای دانشجویی دریافت کنند. برای درخواست ویزای دانشجویی، داوطلبان باید مدارک مختلفی را ارائه دهند، مانند نامه پذیرش دانشگاه، گواهی تمکن مالی و بیمه پزشکی.
-                        </p>
-                        <h3>زبان‌های تدریس در دانشگاه نیس</h3>
+                        <p class="mb-30">{{ __('university/cote-d-azure.iranian_students_paragraph_2') }}</p>
+
+                        <h3>{{ __('university/cote-d-azure.teaching_languages_title') }}</h3>
                         <p class="mb-30">
-                            در دانشگاه نیس، علاوه بر زبان فرانسوی، دوره‌هایی به زبان انگلیسی نیز ارائه می‌شود. همچنین،
-                            تعدادی از دوره‌ها به ترکیب زبان‌های مختلف نیز تدریس می‌شوند. برای اطلاعات دقیق‌تر، به
-                            دپارتمان‌های مختلف دانشگاه مراجعه نمایید.
+                            {{ __('university/cote-d-azure.teaching_languages_paragraph') }}
                         </p>
                         <h3>
-                            فرصت‌های شغلی پس از فارغ‌التحصیلی از دانشگاه نیس
+                            {{ __('university/cote-d-azure.career_opportunities_title') }}
                         </h3>
                         <p>
-                            فارغ‌التحصیلان دانشگاه نیس از فرصت‌های شغلی بسیار خوبی برخوردار هستند. این دانشگاه دارای روابط قوی با کارفرمایان در سراسر جهان است و به فارغ‌التحصیلان خود در یافتن شغل کمک می‌کند.
+                            {{ __('university/cote-d-azure.career_opportunities_paragraph_1') }}
                         </p>
                         <p class="mb-30">
-                             دانشگاه نیس همچنین به فارغ‌التحصیلان خود در زمینه‌های پژوهشی کمک می‌کند. این دانشگاه دارای چندین مرکز کارآفرینی است که به فارغ‌التحصیلان خود در راه‌اندازی کسب‌وکار کمک می‌کنند.
+                            {{ __('university/cote-d-azure.career_opportunities_paragraph_2') }}
                         </p>
-                        <h3>محیط چند فرهنگی و امکانات رفاهی دانشگاه نیس</h3>
+                        <h3>{{ __('university/cote-d-azure.multicultural_environment_title') }}</h3>
                         <p class="mb-30">
-                            دانشگاه نیس یک محیط چند فرهنگی است و دانشجویان از بیش از 100 کشور در این دانشگاه حضور دارند. این دانشگاه همچنین دارای امکانات رفاهی بسیاری برای دانشجویان بین‌المللی است، مانند سالن‌های مطالعه، غذاخوری‌ها، مراکز فرهنگی، کتابخانه‌های مجهز و امکانات ورزشی.
+                            {{ __('university/cote-d-azure.multicultural_environment_paragraph') }}
                         </p>
-                        <h3>سخن پایانی</h3>
-                        <p class="mb-30">دانشگاه نیس یک دانشگاه عالی برای دانشجویان بین‌المللی است که می‌خواهند در فرانسه تحصیل کنند. این دانشگاه دارای آموزش با کیفیت بالا، امکانات رفاهی عالی، فرصت‌های شغلی زیادی برای فارغ‌التحصیلان و محیطی چند فرهنگی است. اگر شما یک دانشجوی ایرانی هستید که به دنبال تحصیل در فرانسه هستید، دانشگاه نیس یک گزینه عالی برای شما خواهد بود.
-                        </p>
+                        <h3>{{ __('university/cote-d-azure.conclusion_title') }}</h3>
+                        <p class="mb-30">{{ __('university/cote-d-azure.conclusion_paragraph') }}</p>
+
                         <div class="car-service-list-wrap">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="service-list-img">
                                         <img src="{{asset("assets/img/universities/Nice/nice_logo.webp")}}"
-                                             alt="معرفی برترین دانشگاه های فرانسه | دانشگاه نیس">
+                                             alt="{{ __('university/cote-d-azure.title') }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -153,23 +152,23 @@
                                         <ul>
                                             <li>
                                                 <i class='bx bx-check'></i>
-                                                تاریخچه معتبر و قدیمی
+                                                {{ __('university/cote-d-azure.prestigious_history') }}
                                             </li>
                                             <li>
                                                 <i class='bx bx-check'></i>
-                                                تخصص‌های متنوع و مدرن
+                                                {{ __('university/cote-d-azure.diverse_specializations') }}
                                             </li>
                                             <li>
                                                 <i class='bx bx-check'></i>
-                                                محیط آموزشی بین‌المللی
+                                                {{ __('university/cote-d-azure.international_environment') }}
                                             </li>
                                             <li>
                                                 <i class='bx bx-check'></i>
-                                                امکانات و تجهیزات مدرن
+                                                {{ __('university/cote-d-azure.modern_facilities') }}
                                             </li>
                                             <li>
                                                 <i class='bx bx-check'></i>
-                                                پژوهش‌های برتر و نوآوری
+                                                {{ __('university/cote-d-azure.cutting_edge_research') }}
                                             </li>
                                         </ul>
                                     </div>
@@ -178,13 +177,14 @@
                         </div>
 
                         <div class="ask-question">
-                            <h3>سوال بپرس</h3>
+                            <h3>{{ __('university/cote-d-azure.ask_question') }}</h3>
                             <form id="contactForm">
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="name" id="name" class="form-control" required
-                                                   data-error="نام خود را وارد کنید" placeholder="نام شما">
+                                                   data-error="{{ __('university/cote-d-azure.name_error') }}"
+                                                   placeholder="{{ __('university/cote-d-azure.name_placeholder') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -192,7 +192,8 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="email" name="email" id="email" class="form-control" required
-                                                   data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
+                                                   data-error="{{ __('university/cote-d-azure.email_error') }}"
+                                                   placeholder="{{ __('university/cote-d-azure.email_placeholder') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -200,8 +201,9 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="phone_number" id="phone_number" required
-                                                   data-error="تلفن خود را وارد کنید" class="form-control"
-                                                   placeholder="تلفن شما">
+                                                   data-error="{{ __('university/cote-d-azure.phone_error') }}"
+                                                   class="form-control"
+                                                   placeholder="{{ __('university/cote-d-azure.phone_placeholder') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -209,7 +211,8 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                   required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
+                                                   required data-error="{{ __('university/cote-d-azure.subject_error') }}"
+                                                   placeholder="{{ __('university/cote-d-azure.subject_placeholder') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -217,8 +220,8 @@
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="5"
-                                                  required data-error="پیام خود را وارد کنید"
-                                                  placeholder="پیام شما"></textarea>
+                                                  required data-error="{{ __('university/cote-d-azure.message_error') }}"
+                                                  placeholder="{{ __('university/cote-d-azure.message_placeholder') }}"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -226,8 +229,8 @@
                                     <div class="col-lg-12 col-md-12">
                                         <button type="submit" class="default-btn btn-two">
 												<span class="label">
-													ارسال پیام
-													<i class="flaticon-left-arrow"></i>
+													{{ __('university/cote-d-azure.send_message') }}
+													<i class="{{ $arrowClass }}"></i>
 												</span>
                                         </button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
@@ -246,31 +249,33 @@
 
 @endsection
 @push("json")
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://applyvipconseil.com/universities/cote-d-azure"
-  },
-  "headline": "دانشگاه Cote d'Azur: قله علم و فرهنگ در ساحل مدیترانه",
-  "image": "https://applyvipconseil.com/assets/img/universities/Nice/nice_logo.webp",  
-  "author": {
-    "@type": "Organization",
-    "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
-    "url": "https://applyvipconseil.com/"
-  },  
-  "publisher": {
-    "@type": "Organization",
-    "name": "",
-    "logo": {
-      "@type": "ImageObject",
-      "url": ""
-    }
-  },
-  "datePublished": "2023-11-10",
-  "dateModified": "2024-01-12"
-}
-</script>
+    <script type="application/ld+json">
+    @verbatim
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://applyvipconseil.com/universities/cote-d-azure"
+              },
+              "headline": "دانشگاه Cote d'Azur: قله علم و فرهنگ در ساحل مدیترانه",
+              "image": "https://applyvipconseil.com/assets/img/universities/Nice/nice_logo.webp",
+              "author": {
+                "@type": "Organization",
+                "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
+                "url": "https://applyvipconseil.com/"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": ""
+                }
+              },
+              "datePublished": "2023-11-10",
+              "dateModified": "2024-01-12"
+            }
+        @endverbatim
+    </script>
 @endpush
