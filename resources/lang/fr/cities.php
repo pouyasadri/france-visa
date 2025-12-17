@@ -19,7 +19,7 @@ return [
     // City Cards
     'paris_alt' => 'Les plus belles villes de France | Présentation de Paris',
     'paris_title' => 'Présentation de Paris',
-    'paris_description' => 'Paris, la capitale de la France, a toujours été l\'une des destinations d\'immigration les plus populaires pour les Iraniens. Cette belle ville avec son histoire riche, sa culture pure et ses excellentes opportunités éducatives et professionnelles, a toujours été le rêve de nombreux jeunes étudiants et professionnels iraniens.',
+    'paris_description' => 'Conditions de vie et coûts dans la ville de Paris',
 
     'lyon_alt' => 'Les plus belles villes de France | Présentation de Lyon',
     'lyon_title' => 'Présentation de Lyon',
@@ -27,7 +27,7 @@ return [
 
     'strasbourg_alt' => 'Les plus belles villes de France | Présentation de Strasbourg',
     'strasbourg_title' => 'Présentation de Strasbourg',
-    'strasbourg_description' => 'Conditions de vie et coûts dans la ville de Strasbourg',
+    'strasbourg_description' => 'Conditions de vie et coûts à Strasbourg',
 
     'nice_alt' => 'Les plus belles villes de France | Présentation de Nice',
     'nice_title' => 'Présentation de Nice',
@@ -35,7 +35,7 @@ return [
 
     'toulouse_alt' => 'Les plus belles villes de France | Présentation de Toulouse',
     'toulouse_title' => 'Présentation de Toulouse',
-    'toulouse_description' => 'Conditions de vie et coûts dans la ville de Toulouse',
+    'toulouse_description' => 'Conditions de vie et coûts à Toulouse',
 
     'read_more' => 'En savoir plus',
 

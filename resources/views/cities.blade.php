@@ -5,7 +5,7 @@
 @section('content')
     @php
         $isRtl = in_array(app()->getLocale(), ['fa'], true);
-        $arrowClass = $isRtl ? 'flaticon-right-arrow' : 'flaticon-left-arrow';
+        $arrowClass = $isRtl ? 'flaticon-left-arrow' : 'flaticon-right-arrow';
     @endphp
         <!-- Start Page Title Area -->
     <div class="page-title-area">

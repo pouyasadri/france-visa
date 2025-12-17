@@ -19,7 +19,7 @@ return [
     // City Cards
     'paris_alt' => 'Most Beautiful Cities in France | Introduction to Paris',
     'paris_title' => 'Introduction to Paris',
-    'paris_description' => 'Paris, the capital of France, has always been one of the most popular immigration destinations for Iranians. This beautiful city with its rich history, pure culture, and excellent educational and career opportunities, has always been the dream of many young Iranian students and professionals.',
+    'paris_description' => 'Living conditions and costs in the city of Paris',
 
     'lyon_alt' => 'Most Beautiful Cities in France | Introduction to Lyon',
     'lyon_title' => 'Introduction to Lyon',
@@ -27,7 +27,7 @@ return [
 
     'strasbourg_alt' => 'Most Beautiful Cities in France | Introduction to Strasbourg',
     'strasbourg_title' => 'Introduction to Strasbourg',
-    'strasbourg_description' => 'Living conditions and costs in the city of Strasbourg',
+    'strasbourg_description' => 'Living conditions and costs in Strasbourg',
 
     'nice_alt' => 'Most Beautiful Cities in France | Introduction to Nice',
     'nice_title' => 'Introduction to Nice',
