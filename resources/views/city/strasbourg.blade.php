@@ -1,26 +1,27 @@
 @extends('layout')
-@section('title',"استراسبورگ: چهارراه اروپا | معرفی زیباترین و پربازدیدترین شهرهای فرانسه")
-@section("keywords","استراسبورگ,شهر استراسبورگ,جاذبه های گردشگری استراسبورگ,تاریخچه استراسبورگ,فرهنگ استراسبورگ,استراسبورگ تاریخی,استراسبورگ فرهنگی,استراسبورگ بین المللی,مهاجرت به استراسبورگ,تحصیل در استراسبورگ,تحصیل در فرانسه,خرید ملک در استراسبورگ")
-@section("description",'استراسبورگ، شهری در شرق فرانسه، شهری تاریخی و فرهنگی است که به دلیل موقعیت جغرافیایی استراتژیک خود به عنوان "چهارراه اروپا" شناخته می شود. این شهر در مرز فرانسه، آلمان، و لوکزامبورگ واقع شده است و به عنوان یکی از پایتخت های اتحادیه اروپا شناخته می شود.
-
-در این صفحه، شما را به سفری به استراسبورگ می بریم تا با تاریخچه، فرهنگ، و جاذبه های گردشگری این شهر زیبا آشنا شوید.')
+@section('title', __('city/strasbourg.title'))
+@section('keywords', __('city/strasbourg.keywords'))
+@section('description', __('city/strasbourg.description'))
 @section('content')
+    @php
+        $isRtl = in_array(app()->getLocale(), ['fa'], true);
+        $arrowClass = $isRtl ? 'flaticon-left-arrow' : 'flaticon-right-arrow';
+    @endphp
 
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>معرفی شهر استراسبورگ</h2>
+                <h2>{{ __('city/strasbourg.main_heading') }}</h2>
                 <ul>
                     <li>
-                        <a href="{{ route('index') }}">
-                            صفحه اصلی
+                        <a href="{{url(app()->getLocale().'/')}}">
+                            {{ __('city/strasbourg.breadcrumb_home') }}
                         </a>
                     </li>
-                    <li><a href="/cities">
-                            زیباترین و پربازدیدترین شهرهای فرانسه
-
+                    <li><a href="{{url(app()->getLocale().'/cities')}}">
+                            {{ __('city/strasbourg.breadcrumb_cities') }}
                         </a></li>
-                    <li>شهر استراسبورگ</li>
+                    <li>{{ __('city/strasbourg.breadcrumb_strasbourg') }}</li>
                 </ul>
             </div>
         </div>
@@ -34,17 +35,17 @@
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">محتویات مقاله</h4>
+                            <h4 class="service-details-title">{{ __('city/strasbourg.table_of_contents') }}</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">ارتباط با ما</h4>
+                            <h4 class="service-details-title">{{ __('city/strasbourg.contact_us') }}</h4>
                             <ul>
                                 <li>
-                                    <a href="/consult">
-                                        درخواست مشاوره مهاجرت تحصیلی به فرانسه
+                                    <a href="{{url(app()->getLocale().'/consult')}}">
+                                        {{ __('city/strasbourg.consultation_request') }}
                                         <i class='bx bx-time'></i>
                                     </a>
                                 </li>
@@ -57,244 +58,175 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">لینک های کاربردی</h4>
+                            <h4 class="service-details-title">{{ __('city/strasbourg.useful_links') }}</h4>
                             <ul>
                                 <li>
-                                    <a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%B3%D8%A8%D9%88%D8%B1%DA%AF">
-                                        شهر استراسبورگ - ویکی پدیا
+                                    <a href="https://en.wikipedia.org/wiki/Strasbourg" target="_blank">
+                                        {{ __('city/strasbourg.strasbourg_wikipedia') }}
                                         <i class="bx bxl-internet-explorer"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="service-details-wrap">
 
-
-                        <h2>استراسبورگ، پایتخت اروپا: شهری با اصالت فرانسوی و روحیه بین‌المللی</h2>
+                        <h2>{{ __('city/strasbourg.intro_heading') }}</h2>
                         <div class="single-services-imgs mb-30">
                             <img src="{{asset("assets/img/cities/Strasbourg/strasbourg.webp")}}"
-                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر استراسبورگ">
+                                 alt="{{ __('city/strasbourg.breadcrumb_strasbourg') }}">
                         </div>
                         <p class="mb-30">
-استراسبورگ، شهری تاریخی و زیبا در شرق فرانسه، مقصدی منحصربه‌فرد برای ایرانیان علاقه‌مند به مهاجرت به فرانسه است. این شهر با ترکیب جذاب فرهنگ فرانسوی و آلمانی، نهادهای اروپایی متعدد، و موقعیت جغرافیایی ایده‌آل، تجربه‌ای متفاوت از سایر شهرهای فرانسه را برای مهاجران رقم می‌زند.
-
+                            {{ __('city/strasbourg.intro_paragraph') }}
                         </p>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84484.13406168342!2d7.762079299999999!3d48.5690744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2c1%3A0x971a483118e7241f!2sStrasbourg!5e0!3m2!1sfr!2sfr!4v1691022735708!5m2!1sfr!2sfr"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <h3 class="mt-20">زبان در استراسبورگ</h3>
-                        <p class="mb-30"> این شهر بزرگ مرزی در واقع یک منطقه اینترنشنال اروپایی است که در آن مردم به
-                            تجارت و گردشگری مشغول‌اند و اعضای پارلمان اروپا به‌علاوه‌ی روزنامه‌نگاران از سراسر اروپا
-                            حضوری همیشگی در اینجا دارند. پس مشکلی برای صحبت کردن به انگلیسی نخواهید داشت هرچند بسیار
-                            تاثیر مثبتی خواهد گذاشت اگر چند کلمه‌ای فرانسوی بدانید برای اینکه دلشان را به دست بیاورید و
-                            همینطور رسم ادب را به جا.
+                        <h3 class="mt-20">{{ __('city/strasbourg.language_heading') }}</h3>
+                        <p class="mb-30">
+                            {{ __('city/strasbourg.language_paragraph') }}
                         </p>
                         <div class="rooms-details mb-30">
                             <img src="{{asset("assets/img/cities/Strasbourg/strasbourg1.webp")}}"
-                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر استراسبورگ">
+                                 alt="{{ __('city/strasbourg.breadcrumb_strasbourg') }}">
                         </div>
                         <h3 class="mt-20">
-                            تحصیل در استراسبورگ
+                            {{ __('city/strasbourg.study_heading') }}
                         </h3>
                         <p class="mb-30">
-                            استراسبورگ میزبان دانشگاه‌های معتبر از جمله<a href="https://applyvipconseil.com/universities/strasbourg" target="_blank"> Université de Strasbourg</a>و École Nationale Supérieure d'Ingénieurs de Strasbourg (ENSI Strasbourg) است. این دانشگاه‌ها در رشته‌های متنوعی از جمله علوم سیاسی، حقوق، مهندسی، علوم پایه، تجارت، و علوم انسانی برنامه‌های تحصیلی ارائه می‌دهند.
-
-علاوه بر دانشگاه‌ها، استراسبورگ تعدادی موسسه آموزشی عالی در زمینه‌های تجارت، مدیریت، و روابط بین‌الملل دارد. این موسسات با رویکرد بین‌المللی، فرصت‌های مناسبی برای کسب مهارت‌های مورد نیاز در بازار کار جهانی فراهم می‌کنند.
-
-برای تحصیل در استراسبورگ، داشتن مدرک زبان فرانسه (مانند TCF یا TEF) ضروری است. همچنین بسته به مقطع تحصیلی، ممکن است به ارائه سوابق تحصیلی، توصیه‌نامه و شرکت در آزمون‌های ورودی نیاز باشد.
+                            {{ __('city/strasbourg.study_paragraph') }}
                         </p>
 
                         <h3>
-                            هزینه زندگی دانشجویی در استراسبورگ
+                            {{ __('city/strasbourg.living_costs_heading') }}
                         </h3>
                         <p class="mb-30">
-
-                            اینجا بهشتی برای دانشجویان است. تقریبا امکانات تحصیل در تمام رشته ها در این شهر محیاست. از
-                            کالج های زبان گرفته تا مقاطع بالاتر در دانشگاه قابل دسترس هستند. هزینه اسکان و اجازه خوابگاه
-                            برای یک دانشجو بین 350 تا 550 یورو در ماه پیش‌بینی شده که با تشکیل پرونده در سازمان CAF
-                            حداقل 30% از اجاره ماهانه شما توسط این سازمان پرداخت خواهد شد!
-
-                            همچنین هزینه خورد و خوراک برای یک دانشجو بین ۱۰۰ تا ۱۵۰ یورو در ماه است. البته این مبلغ کمی
-                            به سبک زندگی فرد هم بستگی دارد.
-هزینه‌های زندگی در استراسبورگ نسبت به پاریس و لیون پایین‌تر است. با این حال، به دلیل نزدیکی به آلمان و سوئیس، قیمت برخی اقلام ممکن است کمی بالاتر از سایر شهرهای فرانسه باشد. با مدیریت صحیح بودجه، می‌توان زندگی راحت و مقرون‌به‌صرفه‌ای را در استراسبورگ تجربه کرد.
+                            {{ __('city/strasbourg.living_costs_paragraph') }}
                         </p>
-                                                <h3 class="mt-20">آب و هوا استراسبورگ</h3>
+                        <h3 class="mt-20">{{ __('city/strasbourg.climate_heading') }}</h3>
                         <p class="mb-30">
-                            از آن‌جایی که آب و هوای استراسبورگ به صورت نیمه قاره ای است و زمستان های سرد و خشک همراه با
-                            باران، و تابستان های بسیار گرم و پاییز‌های خنک و بهاری همراه با باران، میتوان گفت بهترین
-                            زمان برای سفر به استراسبورگ اوایل تابستان بهترین زمان‌ برای سفر به این شهر می باشد. جولای با
-                            دمای بین ۱۲ تا ۲۵ درجه سانتیگراد، روزها گرم و آفتابی را برای شما به ارمغان خواهد آورد و
-                            فرصتی عالی برای گشت‌وگذار در اطراف شهر و فضای باز را دارید.
+                            {{ __('city/strasbourg.climate_paragraph') }}
                         </p>
                         <h3 class="mt-20">
-                            حمل و نقل در استراسبورگ
+                            {{ __('city/strasbourg.transportation_heading') }}
                         </h3>
                         <p class="mb-30">
-
-
-                            حمل و نقل عمومی در استراسبورگ بیشتر با تراموا انجام می‌گیرد که با ظاهری آینده نگر که در سال
-                            ۱۹۹۴ افتتاح شد و در زمان خود بسیار پیشرو بود. یک شبکه جامع اتوبوس‌رانی از این ساختار به هم
-                            متصل شهری نیز پشتیبانی می‌کند.
-
-                            همچنین میتوان گفت این شهر یکی از دوچرخه ‌محورترین شهرهای جهان است، بنابراین قطعاً راهی
-                            ایده‌آل برای دیدن شهر رکاب زدن خواهد بود. اگر به تعطیلات خود در حومه آلزاس ادامه می‌دهید
-                            اجاره ماشین بهتر است، مخصوصا زمانی که می خواهید استراسبورگ را به مقصد شهرهای اطراف ترک کنید.
-
-                            مرکز شهر با مسیرهای پیاده‌روی و تراموا نیز به یک مقصد گردشگری محبوب تبدیل شده است. یک
-                            فرودگاه منطقه‌ای در ۱۵ کیلومتری جنوب غربی شهر نیز قرار دارد.
-
+                            {{ __('city/strasbourg.transportation_paragraph') }}
                         </p>
                         <h3 class="mt-20">
-                            جاذبه های گردشگری در استراسبورگ
+                            {{ __('city/strasbourg.tourism_heading') }}
                         </h3>
                         <p class="mb-30">
-
-
-                            استراسبورگ دومین شهر توریستی فرانسه پس از پاریس است. این شهر سه جاذبه اصلی دارد. اول کلیسای
-                            جامع، دوم کلیسای جامع فرانسوی که پس از نوتردام پاریس مشهورترین است. و جاذبه سوم شهر قدیم است
-                            که منطقه‌ای تاریخی و زیبا است با خانه‌های نیمه‌چوبی قرون وسطایی و اسکله‌های مشرف به راین و
-                            همچنین خانه کامرزل، و پل‌های سرپوشیده‌ای هست که به اندازه دیدار ایفل در پاریس ارزش گردشگری
-                            دارند.
-
-                            برای بازدید از شهر و بناهای تاریخی اصلی آن، باید یک اقامت ۲ روزه را برنامه‌ریزی کنید. اگر
-                            قصد دارید ۳ روز یا بیشتر را در این شهر زیبا بگذرانید، زمان کافی برای کشف محیط اطراف شهر هم
-                            خواهید داشت.
-
-                            از سال 2020، طبق اعلام رسمی دولت محلی، شهر استراسبورگ دارای یازده موزه شهرداری (از جمله
-                            Aubette یازده موزه دانشگاهی، و حداقل دو موزه خصوصی (موزه وودو و موزه‌بارِ) است. پنج شهرداری
-                            در نواحی شهری نیز موزه‌های زیر نظر خودشان را اداره می‌کنند که سه تای آنها به تاریخ نظامی و
-                            جنگ‌های فرانسه با پروس اختصاص دارد.
-
+                            {{ __('city/strasbourg.tourism_paragraph') }}
                         </p>
                         <div class="rooms-details mb-30">
                             <img src="{{asset("assets/img/cities/Strasbourg/strasbourg3.webp")}}"
-                                 alt="زیباترین و پربازدیدترین شهرهای فرانسه | شهر استراسبورگ">
+                                 alt="{{ __('city/strasbourg.breadcrumb_strasbourg') }}">
                         </div>
-                    
+
                         <h3 class="mt-20">
-                            جاذبه‌های کریسمس در استراسبورگ
+                            {{ __('city/strasbourg.christmas_heading') }}
                         </h3>
                         <p class="mb-30">
-                            بازار کریسمس یا Christkindelsmärik ، بازار کودکی مسیح، قدیمی‌ترین و بزرگ‌ترین بازار تاریخی
-                            کریسمس اروپا است و در طول ماه دسامبر، میدان‌ها و خیابان‌های قدیمی اطراف کلیسای جامع را پر
-                            می‌کند.
+                            {{ __('city/strasbourg.christmas_paragraph') }}
 
-                            در زیر به برخی از مهم‌ترین فعالیت‌هایی که می‌توانید انجام دهید اشاره کرده‌ایم:
+                            {{ __('city/strasbourg.christmas_activities') }}
                         <ul style="list-style: inside">
-                            <li>از کلیسای جامع استراسبورگ دیدن کنید؛</li>
-                            <li>در فرانسه کوچک بمانید؛</li>
-                            <li>در میدان طلایی قدم بزنید؛</li>
-                            <li>در بروگلی؛</li>
-                            <li>همینطور در میدان کولبر؛</li>
-                            <li>و میدان کلیسای جامع؛</li>
-                            <li>و میدان میلر.</li>
+                            <li>{{ __('city/strasbourg.christmas_activity_1') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_activity_2') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_activity_3') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_activity_4') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_activity_5') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_activity_6') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_activity_7') }}</li>
                         </ul>
-                        بهترین‌ غذاهایی که در این شهر پیشنهاد می‌کنیم تا حتما آن‌ها را امتحان کنید عبارتند از :
+                        {{ __('city/strasbourg.christmas_food_intro') }}
                         <ul style="list-style: inside">
-                            <li>برتزل؛</li>
-                            <li>اسپاتزل؛</li>
-                            <li>فلامکوچه؛</li>
-                            <li>مونستِق؛</li>
-                            <li>کلم ترش؛</li>
-                            <li>کوگلوف؛</li>
-                            <li>شراب سنتی؛</li>
-                            <li>آبجو سنتی استراسبورگ.</li>
+                            <li>{{ __('city/strasbourg.christmas_food_1') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_food_2') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_food_3') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_food_4') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_food_5') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_food_6') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_food_7') }}</li>
+                            <li>{{ __('city/strasbourg.christmas_food_8') }}</li>
                         </ul>
-                        روی هم رفته آلزاسایی‌ها مردمانی هستند که غذاهای دلچسب در فضای خودمانی رستوران‌های مدرن و آلزاسی
-                        با تزئینات زیبا را می‌پرستند و بخشی از سبک زندگی‌شان است.
+                        {{ __('city/strasbourg.christmas_food_conclusion') }}
                         </p>
-                        <h3>نایت‌لایف یا زندگی شبانه در استراسبورگ</h3>
+                        <h3 class="mt-20">{{ __('city/strasbourg.nightlife_heading') }}</h3>
                         <p class="mb-30">
-                            استراسبورگ به لحاظ زندگی شبانه سرزنده و به یادماندنی است. اگر در استراسبورگ بودید بعد از شام
-                            به اتاق هتل بازنگردید. چیزهای زیادی هنوز برای کشف وجود دارد که ارزش کمی دیر بیدار شدن در صبح
-                            فردا را دارد. در زیر به برخی از آن‌ها اشاره کرده‌ایم:
+                            {{ __('city/strasbourg.nightlife_paragraph') }}
 
-                        <p>• قایق سواری شبانه؛<br>• تئاترهای خیابانی؛ <br>• اپراهای سانس شب.</p>
-                        </p>
-                        <h3 class="mt-20">
-                            لک‌لک‌ها نماد باروری در استراسبورگ به عنوان جاذبه گردشگری
-                        </h3>
-                        <p class="mb-30">
-                            این یک اتفاق هر روزه نیست که لانه لک لک را ببینید؛ شاید هرگز چندین لانه که پشت سر هم قرار
-                            دارند و در آن‌ها لک‌لک‌ها از تخم‌هایشان محافظت می‌کنند را ندیده باشید مگر اینکه در
-                            استراسبورگ باشید.
-
-                            لک‌لک‌ها نماد آلزاس هستند و گفته می‌شود شانس و باروری را به ارمغان می‌آورند. درواقع، افسانه
-                            لک‌لک ها بچه به دنیا می آورند از اینجا گرفته شده. روی هم رفته، لک‌لک ها به آن حس افسانه ای
-                            سفر به استراسبورگ می افزایند.
-
-                            برای دیدن این مناظر شگفت انگیز در منطقه بالاشهر استراسبورگ در نزدیکی Parc de l’Orangerie قدم
-                            بزنید تا لک‌لک‌های زیادی را ببینید که در لابه‌لای شاخ و برگ درختان، بالای دودکش‌ها و پشت بام
-                            ها لانه می‌کنند.
-                        </p>
-                        <h3 class="mt-20">
-                            صنایع بومی و سنتی آن به شرح زیر می باشد
-                        </h3>
-                        <p class="mb-30">
                         <ul style="list-style: inside">
-                            <li>صنایع دباغی؛</li>
-                            <li>آسیاب آرد؛</li>
-                            <li>فلزکاری؛</li>
-                            <li>آبجوسازی.</li>
+                            <li>{{ __('city/strasbourg.nightlife_activity_1') }}</li>
+                            <li>{{ __('city/strasbourg.nightlife_activity_2') }}</li>
+                            <li>{{ __('city/strasbourg.nightlife_activity_3') }}</li>
                         </ul>
                         </p>
                         <h3 class="mt-20">
-                            سوغات استراسبورگ
+                            {{ __('city/strasbourg.storks_heading') }}
                         </h3>
                         <p class="mb-30">
-                            استراسبورگ هم بزرگ است و مغازه‌ها و رستوران‌های زیادی برای کاوش دارد، در عین حال به
-                            اندازه‌ای کوچک که حس روستایی دلپذیرش را حفظ کرده‌ باشد. پس، حتما از اقامت خود در این شهر بی
-                            نظیر آلزاس سوغاتی تهیه کنید. نماد‌های آلزاسی، عروسک‌های لک‌لک‌ و لباس‌های محلی آلزاس از
-                            اصلی‌ترین سوغات این منطقه بشمار می‌روند.
+                            {{ __('city/strasbourg.storks_paragraph') }}
                         </p>
                         <h3 class="mt-20">
-                            اقتصاد استراسبورگ
+                            {{ __('city/strasbourg.industries_heading') }}
                         </h3>
                         <p class="mb-30">
-                            این شهر به عنوان یک مرکز تجاری، بیزنس و فرهنگ نقش عمده‌ای در مرز میان فرانسه و آلمان ایفا
-                            می‌کند. علاوه بر نقش سنتی خود به عنوان پایتخت آلزاس این شهر مقر چندین نهاد و ارگان اروپایی
-                            از جمله پارلمان اروپا، شورای اروپا و دادگاه اروپایی حقوق بشر است.
-
-                            فعالیت‌های اقتصادی کنونی استراسبورگ شامل:
                         <ul style="list-style: inside">
-                            <li>فرآوری مواد غذایی؛</li>
-                            <li>مرکز مهندسی مکانیک و برق؛</li>
-                            <li>داروسازی؛</li>
-                            <li>توسعه پردازنده‌های الکترونیک؛</li>
-                            <li>پلاستیک.</li>
+                            <li>{{ __('city/strasbourg.industry_1') }}</li>
+                            <li>{{ __('city/strasbourg.industry_2') }}</li>
+                            <li>{{ __('city/strasbourg.industry_3') }}</li>
+                            <li>{{ __('city/strasbourg.industry_4') }}</li>
                         </ul>
-                        همچنین یک کارخانه بزرگ مونتاژ خودرو در منطقه بندر صنعتی شهر وجود دارد. این بندر خود یکی از
-                        بزرگترین بندرهای راین است و حمل و نقل نفت، محصولات کشاورزی و مصالح ساختمانی از این مسیر صورت
-                        می‌پذیرد.
                         </p>
                         <h3 class="mt-20">
-                            فرصت‌های کاری در استراسبورگ
+                            {{ __('city/strasbourg.souvenirs_heading') }}
                         </h3>
                         <p class="mb-30">
-                            استراسبورگ به دلیل حضور نهادهای اروپایی و سازمان‌های بین‌المللی، مرکز مهمی برای دیپلماسی و امور بین‌الملل است. همچنین صنایع داروسازی، فناوری اطلاعات، و گردشگری در این شهر رونق دارند. این عوامل فرصت‌های شغلی مناسبی را برای متخصصان با مهارت‌های مرتبط با این حوزه‌ها فراهم می‌کنند.
-
-برای کار در فرانسه، داشتن مجوز کار الزامی است. شرایط اخذ مجوز کار بسته به نوع موقعیت شغلی و ملیت فرد متفاوت است.
+                            {{ __('city/strasbourg.souvenirs_paragraph') }}
                         </p>
                         <h3 class="mt-20">
-                            جمع بندی
+                            {{ __('city/strasbourg.economy_heading') }}
                         </h3>
                         <p class="mb-30">
-                            استراسبورگ با ارائه‌ی محیطی چندفرهنگی، فرصت‌های تحصیلی و کاری مناسب در حوزه‌های بین‌المللی، و هزینه‌های زندگی معقول، گزینه‌ای جذاب برای ایرانیان علاقه‌مند به زندگی و کار در فضایی اروپایی با روحیه‌ی فرانسوی است. این شهر تاریخی با جاذبه‌های متعدد و موقعیت جغرافیایی ایده‌آل، تجربه‌ای منحصر به فرد برای مهاجران ایرانی رقم می‌زند.
+                            {{ __('city/strasbourg.economy_paragraph') }}
 
-
+                            {{ __('city/strasbourg.economy_activities') }}
+                        <ul style="list-style: inside">
+                            <li>{{ __('city/strasbourg.economy_activity_1') }}</li>
+                            <li>{{ __('city/strasbourg.economy_activity_2') }}</li>
+                            <li>{{ __('city/strasbourg.economy_activity_3') }}</li>
+                            <li>{{ __('city/strasbourg.economy_activity_4') }}</li>
+                            <li>{{ __('city/strasbourg.economy_activity_5') }}</li>
+                        </ul>
+                        {{ __('city/strasbourg.economy_conclusion') }}
+                        </p>
+                        <h3 class="mt-20">
+                            {{ __('city/strasbourg.jobs_heading') }}
+                        </h3>
+                        <p class="mb-30">
+                            {{ __('city/strasbourg.jobs_paragraph') }}
+                        </p>
+                        <h3 class="mt-20">
+                            {{ __('city/strasbourg.conclusion_heading') }}
+                        </h3>
+                        <p class="mb-30">
+                            {{ __('city/strasbourg.conclusion_paragraph') }}
                         </p>
                         <div class="ask-question">
-                            <h3>سوال بپرس</h3>
+                            <h3>{{ __('city/strasbourg.ask_question') }}</h3>
                             <form id="contactForm">
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="name" id="name" class="form-control" required
-                                                   data-error="نام خود را وارد کنید" placeholder="نام شما">
+                                                   data-error="{{ __('city/strasbourg.form_error_name') }}"
+                                                   placeholder="{{ __('city/strasbourg.form_name') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -302,7 +234,8 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="email" name="email" id="email" class="form-control" required
-                                                   data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
+                                                   data-error="{{ __('city/strasbourg.form_error_email') }}"
+                                                   placeholder="{{ __('city/strasbourg.form_email') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -310,8 +243,9 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="phone_number" id="phone_number" required
-                                                   data-error="تلفن خود را وارد کنید" class="form-control"
-                                                   placeholder="تلفن شما">
+                                                   data-error="{{ __('city/strasbourg.form_error_phone') }}"
+                                                   class="form-control"
+                                                   placeholder="{{ __('city/strasbourg.form_phone') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -319,7 +253,8 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                   required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
+                                                   required data-error="{{ __('city/strasbourg.form_error_subject') }}"
+                                                   placeholder="{{ __('city/strasbourg.form_subject') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -327,8 +262,8 @@
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="5"
-                                                  required data-error="پیام خود را وارد کنید"
-                                                  placeholder="پیام شما"></textarea>
+                                                  required data-error="{{ __('city/strasbourg.form_error_message') }}"
+                                                  placeholder="{{ __('city/strasbourg.form_message') }}"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -336,7 +271,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <button type="submit" class="default-btn btn-two">
 												<span class="label">
-													ارسال پیام
+													{{ __('city/strasbourg.form_send') }}
 													<i class="flaticon-left-arrow"></i>
 												</span>
                                         </button>
@@ -356,31 +291,33 @@
 
 @endsection
 @push("json")
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://applyvipconseil.com/cities/strasbourg"
-          },
-          "headline": "استراسبورگ، پایتخت اروپا: شهری با اصالت فرانسوی و روحیه بین‌المللی",
-          "image": "https://applyvipconseil.com/assets/img/cities/Strasbourg/strasbourg3.webp",
-          "author": {
-            "@type": "Organization",
-            "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
-            "url": "https://applyvipconseil.com/"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "",
-            "logo": {
-              "@type": "ImageObject",
-              "url": ""
+    @verbatim
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://applyvipconseil.com/{{ app()->getLocale() }}/cities/strasbourg"
+              },
+              "headline": "{{ __('city/strasbourg.intro_heading') }}",
+              "image": "https://applyvipconseil.com/assets/img/cities/Strasbourg/strasbourg3.webp",
+              "author": {
+                "@type": "Organization",
+                "name": "{{ __('layout.site_title') }}",
+                "url": "https://applyvipconseil.com/"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "{{ __('layout.site_title') }}",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": ""
+                }
+              },
+              "datePublished": "2023-11-29",
+              "dateModified": "2024-03-12"
             }
-          },
-          "datePublished": "2023-11-29",
-          "dateModified": "2024-03-12"
-        }
-    </script>
+        </script>
+    @endverbatim
 @endpush
