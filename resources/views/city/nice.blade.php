@@ -1,27 +1,28 @@
 @extends('layout')
-@section('title',"نیس: شهری زیبا و ساحلی در جنوب فرانسه | معرفی زیباترین و پربازدیدترین شهرهای فرانسه")
-@section("keywords","نیس,شهر نیس,جاذبه های گردشگری نیس,تاریخچه نیس,فرهنگ نیس,نیس ساحلی,نیس زیبا,نیس فرانسه,تحصیل در نیس,زندگی در نیس,سرمایه گذاری در نیس,تحصیل در فرانسه,خرید ملک در نیس,اقامت فرانسه")
-@section("description",'نیس، شهری در جنوب فرانسه، شهری زیبا و ساحلی است که به دلیل آب و هوای مدیترانه ای معتدل خود، به عنوان "پاریس ساحلی" شناخته می شود. این شهر دارای سواحل شنی زیبا، آب های آبی کریستالی، و آب و هوایی گرم و آفتابی است.
-
-در این صفحه، شما را به سفری به نیس می بریم تا با تاریخچه، فرهنگ، و جاذبه های گردشگری این شهر زیبا آشنا شوید.
-')
+@section('title', __('city/nice.title'))
+@section('keywords', __('city/nice.keywords'))
+@section('description', __('city/nice.description'))
 @section('content')
+    @php
+        $isRtl = in_array(app()->getLocale(), ['fa'], true);
+        $arrowClass = $isRtl ? 'flaticon-left-arrow' : 'flaticon-right-arrow';
+    @endphp
 
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>معرفی شهر نیس</h2>
+                <h2>{{ __('city/nice.main_heading') }}</h2>
                 <ul>
                     <li>
-                        <a href="{{ route('index') }}">
-                            صفحه اصلی
+                        <a href="{{url(app()->getLocale().'/')}}">
+                            {{ __('city/nice.breadcrumb_home') }}
                         </a>
                     </li>
-                    <li><a href="/cities">
-                            زیباترین و پربازدیدترین شهرهای فرانسه
+                    <li><a href="{{url(app()->getLocale().'/cities')}}">
+                            {{ __('city/nice.breadcrumb_cities') }}
 
                         </a></li>
-                    <li>شهر نیس</li>
+                    <li>{{ __('city/nice.breadcrumb_nice') }}</li>
                 </ul>
             </div>
         </div>
@@ -35,17 +36,17 @@
                 <div class="col-lg-4">
                     <div class="service-sidebar-area">
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">محتویات مقاله</h4>
+                            <h4 class="service-details-title">{{ __('city/nice.table_of_contents') }}</h4>
                             <ol id="board">
 
                             </ol>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">ارتباط با ما</h4>
+                            <h4 class="service-details-title">{{ __('city/nice.contact_us') }}</h4>
                             <ul>
                                 <li>
-                                    <a href="/consult">
-                                        درخواست مشاوره مهاجرت به شهر نیس
+                                    <a href="{{url(app()->getLocale().'/consult')}}">
+                                        {{ __('city/nice.consultation_request') }}
                                         <i class='bx bx-time'></i>
                                     </a>
                                 </li>
@@ -58,187 +59,99 @@
                             </ul>
                         </div>
                         <div class="service-list service-card">
-                            <h4 class="service-details-title">لینک های کاربردی</h4>
+                            <h4 class="service-details-title">{{ __('city/nice.useful_links') }}</h4>
                             <ul>
                                 <li>
-                                    <a href="https://fa.wikipedia.org/wiki/%D9%86%DB%8C%D8%B3">
-                                        شهر نیس - ویکی پدیا
+                                    <a href="https://en.wikipedia.org/wiki/Nice" target="_blank">
+                                        {{ __('city/nice.nice_wikipedia') }}
                                         <i class="bx bxl-internet-explorer"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="service-details-wrap">
 
 
-                        <h2>نیس، سواحل آفتاب‌گیرانه فرانسه: شهری با جذابیت مدیترانه‌ای برای ایرانیان</h2>
+                        <h2>{{ __('city/nice.intro_heading') }}</h2>
                         <div class="single-services-imgs mb-30">
                             <img src="{{asset("assets/img/cities/Nice/nice.webp")}}"
-                                 alt=" زیباترین و پربازدیدترین شهرهای فرانسه | شهر نیس">
+                                 alt="{{ __('city/nice.breadcrumb_nice') }}">
                         </div>
                         <p class="mb-30">
-
-
-                            مردمی و سرزنده، اینها کلمات زیبایی هستند که برای توصیف این شهر زیبای ساحلی استفاده می شوند.
-                            مقصد گردشگری دوک‌های متمول بریتانیایی در قرن نوزدهم، نیس در کرانه دریای آزور بیش از دو قرن
-                            است که به دلیل آب‌وهوای ملایم خود شهرتی جهانی دارد—آزور یعنی نیلگون.
-
-                            نیس در منتهی الیه جنوب شرقی سرزمین اصلی فرانسه، در نزدیکی مرز ایتالیا، در واقع در سی‌
-                            کیلومتری آن، واقع شده است. اینجا در یک معنا بخش انتهایی ریویرای مدیترانه‌ای از سمت فرانسه
-                            محسوب می‌شود.
-اگر به دنبال مهاجرت به شهری با آب‌وهوای دلنشین، چشم‌اندازهای زیبا، و فرصت‌های متنوع برای تحصیل و کار هستید، نیس می‌تواند گزینه‌ای ایده‌آل باشد.
-
-
+                            {{ __('city/nice.intro_paragraph_1') }}
+                        </p>
+                        <p class="mb-30">
+                            {{ __('city/nice.intro_paragraph_2') }}
                         </p>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92308.71776030952!2d7.2576159!3d43.6970927!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0106a852d31%3A0x40819a5fd979a70!2sNice!5e0!3m2!1sfr!2sfr!4v1691064910510!5m2!1sfr!2sfr"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <p class="mb-30">
-
-                            نیس، این شهر ساحلی با نام مستعار “Nissa la bella” (نیس خوشگله) در تمام طول سال آب و هوای گرم
-                            و دلپذیری دارد و به دلیل فضای آرام و متمایزش و مکان‌های دیدنی فراوانش، مکانی ضروری برای هر
-                            گردشگری است که قصد دیدن فرانسه و جاذبه‌های ریز و درشت آن را دارد.
-
-                            نیس از نظر تاریخی بسیار چند مایه است؛ قبل از تبدیل شدن به بخشی از پادشاهی استروگوتیک
-                            ایتالیا، و سپس پیوستن به امپراتوری روم شرقی و دوبار زیر پرچم پادشاهی ایتالیا (امپراتوری روم
-                            مقدس) رفتن، دوباره تبدیل به بخشی از خاک جنوا و پروونسال شد، و در نهایت فرانسوی.
-
-                            پس این شهر ساحلی محبوب پی‌درپی از نظر هویتی لیگوری، یونانی و رومی بودن را تجربه کرده است.
-                            امروز نیس ۳۴۱ هزار نفر جمعیت دارد و بخشی از اقتصاد گردشگری اروپا را به خودش اختصاص داده است.
-
-                            در این مطلب می‌خواهیم کمی در ساحل آرام نیس وقت‌گذرانی کنیم و درباره این مکان به‌ یاد ماندنی،
-                            جاذبه‌ها و لحظات خاطره‌انگیزش بیشتر بدانیم.
+                            {{ __('city/nice.intro_paragraph_3') }}
                         </p>
-                        <h3 class="mt-20">زندگی در نیس </h3>
-                        <p class="mb-30">نیس جزو ده‌تای اول از فهرست زیست‌پذیر‌ترین شهرهای فرانسه در سال 2021 بود.
-                            پایتخت سواحل دریای
-                            آزور با کسب رتبه هفتم از 500 در رتبه‌بندی شهرهای فرانسه با سطح زندگی خوب که توسط انجمن
-                            Villes et Villas انجام شده است، یک بار دیگر کیفیت زندگی بالای خود را ثابت کرد.
-
-                            به لحاظ هویتی شهر نیس سرود خاص خود را دارد. تنوع چشم‌انداز و سبک زندگی منحصر به فرد، جوهر
-                            زندگی و زیبایی در این منطقه شگفت‌انگیز را تعریف می‌کنند و همین باعث شده نیس خاکی گیرا داشته
-                            باشد و مردم را به سفر دوباره تشویق ‌کند. شما اینجا حتی یک لحظه‌ هم فرصت کسل شدن‌ را پیدا
-                            نمی‌کنید، همه چیز برای کشف و شهودی پایان‌نیافتنی آماده است.
-
-                            یکی دیگر از ویژگی های نیس این است که جمعیت آن سالمندان هستند. اگر درحال ورود به میانسالی
-                            هستید، نیس شهری دوستدار سالخوردگان و میان‌سالان ارزیابی می‌شود. نیمی از ساکنان بالای ۴۳ سال
-                            هستند و در مقام مقایسه، در سایر شهرهای هم رده ۳۶ سال است. در سال ۲۰۱۰، ۲۱٫۸ درصد از جمعیت
-                            کلان شهرها ۶۵ سال یا بیشتر سن داشتند (در مقایسه با تنها ۱۴٫۶ درصد در جاهای دیگر).
-
-                            به این اعتبار، نیس دارای بهترین زندگی شبانه در ساحل آزور است.
-
-                            درواقع این شهر ترکیبی از سبک‌های فرهنگی است. نیس قدیم از خیابان‌های قرون وسطایی در هم تنیده،
-                            بازارهای محلی و مغازه‌های سنتی تشکیل شده است. در مقابل، مرکز شهر بسیار مدرن‌ و مجهز ساخته
-                            شده و مملو از مراکز خرید، سالن‌های نمایش ردیف‌هایی شلوغ از رستوران‌ها و بارها است.
-
-                            به طور کلی، نیس مکان خوبی برای زندگی است. شما اینجا به تمامی فرانسوی زیست خواهید کرد، اگر
-                            سبک زندگی فرانسوی را می‌خواهید نیس را درست انتخاب کرده‌اید. اینجا تمام مزایای سایر شهرهای
-                            فرانسه را دارد (غذای خوب و شراب عالی)، بعلاوه‌ی این مزیت که در سواحل مدیترانه قرار دارد.
-
-                            همچنین به طور کلی نیس شهر امنی است، و به طور کلی نرخ نسبتاً پایینی از جنایات خشونت آمیز
-                            دارد. بهترین کارهایی که در شب در نیس انجام می‌شود:
+                        <h3 class="mt-20">{{ __('city/nice.living_heading') }}</h3>
+                        <p class="mb-30">{{ __('city/nice.living_paragraph') }}
                         <ul style="list-style: inside">
-                            <li>
-                                از منطقه هزار‌گنج دیدن کنید
-                            </li>
-                            <li>
-                                به قلعه‌های تاریخی بروید
-                            </li>
-                            <li>
-                                در هتل‌ها نوشیدنی بگیرید
-                            </li>
-                            <li>
-                                به مهمانی‌های گروهی بروید
-                            </li>
+                            <li>{{ __('city/nice.living_activity_1') }}</li>
+                            <li>{{ __('city/nice.living_activity_2') }}</li>
+                            <li>{{ __('city/nice.living_activity_3') }}</li>
+                            <li>{{ __('city/nice.living_activity_4') }}</li>
                         </ul>
                         </p>
                         <h3 class="mt-20">
-                            تحصیل در نیس
+                            {{ __('city/nice.study_heading') }}
                         </h3>
                         <p class="mb-30">
-                            نیس میزبان دانشگاه دولتی <a href="https://applyvipconseil.com/universities/cote-d-azure" target="_blank">Université Côte d'Azur</a> است که در رشته‌های مهندسی، علوم پایه، حقوق، علوم اقتصادی، مدیریت، و علوم انسانی برنامه‌های تحصیلی ارائه می‌دهد. علاوه بر این، چندین مدرسه عالی در زمینه معماری، هنر، و گردشگری نیز در این شهر وجود دارد.
-
-برای تحصیل در نیس، داشتن مدرک زبان فرانسه (مانند TCF یا TEF) ضروری است. همچنین بسته به مقطع تحصیلی، ممکن است به ارائه سوابق تحصیلی، توصیه‌نامه و شرکت در آزمون‌های ورودی نیاز باشد.
+                            {{ __('city/nice.study_paragraph') }}
                         </p>
-                        <h3 class="mt-20">آب و هوا در نیس</h3>
+                        <h3 class="mt-20">{{ __('city/nice.climate_heading') }}</h3>
                         <p class="mb-30">
-
-                            آب و هوای شهر مطابق با استانداردهای آب و هوای تقریبا نیمه گرمسیری مدیترانه ای است. به دلیل
-                            دامنه حرارتی کم روزانه بدون توجه به فصل و رطوبت مشخص هوا حتی در اواسط تابستان که بارندگی
-                            نادر است بسیار دلپذیر و آرامش‌بخش به نظر خواهد رسید.
-
-                            نیس دارای میانگین دمای ۱۶ درجه سانتیگراد در طول سال است که یکی از بالاترین دماها در سرزمین
-                            اصلی فرانسه، پس از منتون (۱۶٫۴ درجه سانتیگراد) گزارش گردیده که آن را به یکی از ویژگی های آب
-                            و هوای مدیترانه ای در فرانسه تبدیل می‌کند. این آب و هوا خاصه‌ی شرق ساحل ریویرا یافت است به
-                            این معنی که در هیچ کجای دیگر از این کر‌ه‌ی خاکی مشابهش را پیدا نخواهید کرد.
-
-                            بعلاوه، موقعیت جغرافیایی آن در غرب خلیج جنوا به طور قابل توجهی از آن در برابر تند‌بادها در
-                            تمام طول سال محافظت می‌کند.
-
+                            {{ __('city/nice.climate_paragraph') }}
                         </p>
                         <div class="rooms-details mb-30">
                             <img src="{{asset("assets/img/cities/Nice/nice1.webp")}}"
-                                 alt=" زیباترین و پربازدیدترین شهرهای فرانسه | شهر نیس">
+                                 alt="{{ __('city/nice.breadcrumb_nice') }}">
                         </div>
-                        <h3 class="mt-20">زبان مردم نیس</h3>
+                        <h3 class="mt-20">{{ __('city/nice.language_heading') }}</h3>
                         <p class="mb-30">
-
-
-                            فرانسوی معیار زبان رسمی مردن در نیس است. با این حال، به عنوان یک مقصد توریستی بین المللی
-                            بسیار محبوب بوده و حتما متوجه خواهید شد که در بسیاری از رستوران‌ها، بارها و هتل‌ها انگلیسی
-                            صحبت می‌شود. پس از بابت زبان اصلا نگران نباشید.
-
-                            از طرفی، کارکنان هتل‌ها و رستوران‌ها اغلب به زبان فرانسوی که به کار برده‌اید به زبان انگلیسی
-                            پاسخ می‌دهند، مگر اینکه تلفظ شما انقدر حرفه‌ای باشد تا فکر کنند که شما فرانسه‌ی شایسته‌ای
-                            می‌دانید. پس لطفا خیلی احساس فارنکوفون بودن در نیس نکنید، مگر وقتی که سطح خوبی از فرانسه را
-                            فراگفته‌اید.
-
+                            {{ __('city/nice.language_paragraph') }}
                         </p>
                         <h3 class="mt-20">
-                            حمل و نقل در نیس
+                            {{ __('city/nice.transportation_heading') }}
                         </h3>
-                        <p class="mb-30">سفرهای روزانه به نیس و از مبدا آن بسیار مهم و برای اقتصاد شهری حیاتی است. تخمین
-                            زده می‌شود که روزانه حدود ۳۱۰۰۰۰ نفر وارد شهر شده و سپس از آن خارج می‌شوند. این به مدد
-                            زیرساخت‌های بهینه‌ی حمل‌ونقلی نیس انجام می‌گیرد که مطابق طرح جامع نیس به سال ۲۰۱۹ در دست
-                            توسعه قرار دارد.
+                        <p class="mb-30">{{ __('city/nice.transportation_paragraph') }}
                         </p>
                         <h3 class="mt-30">
-                            هزینه زندگی در شهر نیس
+                            {{ __('city/nice.living_costs_heading') }}
                         </h3>
                         <p class="mb-30">
-                            هزینه‌های زندگی در نیس نسبت به پاریس و لیون کمی بالاتر است، اما همچنان از شهرهای بزرگ دیگر اروپا پایین‌تر است. هزینه‌های مسکن، خوراک، و حمل و نقل بسته به محله زندگی و سبک زندگی می‌تواند متغیر باشد.
-                            تخمینی سرانگشتی در مورد هزینه زندگی در شهر نیس برای خانواده چهار نفره هزینه ماهانه ۳۵۱۵ دلار
-                            (۳۳۶۸ یورو) بدون اجاره را به شما نشان می‌دهد. هزینه‌های ماهانه یک نفر هم بدون اجاره ۹۷۵ دلار
-                            (۹۳۴ یورو) تخمین زده می‌شود—با این حساب، نیس ۲۳٫۶۳ % ارزان‌تر از نیویورک است، بدون محاسبه
-                            اجاره‌منزل.
-                            
+                            {{ __('city/nice.living_costs_paragraph') }}
                         </p>
                         <h3 class="mt-20">
-                            فرصت‌های کاری در نیس
+                            {{ __('city/nice.job_heading') }}
                         </h3>
                         <p class="mb-30">
-                            اقتصاد نیس عمدتا بر پایه گردشگری، تجارت، و صنایع خلاق مانند مد و فناوری اطلاعات استوار است. این عوامل فرصت‌های شغلی مناسبی را برای متخصصان در زمینه هتلداری، رستوران‌داری، فروش، بازاریابی، فناوری اطلاعات، و طراحی فراهم می‌کند.
-
-برای کار در فرانسه، داشتن مجوز کار الزامی است. شرایط اخذ مجوز کار بسته به نوع موقعیت شغلی و ملیت فرد متفاوت است.
+                            {{ __('city/nice.job_paragraph') }}
                         </p>
                         <h3>
-                            کلام آخر
+                            {{ __('city/nice.conclusion_heading') }}
                         </h3>
-                        <p class="mb-30">نیس با ارائه‌ی آب‌وهوای مدیترانه‌ای دلنشین، فرصت‌های متنوع برای تفریحات ساحلی و گردشگری، و اقتصاد پویا در حوزه‌ی گردشگری و صنایع خلاق، گزینه‌ای جذاب برای ایرانیان علاقه‌مند به تجربه‌ای متفاوت از زندگی در فرانسه است. این شهر با فرهنگ غنی و مردمان مهمان‌نواز، فضایی دلنشین برای زندگی و کار برای مهاجران ایرانی فراهم می‌کند.
-
+                        <p class="mb-30">{{ __('city/nice.conclusion_paragraph') }}
                         </p>
                         <div class="ask-question">
-                            <h3>سوال بپرس</h3>
+                            <h3>{{ __('city/nice.ask_question') }}</h3>
                             <form id="contactForm">
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="name" id="name" class="form-control" required
-                                                   data-error="نام خود را وارد کنید" placeholder="نام شما">
+                                                   data-error="{{ __('city/nice.form_error_name') }}"
+                                                   placeholder="{{ __('city/nice.form_name') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -246,7 +159,8 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="email" name="email" id="email" class="form-control" required
-                                                   data-error="ایمیل خود را وارد کنید" placeholder="ایمیل شما">
+                                                   data-error="{{ __('city/nice.form_error_email') }}"
+                                                   placeholder="{{ __('city/nice.form_email') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -254,8 +168,9 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="phone_number" id="phone_number" required
-                                                   data-error="تلفن خود را وارد کنید" class="form-control"
-                                                   placeholder="تلفن شما">
+                                                   data-error="{{ __('city/nice.form_error_phone') }}"
+                                                   class="form-control"
+                                                   placeholder="{{ __('city/nice.form_phone') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -263,7 +178,8 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                   required data-error="موضوع خود را وارد کنید" placeholder="موضوع">
+                                                   required data-error="{{ __('city/nice.form_error_subject') }}"
+                                                   placeholder="{{ __('city/nice.form_subject') }}">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -271,8 +187,8 @@
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="5"
-                                                  required data-error="پیام خود را وارد کنید"
-                                                  placeholder="پیام شما"></textarea>
+                                                  required data-error="{{ __('city/nice.form_error_message') }}"
+                                                  placeholder="{{ __('city/nice.form_message') }}"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -280,7 +196,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <button type="submit" class="default-btn btn-two">
 												<span class="label">
-													ارسال پیام
+													{{ __('city/nice.form_send') }}
 													<i class="flaticon-left-arrow"></i>
 												</span>
                                         </button>
@@ -300,24 +216,25 @@
 
 @endsection
 @push("json")
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
+    @verbatim
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://applyvipconseil.com/cities/nice"
+    "@id": "https://applyvipconseil.com/{{ app()->getLocale() }}/cities/nice"
   },
-  "headline": "نیس، سواحل آفتاب‌گیرانه فرانسه: شهری با جذابیت مدیترانه‌ای برای ایرانیان",
-  "image": "https://applyvipconseil.com/assets/img/cities/Nice/nice.webp",  
+  "headline": "{{ __('city/nice.intro_heading') }}",
+  "image": "https://applyvipconseil.com/assets/img/cities/Nice/nice.webp",
   "author": {
     "@type": "Organization",
-    "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
+    "name": "{{ __('layout.site_title') }}",
     "url": "https://applyvipconseil.com/"
-  },  
+  },
   "publisher": {
     "@type": "Organization",
-    "name": "",
+    "name": "{{ __('layout.site_title') }}",
     "logo": {
       "@type": "ImageObject",
       "url": ""
@@ -326,5 +243,6 @@
   "datePublished": "2023-11-15",
   "dateModified": "2024-03-12"
 }
-</script>
+        </script>
+    @endverbatim
 @endpush
