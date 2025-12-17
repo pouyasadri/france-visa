@@ -1,4 +1,4 @@
-﻿/*
+/*
 @File: Ecorik Template Styles
 
 * This file contains the styling for the actual template, this
@@ -120,14 +120,16 @@ This files table contents are outlined below>>>>>
 /*
 Default Style
 ============================*/
-@import url("Vazirmatn-RD-FD-font-face.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap");
 
 body {
     padding: 0;
     margin: 0;
     font-size: 14px;
     line-height: 1.8;
-    font-family: "Vazirmatn RD FD", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #7a7e9a;
 }
 
@@ -626,7 +628,7 @@ Default Btn Area Style
     position: relative;
     cursor: pointer;
     border-radius: 50px;
-    font-family: "Vazirmatn RD FD", sans-serif;
+    font-family: "Muli", sans-serif;
     text-align: center;
 }
 
@@ -963,8 +965,8 @@ Eorik Nav Area Style
 }
 
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item a.active i {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item a.active::before {
@@ -977,8 +979,8 @@ Eorik Nav Area Style
 }
 
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item:hover a i {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
@@ -1311,11 +1313,11 @@ Eorik SliderArea Style
 }
 
 .eorik-slider-item .eorik-slider-text h1 {
-    font-size: 120px;
-    color: #f9f9f9;
+    font-size: 160px;
+    color: #ffffff;
     margin-top: 30px;
-    margin-bottom: -10px;
-    font-family: "danstevis";
+    margin-bottom: -20px;
+    font-family: "beautiful-heartregular";
     text-shadow: 5px 5px #000000;
 }
 
@@ -1326,7 +1328,7 @@ Eorik SliderArea Style
     margin-bottom: 30px;
     font-weight: normal;
     text-shadow: 2px 2px #0b0b0b;
-
+    margin-top: 25px;
 }
 
 .eorik-slider-item .eorik-slider-text .slider-btn .default-btn {
@@ -2309,7 +2311,7 @@ Booking Area Style
     transition: all 0.5s;
     color: #717486;
     font-size: 14px;
-    text-align: right;
+    text-align: left;
     padding: 1rem;
 }
 
@@ -3216,17 +3218,17 @@ Exclusive Area Two Style
 }
 
 .exclusive-area-two .exclusive-img.bg-3 {
-    background-image: url(../img/universities/Paris_Saclay/Paris_saclay_university_logo.webp);
+    background-image: url(../img/universities/Paris_Sud/paris_sud_logo.webp);
     background-size: contain;
 }
 
 .exclusive-area-two .exclusive-img.bg-4 {
-       background-image: url(../../assets/img/universities/Paris_Nord/paris_nord_logo.webp);
+    background-image: url(../../assets/img/universities/Paris_Nord/paris_nord_logo.webp);
     background-size: contain;
 }
 
 .exclusive-area-two .exclusive-img.bg-5 {
-    background-image: url(../img/universities/Paris_cite/Paris_cite_university_logo.webp);
+    background-image: url(../img/universities/Paris7/paris_7_logo.webp);
     background-size: contain;
 
 }
@@ -3732,7 +3734,7 @@ Ecorik Slider Area Five Style
 }
 
 .eorik-slider-area-five .owl-prev::before {
-    content: "قبلی";
+    content: "Previous";
     position: absolute;
     top: 8px;
     left: 35px;
@@ -3761,7 +3763,7 @@ Ecorik Slider Area Five Style
 }
 
 .eorik-slider-area-five .owl-next::before {
-    content: "بعدی";
+    content: "Next";
     position: absolute;
     top: 7px;
     right: 15px;
@@ -3786,15 +3788,15 @@ Ecorik Slider Area Five Style
 }
 
 .eorik-slider-area-five .slider-item-bg-13 {
-    background-image: url("../img/cities/Paris/paris-slider1.webp");
+    background-image: url("../img/cities/Paris/paris-slider.webp");
 }
 
 .eorik-slider-area-five .slider-item-bg-14 {
-    background-image: url(../img/cities/Paris/paris-slider3.webp);
+    background-image: url(../img/cities/Nice/nice.webp);
 }
 
 .eorik-slider-area-five .slider-item-bg-15 {
-    background-image: url(../img/cities/Nice/nice.webp);
+    background-image: url(../img/cities/Strasbourg/strasbourg3.webp);
 }
 
 .eorik-slider-area-five .eorik-slider-item::before {
@@ -3822,7 +3824,7 @@ Page Title Area Style
 }
 
 .bg-paris-sud {
-    background-image: url(../img/universities/Paris_Saclay/Paris_saclay_university_logo.webp);
+    background-image: url(../img/universities/Paris_Sud/paris_sud_logo.webp);
     background-size: contain;
     height: 60%;
 }
@@ -3833,7 +3835,7 @@ Page Title Area Style
 }
 
 .bg-paris-7 {
-    background-image: url(../img/universities/Paris_cite/Paris_cite_university_logo.webp);
+    background-image: url(../img/universities/Paris7/paris_7_logo.webp);
     background-size: contain;
 }
 
@@ -4843,6 +4845,7 @@ News Details Area Style
 
 .news-details-area .news-details-desc .article-image {
     position: relative;
+    background-color: #24416b;
 }
 
 .news-details-area .news-details-desc .article-content {
