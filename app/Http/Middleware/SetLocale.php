@@ -25,15 +25,10 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): mixed
     {
-        $supported = ['en', 'fr', 'fa'];
+        $supported = config('localization.supported_locales', ['en', 'fr', 'fa']);
 
-        $routeLocale = null;
-        if ($request->route()) {
-            // route() may return an array or object depending on the router internals; use parameter() helper
-            $routeLocale = $request->route('locale');
-        }
-
-        $locale = $routeLocale ?? session('locale') ?? null;
+        $routeLocale = $request->route() ? $request->route('locale') : null;
+        $locale = $routeLocale ?? session('locale');
 
         if (! $locale) {
             $accept = $request->server('HTTP_ACCEPT_LANGUAGE') ?? '';
@@ -61,7 +56,7 @@ class SetLocale
         }
 
         // Share helpful view variables that depend on the chosen locale
-        $rtlLocales = ['fa'];
+        $rtlLocales = config('localization.rtl_locales', ['fa']);
         $isRtl = in_array($locale, $rtlLocales, true);
 
         // Icon classes used in templates (flaticon and boxicons)
