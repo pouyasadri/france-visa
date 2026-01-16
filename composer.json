@@ -10,11 +10,12 @@
     "require": {
         "php": "^8.5",
         "guzzlehttp/guzzle": "^7.8",
+        "intervention/image": "^3.11",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
-        "twilio/sdk": "^8.0"
+        "mews/purifier": "^3.4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
