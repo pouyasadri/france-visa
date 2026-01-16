@@ -4,9 +4,11 @@ use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\HouseController;
+use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Middleware\SetLocale;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Redirect root to preferred or default locale for SEO-friendly canonical URLs
@@ -61,32 +63,48 @@ Route::prefix('{locale}')
 
         // Blog Routes
         Route::prefix('blog')->group(function () {
-            Route::get('/admin', [BlogController::class, 'create'])->middleware('auth');
-            Route::post('/admin', [BlogController::class, 'store'])->middleware('auth');
-            Route::get('/{blog}/delete', [BlogController::class, 'destroy'])->name('blog.delete')->middleware('auth');
-            Route::get('/', [BlogController::class, 'index']);
+            Route::get('/', [BlogController::class, 'index'])->name('blog.index');
+            Route::get('/create', [BlogController::class, 'create'])->middleware('auth')->name('blog.create');
+            Route::post('/', [BlogController::class, 'store'])->middleware('auth')->name('blog.store');
+            Route::post('/{id}/restore', [BlogController::class, 'restore'])->middleware('auth')->name('blog.restore');
             Route::get('/{blog}', [BlogController::class, 'show'])->name('blog.show');
+            Route::get('/{blog}/edit', [BlogController::class, 'edit'])->middleware('auth')->name('blog.edit');
+            Route::put('/{blog}', [BlogController::class, 'update'])->middleware('auth')->name('blog.update');
+            Route::delete('/{blog}', [BlogController::class, 'destroy'])->name('blog.delete')->middleware('auth');
 
             // Category CRUD
             Route::prefix('/categories')->group(function () {
                 Route::get('/', [BlogCategoryController::class, 'index'])->name('blog.categories.index');
-                Route::get('/admin', [BlogCategoryController::class, 'create'])->middleware('auth')->name('blog.categories.create');
-                Route::post('/admin', [BlogCategoryController::class, 'store'])->middleware('auth')->name('blog.categories.store');
+                Route::get('/create', [BlogCategoryController::class, 'create'])->middleware('auth')->name('blog.categories.create');
+                Route::post('/', [BlogCategoryController::class, 'store'])->middleware('auth')->name('blog.categories.store');
                 Route::get('/{category}/edit', [BlogCategoryController::class, 'edit'])->middleware('auth')->name('blog.categories.edit');
                 Route::put('/{category}', [BlogCategoryController::class, 'update'])->middleware('auth')->name('blog.categories.update');
-                Route::get('/{category}/delete', [BlogCategoryController::class, 'destroy'])->middleware('auth')->name('blog.categories.delete');
+                Route::delete('/{category}', [BlogCategoryController::class, 'destroy'])->middleware('auth')->name('blog.categories.delete');
             });
         });
 
-        // Houses Routes
-        Route::prefix('house')->group(function () {
-            Route::get('/admin', [HouseController::class, 'create'])->middleware('auth');
-            Route::post('/admin', [HouseController::class, 'store'])->middleware('auth');
-            Route::get('/{house}/delete', [HouseController::class, 'destroy'])->name('house.delete');
-            Route::get('/', [HouseController::class, 'index']);
-            Route::get('/{house}', [HouseController::class, 'show'])->name('house.show');
+        // Properties Routes
+        Route::prefix('properties')->group(function () {
+            Route::get('/', [\App\Http\Controllers\PropertyController::class, 'index'])->name('properties.index');
+            Route::get('/create', [\App\Http\Controllers\PropertyController::class, 'create'])->middleware('auth')->name('properties.create');
+            Route::post('/', [\App\Http\Controllers\PropertyController::class, 'store'])->middleware('auth')->name('properties.store');
+            Route::post('/{id}/restore', [\App\Http\Controllers\PropertyController::class, 'restore'])->middleware('auth')->name('properties.restore');
+            Route::delete('/images/{image}', [\App\Http\Controllers\PropertyController::class, 'deleteImage'])->middleware('auth')->name('properties.images.delete');
+            Route::get('/{property}', [\App\Http\Controllers\PropertyController::class, 'show'])->name('properties.show');
+            Route::get('/{property}/edit', [\App\Http\Controllers\PropertyController::class, 'edit'])->middleware('auth')->name('properties.edit');
+            Route::put('/{property}', [\App\Http\Controllers\PropertyController::class, 'update'])->middleware('auth')->name('properties.update');
+            Route::delete('/{property}', [\App\Http\Controllers\PropertyController::class, 'destroy'])->middleware('auth')->name('properties.destroy');
         });
-        Route::get('/houses/filter', [HouseController::class, 'filter'])->name('houses.filter');
+
+        // Property front-end Routes (was property)
+        Route::prefix('property')->group(function () {
+            Route::get('/admin', [PropertyController::class, 'create'])->middleware('auth');
+            Route::post('/admin', [PropertyController::class, 'store'])->middleware('auth');
+            Route::get('/{property}/delete', [PropertyController::class, 'destroy'])->name('property.delete');
+            Route::get('/', [PropertyController::class, 'index'])->name('property.index');
+            Route::get('/{property}', [PropertyController::class, 'show'])->name('property.show');
+        });
+        Route::get('/property/filter', [PropertyController::class, 'filter'])->name('property.filter');
 
         // Other Routes
         Route::view('/consult', 'consult');
@@ -94,6 +112,6 @@ Route::prefix('{locale}')
         Route::view('/contactUs', 'contact');
 
         // Auth routes localized
-        \Auth::routes();
+        Auth::routes();
         Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
     });
