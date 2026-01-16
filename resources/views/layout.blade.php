@@ -158,7 +158,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ url(app()->getLocale().'/house') }}" class="nav-link dropdown-toggle">
+                                    <a href="{{ url(app()->getLocale().'/property') }}" class="nav-link dropdown-toggle">
                                         {{ __('layout.nav.houses') }}
                                         <i class='bx bx-chevron-up'></i>
                                     </a>
@@ -233,7 +233,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ url(app()->getLocale().'/house') }}" class="link">
+                                    <a href="{{ url(app()->getLocale().'/property') }}" class="link">
                                         {{ __('layout.sidebar.link.houses') }}
                                     </a>
                                 </li>
