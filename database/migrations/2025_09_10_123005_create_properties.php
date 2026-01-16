@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('properties',static function (Blueprint $table) {
-            $table->ulid('id')->primary();
+            $table->id('id')->primary();
 
             // pricing, counts
             $table->decimal('price', 12); // EUR
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedSmallInteger('garages')->default(0);
 
             // type & status — use ENUM or string + check
-            $table->enum('type', ['apartment','house','villa','studio','land','commercial'])->index();
+            $table->enum('type', ['apartment','property','villa','studio','land','commercial'])->index();
             $table->enum('status', ['available','reserved','sold','rented'])->default('available')->index();
 
             // address

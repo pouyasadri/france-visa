@@ -11,8 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('property_translations', function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->ulid('property_id')->index();
+            $table->id('id')->primary();
+            $table->unsignedBigInteger('property_id')->index();
             $table->string('locale', 5)->index();
             $table->string('name');
             $table->string('slug');
