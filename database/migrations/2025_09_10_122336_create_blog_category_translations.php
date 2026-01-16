@@ -11,8 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('blog_category_translations', static function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->ulid('blog_category_id');
+            $table->id('id')->primary();
+            $table->unsignedBigInteger('blog_category_id');
             $table->string('locale', 5)->index();
             $table->string('name');
             $table->string('slug');

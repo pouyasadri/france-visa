@@ -10,10 +10,6 @@ class BlogCategoryTranslation extends Model
 {
     protected $table = 'blog_category_translations';
 
-    public $incrementing = false;
-
-    protected $keyType = 'string';
-
     protected $fillable = [
         'blog_category_id',
         'locale',
@@ -21,14 +17,6 @@ class BlogCategoryTranslation extends Model
         'slug',
     ];
 
-    protected static function booted(): void
-    {
-        static::creating(static function (self $model) {
-            if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = (string) Str::ulid();
-            }
-        });
-    }
 
     public function category(): BelongsTo
     {

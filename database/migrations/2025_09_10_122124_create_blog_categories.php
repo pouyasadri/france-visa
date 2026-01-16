@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('blog_categories', static function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->ulid('parent_id')->nullable()->index();
+            $table->id('id')->primary();
+            $table->unsignedBigInteger('parent_id')->nullable()->index();
             $table->timestamps();
             $table->softDeletes();
 

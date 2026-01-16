@@ -15,22 +15,10 @@ class BlogCategory extends Model
 
     protected $table = 'blog_categories';
 
-    public $incrementing = false;
-
-    protected $keyType = 'string';
-
     protected $fillable = [
         'parent_id',
     ];
 
-    protected static function booted(): void
-    {
-        static::creating(static function (self $model) {
-            if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = (string) Str::ulid();
-            }
-        });
-    }
 
     public function parent(): BelongsTo
     {

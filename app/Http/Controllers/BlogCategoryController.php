@@ -25,30 +25,40 @@ class BlogCategoryController extends Controller
 
     public function create(): View
     {
+        $this->authorize('create', BlogCategory::class);
+
         $parents = $this->service->getAllCategories();
         return view('blog.categories.create', compact('parents'));
     }
 
     public function store(StoreBlogCategoryRequest $request): RedirectResponse
     {
+        $this->authorize('create', BlogCategory::class);
+
         $this->service->storeCategory($request->validated());
         return redirect()->route('blog.categories.index')->with('success', __('messages.category_saved'));
     }
 
     public function edit(BlogCategory $category): View
     {
+        $this->authorize('update', $category);
+
         $parents = $this->service->getAllCategories();
         return view('blog.categories.edit', compact('category', 'parents'));
     }
 
     public function update(StoreBlogCategoryRequest $request, BlogCategory $category): RedirectResponse
     {
+        $this->authorize('update', $category);
+
         $this->service->updateCategory($category, $request->validated());
         return redirect()->route('blog.categories.index')->with('success', __('messages.category_updated'));
     }
 
     public function destroy(BlogCategory $category): RedirectResponse
     {
+        $this->authorize('delete', $category);
+
         $this->service->deleteCategory($category);
         return redirect()->route('blog.categories.index')->with('success', __('messages.category_deleted'));
     }

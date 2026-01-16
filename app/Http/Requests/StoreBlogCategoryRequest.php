@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreBlogCategoryRequest extends FormRequest
 {
@@ -22,7 +23,7 @@ class StoreBlogCategoryRequest extends FormRequest
             'slug' => ['nullable', 'string', 'max:255'],
 
             'translations' => ['sometimes', 'array'],
-            'translations.*.locale' => ['required_with:translations', 'string', 'max:5'],
+            'translations.*.locale' => ['required_with:translations', 'string', 'max:5', Rule::in(config('localization.supported_locales'))],
             'translations.*.name' => ['nullable', 'string', 'max:255'],
             'translations.*.slug' => ['nullable', 'string', 'max:255'],
         ];
