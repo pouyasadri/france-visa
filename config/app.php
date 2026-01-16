@@ -184,5 +184,13 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Custom Storage Paths
+    |--------------------------------------------------------------------------
+    */
     'blog_image_path' => 'public/images/blogs/',
+    'property_image_path' => 'public/images/properties/',
+    'property_gallery_path' => 'public/images/properties/gallery/',
 ];
