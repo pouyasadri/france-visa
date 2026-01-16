@@ -2,49 +2,114 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBlogRequest;
+use App\Http\Requests\StoreBlogPostRequest;
+use App\Http\Requests\UpdateBlogPostRequest;
 use App\Models\Blog;
 use App\Services\BlogService;
+use App\Services\BlogCategoryService;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class BlogController extends Controller
 {
     protected BlogService $blogService;
+    protected BlogCategoryService $categoryService;
 
-    public function __construct(BlogService $blogService)
+    public function __construct(BlogService $blogService, BlogCategoryService $categoryService)
     {
         $this->blogService = $blogService;
+        $this->categoryService = $categoryService;
     }
 
-    public function index(): View
+    public function index(Request $request): View
     {
-        $blogs = $this->blogService->getAllBlogs();
-        return view("blog.index", compact('blogs'));
+        $includeTrashed = $request->query('trashed') === 'true' && auth()->check();
+        $blogs = $this->blogService->getAllBlogs($includeTrashed);
+        $locale = app()->getLocale();
+
+        return view("blog.index", compact('blogs', 'locale', 'includeTrashed'));
     }
 
-    public function show(Blog $blog): View
+    public function show(string $locale, Blog $blog): View
     {
+        $blog->load(['translations', 'category', 'author']);
+        $locale = app()->getLocale();
+        $translation = $blog->getTranslation($locale);
         $nextBlog = $this->blogService->getNextBlog($blog);
         $prevBlog = $this->blogService->getPreviousBlog($blog);
-        return view("blog.show", compact('blog', 'nextBlog', 'prevBlog'));
+
+        return view("blog.show", compact('blog', 'translation', 'locale', 'nextBlog', 'prevBlog'));
     }
 
     public function create(): View
     {
-        $blogs = $this->blogService->getAllBlogs();
-        return view("blog.admin", compact("blogs"));
+        $this->authorize('create', Blog::class);
+
+        $categories = $this->categoryService->getAllCategories();
+        $locales = config('localization.supported_locales', ['en', 'fr', 'fa']);
+
+        return view("blog.create", compact('categories', 'locales'));
     }
 
-    public function store(StoreBlogRequest $request): RedirectResponse
+    public function store(StoreBlogPostRequest $request): RedirectResponse
     {
+        $this->authorize('create', Blog::class);
+
         $blog = $this->blogService->storeBlog($request->validated());
-        return redirect()->route('home')->with('success', __('messages.blog_saved'));
+
+        return redirect()
+            ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id])
+            ->with('success', __('messages.blog_saved'));
     }
 
-    public function destroy(Blog $blog): RedirectResponse
+    public function edit(string $locale, Blog $blog): View
     {
+        $this->authorize('update', $blog);
+
+        $blog->load(['translations', 'category']);
+        $categories = $this->categoryService->getAllCategories();
+        $locales = config('localization.supported_locales', ['en', 'fr', 'fa']);
+
+        return view("blog.edit", compact('blog', 'categories', 'locales'));
+    }
+
+    public function update(string $locale, UpdateBlogPostRequest $request, Blog $blog): RedirectResponse
+    {
+        $this->authorize('update', $blog);
+
+        $this->blogService->updateBlog($blog, $request->validated());
+
+        return redirect()
+            ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id])
+            ->with('success', __('messages.blog_updated'));
+    }
+
+    public function destroy(string $locale, Blog $blog): RedirectResponse
+    {
+        $this->authorize('delete', $blog);
+
         $this->blogService->deleteBlog($blog);
-        return redirect()->route('home')->with('success', __('messages.blog_deleted'));
+
+        return redirect()
+            ->route('index', ['locale' => app()->getLocale()])
+            ->with('success', __('messages.blog_deleted'));
+    }
+
+    public function restore(string $locale, string $id): RedirectResponse
+    {
+        $this->authorize('restore', Blog::class);
+
+        $blog = $this->blogService->restoreBlog($id);
+
+        if ($blog) {
+            return redirect()
+                ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id])
+                ->with('success', __('messages.blog_restored'));
+        }
+
+        return redirect()
+            ->route('index', ['locale' => app()->getLocale()])
+            ->with('error', __('messages.blog_not_found'));
     }
 }

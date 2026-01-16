@@ -5,35 +5,32 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
 class Blog extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'blog_posts';
-
-    public $incrementing = false;
-
-    protected $keyType = 'string';
 
     protected $fillable = [
         'category_id',
+        'author_id',
         'main_image',
         'blog_main_image',
+        'is_pinned',
+        'published_at',
     ];
 
     protected $casts = [
+        'is_pinned' => 'boolean',
+        'published_at' => 'datetime',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
     ];
 
-    protected static function booted(): void
-    {
-        static::creating(static function (self $model) {
-            if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = (string) Str::ulid();
-            }
-        });
-    }
 
     /**
      * Compatibility: service/controllers use blog_main_image; DB column is main_image
@@ -53,8 +50,35 @@ class Blog extends Model
         return $this->belongsTo(BlogCategory::class, 'category_id', 'id');
     }
 
+    public function author(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'author_id', 'id');
+    }
+
     public function translations(): HasMany
     {
         return $this->hasMany(BlogPostTranslation::class, 'blog_post_id', 'id');
+    }
+
+    public function getTranslation(string $locale, bool $fallback = true): ?BlogPostTranslation
+    {
+        $translation = $this->translations()->where('locale', $locale)->first();
+
+        if (!$translation && $fallback) {
+            $translation = $this->translations()->where('locale', config('app.fallback_locale', 'en'))->first();
+        }
+
+        return $translation;
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->whereNotNull('published_at')
+            ->where('published_at', '<=', now());
+    }
+
+    public function scopePinned($query)
+    {
+        return $query->where('is_pinned', true);
     }
 }

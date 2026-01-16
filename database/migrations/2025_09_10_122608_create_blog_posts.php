@@ -11,12 +11,17 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('blog_posts', static function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->ulid('category_id')->nullable()->index();
+            $table->id('id')->primary();
+            $table->unsignedBigInteger('category_id')->nullable()->index();
+            $table->unsignedBigInteger('author_id')->nullable()->index();
             $table->string('main_image')->nullable();
+            $table->boolean('is_pinned')->default(false);
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('category_id')->references('id')->on('blog_categories')->nullOnDelete();
+            $table->foreign('author_id')->references('id')->on('users')->nullOnDelete();
         });
     }
 

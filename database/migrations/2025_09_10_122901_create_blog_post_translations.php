@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('blog_post_translations',static function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->ulid('blog_post_id')->index();
+            $table->id('id')->primary();
+            $table->unsignedBigInteger('blog_post_id')->index();
             $table->string('locale', 5)->index();
             $table->string('title');
-            $table->string('slug');          // localized slug for SEO
+            $table->string('slug',500);          // localized slug for SEO
             $table->string('excerpt', 500)->nullable();
             $table->longText('body');
 

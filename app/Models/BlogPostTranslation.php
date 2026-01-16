@@ -10,10 +10,6 @@ class BlogPostTranslation extends Model
 {
     protected $table = 'blog_post_translations';
 
-    public $incrementing = false;
-
-    protected $keyType = 'string';
-
     protected $fillable = [
         'blog_post_id',
         'locale',
@@ -23,14 +19,6 @@ class BlogPostTranslation extends Model
         'body',
     ];
 
-    protected static function booted(): void
-    {
-        static::creating(static function (self $model) {
-            if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = (string) Str::ulid();
-            }
-        });
-    }
 
     public function post(): BelongsTo
     {
