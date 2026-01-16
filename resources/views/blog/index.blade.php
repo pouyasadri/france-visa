@@ -1,20 +1,20 @@
 @extends('layout')
-@section('title', 'مهاجرت به فرانسه: تحقق رویاهای شما با اطلاعات و راهنمایی های جامع')
-@section("keywords","مهاجرت به فرانسه,تحصیل در فرانسه,کار در فرانسه,سرمایه گذاری در فرانسه,ویزای فرانسه,اقامت فرانسه,تابعیت فرانسه,مهاجرت قانونی,مهاجرت کاری,مهاجرت تحصیلی,مهاجرت سرمایه گذاری,زندگی در فرانسه,هزینه های زندگی در فرانسه,فرهنگ فرانسه,آداب و رسوم فرانسه,زبان فرانسه")
-@section("description","در این صفحه به تمام سؤالات شما در مورد مهاجرت به فرانسه پاسخ می دهیم. از شرایط و مدارک مورد نیاز برای اخذ ویزای فرانسه گرفته تا نکات مهم در مورد زندگی و کار در این کشور.")
+@section('title', __('blog/index.title'))
+@section("keywords", __('blog/index.keywords'))
+@section("description", __('blog/index.description'))
 @section('content')
     <!-- Start Page Title Area -->
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>راهنمای جامع مهاجرت به فرانسه: از تحصیل تا کار و سرمایه گذاری</h2>
+                <h2>{{ __('blog/index.main_heading') }}</h2>
                 <ul>
                     <li>
                         <a href="/">
-                            صفحه اصلی
+                            {{ __('blog/index.breadcrumb_home') }}
                         </a>
                     </li>
-                    <li>راهنمای جامع مهاجرت به فرانسه</li>
+                    <li>{{ __('blog/index.breadcrumb_blogs') }}</li>
                 </ul>
             </div>
         </div>
@@ -25,44 +25,56 @@
     <section class="news-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>به روز ترین و معتبرترین راهنمای مهاجرت به فرانسه</span>
-                <h2>آخرین مقالات</h2>
+                <span>{{ __('blog/index.section_title') }}</span>
+                <h2>{{ __('blog/index.section_heading') }}</h2>
             </div>
             <div class="row">
-                @forelse($blogs as $blog)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-news">
-                            <div class="news-img">
-                                <a href="{{ route('blog.show', ['blog' => $blog]) }}">
-                                    <img src="{{asset("/storage/images/blogs/".$blog->blog_main_image)}}"
-                                         alt="{{$blog->blog_title}}">
-                                </a>
-                                <div class="dates">
-                                    <span>{{$blog->blog_category}}</span>
+                @php
+                    // Only show blog posts that have a translation in the current locale
+                    $localizedBlogs = $blogs->filter(function($b) use ($locale) {
+                        return (bool) $b->getTranslation($locale);
+                    });
+                @endphp
+
+                @forelse($localizedBlogs as $blog)
+                    @php
+                        $translation = $blog->getTranslation($locale);
+                    @endphp
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-news">
+                                <div class="news-img">
+                                    <a href="{{ route('blog.show', ['blog' => $blog]) }}">
+                                        <img src="{{asset('storage/images/blogs/' . $blog->main_image)}}"
+                                             alt="{{$translation->title}}"
+                                             @if(!$blog->main_image) style="background-color: #f0f0f0;" @endif>
+                                    </a>
+                                    <div class="dates">
+                                        <span>{{ $blog->category?->getTranslation($locale)?->name ?? 'Uncategorized' }}</span>
+                                    </div>
+                                </div>
+                                <div class="news-content-wrap">
+                                    <ul>
+                                        <li>
+                                            <i class="flaticon-user"></i>
+                                            {{ $blog->author?->name ?? __('blog/index.author_label') }}
+                                        </li>
+                                    </ul>
+                                    <a href="{{ route('blog.show', ['blog' => $blog]) }}">
+                                        <h3>{{$translation->title}}</h3>
+                                    </a>
+                                    <p>{{$translation->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($translation->body), 120, '...')}}</p>
+                                    <a class="read-more" href="{{ route('blog.show', ['blog' => $blog]) }}">
+                                        {{ __('blog/index.read_more') }}
+                                        <i class="flaticon-left-arrow"></i>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="news-content-wrap">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-user"></i>
-                                        مدیر
-                                    </li>
-                                </ul>
-                                <a href="{{ route('blog.show', ['blog' => $blog]) }}">
-                                    <h3>{{$blog->blog_title}}</h3>
-                                </a>
-                                <p>{{$blog->blog_slug}}</p>
-                                <a class="read-more" href="{{ route('blog.show', ['blog' => $blog]) }}">
-                                    ادامه خواندن
-                                    <i class="flaticon-left-arrow"></i>
-                                </a>
-                            </div>
                         </div>
-                    </div>
                 @empty
                     <div class="col-12">
-                        <div class="alert alert-danger" role="alert">
-                            هیچ خبر پیدا نشد!
+                        <div class="alert alert-info" role="alert">
+                            {{-- Prefer a locale-specific message if available, otherwise fall back to a generic one. --}}
+                            {{ __('blog/index.no_blogs_in_locale', ['locale' => $locale]) ?: __('blog/index.no_blogs_found') }}
                         </div>
                     </div>
                 @endforelse
