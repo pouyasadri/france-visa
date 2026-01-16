@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
+use App\Models\BlogCategory;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -22,6 +24,17 @@ class RouteServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureRateLimiting();
+        $this->configureRouteModelBindings();
+    }
+
+    /**
+     * Configure route model bindings for models with string keys (ULID).
+     */
+    private function configureRouteModelBindings(): void
+    {
+        // Blog model uses ULID string keys
+        // Note: Route model binding is handled automatically by Laravel 12
+        // when model uses route() method with explicit model binding
     }
 
     /**

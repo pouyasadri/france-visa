@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('property_images',static function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->ulid('property_id')->index();
+            $table->id('id')->primary();
+            $table->unsignedBigInteger('property_id')->index();
             $table->string('path');
             $table->boolean('is_primary')->default(false);
             $table->unsignedSmallInteger('position')->default(0);
