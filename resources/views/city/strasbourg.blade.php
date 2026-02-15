@@ -83,7 +83,7 @@
 
     <section class="mb-5">
         <h3 class="h4 fw-bold mb-3">{{ __('city/strasbourg.living_costs_heading') }}</h3>
-        <p>{{ __('city/strasbourg.living_costs_paragraph') }}</p>
+        <p>{!! __('city/strasbourg.living_costs_paragraph') !!}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/strasbourg.housing_heading') }}</h3>
         <p>{{ __('city/strasbourg.housing_paragraph') }}</p>
@@ -163,7 +163,7 @@
         <p>{{ __('city/strasbourg.jobs_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/strasbourg.conclusion_heading') }}</h3>
-        <p>{{ __('city/strasbourg.conclusion_paragraph') }}</p>
+        <p>{!! __('city/strasbourg.conclusion_paragraph') !!}</p>
     </section>
 
     <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0 mt-5">
@@ -206,8 +206,8 @@
 
 @push('json')
     @php
-        $pageUrl = url($currentLocale.'/cities/strasbourg');
-        $cityId = $pageUrl.'#city';
+        $pageUrl = url($currentLocale . '/cities/strasbourg');
+        $cityId = $pageUrl . '#city';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
             $pageUrl,
@@ -228,8 +228,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale . '/cities')],
             ['name' => __('city/strasbourg.breadcrumb_strasbourg'), 'url' => $pageUrl],
         ]);
     @endphp
