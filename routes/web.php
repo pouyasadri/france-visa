@@ -4,7 +4,6 @@ use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\QuestionController;
@@ -130,31 +129,45 @@ Route::prefix('{locale}')
         */
 
         // TEMPORARY: Show "Coming Soon" page for all property URLs
-        Route::get('/properties', function () {
+        $propertiesComingSoon = function () {
             return view('properties.coming-soon');
-        })->name('properties.index');
+        };
 
-        Route::get('/properties/create', function () {
-            return view('properties.coming-soon');
-        })->name('properties.create');
+        // Keep route names compatible with the (disabled) feature so links/forms don't error.
+        Route::prefix('properties')->group(function () use ($propertiesComingSoon) {
+            Route::get('/', $propertiesComingSoon)->name('properties.index');
+            Route::get('/create', $propertiesComingSoon)->name('properties.create');
+            Route::get('/{id}/edit', $propertiesComingSoon)->name('properties.edit');
+            Route::get('/{id}', $propertiesComingSoon)->name('properties.show');
 
-        Route::get('/properties/{id}', function () {
-            return view('properties.coming-soon');
-        })->name('properties.show');
+            // Mutating routes: redirect back to the index (which shows Coming Soon)
+            Route::post('/', function (Request $request) {
+                return redirect()->route('properties.index', ['locale' => $request->route('locale')]);
+            })->name('properties.store');
+            Route::put('/{id}', function (Request $request) {
+                return redirect()->route('properties.index', ['locale' => $request->route('locale')]);
+            })->name('properties.update');
+            Route::delete('/{id}', function (Request $request) {
+                return redirect()->route('properties.index', ['locale' => $request->route('locale')]);
+            })->name('properties.destroy');
+            Route::delete('/images/{image}', function (Request $request) {
+                return redirect()->route('properties.index', ['locale' => $request->route('locale')]);
+            })->name('properties.images.delete');
+            Route::post('/{id}/restore', function (Request $request) {
+                return redirect()->route('properties.index', ['locale' => $request->route('locale')]);
+            })->name('properties.restore');
+        });
 
-        Route::get('/properties/{id}/edit', function () {
-            return view('properties.coming-soon');
-        })->name('properties.edit');
-
-        Route::get('/property', function () {
-            return view('properties.coming-soon');
-        })->name('property.index');
-
-        Route::get('/property/{id}', function () {
-            return view('properties.coming-soon');
-        })->name('property.show');
-
-
+        Route::prefix('property')->group(function () use ($propertiesComingSoon) {
+            Route::get('/', $propertiesComingSoon)->name('property.index');
+            Route::get('/admin', $propertiesComingSoon);
+            Route::post('/admin', function (Request $request) {
+                return redirect()->route('property.index', ['locale' => $request->route('locale')]);
+            });
+            Route::get('/filter', $propertiesComingSoon)->name('property.filter');
+            Route::get('/{id}/delete', $propertiesComingSoon)->name('property.delete');
+            Route::get('/{id}', $propertiesComingSoon)->name('property.show');
+        });
 
         // Other Routes
         Route::view('/consult', 'pages.consult')->name('consult');
@@ -166,8 +179,6 @@ Route::prefix('{locale}')
         Route::post('/questions/submit', [QuestionController::class, 'submit'])->name('questions.submit');
 
         // Auth routes localized
-    
-
 
         // Debug route for locale detection (only in non-production)
         if (app()->environment('local', 'development')) {
@@ -209,5 +220,5 @@ Route::get('/{locale}/admin', function () {
 })->whereIn('locale', ['en', 'fr', 'fa']);
 
 Route::get('/{locale}/admin/{any?}', function ($locale, $any = null) {
-    return redirect('/admin/' . $any);
+    return redirect('/admin/'.$any);
 })->whereIn('locale', ['en', 'fr', 'fa'])->where('any', '.*');
