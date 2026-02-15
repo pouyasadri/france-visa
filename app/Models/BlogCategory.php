@@ -39,4 +39,15 @@ class BlogCategory extends Model
     {
         return $this->hasMany(Blog::class, 'category_id', 'id');
     }
+
+    public function getTranslation(string $locale, bool $fallback = true): ?BlogCategoryTranslation
+    {
+        $translation = $this->translations()->where('locale', $locale)->first();
+
+        if (!$translation && $fallback) {
+            $translation = $this->translations()->where('locale', config('app.fallback_locale', 'en'))->first();
+        }
+
+        return $translation;
+    }
 }
