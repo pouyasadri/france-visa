@@ -224,8 +224,8 @@ class PropertyService
 
     protected function uploadImage($file, string $path): string
     {
-        // Generate unique filename
-        $filename = time() . '_' . Str::random(10) . '.' . $file->getClientOriginalExtension();
+        // Generate unique filename with webp extension
+        $filename = time() . '_' . Str::random(10) . '.webp';
         $fullPath = $path . $filename;
 
         // Process and optimize image
@@ -237,7 +237,7 @@ class PropertyService
         }
 
         // Encode with quality
-        $encoded = $image->toJpeg(quality: 80);
+        $encoded = $image->toWebp(quality: 80);
 
         // Store the image
         Storage::put($fullPath, $encoded);
