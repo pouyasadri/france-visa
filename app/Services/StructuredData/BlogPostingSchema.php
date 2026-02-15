@@ -99,13 +99,8 @@ class BlogPostingSchema extends SchemaBuilder
      */
     protected function buildPublisher(): array
     {
-        return [
-            '@type' => 'Organization',
-            'name' => config('seo.organization.name'),
-            'logo' => [
-                '@type' => 'ImageObject',
-                'url' => $this->asset('assets/img/logo/logo.png'),
-            ],
-        ];
+        $orgId = rtrim(config('app.url'), '/').'/'.'#organization';
+
+        return ['@id' => $orgId];
     }
 }

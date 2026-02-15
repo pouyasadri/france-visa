@@ -16,7 +16,10 @@ class OrganizationSchema extends SchemaBuilder
     {
         $org = config('seo.organization');
 
-        $this->add('name', $org['name'])
+        $orgId = rtrim(config('app.url'), '/').'/'.'#organization';
+
+        $this->add('@id', $orgId)
+            ->add('name', $org['name'])
             ->add('legalName', $org['legal_name'])
             ->add('url', $org['url'])
             ->add('logo', $this->buildLogo($org['logo']))

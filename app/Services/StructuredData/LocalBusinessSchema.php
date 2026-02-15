@@ -16,14 +16,20 @@ class LocalBusinessSchema extends SchemaBuilder
     {
         $org = config('seo.organization');
 
-        $this->add('name', $org['name'])
+        $baseUrl = rtrim(config('app.url'), '/');
+        $orgId = $baseUrl.'/#organization';
+        $businessId = $baseUrl.'/#localbusiness';
+
+        $this->add('@id', $businessId)
+            ->add('name', $org['name'])
             ->add('image', $this->url($org['logo']))
             ->add('url', $org['url'])
             ->add('telephone', $org['telephone'])
             ->add('email', $org['email'])
             ->add('address', $this->buildAddress($org['address']))
             ->add('priceRange', '€€')
-            ->add('sameAs', $org['same_as']);
+            ->add('sameAs', $org['same_as'])
+            ->add('parentOrganization', ['@id' => $orgId]);
 
         // Add opening hours (you can make this configurable)
         $this->add('openingHoursSpecification', $this->buildOpeningHours());
