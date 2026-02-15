@@ -81,4 +81,9 @@ class Blog extends Model
     {
         return $query->where('is_pinned', true);
     }
+
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class, 'blog_post_id', 'id');
+    }
 }

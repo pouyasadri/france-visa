@@ -8,6 +8,8 @@ return [
     // Sidebar
     'table_of_contents' => 'Table des matières',
     'contact_us' => 'Contactez-nous',
+    'recent_posts_title' => 'Articles Récents',
+    'reading_time' => ':minutes min de lecture',
     'consult_button' => 'Demander une consultation pour l\'immigration en France',
     'email' => 'info@applyvipconseil.com',
     'instagram' => 'Notre Instagram',
@@ -29,5 +31,9 @@ return [
     'message_placeholder' => 'Votre message',
     'message_error' => 'Veuillez entrer votre message',
     'submit_button' => 'Envoyer le message',
+
+    // Comments
+    'comments_title' => 'Commentaires',
+    'comment_submitted' => 'Votre commentaire a été soumis et est en attente d\'approbation.',
 ];
 

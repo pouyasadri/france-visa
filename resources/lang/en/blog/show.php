@@ -8,6 +8,8 @@ return [
     // Sidebar
     'table_of_contents' => 'Table of Contents',
     'contact_us' => 'Contact Us',
+    'recent_posts_title' => 'Recent Articles',
+    'reading_time' => ':minutes min read',
     'consult_button' => 'Request consultation for immigration to France',
     'email' => 'info@applyvipconseil.com',
     'instagram' => 'Our Instagram',
@@ -29,5 +31,9 @@ return [
     'message_placeholder' => 'Your Message',
     'message_error' => 'Please enter your message',
     'submit_button' => 'Send Message',
+
+    // Comments
+    'comments_title' => 'Comments',
+    'comment_submitted' => 'Your comment has been submitted and is pending approval.',
 ];
 

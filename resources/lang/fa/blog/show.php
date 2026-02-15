@@ -8,6 +8,8 @@ return [
     // Sidebar
     'table_of_contents' => 'محتویات مقاله',
     'contact_us' => 'ارتباط با ما',
+    'recent_posts_title' => 'مقالات اخیر',
+    'reading_time' => ':minutes دقیقه مطالعه',
     'consult_button' => 'درخواست مشاوره مهاجرت به فرانسه',
     'email' => 'info@applyvipconseil.com',
     'instagram' => 'اینستاگرام ما',
@@ -29,6 +31,10 @@ return [
     'message_placeholder' => 'پیام شما',
     'message_error' => 'پیام خود را وارد کنید',
     'submit_button' => 'ارسال پیام',
+
+    // Comments
+    'comments_title' => 'نظرات',
+    'comment_submitted' => 'نظر شما با موفقیت ثبت شد و در انتظار تایید است.',
 ];
 
 

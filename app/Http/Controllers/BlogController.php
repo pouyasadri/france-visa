@@ -25,21 +25,30 @@ class BlogController extends Controller
     public function index(Request $request): View
     {
         $includeTrashed = $request->query('trashed') === 'true' && auth()->check();
-        $blogs = $this->blogService->getAllBlogs($includeTrashed);
+        $perPage = 9;
+        $blogs = $this->blogService->getPaginatedBlogs($perPage, app()->getLocale(), $includeTrashed);
         $locale = app()->getLocale();
 
         return view("blog.index", compact('blogs', 'locale', 'includeTrashed'));
     }
 
-    public function show(string $locale, Blog $blog): View
+    public function show(string $locale, Blog $blog): View|RedirectResponse
     {
-        $blog->load(['translations', 'category', 'author']);
+        $blog->load(['translations', 'category', 'category.translations', 'author']);
         $locale = app()->getLocale();
-        $translation = $blog->getTranslation($locale);
+        $translation = $blog->getTranslation($locale, false);
+
+        if (!$translation) {
+            return redirect()->route('blog.index', ['locale' => $locale]);
+        }
+
         $nextBlog = $this->blogService->getNextBlog($blog);
         $prevBlog = $this->blogService->getPreviousBlog($blog);
 
-        return view("blog.show", compact('blog', 'translation', 'locale', 'nextBlog', 'prevBlog'));
+        // Fetch 3 most recent published blogs (localized) for the sidebar
+        $recentBlogs = $this->blogService->getPublishedBlogs($locale)->where('id', '!=', $blog->id)->take(3);
+
+        return view("blog.show", compact('blog', 'translation', 'locale', 'nextBlog', 'prevBlog', 'recentBlogs'));
     }
 
     public function create(): View

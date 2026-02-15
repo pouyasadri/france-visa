@@ -19,24 +19,57 @@ class BlogService
         $this->imageManager = new ImageManager(new Driver());
     }
 
-    public function getAllBlogs(bool $includeTrashed = false): Collection
+    public function getAllBlogs(bool $includeTrashed = false, ?string $locale = null): Collection
     {
-        $query = Blog::with(['category', 'author', 'translations'])
+        $query = Blog::with(['translations', 'category', 'category.translations', 'author'])
             ->orderBy('created_at', 'desc');
 
         if ($includeTrashed) {
             $query->withTrashed();
         }
 
+        if ($locale) {
+            $query->whereHas('translations', function ($q) use ($locale) {
+                $q->where('locale', $locale);
+            });
+        }
+
         return $query->get();
     }
 
-    public function getPublishedBlogs(): Collection
+    public function getPublishedBlogs(?string $locale = null): Collection
     {
-        return Blog::published()
-            ->with(['category', 'author', 'translations'])
-            ->orderBy('published_at', 'desc')
-            ->get();
+        $query = Blog::published()
+            ->with(['translations', 'category', 'category.translations', 'author'])
+            ->orderBy('published_at', 'desc');
+
+        if ($locale) {
+            $query->whereHas('translations', function ($q) use ($locale) {
+                $q->where('locale', $locale);
+            });
+        }
+
+        return $query->get();
+    }
+
+    public function getPaginatedBlogs(int $perPage = 9, ?string $locale = null, bool $includeTrashed = false): \Illuminate\Contracts\Pagination\LengthAwarePaginator
+    {
+        $query = Blog::with(['translations', 'category', 'category.translations', 'author'])
+            ->orderBy('published_at', 'desc');
+
+        if (!$includeTrashed) {
+            $query->published();
+        } else {
+            $query->withTrashed();
+        }
+
+        if ($locale) {
+            $query->whereHas('translations', function ($q) use ($locale) {
+                $q->where('locale', $locale);
+            });
+        }
+
+        return $query->paginate($perPage);
     }
 
     public function getNextBlog(Blog $blog): ?Blog
@@ -65,7 +98,7 @@ class BlogService
                 'author_id' => $validatedData['author_id'] ?? auth()->id(),
                 'main_image' => $mainImagePath,
                 'is_pinned' => $validatedData['is_pinned'] ?? false,
-                'published_at' => $validatedData['published_at'] ?? null,
+                'published_at' => $validatedData['published_at'] ?? now(),
             ]);
 
             // Create translations
@@ -193,7 +226,8 @@ class BlogService
         $encoded = $image->toJpeg(quality: 80);
         Storage::put($fullPath, $encoded);
 
-        return $fullPath;
+        // Return path relative to the 'public' disk root (remove 'public/' prefix if present)
+        return str_replace('public/', '', $fullPath);
     }
 
     protected function generateUniqueSlug(string $title, string $locale, ?string $excludeId = null): string
