@@ -22,7 +22,7 @@ return [
 
     'educational_consultation_subtitle' => 'Consultation Éducative pour un Avenir Brillant',
     'educational_consultation_title' => 'Consultation Éducative Spécialisée avec A.V.C',
-    'educational_consultation_description' => 'Avec la consultation éducative spécialisée d\'A.V.C, façonnez votre avenir éducatif dans les meilleures universités de France et d\'Europe avec confiance et connaissance complète. Nous vous aidons à choisir le meilleur parcours éducatif en nous concentrant sur les meilleures options et des informations précises.',
+    'educational_consultation_desc' => 'Avec la consultation éducative spécialisée d\'A.V.C, façonnez votre avenir éducatif dans les meilleures universités de France et d\'Europe avec confiance et connaissance complète. Nous vous aidons à choisir le meilleur parcours éducatif en nous concentrant sur les meilleures options et des informations précises.',
 
     'dormitory_booking_subtitle' => 'Réservation Résidence Étudiante en France',
     'dormitory_booking_title' => 'Réservation Résidence Étudiante avec A.V.C',
@@ -34,6 +34,13 @@ return [
 
     // Consultation Form Section
     'consultation_form_heading' => 'Demander Rendez-vous Consultation pour Immigration France',
+    'form' => [
+        'name' => ['label' => 'Nom Complet'],
+        'email' => ['label' => 'Adresse Email'],
+        'whatsapp' => ['label' => 'Numéro WhatsApp/Téléphone'],
+        'service' => ['label' => 'Service Souhaité'],
+        'details' => ['label' => 'Détails Supplémentaires'],
+    ],
     'form_name_placeholder' => 'Nom Complet',
     'form_email_placeholder' => 'Email',
     'form_whatsapp_placeholder' => 'Numéro WhatsApp',
@@ -46,6 +53,15 @@ return [
     'form_submit_button' => 'Soumettre Demande',
 
     // Contact Information Section
+    'info' => [
+        'phone' => [
+            'france_label' => 'France',
+            'iran_label' => 'Iran',
+        ],
+        'email' => [
+            'title' => 'Notre Adresse Email',
+        ],
+    ],
     'contact_info_heading' => 'Contacter l\'Équipe de Consultation Immigration Apply Vip Conseil',
     'contact_info_description' => 'Notre équipe de consultation spécialisée vous accompagnera à travers toutes les étapes d\'immigration vers la France.',
 
@@ -69,8 +85,8 @@ return [
     'document_translation' => 'Traduction Facile de Documents',
     'document_translation_description' => 'Bénéficiez de notre expertise en traduction de documents. Nos services traduisent vos documents avec facilité et précision. Nous sommes toujours prêts à vous apporter une bonne expérience de traduction de documents.',
 
-    'educational_consultation' => 'Consultation Éducative',
-    'educational_consultation_description' => 'Bénéficiez de notre expérience en consultation éducative. Avec précision et expertise, nous sommes toujours à votre service pour créer une expérience positive de consultation éducative pour vous.',
+    'educational_consultation_service' => 'Consultation Éducative',
+    'educational_consultation_service_desc' => 'Bénéficiez de notre expérience en consultation éducative. Avec précision et expertise, we are always at your service to create a positive experience of educational consultation for you.',
 
     'accommodation_booking' => 'Réservation d\'Hébergement',
     'accommodation_booking_description' => 'Bénéficiez de notre expérience en réservation d\'hébergement. Avec précision et informations complètes, nous sommes toujours à votre service pour vivre une bonne expérience de réservation d\'hébergement avec nous.',

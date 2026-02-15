@@ -22,7 +22,7 @@ return [
 
     'educational_consultation_subtitle' => 'مشاوره تحصیلی برای آینده‌ی روشن',
     'educational_consultation_title' => 'مشاوره تحصیلی تخصصی با A.V.C',
-    'educational_consultation_description' => 'با مشاوره تحصیلی تخصصی A.V.C، آینده‌ی تحصیلی خود در بهترین دانشگاه های فرانسه و اروپا را با اعتماد به نفس و آگاهی کامل رقم بزنید. ما با تمرکز بر بهترین گزینه‌ها و اطلاعات دقیق، به شما کمک می‌کنیم تا بهترین مسیر تحصیلی را برای خود انتخاب کنید.',
+    'educational_consultation_desc' => 'با مشاوره تحصیلی تخصصی A.V.C، آینده‌ی تحصیلی خود در بهترین دانشگاه های فرانسه و اروپا را با اعتماد به نفس و آگاهی کامل رقم بزنید. ما با تمرکز بر بهترین گزینه‌ها و اطلاعات دقیق، به شما کمک می‌کنیم تا بهترین مسیر تحصیلی را برای خود انتخاب کنید.',
 
     'dormitory_booking_subtitle' => 'رزرو خوابگاه دانشجویی در فرانسه',
     'dormitory_booking_title' => 'رزرو خوابگاه دانشجویی با A.V.C',
@@ -34,6 +34,13 @@ return [
 
     // Consultation Form Section
     'consultation_form_heading' => 'درخواست وقت مشاوره برای مهاجرت به فرانسه',
+    'form' => [
+        'name' => ['label' => 'نام و نام خانوادگی'],
+        'email' => ['label' => 'آدرس ایمیل'],
+        'whatsapp' => ['label' => 'شماره واتساپ/تلفن'],
+        'service' => ['label' => 'سرویس مورد نیاز'],
+        'details' => ['label' => 'توضیحات تکمیلی'],
+    ],
     'form_name_placeholder' => 'نام و نام خانوادگی',
     'form_email_placeholder' => 'ایمیل',
     'form_whatsapp_placeholder' => 'شماره واتساپ',
@@ -46,6 +53,15 @@ return [
     'form_submit_button' => 'ثبت درخواست',
 
     // Contact Information Section
+    'info' => [
+        'phone' => [
+            'france_label' => 'فرانسه',
+            'iran_label' => 'ایران',
+        ],
+        'email' => [
+            'title' => 'آدرس ایمیل ما',
+        ],
+    ],
     'contact_info_heading' => 'تماس با تیم مشاوران مهاجرتی Apply Vip Conseil',
     'contact_info_description' => 'تیم مشاورین تخصصی ما شما را در تمامی مراحل مهاجرت به فرانسه همراهی خواهند کرد.',
 
@@ -69,8 +85,8 @@ return [
     'document_translation' => 'ترجمه مدارک با سهولت',
     'document_translation_description' => 'از تخصص ما در ترجمه مدارک بهره ببرید. خدمات ما با راحتی و دقت به ترجمه مدارک شما می‌پردازند. همیشه آماده‌ایم تا تجربه‌ی خوبی از ترجمه مدارک را برای شما به ارمغان بیاوریم.',
 
-    'educational_consultation' => 'مشاوره تحصیلی',
-    'educational_consultation_description' => 'از تجربه ما در مشاوره تحصیلی بهره ببرید. با دقت و تخصص، همیشه در خدمت شما هستیم تا تجربه‌ای مثبت از مشاوره تحصیلی را برایتان خلق کنیم.',
+    'educational_consultation_service' => 'مشاوره تحصیلی',
+    'educational_consultation_service_desc' => 'از تجربه ما در مشاوره تحصیلی بهره ببرید. با دقت و تخصص، همیشه در خدمت شما هستیم تا تجربه‌ای مثبت از مشاوره تحصیلی را برایتان خلق کنیم.',
 
     'accommodation_booking' => 'رزرو محل اسکان',
     'accommodation_booking_description' => 'از تجربه ما در رزرو محل اسکان بهره ببرید. با دقت و اطلاعات کامل، همیشه در خدمت شما هستیم تا تجربه‌ای خوب از رزرو محل اسکان را با ما تجربه کنید.',

@@ -22,7 +22,7 @@ return [
 
     'educational_consultation_subtitle' => 'Educational Consultation for a Bright Future',
     'educational_consultation_title' => 'Specialized Educational Consultation with A.V.C',
-    'educational_consultation_description' => 'With A.V.C\'s specialized educational consultation, shape your educational future at the best universities in France and Europe with confidence and complete knowledge. We help you choose the best educational path by focusing on the best options and accurate information.',
+    'educational_consultation_desc' => 'With A.V.C\'s specialized educational consultation, shape your educational future at the best universities in France and Europe with confidence and complete knowledge. We help you choose the best educational path by focusing on the best options and accurate information.',
 
     'dormitory_booking_subtitle' => 'Student Dormitory Booking in France',
     'dormitory_booking_title' => 'Student Dormitory Booking with A.V.C',
@@ -34,6 +34,13 @@ return [
 
     // Consultation Form Section
     'consultation_form_heading' => 'Request Consultation Appointment for France Immigration',
+    'form' => [
+        'name' => ['label' => 'Full Name'],
+        'email' => ['label' => 'Email Address'],
+        'whatsapp' => ['label' => 'WhatsApp/Phone Number'],
+        'service' => ['label' => 'Service Needed'],
+        'details' => ['label' => 'Additional Details'],
+    ],
     'form_name_placeholder' => 'Full Name',
     'form_email_placeholder' => 'Email',
     'form_whatsapp_placeholder' => 'WhatsApp Number',
@@ -46,6 +53,15 @@ return [
     'form_submit_button' => 'Submit Request',
 
     // Contact Information Section
+    'info' => [
+        'phone' => [
+            'france_label' => 'France',
+            'iran_label' => 'Iran',
+        ],
+        'email' => [
+            'title' => 'Our Email Address',
+        ],
+    ],
     'contact_info_heading' => 'Contact Apply Vip Conseil Immigration Consultation Team',
     'contact_info_description' => 'Our specialized consultation team will accompany you through all stages of immigration to France.',
 
@@ -69,8 +85,8 @@ return [
     'document_translation' => 'Easy Document Translation',
     'document_translation_description' => 'Benefit from our expertise in document translation. Our services translate your documents with ease and precision. We are always ready to bring you a good experience of document translation.',
 
-    'educational_consultation' => 'Educational Consultation',
-    'educational_consultation_description' => 'Benefit from our experience in educational consultation. With precision and expertise, we are always at your service to create a positive experience of educational consultation for you.',
+    'educational_consultation_service' => 'Educational Consultation',
+    'educational_consultation_service_desc' => 'Benefit from our experience in educational consultation. With precision and expertise, we are always at your service to create a positive experience of educational consultation for you.',
 
     'accommodation_booking' => 'Accommodation Booking',
     'accommodation_booking_description' => 'Benefit from our experience in accommodation booking. With precision and complete information, we are always at your service to experience a good accommodation booking experience with us.',
