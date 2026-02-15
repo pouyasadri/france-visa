@@ -2,6 +2,22 @@
 
 return [
     'logo_alt' => 'A.V.C : Éducation, Vie, Investissement en France',
+    'language' => 'Langue',
+
+    // Accessibilité
+    'skip_to_content' => 'Aller au contenu principal',
+    'mobile_navigation' => 'Navigation mobile',
+    'main_navigation' => 'Navigation principale',
+    'home' => 'Page d\'accueil',
+
+    // Réseaux sociaux
+    'social' => [
+        'instagram' => 'Instagram',
+        'facebook' => 'Facebook',
+        'twitter' => 'Twitter',
+        'linkedin' => 'LinkedIn',
+        'youtube' => 'YouTube',
+    ],
 
     'nav' => [
         'home' => 'Accueil',
@@ -63,4 +79,3 @@ return [
         'shape_alt' => 'Image',
     ],
 ];
-

@@ -2,6 +2,22 @@
 
 return [
     'logo_alt' => 'A.V.C: تحصیل، زندگی، سرمایه گذاری در فرانسه',
+    'language' => 'زبان',
+
+    // دسترسی‌پذیری
+    'skip_to_content' => 'پرش به محتوای اصلی',
+    'mobile_navigation' => 'منوی موبایل',
+    'main_navigation' => 'منوی اصلی',
+    'home' => 'صفحه اصلی',
+
+    // شبکه‌های اجتماعی
+    'social' => [
+        'instagram' => 'اینستاگرام',
+        'facebook' => 'فیسبوک',
+        'twitter' => 'توییتر',
+        'linkedin' => 'لینکدین',
+        'youtube' => 'یوتیوب',
+    ],
 
     'nav' => [
         'home' => 'خانه',
@@ -11,6 +27,7 @@ return [
         'cities' => 'معرفی شهر ها',
         'houses' => 'املاک',
         'contact' => 'تماس با ما',
+        'menu' => 'منو',
     ],
 
     'sidebar' => [
@@ -63,4 +80,3 @@ return [
         'shape_alt' => 'تصویر',
     ],
 ];
-

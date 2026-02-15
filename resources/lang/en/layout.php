@@ -2,6 +2,22 @@
 
 return [
     'logo_alt' => 'A.V.C: Education, Life, Investment in France.',
+    'language' => 'Language',
+
+    // Accessibility
+    'skip_to_content' => 'Skip to main content',
+    'mobile_navigation' => 'Mobile navigation',
+    'main_navigation' => 'Main navigation',
+    'home' => 'Home page',
+
+    // Social Media
+    'social' => [
+        'instagram' => 'Instagram',
+        'facebook' => 'Facebook',
+        'twitter' => 'Twitter',
+        'linkedin' => 'LinkedIn',
+        'youtube' => 'YouTube',
+    ],
 
     'nav' => [
         'home' => 'Home',
@@ -11,6 +27,7 @@ return [
         'cities' => 'Cities',
         'houses' => 'Real Estate',
         'contact' => 'Contact us',
+        'menu' => 'Menu',
     ],
 
     'sidebar' => [
@@ -63,4 +80,3 @@ return [
         'shape_alt' => 'Image',
     ],
 ];
-
