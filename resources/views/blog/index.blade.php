@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.main')
 @section('title', __('blog/index.title'))
 @section("keywords", __('blog/index.keywords'))
 @section("description", __('blog/index.description'))
@@ -29,47 +29,10 @@
                 <h2>{{ __('blog/index.section_heading') }}</h2>
             </div>
             <div class="row">
-                @php
-                    // Only show blog posts that have a translation in the current locale
-                    $localizedBlogs = $blogs->filter(function($b) use ($locale) {
-                        return (bool) $b->getTranslation($locale);
-                    });
-                @endphp
-
-                @forelse($localizedBlogs as $blog)
-                    @php
-                        $translation = $blog->getTranslation($locale);
-                    @endphp
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-news">
-                                <div class="news-img">
-                                    <a href="{{ route('blog.show', ['blog' => $blog]) }}">
-                                        <img src="{{asset('storage/images/blogs/' . $blog->main_image)}}"
-                                             alt="{{$translation->title}}"
-                                             @if(!$blog->main_image) style="background-color: #f0f0f0;" @endif>
-                                    </a>
-                                    <div class="dates">
-                                        <span>{{ $blog->category?->getTranslation($locale)?->name ?? 'Uncategorized' }}</span>
-                                    </div>
-                                </div>
-                                <div class="news-content-wrap">
-                                    <ul>
-                                        <li>
-                                            <i class="flaticon-user"></i>
-                                            {{ $blog->author?->name ?? __('blog/index.author_label') }}
-                                        </li>
-                                    </ul>
-                                    <a href="{{ route('blog.show', ['blog' => $blog]) }}">
-                                        <h3>{{$translation->title}}</h3>
-                                    </a>
-                                    <p>{{$translation->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($translation->body), 120, '...')}}</p>
-                                    <a class="read-more" href="{{ route('blog.show', ['blog' => $blog]) }}">
-                                        {{ __('blog/index.read_more') }}
-                                        <i class="flaticon-left-arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                @forelse($blogs as $blog)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <x-blog-card :blog="$blog" :showAuthor="true" />
+                    </div>
                 @empty
                     <div class="col-12">
                         <div class="alert alert-info" role="alert">
@@ -78,6 +41,10 @@
                         </div>
                     </div>
                 @endforelse
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+                <x-ui.pagination :items="$blogs" />
             </div>
         </div>
     </section>
