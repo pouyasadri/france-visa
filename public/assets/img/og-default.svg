@@ -1,0 +1,26 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1100" cy="530" r="100" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Main content -->
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff" text-anchor="middle">Apply Vip Conseil</text>
+  
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="32" fill="#e0e7ff" text-anchor="middle">Immigration • Education • Real Estate</text>
+  
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="28" fill="#c7d2fe" text-anchor="middle">Your Trusted Partner in France</text>
+  
+  <!-- Bottom decoration -->
+  <rect x="400" y="520" width="400" height="4" fill="#60a5fa" rx="2"/>
+</svg>
