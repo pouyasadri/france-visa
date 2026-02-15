@@ -3,29 +3,24 @@
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ConsultController;
-use App\Http\Controllers\HouseController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Middleware\SetLocale;
+use App\Services\LocaleDetector;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Redirect root to preferred or default locale for SEO-friendly canonical URLs
 Route::get('/', function (Request $request) {
-    $supported = ['en', 'fr', 'fa'];
+    $localeDetector = app(LocaleDetector::class);
+    $locale = $localeDetector->detectLocale($request);
 
-    $sessionLocale = session('locale');
-    $preferred = $request->getPreferredLanguage($supported);
-    $locale = in_array($sessionLocale, $supported, true)
-        ? $sessionLocale
-        : ($preferred ?: config('app.locale'));
-
-    if (! in_array($locale, $supported, true)) {
-        $locale = config('app.locale');
-    }
-
-    return redirect("/{$locale}");
+    return redirect("/$locale");
 })->name('root.redirect');
 
 // Keep sitemap at root (not locale-specific)
@@ -37,30 +32,39 @@ Route::prefix('{locale}')
     ->middleware(SetLocale::class)
     ->group(function () {
         // Home Route (localized)
-        Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('index');
+        Route::get('/', [IndexController::class, 'index'])->name('index');
 
         // Cities Routes
         Route::prefix('cities')->group(function () {
-            Route::view('/', 'cities');
+            Route::view('/', 'pages.cities.index');
             $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon'];
             foreach ($cities as $city) {
-                Route::view("/{$city}", "city.{$city}");
+                Route::view("/$city", "city.$city");
             }
         });
 
         // Universities Routes
         Route::prefix('universities')->group(function () {
-            Route::view('/', 'universities');
+            Route::view('/', 'pages.universities.index');
             $universities = [
-                'paris-saclay-university', 'sorbonne-paris-nord', 'paris-cite', 'paris-4-sorbonne',
-                'paris-3', 'paris-2', 'lyon-3', 'lyon-2', 'lyon-1', 'pantheon-sorbonne',
-                'cote-d-azure', 'toulouse', 'strasbourg'
+                'paris-saclay-university',
+                'sorbonne-paris-nord',
+                'paris-cite',
+                'paris-4-sorbonne',
+                'paris-3',
+                'paris-2',
+                'lyon-3',
+                'lyon-2',
+                'lyon-1',
+                'pantheon-sorbonne',
+                'cote-d-azure',
+                'toulouse',
+                'strasbourg',
             ];
             foreach ($universities as $university) {
-                Route::view("/{$university}", "university.{$university}");
+                Route::view("/$university", "university.$university");
             }
         });
-
         // Blog Routes
         Route::prefix('blog')->group(function () {
             Route::get('/', [BlogController::class, 'index'])->name('blog.index');
@@ -71,6 +75,9 @@ Route::prefix('{locale}')
             Route::get('/{blog}/edit', [BlogController::class, 'edit'])->middleware('auth')->name('blog.edit');
             Route::put('/{blog}', [BlogController::class, 'update'])->middleware('auth')->name('blog.update');
             Route::delete('/{blog}', [BlogController::class, 'destroy'])->name('blog.delete')->middleware('auth');
+
+            // Comments
+            Route::post('/{blog}/comments', [\App\Http\Controllers\CommentController::class, 'store'])->name('comments.store');
 
             // Category CRUD
             Route::prefix('/categories')->group(function () {
@@ -83,17 +90,28 @@ Route::prefix('{locale}')
             });
         });
 
+        /*
+        |--------------------------------------------------------------------------
+        | PROPERTIES FEATURE DISABLED - COMING SOON
+        |--------------------------------------------------------------------------
+        | Property routes temporarily disabled. To re-enable:
+        | 1. Uncomment this section (lines 78-99)
+        | 2. Remove temporary "coming soon" routes below
+        | 3. Clear route cache: php artisan route:clear
+        | 4. See PROPERTIES_DISABLED.md for full restoration guide
+        |--------------------------------------------------------------------------
+
         // Properties Routes
         Route::prefix('properties')->group(function () {
-            Route::get('/', [\App\Http\Controllers\PropertyController::class, 'index'])->name('properties.index');
-            Route::get('/create', [\App\Http\Controllers\PropertyController::class, 'create'])->middleware('auth')->name('properties.create');
-            Route::post('/', [\App\Http\Controllers\PropertyController::class, 'store'])->middleware('auth')->name('properties.store');
-            Route::post('/{id}/restore', [\App\Http\Controllers\PropertyController::class, 'restore'])->middleware('auth')->name('properties.restore');
-            Route::delete('/images/{image}', [\App\Http\Controllers\PropertyController::class, 'deleteImage'])->middleware('auth')->name('properties.images.delete');
-            Route::get('/{property}', [\App\Http\Controllers\PropertyController::class, 'show'])->name('properties.show');
-            Route::get('/{property}/edit', [\App\Http\Controllers\PropertyController::class, 'edit'])->middleware('auth')->name('properties.edit');
-            Route::put('/{property}', [\App\Http\Controllers\PropertyController::class, 'update'])->middleware('auth')->name('properties.update');
-            Route::delete('/{property}', [\App\Http\Controllers\PropertyController::class, 'destroy'])->middleware('auth')->name('properties.destroy');
+            Route::get('/', [PropertyController::class, 'index'])->name('properties.index');
+            Route::get('/create', [PropertyController::class, 'create'])->middleware('auth')->name('properties.create');
+            Route::post('/', [PropertyController::class, 'store'])->middleware('auth')->name('properties.store');
+            Route::post('/{id}/restore', [PropertyController::class, 'restore'])->middleware('auth')->name('properties.restore');
+            Route::delete('/images/{image}', [PropertyController::class, 'deleteImage'])->middleware('auth')->name('properties.images.delete');
+            Route::get('/{property}', [PropertyController::class, 'show'])->name('properties.show');
+            Route::get('/{property}/edit', [PropertyController::class, 'edit'])->middleware('auth')->name('properties.edit');
+            Route::put('/{property}', [PropertyController::class, 'update'])->middleware('auth')->name('properties.update');
+            Route::delete('/{property}', [PropertyController::class, 'destroy'])->middleware('auth')->name('properties.destroy');
         });
 
         // Property front-end Routes (was property)
@@ -106,12 +124,90 @@ Route::prefix('{locale}')
         });
         Route::get('/property/filter', [PropertyController::class, 'filter'])->name('property.filter');
 
+        |--------------------------------------------------------------------------
+        | END PROPERTIES FEATURE DISABLED
+        |--------------------------------------------------------------------------
+        */
+
+        // TEMPORARY: Show "Coming Soon" page for all property URLs
+        Route::get('/properties', function () {
+            return view('properties.coming-soon');
+        })->name('properties.index');
+
+        Route::get('/properties/create', function () {
+            return view('properties.coming-soon');
+        })->name('properties.create');
+
+        Route::get('/properties/{id}', function () {
+            return view('properties.coming-soon');
+        })->name('properties.show');
+
+        Route::get('/properties/{id}/edit', function () {
+            return view('properties.coming-soon');
+        })->name('properties.edit');
+
+        Route::get('/property', function () {
+            return view('properties.coming-soon');
+        })->name('property.index');
+
+        Route::get('/property/{id}', function () {
+            return view('properties.coming-soon');
+        })->name('property.show');
+
+
+
         // Other Routes
-        Route::view('/consult', 'consult');
+        Route::view('/consult', 'pages.consult')->name('consult');
         Route::post('/consult/submit', [ConsultController::class, 'submit'])->name('consult.submit');
-        Route::view('/contactUs', 'contact');
+
+        Route::view('/contactUs', 'pages.contact')->name('contact');
+        Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+
+        Route::post('/questions/submit', [QuestionController::class, 'submit'])->name('questions.submit');
 
         // Auth routes localized
-        Auth::routes();
-        Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
+
+
+        // Debug route for locale detection (only in non-production)
+        if (app()->environment('local', 'development')) {
+            Route::get('/locale-debug', function (Request $request) {
+                $localeDetector = app(LocaleDetector::class);
+                $info = $localeDetector->getDetectionInfo($request, $request->route('locale'));
+
+                return response()->json($info);
+            })->name('locale.debug');
+        }
     });
+
+// Auth Routes (Non-Localized, defaults to FR often preferred for admin, or just default app locale)
+// User requested "just for the admin section", and "it should be in fr" for login.
+// We can force FR locale for these routes.
+Route::middleware(['admin.locale'])->group(function () {
+    Auth::routes(['register' => false, 'reset' => false]);
+
+    // Admin Routes
+    Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+
+        // Blog Routes
+        Route::resource('blogs', \App\Http\Controllers\Admin\BlogController::class)->names('blog');
+        Route::resource('questions', \App\Http\Controllers\Admin\QuestionController::class)->only(['index', 'show', 'destroy']);
+        Route::resource('comments', \App\Http\Controllers\Admin\CommentController::class)->only(['index', 'update', 'destroy']);
+        Route::resource('consulting', \App\Http\Controllers\Admin\ConsultingController::class)->only(['index', 'show', 'destroy']);
+        Route::resource('admins', \App\Http\Controllers\Admin\AdminUserController::class)->only(['index', 'create', 'store', 'destroy']);
+    });
+});
+
+// Redirects for legacy/locale-prefixed admin/login routes
+Route::get('/{locale}/login', function () {
+    return redirect('/login');
+})->whereIn('locale', ['en', 'fr', 'fa']);
+
+Route::get('/{locale}/admin', function () {
+    return redirect('/admin');
+})->whereIn('locale', ['en', 'fr', 'fa']);
+
+Route::get('/{locale}/admin/{any?}', function ($locale, $any = null) {
+    return redirect('/admin/' . $any);
+})->whereIn('locale', ['en', 'fr', 'fa'])->where('any', '.*');

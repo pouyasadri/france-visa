@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Services\LocaleDetector;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
@@ -13,11 +14,12 @@ class SetLocale
     /**
      * Handle an incoming request and set the application locale.
      *
-     * - Reads the locale from the route parameter `locale`, session, or Accept-Language header.
-     * - Falls back to `config('app.locale')` if the found locale is not supported.
-     * - Stores the chosen locale in session and calls app()->setLocale().
-     * - Sets URL defaults so named routes automatically include the locale parameter.
-     * - Sets Carbon locale for date translations.
+     * Uses LocaleDetector service for intelligent locale detection:
+     * - Route parameter (explicit user choice)
+     * - Session (previously detected locale)
+     * - Browser Accept-Language header (with quality values)
+     * - IP geolocation (optional)
+     * - Config fallback
      *
      * @param  Request  $request
      * @param  Closure  $next
@@ -25,23 +27,15 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): mixed
     {
-        $supported = config('localization.supported_locales', ['en', 'fr', 'fa']);
+        $localeDetector = app(LocaleDetector::class);
 
+        // Get route locale if available
         $routeLocale = $request->route() ? $request->route('locale') : null;
-        $locale = $routeLocale ?? session('locale');
 
-        if (! $locale) {
-            $accept = $request->server('HTTP_ACCEPT_LANGUAGE') ?? '';
-            // extract first language tag and take primary subtag
-            if (preg_match('/^([a-zA-Z]{2})(?:-|;|,|$)/', $accept, $m)) {
-                $locale = strtolower($m[1]);
-            }
-        }
+        // Detect best locale using the service
+        $locale = $localeDetector->detectLocale($request, $routeLocale);
 
-        if (! in_array($locale, $supported, true)) {
-            $locale = config('app.locale');
-        }
-
+        // Set application locale
         app()->setLocale($locale);
         session(['locale' => $locale]);
 
