@@ -81,8 +81,7 @@
                                                     class="form-label small fw-bold text-muted">{{ __('consult.form.whatsapp.label' ?? 'WhatsApp/Phone') }}</label>
                                                 <input type="tel" name="user_phone_number" id="user_phone_number"
                                                     class="form-control rounded-pill px-4 py-2"
-                                                    placeholder="{{ __('consult.form_whatsapp_placeholder') }}"
-                                                    required>
+                                                    placeholder="{{ __('consult.form_whatsapp_placeholder') }}" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -94,13 +93,17 @@
                                                     <option value="default">{{ __('consult.form_service_default') }}
                                                     </option>
                                                     <option value="{{ __('consult.form_service_residence') }}">
-                                                        {{ __('consult.form_service_residence') }}</option>
+                                                        {{ __('consult.form_service_residence') }}
+                                                    </option>
                                                     <option value="{{ __('consult.form_service_education') }}">
-                                                        {{ __('consult.form_service_education') }}</option>
+                                                        {{ __('consult.form_service_education') }}
+                                                    </option>
                                                     <option value="{{ __('consult.form_service_immigration') }}">
-                                                        {{ __('consult.form_service_immigration') }}</option>
+                                                        {{ __('consult.form_service_immigration') }}
+                                                    </option>
                                                     <option value="{{ __('consult.form_service_legal') }}">
-                                                        {{ __('consult.form_service_legal') }}</option>
+                                                        {{ __('consult.form_service_legal') }}
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -108,8 +111,8 @@
                                             <div class="form-group mb-4">
                                                 <label for="user_details"
                                                     class="form-label small fw-bold text-muted">{{ __('consult.form.details.label' ?? 'Details') }}</label>
-                                                <textarea class="form-control rounded-4 px-4 py-3"
-                                                    name="user_details" id="user_details" cols="30" rows="5"
+                                                <textarea class="form-control rounded-4 px-4 py-3" name="user_details"
+                                                    id="user_details" cols="30" rows="5"
                                                     placeholder="{{ __('consult.form_details_placeholder') }}"
                                                     required></textarea>
                                             </div>
@@ -131,38 +134,44 @@
                         <div class="row g-4 h-100">
                             <!-- Email Info -->
                             <div class="col-12">
-                                <div class="single-contact-info rounded-5 shadow-sm p-4 bg-white border-0 transition-all hover-lift">
+                                <div
+                                    class="single-contact-info rounded-5 shadow-sm p-4 bg-white border-0 transition-all hover-lift">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="flex-shrink-0 bg-info-subtle text-info rounded-pill p-3 me-3">
                                             <i class='bx bx-envelope fs-3'></i>
                                         </div>
                                         <h3 class="h5 fw-bold mb-0">{{ __('consult.info.email.title' ?? 'Our Email') }}</h3>
                                     </div>
-                                    <a href="mailto:info@applyvipconseil.com" class="text-muted text-decoration-none">info@applyvipconseil.com</a>
+                                    <a href="mailto:info@applyvipconseil.com"
+                                        class="text-muted text-decoration-none">info@applyvipconseil.com</a>
                                 </div>
                             </div>
                             <!-- Phone France -->
                             <div class="col-12">
-                                <div class="single-contact-info rounded-5 shadow-sm p-4 bg-white border-0 transition-all hover-lift">
+                                <div
+                                    class="single-contact-info rounded-5 shadow-sm p-4 bg-white border-0 transition-all hover-lift">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="flex-shrink-0 bg-primary-subtle text-primary rounded-pill p-3 me-3">
                                             <i class='bx bx-phone-call fs-3'></i>
                                         </div>
-                                        <h3 class="h5 fw-bold mb-0">{{ __('consult.info.phone.france_label' ?? 'France') }}</h3>
+                                        <h3 class="h5 fw-bold mb-0">{{ __('consult.info.phone.france_label' ?? 'France') }}
+                                        </h3>
                                     </div>
                                     <a href="tel:+33768688326" class="text-muted text-decoration-none">0033-768-68-83-26</a>
                                 </div>
                             </div>
                             <!-- Phone Iran -->
                             <div class="col-12">
-                                <div class="single-contact-info rounded-5 shadow-sm p-4 bg-white border-0 transition-all hover-lift">
+                                <div
+                                    class="single-contact-info rounded-5 shadow-sm p-4 bg-white border-0 transition-all hover-lift">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="flex-shrink-0 bg-success-subtle text-success rounded-pill p-3 me-3">
                                             <i class='bx bx-phone-call fs-3'></i>
                                         </div>
                                         <h3 class="h5 fw-bold mb-0">{{ __('consult.info.phone.iran_label' ?? 'Iran') }}</h3>
                                     </div>
-                                    <a href="tel:+989120087194" class="text-muted text-decoration-none">0098-912-008-7194</a>
+                                    <a href="tel:+989120087194"
+                                        class="text-muted text-decoration-none">0098-912-008-7194</a>
                                 </div>
                             </div>
                             <!-- Description (Optional/Bottom) -->
@@ -190,14 +199,16 @@
             ['label' => null, 'title' => __('consult.administrative_support_france'), 'description' => __('consult.administrative_support_description')],
             ['label' => null, 'title' => __('consult.legal_services'), 'description' => __('consult.legal_services_description')],
         ]" />
+
+        <x-sections.faq :title="__('faq.title')" :subtitle="__('faq.subtitle')" :items="__('faq.items')" />
     </div>
 @endsection
 
 @push('json')
     @php
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('consult.breadcrumb_home'), 'url' => url($currentLocale.'/')],
-            ['name' => __('consult.breadcrumb_consult'), 'url' => url($currentLocale.'/consult')],
+            ['name' => __('consult.breadcrumb_home'), 'url' => url($currentLocale . '/')],
+            ['name' => __('consult.breadcrumb_consult'), 'url' => url($currentLocale . '/consult')],
         ]);
 
         $webPageSchema = new \App\Services\StructuredData\WebPageSchema(
@@ -212,7 +223,7 @@
             '@type' => 'Service',
             'name' => $pageTitle,
             'description' => $pageDescription,
-            'provider' => ['@id' => rtrim(config('app.url'), '/').'/' . '#organization'],
+            'provider' => ['@id' => rtrim(config('app.url'), '/') . '/' . '#organization'],
             'areaServed' => ['FR', 'IR'],
             'hasOfferCatalog' => [
                 '@type' => 'OfferCatalog',

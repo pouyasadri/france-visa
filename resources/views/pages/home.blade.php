@@ -158,15 +158,16 @@
             <div class="container">
                 <div class="row">
                     @php
-                        $mapCityNamesJson = e(json_encode([
+                        $mapCityNamesJson = json_encode([
                             __('cities.map_paris'),
                             __('cities.map_strasbourg'),
                             __('cities.map_lyon'),
                             __('cities.map_nice'),
                             __('cities.map_toulouse'),
-                        ], JSON_UNESCAPED_UNICODE));
+                        ], JSON_UNESCAPED_UNICODE);
                     @endphp
-                    <div class="col-lg-5 col-md-12" style="height: 40rem" id="chartdiv" data-city-names="{{ $mapCityNamesJson }}"></div>
+                    <div class="col-lg-5 col-md-12" style="height: 40rem" id="chartdiv"
+                        data-city-names="{{ $mapCityNamesJson }}"></div>
                     <div class="city-wrap col-lg-5 col-md-12">
                         <div class="single-city-item owl-carousel owl-theme">
                             @foreach(__('index.cities.items') as $index => $city)
@@ -309,30 +310,10 @@
         </section>
         <!-- End News Area -->
 
-        @php
-            $homepageFaqs = match ($currentLocale) {
-                'fr' => \App\Services\FaqService::immigrationFaqsFR(),
-                'fa' => \App\Services\FaqService::immigrationFaqsFA(),
-                default => \App\Services\FaqService::immigrationFaqsEN(),
-            };
-        @endphp
-
-        <section class="pt-100 pb-100">
-            <div class="container">
-                <div class="section-title">
-                    <span>{{ __('index.faq.subtitle', [], $currentLocale) }}</span>
-                    <h2>{{ __('index.faq.title', [], $currentLocale) }}</h2>
-                </div>
-                <x-ui.faq-section :faqs="array_slice($homepageFaqs, 0, 5)" />
-            </div>
-        </section>
+        <x-sections.faq :title="__('faq.title')" :subtitle="__('faq.subtitle')" :items="__('faq.items')" />
 
     </div>
 @endsection
-@push("styles")
-    <script src="{{asset("https://www.amcharts.com/lib/3/ammap.js?3.17.0")}}"></script>
-    <script src="{{asset("https://www.amcharts.com/lib/3/maps/js/franceLow.js")}}"></script>
-@endpush
 @push("json")
     {{-- WebPage Schema --}}
     @php
@@ -351,6 +332,8 @@
     <x-seo.structured-data :schema="$webPageSchema" />
 @endpush
 @push("scripts")
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/franceLow.js"></script>
     <script>
         // Dynamic Map Configuration with Locale-based City Names
         var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
