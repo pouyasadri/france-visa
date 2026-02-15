@@ -1,26 +1,163 @@
 <?php
-  
+
 namespace App\Http\Controllers;
-  
-use Illuminate\Http\Request;
+
 use App\Models\Blog;
-use App\Models\House;
+use App\Models\Property;
 use Illuminate\Http\Response;
-  
+
 class SitemapController extends Controller
 {
     /**
-     * Write code on Method
-     *
-     * @return response()
+     * Generate dynamic XML sitemap
      */
     public function index(): Response
     {
-        $blogs = Blog::latest()->get();
-        $houses = House::latest()->get();
-        return response()->view('sitemap', [
-            'blogs' => $blogs,
-            'houses' => $houses
-        ])->header('Content-Type', 'text/xml');
+        $locales = array_keys(config('seo.locales', ['en', 'fr', 'fa']));
+        $baseUrl = config('app.url', 'https://applyvipconseil.com');
+
+        // Get all published blogs
+        $blogs = Blog::published()->with('translations')->get();
+
+        // PROPERTIES FEATURE DISABLED - COMING SOON
+        // Original: $properties = Property::published()->with('translations')->get();
+        // To re-enable: Uncomment the line above and uncomment the URL generation below (lines 67-86)
+        // See PROPERTIES_DISABLED.md for full restoration guide
+        $properties = collect(); // Empty collection prevents errors
+
+        // Static pages (cities and universities)
+        $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon'];
+        $universities = [
+            'paris-saclay-university', 'sorbonne-paris-nord', 'paris-cite', 'paris-4-sorbonne',
+            'paris-3', 'paris-2', 'lyon-3', 'lyon-2', 'lyon-1', 'pantheon-sorbonne',
+            'cote-d-azure', 'toulouse', 'strasbourg',
+        ];
+
+        // Build URLs
+        $urls = [];
+
+        // Homepage for each locale
+        foreach ($locales as $locale) {
+            $urls[] = [
+                'loc' => "{$baseUrl}/{$locale}",
+                'lastmod' => now()->toAtomString(),
+                'changefreq' => config('seo.sitemap.changefreq.homepage', 'daily'),
+                'priority' => config('seo.sitemap.priorities.homepage', 1.0),
+            ];
+        }
+
+        // Blog index and posts for each locale
+        foreach ($locales as $locale) {
+            // Blog index
+            $urls[] = [
+                'loc' => "{$baseUrl}/{$locale}/blog",
+                'lastmod' => $blogs->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
+                'changefreq' => 'daily',
+                'priority' => 0.9,
+            ];
+
+            // Individual blog posts
+            foreach ($blogs as $blog) {
+                $urls[] = [
+                    'loc' => "{$baseUrl}/{$locale}/blog/{$blog->id}",
+                    'lastmod' => $blog->updated_at->toAtomString(),
+                    'changefreq' => config('seo.sitemap.changefreq.blog_post', 'weekly'),
+                    'priority' => config('seo.sitemap.priorities.blog_post', 0.8),
+                ];
+            }
+        }
+
+        /*
+        ================================================================================
+        PROPERTIES FEATURE DISABLED - COMING SOON
+        ================================================================================
+        Property URLs removed from sitemap to prevent indexing during development.
+        To re-enable: Uncomment this section and see PROPERTIES_DISABLED.md
+        ================================================================================
+
+        // Property index and listings for each locale
+        foreach ($locales as $locale) {
+            // Properties index
+            $urls[] = [
+                'loc' => "{$baseUrl}/{$locale}/properties",
+                'lastmod' => $properties->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
+                'changefreq' => 'daily',
+                'priority' => 0.9,
+            ];
+
+            // Individual properties
+            foreach ($properties as $property) {
+                $urls[] = [
+                    'loc' => "{$baseUrl}/{$locale}/properties/{$property->id}",
+                    'lastmod' => $property->updated_at->toAtomString(),
+                    'changefreq' => config('seo.sitemap.changefreq.property', 'weekly'),
+                    'priority' => config('seo.sitemap.priorities.property', 0.8),
+                ];
+            }
+        }
+
+        ================================================================================
+        END PROPERTIES FEATURE DISABLED
+        ================================================================================
+        */
+
+        // Cities for each locale
+        foreach ($locales as $locale) {
+            // Cities index
+            $urls[] = [
+                'loc' => "{$baseUrl}/{$locale}/cities",
+                'lastmod' => now()->toAtomString(),
+                'changefreq' => 'monthly',
+                'priority' => 0.8,
+            ];
+
+            // Individual cities
+            foreach ($cities as $city) {
+                $urls[] = [
+                    'loc' => "{$baseUrl}/{$locale}/cities/{$city}",
+                    'lastmod' => now()->toAtomString(),
+                    'changefreq' => config('seo.sitemap.changefreq.city', 'monthly'),
+                    'priority' => config('seo.sitemap.priorities.city', 0.8),
+                ];
+            }
+        }
+
+        // Universities for each locale
+        foreach ($locales as $locale) {
+            // Universities index
+            $urls[] = [
+                'loc' => "{$baseUrl}/{$locale}/universities",
+                'lastmod' => now()->toAtomString(),
+                'changefreq' => 'monthly',
+                'priority' => 0.8,
+            ];
+
+            // Individual universities
+            foreach ($universities as $university) {
+                $urls[] = [
+                    'loc' => "{$baseUrl}/{$locale}/universities/{$university}",
+                    'lastmod' => now()->toAtomString(),
+                    'changefreq' => config('seo.sitemap.changefreq.university', 'monthly'),
+                    'priority' => config('seo.sitemap.priorities.university', 0.75),
+                ];
+            }
+        }
+
+        // Other static pages for each locale
+        $staticPages = ['consult', 'contactUs'];
+        foreach ($locales as $locale) {
+            foreach ($staticPages as $page) {
+                $urls[] = [
+                    'loc' => "{$baseUrl}/{$locale}/{$page}",
+                    'lastmod' => now()->toAtomString(),
+                    'changefreq' => config('seo.sitemap.changefreq.static_page', 'monthly'),
+                    'priority' => config('seo.sitemap.priorities.static_page', 0.6),
+                ];
+            }
+        }
+
+        return response()
+            ->view('sitemap', ['urls' => $urls])
+            ->header('Content-Type', 'text/xml');
     }
 }

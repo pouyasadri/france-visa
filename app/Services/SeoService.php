@@ -1,0 +1,404 @@
+<?php
+
+namespace App\Services;
+
+use Illuminate\Support\Facades\URL;
+
+class SeoService
+{
+    protected array $meta = [];
+
+    protected array $openGraph = [];
+
+    protected array $twitter = [];
+
+    protected array $hreflang = [];
+
+    protected string $canonical = '';
+
+    /**
+     * Set page title
+     */
+    public function setTitle(string $title, bool $appendSuffix = true): self
+    {
+        $suffix = $appendSuffix ? config('seo.defaults.title_suffix', '') : '';
+        $this->meta['title'] = $title . $suffix;
+        $this->openGraph['og:title'] = $title;
+        $this->twitter['twitter:title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Set meta description
+     */
+    public function setDescription(string $description): self
+    {
+        $this->meta['description'] = $this->truncate($description, 160);
+        $this->openGraph['og:description'] = $this->truncate($description, 200);
+        $this->twitter['twitter:description'] = $this->truncate($description, 200);
+
+        return $this;
+    }
+
+    /**
+     * Set keywords
+     */
+    public function setKeywords(string $keywords): self
+    {
+        $this->meta['keywords'] = $keywords;
+
+        return $this;
+    }
+
+    /**
+     * Set canonical URL
+     */
+    public function setCanonical(?string $url = null): self
+    {
+        $this->canonical = $url ?? URL::current();
+        $this->openGraph['og:url'] = $this->canonical;
+
+        return $this;
+    }
+
+    /**
+     * Set image for social sharing
+     */
+    public function setImage(string $imageUrl, string $alt = ''): self
+    {
+        $fullImageUrl = $this->makeAbsoluteUrl($imageUrl);
+
+        $this->openGraph['og:image'] = $fullImageUrl;
+        $this->openGraph['og:image:alt'] = $alt;
+        $this->openGraph['og:image:width'] = config('seo.images.sizes.og.width', 1200);
+        $this->openGraph['og:image:height'] = config('seo.images.sizes.og.height', 630);
+
+        $this->twitter['twitter:image'] = $fullImageUrl;
+        $this->twitter['twitter:image:alt'] = $alt;
+
+        return $this;
+    }
+
+    /**
+     * Set page type (article, website, product, etc.)
+     */
+    public function setType(string $type): self
+    {
+        $this->openGraph['og:type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Set locale
+     */
+    public function setLocale(string $locale): self
+    {
+        $localeConfig = config("seo.locales.{$locale}", []);
+        $ogLocale = $localeConfig['og_locale'] ?? 'en_US';
+
+        $this->openGraph['og:locale'] = $ogLocale;
+        $this->meta['language'] = $locale;
+
+        return $this;
+    }
+
+    /**
+     * Add alternate locales for Open Graph
+     */
+    public function addAlternateLocales(array $locales): self
+    {
+        $alternates = [];
+        foreach ($locales as $locale) {
+            $localeConfig = config("seo.locales.{$locale}", []);
+            if (isset($localeConfig['og_locale'])) {
+                $alternates[] = $localeConfig['og_locale'];
+            }
+        }
+
+        if (!empty($alternates)) {
+            $this->openGraph['og:locale:alternate'] = $alternates;
+        }
+
+        return $this;
+    }
+
+    /**
+     * Add hreflang tags
+     */
+    public function addHreflang(string $locale, string $url): self
+    {
+        $this->hreflang[$locale] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Set article-specific metadata
+     */
+    public function setArticle(array $data): self
+    {
+        $this->setType('article');
+
+        if (isset($data['published_time'])) {
+            $this->openGraph['article:published_time'] = $data['published_time'];
+        }
+
+        if (isset($data['modified_time'])) {
+            $this->openGraph['article:modified_time'] = $data['modified_time'];
+        }
+
+        if (isset($data['author'])) {
+            $this->openGraph['article:author'] = $data['author'];
+        }
+
+        if (isset($data['section'])) {
+            $this->openGraph['article:section'] = $data['section'];
+        }
+
+        if (isset($data['tags']) && is_array($data['tags'])) {
+            $this->openGraph['article:tag'] = $data['tags'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * Set Twitter Card type
+     */
+    public function setTwitterCard(string $type = 'summary_large_image'): self
+    {
+        $this->twitter['twitter:card'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Set Twitter site handle
+     */
+    public function setTwitterSite(string $handle): self
+    {
+        $this->twitter['twitter:site'] = $handle;
+
+        return $this;
+    }
+
+    /**
+     * Set robots meta tag
+     */
+    public function setRobots(string $robots): self
+    {
+        $this->meta['robots'] = $robots;
+
+        return $this;
+    }
+
+    /**
+     * Get all meta tags
+     */
+    public function getMeta(): array
+    {
+        return array_merge($this->getDefaults(), $this->meta);
+    }
+
+    /**
+     * Get Open Graph tags
+     */
+    public function getOpenGraph(): array
+    {
+        return array_merge($this->getDefaultOpenGraph(), $this->openGraph);
+    }
+
+    /**
+     * Get Twitter Card tags
+     */
+    public function getTwitter(): array
+    {
+        return array_merge($this->getDefaultTwitter(), $this->twitter);
+    }
+
+    /**
+     * Get hreflang tags
+     */
+    public function getHreflang(): array
+    {
+        return $this->hreflang;
+    }
+
+    /**
+     * Get canonical URL
+     */
+    public function getCanonical(): string
+    {
+        return $this->canonical ?: URL::current();
+    }
+
+    /**
+     * Generate meta tags for a blog post
+     */
+    public function forBlogPost($blog, string $locale): self
+    {
+        $translation = $blog->getTranslation($locale);
+
+        if (!$translation) {
+            return $this;
+        }
+
+        $this->setTitle($translation->title)
+            ->setDescription($translation->excerpt ?? strip_tags($translation->body))
+            ->setKeywords($translation->title)
+            ->setLocale($locale)
+            ->setType('article')
+            ->setTwitterCard('summary_large_image');
+
+        if ($blog->main_image) {
+            $this->setImage(
+                asset('storage/' . $blog->main_image),
+                $translation->title
+            );
+        }
+
+        $this->setArticle([
+            'published_time' => $blog->published_at?->toIso8601String() ?? $blog->created_at->toIso8601String(),
+            'modified_time' => $blog->updated_at->toIso8601String(),
+            'author' => $blog->author?->name ?? config('seo.defaults.author'),
+            'section' => $blog->category?->getTranslation($locale)?->name ?? 'Blog',
+        ]);
+
+        return $this;
+    }
+
+    /**
+     * Generate meta tags for a property
+     */
+    public function forProperty($property, string $locale): self
+    {
+        $translation = $property->getTranslation($locale);
+
+        if (!$translation) {
+            return $this;
+        }
+
+        $title = $translation->name ?? 'Property';
+        $description = strip_tags($translation->description ?? '') ?:
+            "Property in {$property->city}, {$property->country}. {$property->rooms} rooms, €" . number_format($property->price, 0);
+
+        $this->setTitle($title)
+            ->setDescription($description)
+            ->setLocale($locale)
+            ->setType('product')
+            ->setTwitterCard('summary_large_image');
+
+        if ($property->main_image) {
+            $this->setImage(
+                asset('storage/' . $property->main_image),
+                $title
+            );
+        }
+
+        return $this;
+    }
+
+    /**
+     * Generate meta tags for homepage
+     */
+    public function forHomepage(string $locale): self
+    {
+        // Use localized values from resources/lang/{locale}/index.php
+        $title = __('index.meta.title');
+        $description = __('index.meta.description');
+        $keywords = __('index.meta.keywords');
+
+        // Fallback if translation key is returned (meaning translation missing)
+        if ($title === 'index.meta.title') {
+            $title = config('seo.defaults.title');
+        }
+        if ($description === 'index.meta.description') {
+            $description = config('seo.defaults.description');
+        }
+
+        $this->setTitle($title, false)
+            ->setDescription($description)
+            ->setKeywords($keywords)
+            ->setLocale($locale)
+            ->setType('website')
+            ->setTwitterCard('summary_large_image');
+
+        // Add explicit Open Graph localization
+        if (request()->routeIs('index')) {
+            $this->openGraph['og:site_name'] = __('index.meta.og.site_name');
+            $this->openGraph['og:title'] = __('index.meta.og.title');
+            $this->openGraph['og:description'] = __('index.meta.og.description');
+
+            // Allow overriding defaults if localization has specific OG keys
+            if (__('index.meta.og.type') !== 'index.meta.og.type') {
+                $this->openGraph['og:type'] = __('index.meta.og.type');
+            }
+            if (__('index.meta.twitter.title') !== 'index.meta.twitter.title') {
+                $this->twitter['twitter:title'] = __('index.meta.twitter.title');
+                $this->twitter['twitter:description'] = __('index.meta.twitter.description');
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get default meta tags
+     */
+    protected function getDefaults(): array
+    {
+        return [
+            'author' => config('seo.defaults.author'),
+            'robots' => config('seo.robots.default'),
+        ];
+    }
+
+    /**
+     * Get default Open Graph tags
+     */
+    protected function getDefaultOpenGraph(): array
+    {
+        return [
+            'og:site_name' => config('seo.defaults.title'),
+            'og:locale' => config('seo.defaults.locale'),
+        ];
+    }
+
+    /**
+     * Get default Twitter tags
+     */
+    protected function getDefaultTwitter(): array
+    {
+        return [
+            'twitter:site' => config('seo.social.twitter.site'),
+            'twitter:creator' => config('seo.social.twitter.creator'),
+        ];
+    }
+
+    /**
+     * Truncate text to specified length
+     */
+    protected function truncate(string $text, int $length): string
+    {
+        $text = strip_tags($text);
+        if (mb_strlen($text) <= $length) {
+            return $text;
+        }
+
+        return mb_substr($text, 0, $length - 3) . '...';
+    }
+
+    /**
+     * Make URL absolute
+     */
+    protected function makeAbsoluteUrl(string $url): string
+    {
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
+            return $url;
+        }
+
+        return url($url);
+    }
+}
