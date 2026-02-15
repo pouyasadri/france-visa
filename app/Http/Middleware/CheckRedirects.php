@@ -17,12 +17,34 @@ class CheckRedirects
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Get the full URL (schema + host + path + query)
+        $host = $request->getHost();
+        $path = $request->getPathInfo();
+
+        // Check for legacy subdomain structure and redirect before locale detection
+        // en.applyvipconseil.com -> applyvipconseil.com/en
+        // fr.applyvipconseil.com -> applyvipconseil.com/fr
+        if (str_starts_with($host, 'en.') || str_starts_with($host, 'fr.')) {
+            $locale = str_starts_with($host, 'en.') ? 'en' : 'fr';
+            $newHost = str_replace(['en.', 'fr.'], '', $host);
+
+            // Build the new URL with locale prefix
+            // If path is /, redirect to /locale
+            // If path already has a locale prefix (like /fa), replace it
+            $newPath = $path === '/' ? "/{$locale}" : "/{$locale}" . $path;
+
+            $newUrl = $request->getScheme() . '://' . $newHost . $newPath;
+
+            // Preserve query string if present
+            if ($request->getQueryString()) {
+                $newUrl .= '?' . $request->getQueryString();
+            }
+
+            return redirect($newUrl, 301);
+        }
+
+        // Check database for exact URL matches (for other legacy URLs)
         $fullUrl = $request->fullUrl();
 
-        // Check if a redirect exists for this URL.
-        // We use cache to avoid hitting the database on every request.
-        // Cache key specific to the full URL.
         $redirect = Cache::remember("redirect-{$fullUrl}", 3600, function () use ($fullUrl) {
             return Redirect::where('from_url', $fullUrl)->first();
         });
@@ -30,10 +52,6 @@ class CheckRedirects
         if ($redirect) {
             return redirect($redirect->to_url, $redirect->http_code);
         }
-
-        // Optional: Check without query string if exact match fails?
-        // The seeder stored generated URLs which might not have query strings usually.
-        // But for now, we stick to exact match as per strict requirement unless specified.
 
         return $next($request);
     }
