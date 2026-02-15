@@ -160,33 +160,41 @@
 @endsection
 
 @push("json")
-    <script type="application/ld+json">
-                @verbatim
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "BlogPosting",
-                      "mainEntityOfPage": {
-                        "@type": "WebPage",
-                        "@id": "https://applyvipconseil.com/universities/sorbonne-paris-nord"
-                      },
-                      "headline": "{{ __('university/sorbonne-paris-nord.schema_headline') }}",
-                      "image": "https://applyvipconseil.com/assets/img/universities/Paris_Nord/paris_nord_logo.webp",
-                      "author": {
-                        "@type": "Organization",
-                        "name": "{{ __('university/sorbonne-paris-nord.schema_author') }}",
-                        "url": "https://applyvipconseil.com/"
-                      },
-                      "publisher": {
-                        "@type": "Organization",
-                        "name": "Apply VIP Conseil",
-                        "logo": {
-                          "@type": "ImageObject",
-                          "url": "https://applyvipconseil.com/images/logo.png"
-                        }
-                      },
-                      "datePublished": "2024-01-01",
-                      "dateModified": "2025-10-15"
-                    }
-                @endverbatim
-                </script>
+    @php
+        $currentLocale = app()->getLocale();
+        $pageUrl = url($currentLocale.'/universities/sorbonne-paris-nord');
+        $universityId = $pageUrl.'#university';
+        $officialUrl = 'https://www.univ-spn.fr/';
+
+        $webPage = new \App\Services\StructuredData\WebPageSchema(
+            $pageUrl,
+            __('university/sorbonne-paris-nord.main_heading'),
+            __('university/sorbonne-paris-nord.description'),
+            $currentLocale,
+            $universityId,
+            asset('assets/img/universities/Paris_Nord/paris_nord_logo.webp')
+        );
+
+        $university = new \App\Services\StructuredData\UniversitySchema(
+            $universityId,
+            __('universities.sorbonne_paris_nord_name'),
+            $officialUrl,
+            __('university/sorbonne-paris-nord.introduction_content'),
+            asset('assets/img/universities/Paris_Nord/paris_nord_logo.webp'),
+            [
+                $officialUrl,
+                'https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D9%BE%D8%A7%D8%B1%DB%8C%D8%B3_%DB%B1%DB%B3',
+            ]
+        );
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
+            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('university/sorbonne-paris-nord.breadcrumb_current'), 'url' => $pageUrl],
+        ]);
+    @endphp
+
+    <x-seo.structured-data :schema="$webPage" />
+    <x-seo.structured-data :schema="$university" />
+    <x-seo.structured-data :schema="$breadcrumb" />
 @endpush

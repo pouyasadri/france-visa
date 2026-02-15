@@ -1,26 +1,28 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('title', __('properties.coming_soon.title'))
 @section('description', __('properties.coming_soon.description'))
 
 @section('content')
     <!-- Page Title -->
-    <div class="page-title-area" style="background-image: url('{{ asset('assets/img/education.webp') }}');">
+    @php($heroBgUrl = asset('assets/img/education.webp'))
+    <div class="page-title-area" style="background-image: url('{{ $heroBgUrl }}');">
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-text">
                         <h2>{{ __('properties.coming_soon.heading') }}</h2>
-                        <ul>
-                            <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('Home') }}</a></li>
-                            <li><i class="{{ $chevronsDir }}"></i></li>
-                            <li>{{ __('Properties') }}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                         <ul>
+                            <li><a href="{{ route('index', ['locale' => app()->getLocale()]) }}">{{ __('layout.home') }}</a></li>
+                            @php($isRtlLocal = app()->getLocale() === 'fa')
+                            <li><i class="{{ $isRtlLocal ? 'bx bx-chevrons-left' : 'bx bx-chevrons-right' }}"></i></li>
+                            <li>{{ __('properties.name') }}</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
     <!-- End Page Title -->
 
     <!-- Coming Soon Area -->
@@ -68,7 +70,7 @@
                         <div class="coming-soon-actions mt-5">
                             <div class="row justify-content-center">
                                 <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                                    <a href="{{ route('blog', ['locale' => app()->getLocale()]) }}" 
+                                    <a href="{{ route('blog.index', ['locale' => app()->getLocale()]) }}" 
                                        class="btn btn-primary btn-block" 
                                        style="padding: 15px 25px; font-size: 16px;">
                                         <i class="bx bx-book-reader"></i> {{ __('properties.coming_soon.explore_blog') }}
@@ -82,7 +84,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                                    <a href="{{ route('contactUs', ['locale' => app()->getLocale()]) }}" 
+                                    <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
                                        class="btn btn-primary btn-block" 
                                        style="padding: 15px 25px; font-size: 16px;">
                                         <i class="bx bx-envelope"></i> {{ __('properties.coming_soon.contact_us') }}
@@ -135,7 +137,7 @@
                         </div>
                         <h4 class="mb-3">{{ __('Education Consulting') }}</h4>
                         <p>{{ __('Study in France with our comprehensive student visa assistance') }}</p>
-                        <a href="{{ route('universities', ['locale' => app()->getLocale()]) }}" class="btn btn-outline-primary mt-3">
+                        <a href="{{ url(app()->getLocale() . '/universities') }}" class="btn btn-outline-primary mt-3">
                             {{ __('Learn More') }}
                         </a>
                     </div>
@@ -149,7 +151,7 @@
                         </div>
                         <h4 class="mb-3">{{ __('Relocation Support') }}</h4>
                         <p>{{ __('Complete support for relocating to France and settling in') }}</p>
-                        <a href="{{ route('cities', ['locale' => app()->getLocale()]) }}" class="btn btn-outline-primary mt-3">
+                        <a href="{{ url(app()->getLocale() . '/cities') }}" class="btn btn-outline-primary mt-3">
                             {{ __('Learn More') }}
                         </a>
                     </div>

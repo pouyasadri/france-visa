@@ -9,6 +9,44 @@
     $pageTitle = __('cities.title');
     $pageKeywords = __('cities.keywords');
     $pageDescription = __('cities.description');
+
+    $cities = [
+        [
+            'slug' => 'paris',
+            'img' => 'assets/img/cities/Paris/paris-slider.webp',
+            'title_key' => 'paris_title',
+            'desc_key' => 'paris_description',
+            'alt_key' => 'paris_alt',
+        ],
+        [
+            'slug' => 'lyon',
+            'img' => 'assets/img/cities/Lyon/lyon.webp',
+            'title_key' => 'lyon_title',
+            'desc_key' => 'lyon_description',
+            'alt_key' => 'lyon_alt',
+        ],
+        [
+            'slug' => 'strasbourg',
+            'img' => 'assets/img/cities/Strasbourg/strasbourg.webp',
+            'title_key' => 'strasbourg_title',
+            'desc_key' => 'strasbourg_description',
+            'alt_key' => 'strasbourg_alt',
+        ],
+        [
+            'slug' => 'nice',
+            'img' => 'assets/img/cities/Nice/nice1.webp',
+            'title_key' => 'nice_title',
+            'desc_key' => 'nice_description',
+            'alt_key' => 'nice_alt',
+        ],
+        [
+            'slug' => 'toulouse',
+            'img' => 'assets/img/cities/Toulouse/toulouse.webp',
+            'title_key' => 'toulouse_title',
+            'desc_key' => 'toulouse_description',
+            'alt_key' => 'toulouse_alt',
+        ],
+    ];
 @endphp
 
 @section('title', $pageTitle)
@@ -16,7 +54,7 @@
 @section('description', $pageDescription)
 
 @section('content')
-    <main id="main-content" role="main">
+    <div>
         <!-- Start Page Title Area -->
         <header class="page-title-area" role="banner">
             <div class="container">
@@ -48,54 +86,15 @@
                 </div>
 
                 <div class="row g-4">
-                    @php
-                        $cities = [
-                            [
-                                'slug' => 'paris',
-                                'img' => 'assets/img/cities/Paris/paris-slider.webp',
-                                'title_key' => 'paris_title',
-                                'desc_key' => 'paris_description',
-                                'alt_key' => 'paris_alt',
-                            ],
-                            [
-                                'slug' => 'lyon',
-                                'img' => 'assets/img/cities/Lyon/lyon.webp',
-                                'title_key' => 'lyon_title',
-                                'desc_key' => 'lyon_description',
-                                'alt_key' => 'lyon_alt',
-                            ],
-                            [
-                                'slug' => 'strasbourg',
-                                'img' => 'assets/img/cities/Strasbourg/strasbourg.webp',
-                                'title_key' => 'strasbourg_title',
-                                'desc_key' => 'strasbourg_description',
-                                'alt_key' => 'strasbourg_alt',
-                            ],
-                            [
-                                'slug' => 'nice',
-                                'img' => 'assets/img/cities/Nice/nice1.webp',
-                                'title_key' => 'nice_title',
-                                'desc_key' => 'nice_description',
-                                'alt_key' => 'nice_alt',
-                            ],
-                            [
-                                'slug' => 'toulouse',
-                                'img' => 'assets/img/cities/Toulouse/toulouse.webp',
-                                'title_key' => 'toulouse_title',
-                                'desc_key' => 'toulouse_description',
-                                'alt_key' => 'toulouse_alt',
-                            ],
-                        ];
-                    @endphp
-
                     @foreach ($cities as $city)
                         <div class="col-lg-6">
                             <article
                                 class="exclusive-wrap rounded-5 shadow-sm overflow-hidden h-100 bg-white border-0 transition-all hover-lift">
                                 <div class="row g-0 align-items-center h-100">
                                     <div class="col-md-5 p-3">
-                                        <div class="exclusive-img h-100 rounded-4"
-                                            style="background-image: url('{{ asset($city['img']) }}'); background-size: cover; background-position: center; min-height: 250px;">
+                                        <div class="exclusive-img h-100 rounded-4 overflow-hidden" style="min-height: 250px;">
+                                            <img src="{{ asset($city['img']) }}" alt="{{ __('cities.' . $city['alt_key']) }}"
+                                                class="w-100 h-100" style="object-fit: cover;">
                                         </div>
                                     </div>
                                     <div class="col-md-7">
@@ -118,37 +117,37 @@
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 @endsection
 
 @push('json')
-    @verbatim
-        <script type="application/ld+json">
-                        {
-                          "@context": "https://schema.org",
-                          "@type": "WebPage",
-                          "name": "{{ $pageTitle }}",
-                          "description": "{{ $pageDescription }}",
-                          "publisher": {
-                            "@type": "Organization",
-                            "name": "Apply VIP Conseil",
-                            "url": "https://applyvipconseil.com/"
-                          },
-                          "breadcrumb": {
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [{
-                              "@type": "ListItem",
-                              "position": 1,
-                              "name": "{{ __('cities.breadcrumb_home') }}",
-                              "item": "{{ url($currentLocale . '/') }}"
-                            },{
-                              "@type": "ListItem",
-                              "position": 2,
-                              "name": "{{ __('cities.breadcrumb_cities') }}",
-                              "item": "{{ url($currentLocale . '/cities') }}"
-                            }]
-                          }
-                        }
-                        </script>
-    @endverbatim
+    @php
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('cities.breadcrumb_home'), 'url' => url($currentLocale.'/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+        ]);
+
+        $collectionPage = new \App\Services\StructuredData\CollectionPageSchema(
+            url()->current(),
+            $pageTitle,
+            $pageDescription,
+            $currentLocale
+        );
+
+        $list = new \App\Services\StructuredData\ItemListSchema($pageTitle);
+        $position = 1;
+        foreach ($cities as $city) {
+            $list->addItem(
+                $position,
+                url($currentLocale.'/cities/'.$city['slug']),
+                __('cities.'.$city['title_key']),
+                asset($city['img'])
+            );
+            $position++;
+        }
+    @endphp
+
+    <x-seo.structured-data :schema="$collectionPage" />
+    <x-seo.structured-data :schema="$breadcrumb" />
+    <x-seo.structured-data :schema="$list" />
 @endpush

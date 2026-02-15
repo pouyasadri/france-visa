@@ -16,7 +16,7 @@
 @section('description', $pageDescription)
 
 @section('content')
-    <main id="main-content" role="main">
+    <div>
         <!-- Start Page Title Area -->
         <header class="page-title-area" role="banner">
             <div class="container">
@@ -214,57 +214,46 @@
             </div>
         </section>
         <!-- End Contact Area -->
-    </main>
+    </div>
 @endsection
 
 @push('json')
-    @verbatim
-        <script type="application/ld+json">
-                {
-                  "@context": "https://schema.org",
-                  "@type": "ContactPage",
-                  "name": "{{ $pageTitle }}",
-                  "description": "{{ $pageDescription }}",
-                  "publisher": {
-                    "@type": "Organization",
-                    "name": "Apply VIP Conseil",
-                    "url": "https://applyvipconseil.com/"
-                  },
-                  "mainEntity": {
-                    "@type": "Organization",
-                    "name": "Apply VIP Conseil",
-                    "contactPoint": [
-                      {
-                        "@type": "ContactPoint",
-                        "telephone": "+98-912-008-7194",
-                        "contactType": "customer service",
-                        "areaServed": "IR",
-                        "availableLanguage": ["Persian", "English"]
-                      },
-                      {
-                        "@type": "ContactPoint",
-                        "telephone": "+33-7-80-95-33-33",
-                        "contactType": "customer service",
-                        "areaServed": "FR",
-                        "availableLanguage": ["French", "English"]
-                      }
-                    ]
-                  },
-                  "breadcrumb": {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [{
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "{{ __('contact.breadcrumb.home') }}",
-                      "item": "{{ url($currentLocale . '/') }}"
-                    },{
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "{{ __('contact.breadcrumb.contact') }}",
-                      "item": "{{ url($currentLocale . '/contact-us') }}"
-                    }]
-                  }
-                }
-                </script>
-    @endverbatim
+    @php
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('contact.breadcrumb.home'), 'url' => url($currentLocale.'/')],
+            ['name' => __('contact.breadcrumb.contact'), 'url' => url($currentLocale.'/contactUs')],
+        ]);
+
+        $contactPageSchema = new \App\Services\StructuredData\WebPageSchema(
+            url()->current(),
+            $pageTitle,
+            $pageDescription,
+            $currentLocale
+        );
+        $contactPageArray = $contactPageSchema->build();
+        $contactPageArray['@type'] = 'ContactPage';
+        $contactPageArray['mainEntity'] = [
+            '@type' => 'Organization',
+            '@id' => rtrim(config('app.url'), '/').'/' . '#organization',
+            'contactPoint' => [
+                [
+                    '@type' => 'ContactPoint',
+                    'telephone' => '+98-912-008-7194',
+                    'contactType' => 'customer service',
+                    'areaServed' => 'IR',
+                    'availableLanguage' => ['Persian', 'English'],
+                ],
+                [
+                    '@type' => 'ContactPoint',
+                    'telephone' => '+33-7-80-95-33-33',
+                    'contactType' => 'customer service',
+                    'areaServed' => 'FR',
+                    'availableLanguage' => ['French', 'English'],
+                ],
+            ],
+        ];
+    @endphp
+
+    <x-seo.structured-data :schema="$contactPageArray" />
+    <x-seo.structured-data :schema="$breadcrumb" />
 @endpush

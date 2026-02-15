@@ -16,7 +16,7 @@
 @section('description', $pageDescription)
 
 @section('content')
-    <main id="main-content" role="main">
+    <div>
         <!-- Start Page Title Area -->
         <header class="page-title-area" role="banner">
             <div class="container">
@@ -190,58 +190,54 @@
             ['label' => null, 'title' => __('consult.administrative_support_france'), 'description' => __('consult.administrative_support_description')],
             ['label' => null, 'title' => __('consult.legal_services'), 'description' => __('consult.legal_services_description')],
         ]" />
-    </main>
+    </div>
 @endsection
 
 @push('json')
-    @verbatim
-        <script type="application/ld+json">
-                {
-                  "@context": "https://schema.org",
-                  "@type": "Service",
-                  "name": "{{ $pageTitle }}",
-                  "description": "{{ $pageDescription }}",
-                  "provider": {
-                    "@type": "Organization",
-                    "name": "Apply VIP Conseil",
-                    "url": "https://applyvipconseil.com/"
-                  },
-                  "areaServed": ["FR", "IR"],
-                  "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Immigration Services",
-                    "itemListElement": [
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Service",
-                          "name": "{{ __('consult.residence_consultation') }}"
-                        }
-                      },
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Service",
-                          "name": "{{ __('consult.educational_consultation') }}"
-                        }
-                      }
-                    ]
-                  },
-                  "breadcrumb": {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [{
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "{{ __('consult.breadcrumb_home') }}",
-                      "item": "{{ url($currentLocale . '/') }}"
-                    },{
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "{{ __('consult.breadcrumb_consult') }}",
-                      "item": "{{ url($currentLocale . '/consult') }}"
-                    }]
-                  }
-                }
-                </script>
-    @endverbatim
+    @php
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('consult.breadcrumb_home'), 'url' => url($currentLocale.'/')],
+            ['name' => __('consult.breadcrumb_consult'), 'url' => url($currentLocale.'/consult')],
+        ]);
+
+        $webPageSchema = new \App\Services\StructuredData\WebPageSchema(
+            url()->current(),
+            $pageTitle,
+            $pageDescription,
+            $currentLocale
+        );
+
+        $serviceSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Service',
+            'name' => $pageTitle,
+            'description' => $pageDescription,
+            'provider' => ['@id' => rtrim(config('app.url'), '/').'/' . '#organization'],
+            'areaServed' => ['FR', 'IR'],
+            'hasOfferCatalog' => [
+                '@type' => 'OfferCatalog',
+                'name' => 'Immigration Services',
+                'itemListElement' => [
+                    [
+                        '@type' => 'Offer',
+                        'itemOffered' => [
+                            '@type' => 'Service',
+                            'name' => __('consult.residence_consultation'),
+                        ],
+                    ],
+                    [
+                        '@type' => 'Offer',
+                        'itemOffered' => [
+                            '@type' => 'Service',
+                            'name' => __('consult.educational_consultation'),
+                        ],
+                    ],
+                ],
+            ],
+        ];
+    @endphp
+
+    <x-seo.structured-data :schema="$webPageSchema" />
+    <x-seo.structured-data :schema="$breadcrumb" />
+    <x-seo.structured-data :schema="$serviceSchema" />
 @endpush

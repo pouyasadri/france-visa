@@ -9,10 +9,46 @@
         $currentLocale = app()->getLocale();
         $seoService = app(\App\Services\SeoService::class);
 
+        // Canonical should be stable per-page; avoid query strings unless you intentionally want them.
+        $canonicalUrl = url()->current();
+        $currentRoute = request()->route();
+        if ($currentRoute) {
+            $routeName = $currentRoute->getName();
+            if ($routeName) {
+                try {
+                    $params = $currentRoute->parameters();
+                    $paramNames = method_exists($currentRoute, 'parameterNames') ? $currentRoute->parameterNames() : [];
+                    if (! empty($paramNames)) {
+                        $params = array_intersect_key($params, array_flip($paramNames));
+                    }
+
+                    $canonicalUrl = route($routeName, $params);
+                } catch (\Throwable $e) {
+                    // Fallback to current URL
+                }
+            }
+        }
+
         // Set default SEO for layout
         $seoService->setLocale($currentLocale)
-            ->setCanonical(url()->current())
+            ->setCanonical($canonicalUrl)
             ->setTwitterCard('summary_large_image');
+
+        // Ensure og:type is appropriate per-route (can still be overridden by page-specific SEO setup)
+        if ($currentRoute) {
+            $routeName = $currentRoute->getName();
+            $actionName = $currentRoute->getActionName();
+
+            if ($routeName === 'blog.show') {
+                $seoService->setType('article');
+            }
+
+            // Only mark properties pages as products when the real feature is enabled
+            // (coming-soon closures should remain "website").
+            if (($routeName === 'properties.show' || $routeName === 'property.show') && $actionName !== 'Closure') {
+                $seoService->setType('product');
+            }
+        }
 
         // Get meta, og, twitter data
         $metaTags = $seoService->getMeta();
@@ -50,7 +86,7 @@
     <meta name="language" content="{{ $currentLocale }}">
 
     {{-- Canonical URL --}}
-    <link rel="canonical" href="{{ url()->current() }}" />
+    <link rel="canonical" href="{{ $canonicalUrl }}" />
 
     {{-- Hreflang Tags for Multilingual SEO --}}
     @if(!empty($hreflangTags))
@@ -132,6 +168,18 @@
     @endphp
     <x-seo.structured-data :schema="$businessSchema" />
 
+    {{-- WebSite Structured Data --}}
+    @php
+        $baseUrl = rtrim(config('app.url'), '/');
+        $webSiteSchema = new \App\Services\StructuredData\WebSiteSchema(
+            $baseUrl,
+            config('seo.organization.name'),
+            $baseUrl . '/' . $currentLocale . '/blog?search={search_term_string}',
+            $currentLocale
+        );
+    @endphp
+    <x-seo.structured-data :schema="$webSiteSchema" />
+
     @stack('json')
 
     <script type="text/javascript">
@@ -167,10 +215,10 @@
         <x-layout.mobile-menu :isRtl="$isRtl" />
     </header>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        @yield('content')
-    </main>
+     <!-- Main Content -->
+     <main id="main-content" role="main">
+         @yield('content')
+     </main>
 
     <!-- Footer -->
     <x-layout.footer :isRtl="$isRtl" :chevronsDir="$chevronsDir" />

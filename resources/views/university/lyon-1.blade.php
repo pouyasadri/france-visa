@@ -147,33 +147,41 @@
 @endsection
 
 @push("json")
-    <script type="application/ld+json">
-                @verbatim
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "BlogPosting",
-                      "mainEntityOfPage": {
-                        "@type": "WebPage",
-                        "@id": "https://applyvipconseil.com/universities/lyon-1"
-                      },
-                      "headline": "دانشگاه لیون 1: مهد نوآوری و آموزش عالی",
-                      "image": "https://applyvipconseil.com/assets/img/universities/Lyon1/lyon_1_logo.webp",
-                      "author": {
-                        "@type": "Organization",
-                        "name": "تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C",
-                        "url": "https://applyvipconseil.com/"
-                      },
-                      "publisher": {
-                        "@type": "Organization",
-                        "name": "Apply VIP Conseil",
-                        "logo": {
-                          "@type": "ImageObject",
-                          "url": "https://applyvipconseil.com/images/logo.png"
-                        }
-                      },
-                      "datePublished": "2023-11-08",
-                      "dateModified": "2024-01-12"
-                    }
-                @endverbatim
-                </script>
+    @php
+        $currentLocale = app()->getLocale();
+        $pageUrl = url($currentLocale.'/universities/lyon-1');
+        $universityId = $pageUrl.'#university';
+        $officialUrl = 'https://www.univ-lyon1.fr/';
+
+        $webPage = new \App\Services\StructuredData\WebPageSchema(
+            $pageUrl,
+            __('university/lyon-1.main_heading'),
+            __('university/lyon-1.description'),
+            $currentLocale,
+            $universityId,
+            asset('assets/img/universities/Lyon1/lyon_1_logo.webp')
+        );
+
+        $university = new \App\Services\StructuredData\UniversitySchema(
+            $universityId,
+            __('universities.lyon_1_name'),
+            $officialUrl,
+            __('university/lyon-1.introduction_content'),
+            asset('assets/img/universities/Lyon1/lyon_1_logo.webp'),
+            [
+                $officialUrl,
+                'https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%DA%A9%D9%84%D9%88%D8%AF_%D8%A8%D8%B1%D9%86%D8%A7%D8%B1%D8%AF_%D9%84%DB%8C%D9%88%D9%86_%DB%B1',
+            ]
+        );
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
+            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('university/lyon-1.breadcrumb_current'), 'url' => $pageUrl],
+        ]);
+    @endphp
+
+    <x-seo.structured-data :schema="$webPage" />
+    <x-seo.structured-data :schema="$university" />
+    <x-seo.structured-data :schema="$breadcrumb" />
 @endpush

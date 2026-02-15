@@ -33,7 +33,8 @@
                 </div>
             @endif
 
-            <form action="{{ route('properties.update', ['locale' => app()->getLocale(), 'property' => $property->id]) }}"
+            @php($updateAction = \Illuminate\Support\Facades\Route::has('properties.update') ? route('properties.update', ['locale' => app()->getLocale(), 'id' => $property->id]) : '#')
+            <form action="{{ $updateAction }}"
                   method="POST"
                   enctype="multipart/form-data">
                 @csrf
@@ -174,9 +175,11 @@
                                                      class="card-img-top"
                                                      alt="Gallery">
                                                 <div class="card-body p-2">
-                                                    <form action="{{ route('properties.images.delete', ['locale' => app()->getLocale(), 'image' => $image->id]) }}"
-                                                          method="POST"
-                                                          onsubmit="return confirm('{{ __('Delete this image?') }}');">
+                                                    @php($deleteImageAction = \Illuminate\Support\Facades\Route::has('properties.images.delete') ? route('properties.images.delete', ['locale' => app()->getLocale(), 'image' => $image->id]) : '#')
+                                                    <form action="{{ $deleteImageAction }}"
+                                                           method="POST"
+                                                           @php($confirmDeleteImageMessage = addslashes(__('Delete this image?')))
+                                                           onsubmit="return confirm('{{ $confirmDeleteImageMessage }}');">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger btn-sm btn-block">
@@ -291,4 +294,3 @@
     </script>
     @endpush
 @endsection
-

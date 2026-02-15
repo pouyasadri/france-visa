@@ -175,33 +175,36 @@
 @endsection
 
 @push('json')
-@verbatim
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://applyvipconseil.com/{{ app()->getLocale() }}/cities/paris"
-      },
-      "headline": "{{ __('city/paris.main_heading') }}",
-      "image": "https://applyvipconseil.com/assets/img/cities/Paris/paris.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "{{ __('layout.site_title') }}",
-        "url": "https://applyvipconseil.com/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ __('layout.site_title') }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": ""
-        }
-      },
-      "datePublished": "2023-11-29",
-      "dateModified": "2024-03-12"
-    }
-    </script>
-    @endverbatim
+    @php
+        $pageUrl = url($currentLocale.'/cities/paris');
+        $cityId = $pageUrl.'#city';
+
+        $webPage = new \App\Services\StructuredData\WebPageSchema(
+            $pageUrl,
+            __('city/paris.main_heading'),
+            __('city/paris.description'),
+            $currentLocale,
+            $cityId,
+            asset('assets/img/cities/Paris/paris.webp')
+        );
+
+        $city = new \App\Services\StructuredData\CityGuideSchema(
+            $cityId,
+            __('city/paris.breadcrumb_paris'),
+            __('city/paris.intro_paragraph'),
+            asset('assets/img/cities/Paris/paris.webp'),
+            ['https://en.wikipedia.org/wiki/Paris'],
+            ['lat' => 48.8567, 'lng' => 2.3510]
+        );
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+            ['name' => __('city/paris.breadcrumb_paris'), 'url' => $pageUrl],
+        ]);
+    @endphp
+
+    <x-seo.structured-data :schema="$webPage" />
+    <x-seo.structured-data :schema="$city" />
+    <x-seo.structured-data :schema="$breadcrumb" />
 @endpush

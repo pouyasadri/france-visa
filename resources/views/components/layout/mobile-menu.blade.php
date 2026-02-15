@@ -9,7 +9,7 @@
     {{-- Drawer Header --}}
     <div class="mobile-menu-header">
         <div class="mobile-menu-logo">
-            <a href="{{ route('index') }}">
+            <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
                 <img src="{{asset("../assets/img/logo/new-logo.webp")}}" alt="{{ __('layout.logo_alt') }}">
             </a>
         </div>
@@ -23,7 +23,7 @@
         <nav class="mobile-menu-nav">
             <ul>
                 <li>
-                    <a href="{{ route('index') }}"
+                    <a href="{{ route('index', ['locale' => app()->getLocale()]) }}"
                         class="{{ request()->is(app()->getLocale()) || request()->is(app()->getLocale() . '/') ? 'active' : '' }}">
                         {{ __('layout.nav.home') }}
                     </a>

@@ -111,13 +111,15 @@
 
                             @auth
                                 <div class="mt-4">
-                                    <a href="{{ route('properties.edit', ['locale' => app()->getLocale(), 'property' => $property->id]) }}"
+                                    <a href="{{ route('properties.edit', ['locale' => app()->getLocale(), 'id' => $property->id]) }}"
                                        class="btn btn-warning btn-block">
                                         <i class="bx bx-edit"></i> {{ __('Edit Property') }}
                                     </a>
-                                    <form action="{{ route('properties.destroy', ['locale' => app()->getLocale(), 'property' => $property->id]) }}"
-                                          method="POST"
-                                          onsubmit="return confirm('{{ __('Are you sure?') }}');">
+                                    @php($confirmDeleteMessage = addslashes(__('Are you sure?')))
+                                    @php($destroyAction = \Illuminate\Support\Facades\Route::has('properties.destroy') ? route('properties.destroy', ['locale' => app()->getLocale(), 'id' => $property->id]) : '#')
+                                    <form action="{{ $destroyAction }}"
+                                           method="POST"
+                                          onsubmit="return confirm('{{ $confirmDeleteMessage }}');">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-block mt-2">
@@ -152,8 +154,8 @@
     @php
         $breadcrumbSchema = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
             ['name' => __('Home'), 'url' => route('index', ['locale' => $currentLocale])],
-            ['name' => __('Properties'), 'url' => route('properties.index', ['locale' => $currentLocale])],
-            ['name' => $pageTitle, 'url' => route('properties.show', ['locale' => $currentLocale, 'property' => $property->id])],
+            ['name' => __('properties.name'), 'url' => route('properties.index', ['locale' => $currentLocale])],
+            ['name' => $pageTitle, 'url' => route('properties.show', ['locale' => $currentLocale, 'id' => $property->id])],
         ]);
     @endphp
     <x-seo.structured-data :schema="$breadcrumbSchema" />

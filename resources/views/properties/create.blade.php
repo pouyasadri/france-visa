@@ -26,7 +26,8 @@
                 </div>
             @endif
 
-            <form action="{{ route('properties.store', ['locale' => app()->getLocale()]) }}"
+            @php($storeAction = \Illuminate\Support\Facades\Route::has('properties.store') ? route('properties.store', ['locale' => app()->getLocale()]) : '#')
+            <form action="{{ $storeAction }}"
                   method="POST"
                   enctype="multipart/form-data">
                 @csrf
@@ -241,4 +242,3 @@
     </script>
     @endpush
 @endsection
-

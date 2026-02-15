@@ -143,33 +143,38 @@
 @endsection
 
 @push("json")
-    <script type="application/ld+json">
-            @verbatim
-                {
-                  "@context": "https://schema.org",
-                  "@type": "BlogPosting",
-                  "mainEntityOfPage": {
-                    "@type": "WebPage",
-                    "@id": "https://applyvipconseil.com/universities/cote-d-azure"
-                  },
-                  "headline": "دانشگاه Cote d'Azur: قله علم و فرهنگ در ساحل مدیترانه",
-                  "image": "https://applyvipconseil.com/assets/img/universities/Nice/nice_logo.webp",
-                  "author": {
-                    "@type": "Organization",
-                    "name": "Apply VIP Conseil",
-                    "url": "https://applyvipconseil.com/"
-                  },
-                  "publisher": {
-                    "@type": "Organization",
-                    "name": "Apply VIP Conseil",
-                    "logo": {
-                      "@type": "ImageObject",
-                      "url": "https://applyvipconseil.com/images/logo.png"
-                    }
-                  },
-                  "datePublished": "2023-11-10",
-                  "dateModified": "2024-01-12"
-                }
-            @endverbatim
-            </script>
+    @php
+        $currentLocale = app()->getLocale();
+        $pageUrl = url($currentLocale.'/universities/cote-d-azure');
+        $universityId = $pageUrl.'#university';
+        $officialUrl = 'https://univ-cotedazur.fr/';
+
+        $webPage = new \App\Services\StructuredData\WebPageSchema(
+            $pageUrl,
+            __('university/cote-d-azure.main_heading'),
+            __('university/cote-d-azure.description'),
+            $currentLocale,
+            $universityId,
+            asset('assets/img/universities/Nice/nice_logo.webp')
+        );
+
+        $university = new \App\Services\StructuredData\UniversitySchema(
+            $universityId,
+            __('universities.nice_name'),
+            $officialUrl,
+            __('university/cote-d-azure.introduction_content'),
+            asset('assets/img/universities/Nice/nice_logo.webp'),
+            [$officialUrl]
+        );
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
+            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('university/cote-d-azure.breadcrumb_current'), 'url' => $pageUrl],
+        ]);
+    @endphp
+
+    <x-seo.structured-data :schema="$webPage" />
+    <x-seo.structured-data :schema="$university" />
+    <x-seo.structured-data :schema="$breadcrumb" />
 @endpush

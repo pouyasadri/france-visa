@@ -260,10 +260,13 @@
                         @forelse($properties as $property)
                             @php
                                 $translation = $property->getTranslation(app()->getLocale());
+                                $cardBgUrl = $property->main_image
+                                    ? asset('storage/images/properties/' . $property->main_image)
+                                    : 'https://via.placeholder.com/600x400';
                             @endphp
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-restaurants"
-                                     style="background-image: url('{{ $property->main_image ? asset('storage/images/properties/' . $property->main_image) : 'https://via.placeholder.com/600x400' }}'); height: 400px; margin-bottom: 30px;">
+                                     style="background-image: url('{{ $cardBgUrl }}'); height: 400px; margin-bottom: 30px;">
 
                                     <i class="restaurants-icon flaticon-expand"></i>
                                     <span>{{ Str::limit($translation->name ?? __('property/index.no_name'), 30) }}</span>
@@ -284,14 +287,14 @@
                                         <span class="badge badge-warning mb-3 d-inline-block">{{ ucfirst($property->status) }}</span>
                                     @endif
 
-                                    <a href="{{ route('properties.show', ['locale' => app()->getLocale(), 'property' => $property->id]) }}" class="default-btn">
+                                    <a href="{{ route('properties.show', ['locale' => app()->getLocale(), 'id' => $property->id]) }}" class="default-btn">
                                         {{ __('property/index.read_more') }}
                                         <i class="flaticon-right-arrow"></i>
                                     </a>
 
                                     @auth
                                         <div class="mt-3">
-                                            <a href="{{ route('properties.edit', ['locale' => app()->getLocale(), 'property' => $property->id]) }}" class="btn btn-sm btn-light">
+                                            <a href="{{ route('properties.edit', ['locale' => app()->getLocale(), 'id' => $property->id]) }}" class="btn btn-sm btn-light">
                                                 <i class="bx bx-edit"></i>
                                             </a>
                                         </div>

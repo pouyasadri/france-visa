@@ -48,7 +48,7 @@
     </header>
 
     <!-- Start Blog Details Area -->
-    <main class="blog-details-area ptb-100">
+    <section class="blog-details-area ptb-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -303,7 +303,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 @endsection

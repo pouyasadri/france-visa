@@ -33,6 +33,41 @@
     </div>
 @endsection
 
+@push('json')
+    @php
+        $pageUrl = url($currentLocale.'/cities/toulouse');
+        $cityId = $pageUrl.'#city';
+
+        $webPage = new \App\Services\StructuredData\WebPageSchema(
+            $pageUrl,
+            __('city/toulouse.main_heading'),
+            __('city/toulouse.description'),
+            $currentLocale,
+            $cityId,
+            asset('assets/img/cities/Toulouse/toulouse.webp')
+        );
+
+        $city = new \App\Services\StructuredData\CityGuideSchema(
+            $cityId,
+            __('city/toulouse.breadcrumb_toulouse'),
+            __('city/toulouse.intro_paragraph'),
+            asset('assets/img/cities/Toulouse/toulouse.webp'),
+            ['https://en.wikipedia.org/wiki/Toulouse'],
+            ['lat' => 43.6047, 'lng' => 1.4442]
+        );
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+            ['name' => __('city/toulouse.breadcrumb_toulouse'), 'url' => $pageUrl],
+        ]);
+    @endphp
+
+    <x-seo.structured-data :schema="$webPage" />
+    <x-seo.structured-data :schema="$city" />
+    <x-seo.structured-data :schema="$breadcrumb" />
+@endpush
+
 @section('city_content')
     <section class="mb-5">
         <h2 class="h3 fw-bold mb-4">{{ __('city/toulouse.intro_heading') }}</h2>

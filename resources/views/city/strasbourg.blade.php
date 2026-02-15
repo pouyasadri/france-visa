@@ -205,33 +205,36 @@
 @endsection
 
 @push('json')
-    @verbatim
-        <script type="application/ld+json">
-                        {
-                          "@context": "https://schema.org",
-                          "@type": "BlogPosting",
-                          "mainEntityOfPage": {
-                            "@type": "WebPage",
-                            "@id": "https://applyvipconseil.com/{{ app()->getLocale() }}/cities/strasbourg"
-                          },
-                          "headline": "{{ __('city/strasbourg.intro_heading') }}",
-                          "image": "https://applyvipconseil.com/assets/img/cities/Strasbourg/strasbourg3.webp",
-                          "author": {
-                            "@type": "Organization",
-                            "name": "{{ __('layout.site_title') }}",
-                            "url": "https://applyvipconseil.com/"
-                          },
-                          "publisher": {
-                            "@type": "Organization",
-                            "name": "{{ __('layout.site_title') }}",
-                            "logo": {
-                              "@type": "ImageObject",
-                              "url": ""
-                            }
-                          },
-                          "datePublished": "2023-11-29",
-                          "dateModified": "2024-03-12"
-                        }
-                        </script>
-    @endverbatim
+    @php
+        $pageUrl = url($currentLocale.'/cities/strasbourg');
+        $cityId = $pageUrl.'#city';
+
+        $webPage = new \App\Services\StructuredData\WebPageSchema(
+            $pageUrl,
+            __('city/strasbourg.main_heading'),
+            __('city/strasbourg.description'),
+            $currentLocale,
+            $cityId,
+            asset('assets/img/cities/Strasbourg/strasbourg3.webp')
+        );
+
+        $city = new \App\Services\StructuredData\CityGuideSchema(
+            $cityId,
+            __('city/strasbourg.breadcrumb_strasbourg'),
+            __('city/strasbourg.intro_paragraph'),
+            asset('assets/img/cities/Strasbourg/strasbourg3.webp'),
+            ['https://en.wikipedia.org/wiki/Strasbourg'],
+            ['lat' => 48.5846, 'lng' => 7.7507]
+        );
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+            ['name' => __('city/strasbourg.breadcrumb_strasbourg'), 'url' => $pageUrl],
+        ]);
+    @endphp
+
+    <x-seo.structured-data :schema="$webPage" />
+    <x-seo.structured-data :schema="$city" />
+    <x-seo.structured-data :schema="$breadcrumb" />
 @endpush

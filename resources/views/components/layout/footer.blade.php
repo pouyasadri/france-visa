@@ -8,7 +8,7 @@
                 {{-- About Section --}}
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
-                        <a href="{{ route('index') }}">
+                        <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
                             <img src="{{asset("../assets/img/logo/new-logo.webp")}}" alt="{{ __('layout.logo_alt') }}">
                         </a>
                         <p>{{ __('layout.footer.about_short') }}</p>
@@ -49,7 +49,7 @@
                         <h3>{{ __('layout.footer.quick_links_title') }}</h3>
                         <ul>
                             <li>
-                                <a href="{{ route('index') }}">
+                                <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.links.home') }}
                                 </a>
@@ -73,7 +73,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('index') }}">
+                                <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.links.about') }}
                                 </a>

@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Propriétés',
     'coming_soon' => [
         'title' => 'Propriétés - Bientôt Disponible',
         'heading' => 'Fonctionnalité Propriétés Bientôt Disponible',

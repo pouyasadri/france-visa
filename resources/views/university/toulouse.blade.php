@@ -176,33 +176,41 @@
 @endsection
 
 @push("json")
-    <script type="application/ld+json">
-                @verbatim
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "BlogPosting",
-                      "mainEntityOfPage": {
-                        "@type": "WebPage",
-                        "@id": "https://applyvipconseil.com/universities/toulouse"
-                      },
-                      "headline": "{{ __('university/toulouse.schema_headline') }}",
-                      "image": "https://applyvipconseil.com/assets/img/universities/Toulouse/toulouse_logo.webp",
-                      "author": {
-                        "@type": "Organization",
-                        "name": "Apply VIP Conseil",
-                        "url": "https://applyvipconseil.com/"
-                      },
-                      "publisher": {
-                        "@type": "Organization",
-                        "name": "Apply VIP Conseil",
-                        "logo": {
-                          "@type": "ImageObject",
-                          "url": "https://applyvipconseil.com/images/logo.png"
-                        }
-                      },
-                      "datePublished": "2023-11-11",
-                      "dateModified": "2025-10-16"
-                    }
-                @endverbatim
-                </script>
+    @php
+        $currentLocale = app()->getLocale();
+        $pageUrl = url($currentLocale.'/universities/toulouse');
+        $universityId = $pageUrl.'#university';
+        $officialUrl = 'https://www.ut-capitole.fr/';
+
+        $webPage = new \App\Services\StructuredData\WebPageSchema(
+            $pageUrl,
+            __('university/toulouse.main_heading'),
+            __('university/toulouse.description'),
+            $currentLocale,
+            $universityId,
+            asset('assets/img/universities/Toulouse/toulouse_logo.webp')
+        );
+
+        $university = new \App\Services\StructuredData\UniversitySchema(
+            $universityId,
+            __('universities.toulouse_name'),
+            $officialUrl,
+            __('university/toulouse.introduction_content'),
+            asset('assets/img/universities/Toulouse/toulouse_logo.webp'),
+            [
+                $officialUrl,
+                'https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D8%AA%D9%88%D9%84%D9%88%D8%B2',
+            ]
+        );
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
+            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('university/toulouse.breadcrumb_current'), 'url' => $pageUrl],
+        ]);
+    @endphp
+
+    <x-seo.structured-data :schema="$webPage" />
+    <x-seo.structured-data :schema="$university" />
+    <x-seo.structured-data :schema="$breadcrumb" />
 @endpush

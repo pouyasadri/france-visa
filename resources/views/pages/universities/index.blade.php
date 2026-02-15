@@ -9,6 +9,22 @@
     $pageTitle = __('universities.title');
     $pageKeywords = __('universities.keywords');
     $pageDescription = __('universities.description');
+
+    $universities = [
+        ['slug' => 'paris-saclay-university', 'bg' => 'bg-3', 'name' => 'paris_saclay'],
+        ['slug' => 'sorbonne-paris-nord', 'bg' => 'bg-4', 'name' => 'sorbonne_paris_nord'],
+        ['slug' => 'paris-cite', 'bg' => 'bg-5', 'name' => 'paris_cite'],
+        ['slug' => 'paris-4-sorbonne', 'bg' => 'bg-6', 'name' => 'paris_4'],
+        ['slug' => 'paris-3', 'bg' => 'bg-7', 'name' => 'paris_3'],
+        ['slug' => 'paris-2', 'bg' => 'bg-8', 'name' => 'paris_2'],
+        ['slug' => 'lyon-3', 'bg' => 'bg-9', 'name' => 'lyon_3'],
+        ['slug' => 'lyon-2', 'bg' => 'bg-10', 'name' => 'lyon_2'],
+        ['slug' => 'lyon-1', 'bg' => 'bg-11', 'name' => 'lyon_1'],
+        ['slug' => 'pantheon-sorbonne', 'bg' => 'bg-12', 'name' => 'pantheon_sorbonne'],
+        ['slug' => 'cote-d-azure', 'bg' => 'bg-13', 'name' => 'nice'],
+        ['slug' => 'toulouse', 'bg' => 'bg-14', 'name' => 'toulouse'],
+        ['slug' => 'strasbourg', 'bg' => 'bg-15', 'name' => 'strasbourg'],
+    ];
 @endphp
 
 @section('title', $pageTitle)
@@ -16,7 +32,7 @@
 @section('description', $pageDescription)
 
 @section('content')
-    <main id="main-content" role="main">
+    <div>
         <!-- Start Page Title Area -->
         <header class="page-title-area" role="banner">
             <div class="container">
@@ -49,24 +65,6 @@
                 </div>
 
                 <div class="row g-4">
-                    @php
-                        $universities = [
-                            ['slug' => 'paris-saclay-university', 'bg' => 'bg-3', 'name' => 'paris_saclay'],
-                            ['slug' => 'sorbonne-paris-nord', 'bg' => 'bg-4', 'name' => 'sorbonne_paris_nord'],
-                            ['slug' => 'paris-cite', 'bg' => 'bg-5', 'name' => 'paris_cite'],
-                            ['slug' => 'paris-4-sorbonne', 'bg' => 'bg-6', 'name' => 'paris_4'],
-                            ['slug' => 'paris-3', 'bg' => 'bg-7', 'name' => 'paris_3'],
-                            ['slug' => 'paris-2', 'bg' => 'bg-8', 'name' => 'paris_2'],
-                            ['slug' => 'lyon-3', 'bg' => 'bg-9', 'name' => 'lyon_3'],
-                            ['slug' => 'lyon-2', 'bg' => 'bg-10', 'name' => 'lyon_2'],
-                            ['slug' => 'lyon-1', 'bg' => 'bg-11', 'name' => 'lyon_1'],
-                            ['slug' => 'pantheon-sorbonne', 'bg' => 'bg-12', 'name' => 'pantheon_sorbonne'],
-                            ['slug' => 'cote-d-azure', 'bg' => 'bg-13', 'name' => 'nice'],
-                            ['slug' => 'toulouse', 'bg' => 'bg-14', 'name' => 'toulouse'],
-                            ['slug' => 'strasbourg', 'bg' => 'bg-15', 'name' => 'strasbourg'],
-                        ];
-                    @endphp
-
                     @foreach($universities as $uni)
                         <div class="col-lg-6">
                             <article
@@ -205,37 +203,36 @@
             ['title' => __('universities.administrative_support_france'), 'description' => __('universities.administrative_support_description')],
             ['title' => __('universities.legal_services'), 'description' => __('universities.legal_services_description')],
         ]" />
-    </main>
+    </div>
 @endsection
 
 @push("json")
-    @verbatim
-        <script type="application/ld+json">
-                                {
-                                  "@context": "https://schema.org",
-                                  "@type": "WebPage",
-                                  "name": "{{ $pageTitle }}",
-                                  "description": "{{ $pageDescription }}",
-                                  "publisher": {
-                                    "@type": "Organization",
-                                    "name": "Apply VIP Conseil",
-                                    "url": "https://applyvipconseil.com/"
-                                  },
-                                  "breadcrumb": {
-                                    "@type": "BreadcrumbList",
-                                    "itemListElement": [{
-                                      "@type": "ListItem",
-                                      "position": 1,
-                                      "name": "{{ __('universities.breadcrumb_home') }}",
-                                      "item": "{{ url($currentLocale . '/') }}"
-                                    },{
-                                      "@type": "ListItem",
-                                      "position": 2,
-                                      "name": "{{ __('universities.breadcrumb_universities') }}",
-                                      "item": "{{ url($currentLocale . '/universities') }}"
-                                    }]
-                                  }
-                                }
-                                </script>
-    @endverbatim
+    @php
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('universities.breadcrumb_home'), 'url' => url($currentLocale.'/')],
+            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+        ]);
+
+        $collectionPage = new \App\Services\StructuredData\CollectionPageSchema(
+            url()->current(),
+            $pageTitle,
+            $pageDescription,
+            $currentLocale
+        );
+
+        $list = new \App\Services\StructuredData\ItemListSchema($pageTitle);
+        $position = 1;
+        foreach ($universities as $uni) {
+            $list->addItem(
+                $position,
+                url($currentLocale.'/universities/'.$uni['slug']),
+                __('universities.'.$uni['name'].'_name')
+            );
+            $position++;
+        }
+    @endphp
+
+    <x-seo.structured-data :schema="$collectionPage" />
+    <x-seo.structured-data :schema="$breadcrumb" />
+    <x-seo.structured-data :schema="$list" />
 @endpush

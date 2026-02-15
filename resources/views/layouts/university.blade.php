@@ -31,7 +31,7 @@
     </header>
 
     <!-- Content Area -->
-    <main class="service-details-area ptb-100">
+    <section class="service-details-area ptb-100">
         <div class="container" id="mydiv">
             <div class="row g-4">
                 <!-- Sidebar -->
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <script src="{{ asset('assets/js/createScrollLinks.js') }}"></script>
 @endsection

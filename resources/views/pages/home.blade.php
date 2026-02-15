@@ -10,7 +10,7 @@
 @section("keywords", __('index.meta.keywords'))
 @section("description", __('index.meta.description'))
 @section('content')
-    <main id="main-content" role="main">
+    <div>
 
         @php
             // Determine RTL/LTR and pick appropriate flaticon arrow class
@@ -109,7 +109,7 @@
 
                             <p>{{ __('index.about.p4') }}</p>
 
-                            <a href="{{url(app()->getLocale() . "/contact-us")}}" class="default-btn">
+                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="default-btn">
                                 {{ __('index.about.button') }}
                                 <i class="{{ $arrowIcon }}"></i>
                             </a>
@@ -157,7 +157,16 @@
         <section class="city-view-area ptb-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 col-md-12" style="height: 40rem" id="chartdiv"></div>
+                    @php
+                        $mapCityNamesJson = e(json_encode([
+                            __('cities.map_paris'),
+                            __('cities.map_strasbourg'),
+                            __('cities.map_lyon'),
+                            __('cities.map_nice'),
+                            __('cities.map_toulouse'),
+                        ], JSON_UNESCAPED_UNICODE));
+                    @endphp
+                    <div class="col-lg-5 col-md-12" style="height: 40rem" id="chartdiv" data-city-names="{{ $mapCityNamesJson }}"></div>
                     <div class="city-wrap col-lg-5 col-md-12">
                         <div class="single-city-item owl-carousel owl-theme">
                             @foreach(__('index.cities.items') as $index => $city)
@@ -236,7 +245,7 @@
                             {{ ucfirst($property->status) }}
                         </span>
                         @endif
-                        <a href="{{ route('properties.show', ['locale' => app()->getLocale(), 'property' => $property->id]) }}"
+                        <a href="{{ route('properties.show', ['locale' => app()->getLocale(), 'id' => $property->id]) }}"
                             class="default-btn">
                             {{ __('index.properties.button') }}
                             <i class="{{ $arrowIcon }}"></i>
@@ -265,103 +274,6 @@
         END PROPERTIES FEATURE DISABLED
         ================================================================================
         --}}
-
-        <!-- start Testimonials Area -->
-        <!--<section class="testimonials-area pb-100">-->
-        <!--    <div class="container">-->
-        <!--        <div class="section-title">-->
-        <!--            <span>AVC</span>-->
-        <!--            <h2>آنچه مشتریان می گویند</h2>-->
-        <!--        </div>-->
-        <!--        <div class="testimonials-wrap owl-carousel owl-theme">-->
-        <!--            <div class="single-testimonials">-->
-        <!--                <ul>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                </ul>-->
-        <!--                <h3>خدمات عالی</h3>-->
-        <!--                <p>“لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد-->
-        <!--                    صنعت-->
-        <!--                    بوده است.”</p>-->
-        <!--                <div class="testimonials-content">-->
-        <!--                    <img src="../assets/img/testimonials/2.jpg" alt="Image">-->
-        <!--                    <h4>آیمان جنیس</h4>-->
-        <!--                    <span>CEO@Leasuely</span>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="single-testimonials">-->
-        <!--                <ul>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                </ul>-->
-        <!--                <h3>خدمات عالی</h3>-->
-        <!--                <p>“لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد-->
-        <!--                    صنعت-->
-        <!--                    بوده است.”</p>-->
-        <!--                <div class="testimonials-content">-->
-        <!--                    <img src="../assets/img/testimonials/3.jpg" alt="Image">-->
-        <!--                    <h4>آیمان جنیس</h4>-->
-        <!--                    <span>CEO@Leasuely</span>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="single-testimonials">-->
-        <!--                <ul>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                    <li>-->
-        <!--                        <i class="bx bxs-star"></i>-->
-        <!--                    </li>-->
-        <!--                </ul>-->
-        <!--                <h3>خدمات عالی</h3>-->
-        <!--                <p>“لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد-->
-        <!--                    صنعت-->
-        <!--                    بوده است.”</p>-->
-        <!--                <div class="testimonials-content">-->
-        <!--                    <img src="../assets/img/testimonials/1.jpg" alt="Image">-->
-        <!--                    <h4>آیمان جنیس</h4>-->
-        <!--                    <span>CEO@Leasuely</span>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</section>-->
-        <!-- End Testimonials Area -->
 
         <!-- Start News Area -->
         <section class="news-area pt-100 pb-100">
@@ -397,43 +309,46 @@
         </section>
         <!-- End News Area -->
 
-    </main>
+        @php
+            $homepageFaqs = match ($currentLocale) {
+                'fr' => \App\Services\FaqService::immigrationFaqsFR(),
+                'fa' => \App\Services\FaqService::immigrationFaqsFA(),
+                default => \App\Services\FaqService::immigrationFaqsEN(),
+            };
+        @endphp
+
+        <section class="pt-100 pb-100">
+            <div class="container">
+                <div class="section-title">
+                    <span>{{ __('index.faq.subtitle', [], $currentLocale) }}</span>
+                    <h2>{{ __('index.faq.title', [], $currentLocale) }}</h2>
+                </div>
+                <x-ui.faq-section :faqs="array_slice($homepageFaqs, 0, 5)" />
+            </div>
+        </section>
+
+    </div>
 @endsection
 @push("styles")
     <script src="{{asset("https://www.amcharts.com/lib/3/ammap.js?3.17.0")}}"></script>
     <script src="{{asset("https://www.amcharts.com/lib/3/maps/js/franceLow.js")}}"></script>
 @endpush
 @push("json")
-    {{-- Enhanced WebSite Schema with SearchAction --}}
-    @verbatim
-        <script type="application/ld+json">
-                                                                    {
-                                                                      "@context": "https://schema.org",
-                                                              "@type": "WebSite",
-                                                              "name": "{{ config('seo.organization.name') }}",
-                                                              "url": "{{ config('app.url') }}",
-                                                              "potentialAction": {
-                                                                "@type": "SearchAction",
-                                                                "target": {
-                                                                  "@type": "EntryPoint",
-                                                                  "urlTemplate": "{{ config('app.url') }}/{{ $currentLocale }}/blog?search={search_term_string}"
-                                                                },
-                                                                "query-input": "required name=search_term_string"
-                                                              }
-                                                            }
-                                                                </script>
-    @endverbatim
-    {{-- FAQ Schema for Homepage --}}
+    {{-- WebPage Schema --}}
     @php
-        $homepageFaqs = match ($currentLocale) {
-            'fr' => \App\Services\FaqService::immigrationFaqsFR(),
-            'fa' => \App\Services\FaqService::immigrationFaqsFA(),
-            default => \App\Services\FaqService::immigrationFaqsEN(),
-        };
-        $faqSchema = new \App\Services\StructuredData\FAQSchema();
-        $faqSchema->addQuestions(array_slice($homepageFaqs, 0, 5));
+        $homeTitle = __('index.meta.title');
+        $homeDescription = __('index.meta.description');
+        $homeImage = config('seo.defaults.image');
+        $webPageSchema = new \App\Services\StructuredData\WebPageSchema(
+            url()->current(),
+            $homeTitle,
+            $homeDescription,
+            $currentLocale,
+            null,
+            $homeImage
+        );
     @endphp
-    <x-seo.structured-data :schema="$faqSchema" />
+    <x-seo.structured-data :schema="$webPageSchema" />
 @endpush
 @push("scripts")
     <script>
@@ -442,13 +357,11 @@
         var planeSVG = "m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47";
 
         // Get city names from translations
-        var cityNames = {!! json_encode([
-        __('cities.map_paris'),
-        __('cities.map_strasbourg'),
-        __('cities.map_lyon'),
-        __('cities.map_nice'),
-        __('cities.map_toulouse')
-    ]) !!};
+        var chartEl = document.getElementById("chartdiv");
+        var cityNames = [];
+        if (chartEl && chartEl.dataset && chartEl.dataset.cityNames) {
+            cityNames = JSON.parse(chartEl.dataset.cityNames);
+        }
 
         AmCharts.makeChart("chartdiv", {
             type: "map",
