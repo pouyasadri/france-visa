@@ -1,6 +1,13 @@
 <?php
 
 return [
+    // Map City Names
+    'map_paris' => 'Paris',
+    'map_strasbourg' => 'Strasbourg',
+    'map_lyon' => 'Lyon',
+    'map_nice' => 'Nice',
+    'map_toulouse' => 'Toulouse',
+
     // SEO Meta Tags
     'title' => 'Les plus belles et populaires villes de France | Étudier et Vivre en France',
     'keywords' => 'villes françaises, villes populaires en France, Paris, Lyon, Nice, Toulouse, Strasbourg, immigration en France, meilleures villes pour vivre en France, immigration en Europe, immigration étudiante, résidence française, vie étudiante en Europe',

@@ -25,6 +25,11 @@ return [
     'intro_paragraph_1' => 'Amical et vibrant, ce sont de beaux mots utilisés pour décrire cette belle ville côtière. Destination touristique des riches ducs britanniques au dix-neuvième siècle, Nice sur les rives de la Mer Azur a joui d\'une célébrité mondiale pendant plus de deux siècles en raison de son climat doux—Azure signifie bleu.',
     'intro_paragraph_2' => 'Nice est situé à l\'extrême sud-est de la France métropolitaine, près de la frontière avec l\'Italie, en réalité à trente kilomètres de celle-ci. En un sens, c\'est la dernière partie de la Côte d\'Azur du côté français. Si vous recherchez une ville avec un climat agréable, des vues magnifiques et diverses opportunités d\'études et de travail, Nice pourrait être une option idéale.',
     'intro_paragraph_3' => 'Nice, cette ville côtière surnommée "Nissa la bella" (Nice la Belle) a un climat chaud et agréable toute l\'année et en raison de son atmosphère calme et distinguée et de nombreux lieux à voir, c\'est un endroit essentiel pour tout touriste qui envisage de voir la France et ses attractions. Nice est historiquement très diversifiée; avant de devenir une partie du royaume wisigothique d\'Italie, puis de rejoindre l\'Empire romain d\'Orient et à nouveau sous le drapeau du royaume d\'Italie (Saint-Empire romain), elle est devenue à nouveau une partie des terres de Gênes et de Provence, et finalement française. Donc cette ville côtière populaire a successivement connu d\'être ligurienne, grecque et romaine en termes d\'identité. Aujourd\'hui, Nice a une population de 341 000 habitants et a revendiqué une partie de l\'économie touristique de l\'Europe. Dans cet article, nous voulons passer du temps sur les rives calmes de Nice et en apprendre davantage sur ce lieu mémorable, ses attractions et ses moments mémorables.',
+    'intro_paragraph' => 'Nice, située sur la Côte d\'Azur, est une ville qui capture l\'essence de la vie méditerranéenne. Avec ses superbes plages de galets, ses marchés animés et son riche patrimoine artistique, elle est depuis longtemps une destination privilégiée pour les voyageurs et les expatriés.',
+
+    // Section: History
+    'history_heading' => 'Histoire de Nice',
+    'history_paragraph' => 'Nice possède une histoire riche et complexe, ayant été influencée par diverses cultures au fil des siècles. Fondée à l\'origine par les Grecs, elle est devenue plus tard une colonie romaine et a passé des siècles au sein du comté de Nice, avant de rejoindre la France en 1860.',
 
     // Section: Living
     'living_heading' => 'Vivre à Nice',
@@ -40,6 +45,11 @@ return [
     'study_heading' => 'Études à Nice',
     'study_paragraph' => 'Nice accueille l\'université d\'État Université Côte d\'Azur qui propose des programmes d\'études en génie, sciences fondamentales, droit, sciences économiques, gestion et sciences humaines. De plus, il existe plusieurs écoles supérieures en architecture, art et tourisme dans cette ville. Pour étudier à Nice, il est essentiel d\'avoir un certificat de langue française (tel que TCF ou TEF). De plus, selon le niveau d\'études, vous devrez peut-être fournir des dossiers académiques, des lettres de recommandation et participer à des examens d\'admission.',
 
+    // Section: Universities
+    'universities_heading' => 'Enseignement Supérieur à Nice',
+    'universities_paragraph' => 'Nice est un centre éducatif important dans le sud de la France, accueillant plusieurs institutions et centres de recherche prestigieux.',
+    'university_nice' => 'Université Côte d\'Azur',
+
     // Section: Climate
     'climate_heading' => 'Climat à Nice',
     'climate_paragraph' => 'Le climat de la ville se conforme aux normes d\'un climat méditerranéen semi-tropical. En raison de la petite amplitude thermique quotidienne indépendamment de la saison et de l\'humidité de l\'air spécifique, même en plein été quand les pluies sont rares, il semblera très agréable et apaisant. Nice a une température moyenne de 16 degrés Celsius tout au long de l\'année, ce qui est l\'une des plus hautes températures de la France métropolitaine, après Menton (16,4 degrés Celsius), ce qui en fait l\'une des caractéristiques du climat méditerranéen en France. Ce climat se trouve particulièrement sur la côte orientale de la Riviera, ce qui signifie que vous n\'en trouverez l\'équivalent nulle part ailleurs sur cette planète. De plus, sa position géographique à l\'ouest du golfe de Gênes la protège considérablement des vents forts toute l\'année.',
@@ -52,13 +62,25 @@ return [
     'transportation_heading' => 'Transport à Nice',
     'transportation_paragraph' => 'Les trajets quotidiens vers et depuis Nice sont très importants et vitaux pour l\'économie urbaine. On estime qu\'environ 310 000 personnes entrent dans la ville quotidiennement et la quittent ensuite. Cela se fait grâce aux infrastructures de transport optimales de Nice, qui selon le plan global de Nice d\'ici 2019 sont en cours de développement.',
 
+    // Section: Daily Life
+    'daily_life_heading' => 'Vie Quotidienne à Nice',
+    'daily_life_paragraph' => 'Vivre à Nice signifie profiter d\'un style de vie en plein air. La Promenade des Anglais est parfaite pour les joggings matinaux ou les promenades nocturnes, tandis que les marchés locaux proposent chaque jour des produits méditerranéens frais.',
+
+    // Section: Tourism
+    'tourism_heading' => 'Tourisme et Attractions',
+    'tourism_paragraph' => 'Des rues colorées de la vieille ville (Vieux Nice) aux vues imprenables depuis la colline du Château, Nice offre une multitude d\'attractions. La ville abrite également des musées de renommée mondiale, notamment ceux consacrés à Matisse et Chagall.',
+
     // Section: Living Costs
     'living_costs_heading' => 'Coût de la Vie à Nice',
     'living_costs_paragraph' => 'Le coût de la vie à Nice est légèrement plus élevé qu\'à Paris et Lyon, mais reste inférieur à celui d\'autres grandes villes européennes. Les coûts du logement, de la nourriture et des transports peuvent varier en fonction du quartier et du style de vie. Une estimation approximative du coût de la vie à Nice pour une famille de quatre personnes est d\'environ 3 515 $ (3 368 €) par mois sans loyer. Les coûts mensuels pour une personne sans loyer sont estimés à environ 975 $ (934 €)—selon cette estimation, Nice est 23,63 % moins chère que New York, sans calculer le loyer.',
 
     // Section: Job Opportunities
-    'job_heading' => 'Opportunités d\'Emploi à Nice',
-    'job_paragraph' => 'L\'économie de Nice est principalement basée sur le tourisme, le commerce et les industries créatives telles que la mode et les technologies de l\'information. Ces facteurs offrent des opportunités d\'emploi appropriées pour les professionnels dans le domaine de l\'hôtellerie, des restaurants, de la vente, du marketing, des technologies de l\'information et du design. Pour travailler en France, il est obligatoire d\'avoir un permis de travail. Les conditions d\'obtention d\'un permis de travail varient selon le type de poste et la nationalité de la personne.',
+    'jobs_heading' => 'Opportunités d\'Emploi à Nice',
+    'jobs_paragraph' => 'L\'économie de Nice est principalement basée sur le tourisme, le commerce et les industries créatives telles que la mode et les technologies de l\'information. Ces facteurs offrent des opportunités d\'emploi appropriées pour les professionnels dans le domaine de l\'hôtellerie, des restaurants, de la vente, du marketing, des technologies de l\'information et du design. Pour travailler en France, il est obligatoire d\'avoir un permis de travail. Les conditions d\'obtention d\'un permis de travail varient selon le type de poste et la nationalité de la personne.',
+
+    // Section: Economy
+    'economy_heading' => 'Économie et Affaires',
+    'economy_paragraph' => 'Si le tourisme reste un pilier de l\'économie locale, Nice a également développé une forte présence dans les secteurs de la technologie et des services, notamment avec le parc technologique de Sophia Antipolis à proximité.',
 
     // Section: Conclusion
     'conclusion_heading' => 'Dernier Mot',

@@ -1,6 +1,13 @@
 <?php
 
 return [
+    // Map City Names
+    'map_paris' => 'Paris',
+    'map_strasbourg' => 'Strasbourg',
+    'map_lyon' => 'Lyon',
+    'map_nice' => 'Nice',
+    'map_toulouse' => 'Toulouse',
+
     // SEO Meta Tags
     'title' => 'Most Beautiful and Popular Cities in France | Study & Live in France',
     'keywords' => 'French cities, popular cities in France, Paris, Lyon, Nice, Toulouse, Strasbourg, immigration to France, best cities to live in France, immigration to Europe, study immigration, French residency, student life in Europe',

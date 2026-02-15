@@ -22,29 +22,59 @@ return [
 
     // Main Content
     'intro_heading' => 'Paris, une Ville de Rêve pour l\'Étude et la Vie des Iraniens',
-    'intro_paragraph_1' => 'Paris, la capitale de la France, a toujours été l\'une des destinations d\'immigration les plus populaires pour les Iraniens. Cette belle ville avec son riche histoire, sa culture raffinée et ses brillantes opportunités éducatives et professionnelles a toujours été le rêve de nombreux jeunes étudiants et professionnels iraniens.',
-    'intro_paragraph_2' => 'Si vous aussi envisagez de vous installer en France et d\'étudier et vivre à Paris, cet article vous fournit des informations utiles. Dans cet article, nous examinons les conditions d\'études, de vie, de travail et les conseils importants pour l\'immigration à Paris pour les Iraniens.',
+    'intro_paragraph' => 'Paris, la capitale de la France, a toujours été l\'une des destinations d\'immigration les plus populaires pour les Iraniens. Cette belle ville avec son riche histoire, sa culture raffinée et ses brillantes opportunités éducatives et professionnelles a toujours été le rêve de nombreux jeunes étudiants et professionnels iraniens.',
+
+    // Section: History
+    'history_heading' => 'Histoire de Paris',
+    'history_paragraph' => 'Paris a une histoire de plus de 2 000 ans. À l\'origine un établissement celte appelé Lutèce, elle est devenue une ville romaine majeure et plus tard la capitale du royaume franc. Tout au long du Moyen Âge et de la Renaissance, Paris est devenue un centre mondial de l\'art, de la science et de la philosophie. La Révolution française et l\'ère napoléonienne ont encore consolidé son statut de capitale mondiale.',
 
     // Section: Study in Paris
     'study_heading' => 'Études à Paris',
-    'study_paragraph_1' => 'La France possède un système d\'éducation de haute qualité et des universités reconnues au niveau mondial. Paris, en tant que capitale, accueille certaines des meilleures universités françaises, notamment l\'Université Paris-Sorbonne, l\'Université Paris-Saclay et l\'École Normale Supérieure. Ces universités proposent des programmes éducatifs dans divers domaines, notamment l\'ingénierie, les sciences fondamentales, le droit, l\'économie, la médecine, l\'art et la littérature.',
+    'study_paragraph' => 'La France possède un système d\'éducation de haute qualité et des universités reconnues au niveau mondial. Paris, en tant que capitale, accueille certaines des meilleures universités françaises, notamment l\'Université Paris-Sorbonne, l\'Université Paris-Saclay et l\'École Normale Supérieure. Ces universités proposent des programmes éducatifs dans divers domaines, notamment l\'ingénierie, les sciences fondamentales, le droit, l\'économie, la médecine, l\'art et la littérature.',
     'study_paragraph_2' => 'Pour étudier dans les universités de Paris, il est essentiel d\'avoir un certificat de langue française (tel que TCF ou TEF). De plus, selon le niveau d\'études, vous pourriez avoir besoin de fournir des dossiers académiques, des lettres de recommandation et de participer à des examens d\'admission.',
 
     // Section: Paris Universities
     'universities_heading' => 'Universités de Paris',
-    'universities_paragraph_1' => 'Les universités les plus importantes et les plus prestigieuses de France sont probablement situées à Paris. Bien que les études en France ne soient pas complètement « gratuites », lorsque vous étudiez dans une université d\'État, vous payez un montant très faible. Pour être précis, il n\'y a pas de frais de scolarité dans les universités d\'État françaises, mais il y a des frais d\'inscription modérés, car le gouvernement couvre la plupart des coûts des programmes éducatifs offerts dans les établissements d\'État. Cependant, si vous n\'êtes pas citoyen d\'un pays de l\'Union européenne, vous devrez payer des frais de scolarité plus élevés en France. En tout cas, les universités de Paris les plus importantes sont :',
-    'university_paris_south' => 'Université Paris-Sud',
-    'university_paris_north' => 'Université Paris-Nord',
-    'university_paris_seven' => 'Université Paris 7',
-    'university_paris_four' => 'Université Paris 4 Sorbonne',
-    'university_paris_three' => 'Université Paris 3',
-    'university_paris_two' => 'Université Paris 2 Panthéon',
+    'universities_intro' => 'Les universités les plus importantes et les plus prestigieuses de France sont probablement situées à Paris. Bien que les études en France ne soient pas complètement « gratuites », lorsque vous étudiez dans une université d\'État, vous payez un montant très faible. Pour être précis, il n\'y a pas de frais de scolarité dans les universités d\'État françaises, mais il y a des frais d\'inscription modérés, car le gouvernement couvre la plupart des coûts des programmes éducatifs offerts dans les établissements d\'État. Cependant, si vous n\'êtes pas citoyen d\'un pays de l\'Union européenne, vous devrez payer des frais de scolarité plus élevés en France. En tout cas, les universités de Paris les plus importantes sont :',
     'university_pantheon_sorbonne' => 'Université Panthéon-Sorbonne',
+    'university_paris_cite' => 'Université Paris Cité',
+    'university_pantheon_assas' => 'Université Panthéon-Assas',
+    'university_sorbonne_nouvelle' => 'Université Sorbonne Nouvelle',
+    'university_sorbonne' => 'Université Sorbonne',
+    'university_paris_saclay' => 'Université Paris-Saclay',
+    'university_sorbonne_paris_nord' => 'Université Sorbonne Paris Nord',
     'universities_paragraph_2' => 'Il existe plusieurs universités à Paris qui proposent des programmes éducatifs en langue anglaise, à la fois des cours d\'études à l\'étranger, que ce soit au niveau du diplôme ou des études supérieures. Certaines institutions françaises cherchent à encourager les étudiants anglophones à immigrer à Paris pour des études, tandis que d\'autres sont des campus internationaux d\'universités situées à Paris, comme l\'American University of Paris.',
 
     // Section: Paris Climate
     'climate_heading' => 'Climat de Paris',
     'climate_paragraph' => 'Paris connaît un climat tempéré pendant les quatre saisons. La température maximale moyenne quotidienne varie de 6°C en hiver à 25°C au cœur de l\'été. Par conséquent, le froid ou la chaleur extrême est très rare, mais la pluie ? Non, pas comme ça. À Paris, les averses peuvent arriver et disparaître rapidement pendant la journée. Paris connaît en moyenne 15 jours de neige par an, mais rarement plus d\'une journée de pollution atmosphérique. Les Parisiens et les touristes voient plus de soleil à Paris qu\'à Londres et parmi les capitales européennes, elle offre l\'air le plus agréable à ses habitants.',
+
+    'tourism_heading' => 'Tourisme à Paris',
+    'tourism_paragraph_1' => 'Paris est la destination touristique la plus populaire au monde, connue pour ses musées, ses monuments et son atmosphère romantique.',
+    'tourism_items' => [
+        'Tour Eiffel',
+        'Musée du Louvre',
+        'Cathédrale Notre-Dame',
+        'Arc de Triomphe',
+        'Montmartre et Sacré-Cœur',
+        'Musée d\'Orsay',
+        'Jardin des Tuileries',
+        'Avenue des Champs-Élysées',
+    ],
+    'tourism_paragraph_2' => 'La Tour Eiffel, le Musée du Louvre, la Cathédrale Notre-Dame et l\'Arc de Triomphe ne هستند que quelques-unes des attractions incontournables de Paris.',
+
+    // Section: Economy
+    'economy_heading' => 'Économie de Paris',
+    'economy_paragraph_1' => 'Paris est un pôle économique mondial et l\'une des villes les plus riches du monde. Elle accueille le siège de nombreuses entreprises du Fortune 500 et est un leader dans la finance, les produits de luxe et la technologie. Les grandes entreprises basées à Paris comprennent :',
+    'economy_companies' => [
+        'BNP Paribas',
+        'AXA',
+        'Société Générale',
+        'LVMH',
+        'TotalEnergies',
+        'Carrefour',
+    ],
+    'economy_paragraph_2' => 'Le quartier d\'affaires de La Défense est le plus grand quartier d\'affaires dédié d\'Europe, abritant bon nombre de ces géants corporatifs.',
 
     // Section: Living Costs
     'living_costs_heading' => 'Coût de la Vie à Paris',
@@ -99,6 +129,10 @@ return [
     'benefit_5' => 'Prime de naissance',
     'benefit_6' => 'Allocation de base pour chaque enfant',
     'benefit_7' => 'Allocations parentales',
+
+    // Section: Visa
+    'visa_heading' => 'Visa pour la France',
+    'visa_paragraph' => 'En règle générale, un visa est requis pour immigrer à Paris. Les documents légaux doivent être présentés à la frontière. Les citoyens des pays de l\'UE et de l\'EEE n\'ont pas besoin de visa pour la France en raison du traité de Schengen. Les demandeurs de résidence à Paris doivent faire leur demande par l\'intermédiaire de l\'ambassade ou du consulat de France dans leur pays. Pour les séjours de plus de 90 jours, un visa de long séjour est nécessaire.',
 
     // Section: Conclusion
     'conclusion_heading' => 'Dernier Mot',

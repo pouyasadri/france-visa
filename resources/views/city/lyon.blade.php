@@ -1,273 +1,176 @@
-@extends('layout')
+@extends('layouts.city')
+
+@php
+    $currentLocale = app()->getLocale();
+    $cityName = 'lyon';
+@endphp
+
 @section('title', __('city/lyon.title'))
 @section('keywords', __('city/lyon.keywords'))
 @section('description', __('city/lyon.description'))
-@section('content')
-    @php
-        $isRtl = in_array(app()->getLocale(), ['fa'], true);
-        $arrowClass = $isRtl ? 'flaticon-left-arrow' : 'flaticon-right-arrow';
-    @endphp
 
-    <div class="page-title-area">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{ __('city/lyon.main_heading') }}</h2>
-                <ul>
-                    <li>
-                        <a href="{{url(app()->getLocale().'/')}}">
-                            {{ __('city/lyon.breadcrumb_home') }}
-                        </a>
+@section('header_class', 'bg-lyon-city')
+@section('breadcrumb_current', __('city/lyon.breadcrumb_lyon'))
+@section('page_title_heading', __('city/lyon.main_heading'))
+
+@section('toc_title', __('city/lyon.table_of_contents'))
+@section('contact_title', __('city/lyon.contact_us'))
+@section('consultation_text', __('city/lyon.consultation_request'))
+@section('ask_question_title', __('city/lyon.ask_question'))
+
+@section('useful_links')
+    <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
+        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">{{ __('city/lyon.useful_links') }}</h4>
+        <ul class="list-unstyled mb-0">
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Lyon" target="_blank"
+                    class="d-flex align-items-center text-decoration-none">
+                    <i class="bx bxl-internet-explorer me-2 fs-5 text-primary"></i>
+                    <span>{{ __('city/lyon.lyon_wikipedia') }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+@endsection
+
+@section('city_content')
+    <section class="mb-5">
+        <h2 class="h3 fw-bold mb-4">{{ __('city/lyon.intro_heading') }}</h2>
+        <div class="single-services-imgs mb-4">
+            <img src="{{ asset('assets/img/cities/Lyon/lyon1.webp') }}" alt="{{ __('city/lyon.breadcrumb_lyon') }}"
+                class="img-fluid rounded-4 shadow-sm w-100">
+        </div>
+        <p class="lead">{{ __('city/lyon.intro_paragraph') }}</p>
+    </section>
+
+    <div class="rounded-4 overflow-hidden shadow-sm mb-5">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178167.27644170693!2d4.8262037!3d45.7538785!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/lyon.history_heading') }}</h3>
+        <p>{{ __('city/lyon.history_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.climate_heading') }}</h3>
+        <p>{{ __('city/lyon.climate_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.study_heading') }}</h3>
+        <p>{{ __('city/lyon.study_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.universities_heading') }}</h3>
+        <p>{{ __('city/lyon.universities_intro') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item bg-transparent border-0 ps-0">
+                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
+                <a href="{{ url($currentLocale . '/universities/lyon-1') }}"
+                    target="_blank">{{ __('city/lyon.university_lyon_1') }}</a>
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
+                <a href="{{ url($currentLocale . '/universities/lyon-2') }}"
+                    target="_blank">{{ __('city/lyon.university_lyon_2') }}</a>
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
+                <a href="{{ url($currentLocale . '/universities/lyon-3') }}"
+                    target="_blank">{{ __('city/lyon.university_lyon_3') }}</a>
+            </li>
+        </ul>
+    </section>
+
+    <div class="mb-5">
+        <img src="{{ asset('assets/img/cities/Lyon/lyon.webp') }}" alt="{{ __('city/lyon.breadcrumb_lyon') }}"
+            class="img-fluid rounded-4 shadow-sm w-100">
+    </div>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/lyon.tourism_heading') }}</h3>
+        <p>{{ __('city/lyon.tourism_paragraph_1') }}</p>
+        @if(is_array(__('city/lyon.tourism_items')))
+            <ul class="list-group list-group-flush mb-4">
+                @foreach (__('city/lyon.tourism_items') as $item)
+                    <li class="list-group-item bg-transparent border-0 ps-0">
+                        <i class="bx bx-camera text-primary me-2"></i>
+                        {{ $item }}
                     </li>
-                    <li><a href="{{url(app()->getLocale().'/cities')}}">
-                            {{ __('city/lyon.breadcrumb_cities') }}
+                @endforeach
+            </ul>
+        @endif
+        <p>{{ __('city/lyon.tourism_paragraph_2') }}</p>
+        <p>{{ __('city/lyon.tourism_paragraph_3') }}</p>
 
-                        </a></li>
-                    <li>{{ __('city/lyon.breadcrumb_lyon') }}</li>
-                </ul>
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.economy_heading') }}</h3>
+        <p>{{ __('city/lyon.economy_paragraph_1') }}</p>
+        @if(is_array(__('city/lyon.economy_companies')))
+            <ul class="list-group list-group-flush mb-4">
+                @foreach (__('city/lyon.economy_companies') as $company)
+                    <li class="list-group-item bg-transparent border-0 ps-0">
+                        <i class="bx bx-buildings text-primary me-2"></i>
+                        {{ $company }}
+                    </li>
+                @endforeach
+            </ul>
+        @endif
+        <p>{{ __('city/lyon.economy_paragraph_2') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.living_costs_heading') }}</h3>
+        <p>{{ __('city/lyon.living_costs_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.job_heading') }}</h3>
+        <p>{{ __('city/lyon.job_paragraph_1') }}</p>
+        <p>{{ __('city/lyon.job_paragraph_2') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.visa_heading') }}</h3>
+        <p>{{ __('city/lyon.visa_paragraph') }}</p>
+    </section>
+
+    <div class="mb-5">
+        <img src="{{ asset('assets/img/cities/Lyon/lyon2.webp') }}" alt="{{ __('city/lyon.breadcrumb_lyon') }}"
+            class="img-fluid rounded-4 shadow-sm w-100">
+    </div>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/lyon.conclusion_heading') }}</h3>
+        <p>{{ __('city/lyon.conclusion_paragraph') }}</p>
+    </section>
+
+    <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0 mt-5">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <i class='bx bxs-city text-primary' style="font-size: 5rem;"></i>
+                <h4 class="h5 fw-bold mt-3">{{ __('city/lyon.breadcrumb_lyon') }}</h4>
+            </div>
+            <div class="col-lg-8">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/lyon.intro_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/lyon.study_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/lyon.living_costs_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/lyon.tourism_heading') }}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- End Page Title Area -->
-
-    <!-- End Service Details Area -->
-    <section class="service-details-area ptb-100">
-        <div class="container" id="mydiv">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="service-sidebar-area">
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">{{ __('city/lyon.table_of_contents') }}</h4>
-                            <ol id="board">
-
-                            </ol>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">{{ __('city/lyon.contact_us') }}</h4>
-                            <ul>
-                                <li>
-                                    <a href="{{url(app()->getLocale().'/consult')}}">
-                                        {{ __('city/lyon.consultation_request') }}
-                                        <i class='bx bx-time'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:info@applyvipconseil.com">
-                                        info@applyvipconseil.com
-                                        <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">{{ __('city/lyon.useful_links') }}</h4>
-                            <ul>
-                                <li>
-                                    <a href="https://en.wikipedia.org/wiki/Lyon" target="_blank">
-                                        {{ __('city/lyon.lyon_wikipedia') }}
-                                        <i class="bx bxl-internet-explorer"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="service-details-wrap">
-
-
-                        <h2>{{ __('city/lyon.intro_heading') }}</h2>
-                        <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/cities/Lyon/lyon1.webp")}}"
-                                 alt="{{ __('city/lyon.breadcrumb_lyon') }}">
-                        </div>
-                        <p class="mb-30">
-                            {{ __('city/lyon.intro_paragraph') }}
-                        </p>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178167.27644170693!2d4.8262037!3d45.7538785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <h3 class="mt-20">
-                            {{ __('city/lyon.history_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            {{ __('city/lyon.history_paragraph') }}
-                        </p>
-                        <h3 class="mt-20">{{ __('city/lyon.climate_heading') }}</h3>
-                        <p class="mb-30">{{ __('city/lyon.climate_paragraph') }}</p>
-                        <h3 class="mt-20">
-                            {{ __('city/lyon.study_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            {{ __('city/lyon.study_paragraph') }}
-                        </p>
-                        <h3 class="mt-20">
-                            {{ __('city/lyon.universities_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                        {{ __('city/lyon.universities_intro') }}
-                        <ul style="list-style: inside">
-                            <li><a href={{url(app()->getLocale()."/universities/lyon-1")}}
-                                   target="_blank">{{ __('city/lyon.university_lyon_1') }}</a></li>
-                            <li><a href={{url(app()->getLocale()."/universities/lyon-2")}}
-                                   target="_blank">{{ __('city/lyon.university_lyon_2') }}</a></li>
-                            <li><a href={{url(app()->getLocale()."/universities/lyon-3")}}
-                                   target="_blank">{{ __('city/lyon.university_lyon_3') }}</a></li>
-                        </ul>
-                        </p>
-                        <h3 class="mt-20">{{ __('city/lyon.tourism_heading') }}</h3>
-                        <p class="mb-30">
-                        {{ __('city/lyon.tourism_paragraph_1') }}
-                        <ul style="list-style: inside">
-                            @foreach(__('city/lyon.tourism_items') as $item)
-                                <li>{{ $item }}</li>
-                            @endforeach
-                        </ul>
-                        {{ __('city/lyon.tourism_paragraph_2') }}
-
-                        {{ __('city/lyon.tourism_paragraph_3') }}
-
-                        </p>
-                        <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/cities/Lyon/lyon.webp")}}"
-                                 alt="{{ __('city/lyon.breadcrumb_lyon') }}">
-                        </div>
-                        <h3 class="mt-20">{{ __('city/lyon.economy_heading') }}</h3>
-                        <p class="mb-30">
-                        {{ __('city/lyon.economy_paragraph_1') }}
-
-                        <ul style="list-style: inside">
-                            @foreach(__('city/lyon.economy_companies') as $company)
-                                <li>{{ $company }}</li>
-                            @endforeach
-                        </ul>
-                        {{ __('city/lyon.economy_paragraph_2') }}
-                        </p>
-                        <h3 class="mt-20">{{ __('city/lyon.living_costs_heading') }}</h3>
-                        <p class="mb-30">{{ __('city/lyon.living_costs_paragraph') }}</p>
-                        <h3 class="mt-20">{{ __('city/lyon.job_heading') }}</h3>
-                        <p>{{ __('city/lyon.job_paragraph_1') }}</p>
-                        <p class="mb-30">
-                            {{ __('city/lyon.job_paragraph_2') }}
-                        </p>
-                        <h3 class="mt-20">
-                            {{ __('city/lyon.visa_heading') }}
-                        </h3>
-                        <p class="mb-30">
-
-                            {{ __('city/lyon.visa_paragraph') }}
-
-                        </p>
-                        <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/cities/Lyon/lyon2.webp")}}"
-                                 alt="{{ __('city/lyon.breadcrumb_lyon') }}">
-                        </div>
-
-                        <h3 class="mt-20">
-                            {{ __('city/lyon.conclusion_heading') }}
-                        </h3>
-                        <p class="mb-30">{{ __('city/lyon.conclusion_paragraph') }}
-                        </p>
-                        <div class="ask-question">
-                            <h3>{{ __('city/lyon.ask_question') }}</h3>
-                            <form id="contactForm">
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" class="form-control" required
-                                                   data-error="{{ __('city/lyon.form_error_name') }}"
-                                                   placeholder="{{ __('city/lyon.form_name') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" class="form-control" required
-                                                   data-error="{{ __('city/lyon.form_error_email') }}"
-                                                   placeholder="{{ __('city/lyon.form_email') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required
-                                                   data-error="{{ __('city/lyon.form_error_phone') }}"
-                                                   class="form-control"
-                                                   placeholder="{{ __('city/lyon.form_phone') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                   required data-error="{{ __('city/lyon.form_error_subject') }}"
-                                                   placeholder="{{ __('city/lyon.form_subject') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5"
-                                                  required data-error="{{ __('city/lyon.form_error_message') }}"
-                                                  placeholder="{{ __('city/lyon.form_message') }}"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-two">
-												<span class="label">
-													{{ __('city/lyon.form_send') }}
-													<i class="flaticon-left-arrow"></i>
-												</span>
-                                        </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
-    <!-- End Service Details Area -->
 @endsection
-@push("json")
-    @verbatim
-        <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://applyvipconseil.com/{{ app()->getLocale() }}/cities/lyon"
-          },
-          "headline": "{{ __('city/lyon.intro_heading') }}",
-          "image": "https://applyvipconseil.com/assets/img/cities/Lyon/lyon2.webp",
-          "author": {
-            "@type": "Organization",
-            "name": "{{ __('layout.site_title') }}",
-            "url": "https://applyvipconseil.com/"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "{{ __('layout.site_title') }}",
-            "logo": {
-              "@type": "ImageObject",
-              "url": ""
-            }
-          },
-          "datePublished": "2023-11-29",
-          "dateModified": "2024-03-12"
-        }
-        </script>
-    @endverbatim
-@endpush

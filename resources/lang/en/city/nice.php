@@ -25,6 +25,11 @@ return [
     'intro_paragraph_1' => 'Friendly and vibrant, these are beautiful words used to describe this beautiful coastal city. A tourist destination of wealthy British dukes in the nineteenth century, Nice on the shores of the Azure Sea has had global fame for more than two centuries because of its mild climate—Azure means blue.',
     'intro_paragraph_2' => 'Nice is located in the far southeast of mainland France, near the border with Italy, actually within thirty kilometers of it. In one sense, it is part of the final stretch of the Mediterranean Riviera on the French side. If you are looking for a city with a pleasant climate, beautiful views, and diverse opportunities for study and work, Nice could be an ideal option.',
     'intro_paragraph_3' => 'Nice, this coastal city with the nickname "Nissa la bella" (Nice the Beautiful) has warm and pleasant weather all year round, and because of its quiet and distinguished atmosphere and many places to see, it is a necessary place for every tourist who intends to see France and its attractions. Nice is historically very diverse; before becoming part of the Visigothic kingdom of Italy, then joining the Eastern Roman Empire and again under the flag of the kingdom of Italy (Holy Roman Empire), it became part of the lands of Genoa and Provence again, and finally French. So this popular coastal city has successively experienced being Ligurian, Greek and Roman in terms of identity. Today, Nice has a population of 341,000 and has claimed a part of Europe\'s tourism economy. In this article, we want to spend some time on the calm shores of Nice and learn more about this memorable place, its attractions and memorable moments.',
+    'intro_paragraph' => 'Nice, located on the French Riviera, is a city that captures the essence of Mediterranean life. With its stunning pebble beaches, vibrant markets, and rich artistic heritage, it has long been a favorite destination for travelers and expats alike.',
+
+    // Section: History
+    'history_heading' => 'History of Nice',
+    'history_paragraph' => 'Nice has a rich and complex history, having been influenced by various cultures over the centuries. Originally founded by the Greeks, it later became a Roman settlement and spent centuries as part of the County of Nice, eventually joining France in 1860.',
 
     // Section: Living
     'living_heading' => 'Living in Nice',
@@ -40,6 +45,11 @@ return [
     'study_heading' => 'Study in Nice',
     'study_paragraph' => 'Nice is home to the state university Université Côte d\'Azur which offers educational programs in engineering, basic sciences, law, economic sciences, management, and human sciences. In addition, there are several graduate schools in architecture, art, and tourism in this city. To study in Nice, having a French language certificate (such as TCF or TEF) is essential. Also, depending on the level of study, you may need to provide academic records, recommendation letters, and participate in entrance exams.',
 
+    // Section: Universities
+    'universities_heading' => 'Higher Education in Nice',
+    'universities_paragraph' => 'Nice is an important educational hub in southern France, hosting several prestigious institutions and research centers.',
+    'university_nice' => 'Université Côte d\'Azur',
+
     // Section: Climate
     'climate_heading' => 'Climate in Nice',
     'climate_paragraph' => 'The city\'s climate is in accordance with the standards of almost semi-tropical Mediterranean climate. Due to the small daily temperature range regardless of season and specific air humidity, even in mid-summer when rainfall is rare, it will seem very pleasant and soothing. Nice has an average temperature of 16 degrees Celsius throughout the year, which is one of the highest temperatures in mainland France, after Menton (16.4 degrees Celsius), which makes it one of the characteristics of Mediterranean climate in France. This climate is especially found on the eastern coast of the Riviera, meaning you won\'t find its equivalent anywhere else on this planet. Moreover, its geographical position on the west side of the Gulf of Genoa significantly protects it from strong winds throughout the year.',
@@ -52,13 +62,25 @@ return [
     'transportation_heading' => 'Transportation in Nice',
     'transportation_paragraph' => 'Daily trips to and from Nice are very important and vital for the urban economy. It is estimated that about 310,000 people enter the city daily and then leave it. This is done with the help of Nice\'s optimal transportation infrastructure, which according to the Nice comprehensive plan by 2019 is under development.',
 
+    // Section: Daily Life
+    'daily_life_heading' => 'Daily Life and Amenities',
+    'daily_life_paragraph' => 'Living in Nice means enjoying an outdoor lifestyle. The Promenade des Anglais is perfect for morning jogs or evening strolls, while the local markets offer fresh Mediterranean produce every day.',
+
+    // Section: Tourism
+    'tourism_heading' => 'Tourism and Attractions',
+    'tourism_paragraph' => 'From the colorful streets of the Old Town (Vieux Nice) to the stunning views from Castle Hill, Nice offers a wealth of attractions. The city is also home to world-class museums, including those dedicated to Matisse and Chagall.',
+
     // Section: Living Costs
     'living_costs_heading' => 'Cost of Living in Nice',
     'living_costs_paragraph' => 'The cost of living in Nice is slightly higher than in Paris and Lyon, but still lower than other major European cities. Housing, food, and transportation costs can vary depending on the neighborhood and lifestyle. A rough estimate of the cost of living in Nice for a family of four is about $3,515 (€3,368) per month without rent. Monthly costs for one person without rent are estimated at about $975 (€934)—by this estimate, Nice is 23.63% cheaper than New York, without calculating rent.',
 
     // Section: Job Opportunities
-    'job_heading' => 'Job Opportunities in Nice',
-    'job_paragraph' => 'Nice\'s economy is mainly based on tourism, commerce, and creative industries such as fashion and information technology. These factors provide suitable job opportunities for professionals in the field of hospitality, restaurants, sales, marketing, information technology, and design. To work in France, having a work permit is mandatory. The conditions for obtaining a work permit vary depending on the type of job position and the person\'s nationality.',
+    'jobs_heading' => 'Job Opportunities in Nice',
+    'jobs_paragraph' => 'Nice\'s economy is mainly based on tourism, commerce, and creative industries such as fashion and information technology. These factors provide suitable job opportunities for professionals in the field of hospitality, restaurants, sales, marketing, information technology, and design. To work in France, having a work permit is mandatory. The conditions for obtaining a work permit vary depending on the type of job position and the person\'s nationality.',
+
+    // Section: Economy
+    'economy_heading' => 'Economy and Business',
+    'economy_paragraph' => 'While tourism remains a pillar of the local economy, Nice has also developed a strong presence in the technology and service sectors, particularly with the Sophia Antipolis technology park nearby.',
 
     // Section: Conclusion
     'conclusion_heading' => 'Final Word',

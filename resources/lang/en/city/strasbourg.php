@@ -31,9 +31,34 @@ return [
     'study_heading' => 'Study in Strasbourg',
     'study_paragraph' => 'Strasbourg hosts prestigious universities including Université de Strasbourg and École Nationale Supérieure d\'Ingénieurs de Strasbourg (ENSI Strasbourg). These universities offer educational programs in diverse fields including political science, law, engineering, basic sciences, business, and humanities. In addition to universities, Strasbourg has several higher educational institutions in the fields of business, management, and international relations. These institutions, with an international approach, provide appropriate opportunities for acquiring the skills needed in the global job market. To study in Strasbourg, having a French language certificate (such as TCF or TEF) is essential. Also, depending on the level of study, you may need to provide academic records, recommendation letters, and participate in entrance exams.',
 
+    // Section: Universities
+    'universities_heading' => 'Universities of Strasbourg',
+    'universities_paragraph' => 'Strasbourg is home to one of the largest and most multidisciplinary universities in France, the University of Strasbourg, which attracts thousands of international students every year.',
+    'university_strasbourg' => 'University of Strasbourg',
+    'student_life' => 'Student life in Strasbourg is vibrant and multicultural, with numerous events, associations, and a very bicycle-friendly environment.',
+    'programs_heading' => 'Popular Study Programs',
+    'program_1' => 'Political Science and International Relations',
+    'program_2' => 'European Law',
+    'program_3' => 'Biotechnology and Life Sciences',
+    'program_4' => 'Medicine and Pharmacy',
+    'program_5' => 'Business and Management',
+    'program_6' => 'Engineering and Physics',
+    'program_7' => 'Architecture and Design',
+    'program_8' => 'Humanities and Social Sciences',
+    'program_9' => 'Languages and Intercultural Communication',
+
     // Section: Living Costs
+    // Section: Student Living Costs
     'living_costs_heading' => 'Student Living Costs in Strasbourg',
     'living_costs_paragraph' => 'This is a paradise for students. Almost all fields of study facilities are available in this city. From language colleges to higher levels at universities are accessible. Accommodation and dormitory costs for a student are estimated between 350 to 550 euros per month, and by filing with the CAF organization, at least 30% of your monthly rent will be covered by this organization! Food costs for a student are also between 100 to 150 euros per month. Of course, this amount depends somewhat on the individual\'s lifestyle. Living costs in Strasbourg are lower than in Paris and Lyon. However, due to proximity to Germany and Switzerland, prices of some items may be slightly higher than other French cities. With proper budget management, you can experience comfortable and affordable living in Strasbourg.',
+
+    // Section: Housing
+    'housing_heading' => 'Housing in Strasbourg',
+    'housing_paragraph' => 'Finding accommodation in Strasbourg is easier than in Paris, but it is still advisable to start searching early. Many students opt for university dormitories or shared apartments (colocation) to reduce costs.',
+
+    // Section: Daily Life
+    'daily_life_heading' => 'Daily Life and Amenities',
+    'daily_life_paragraph' => 'Daily life in Strasbourg is characterized by a high quality of life, efficient public transport, and easy access to both nature and urban amenities. The city is very walkable and has the largest bicycle network in France.',
 
     // Section: Climate
     'climate_heading' => 'Climate in Strasbourg',
@@ -46,6 +71,7 @@ return [
     // Section: Tourism
     'tourism_heading' => 'Tourism Attractions in Strasbourg',
     'tourism_paragraph' => 'Strasbourg is the second most touristy city in France after Paris. This city has three main attractions. First, the Cathedral, second the French Cathedral which is the most famous after Notre-Dame in Paris. And the third attraction is the Old Town, which is a historic and beautiful area with half-timbered medieval houses and waterfront promenades overlooking the Rhine, as well as the Maison Kammerzell, and covered bridges that are as valuable as the Eiffel Tower for tourism in Paris. To visit the city and its main historic buildings, you should plan a two-day stay. If you intend to spend 3 days or more in this beautiful city, you will have enough time to explore the surrounding area. Since 2020, according to the official announcement of the local government, the city of Strasbourg has eleven municipal museums (including Aubette), eleven university museums, and at least two private museums (the Voodoo Museum and the Bar Museum). Five municipalities in urban areas also operate their own museums, three of which are dedicated to military history and France\'s wars with Prussia.',
+    'tourism_paragraph_2' => 'The European district, where institutions like the European Parliament are located, is also a major point of interest for visitors interested in politics and modern history.',
 
     // Section: Christmas Attractions
     'christmas_heading' => 'Christmas Attractions in Strasbourg',

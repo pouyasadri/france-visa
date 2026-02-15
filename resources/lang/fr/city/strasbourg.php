@@ -31,9 +31,34 @@ return [
     'study_heading' => 'Études à Strasbourg',
     'study_paragraph' => 'Strasbourg accueille des universités prestigieuses dont l\'Université de Strasbourg et l\'École Nationale Supérieure d\'Ingénieurs de Strasbourg (ENSI Strasbourg). Ces universités proposent des programmes éducatifs dans des domaines divers, notamment les sciences politiques, le droit, l\'ingénierie, les sciences fondamentales, les affaires et les sciences humaines. En plus des universités, Strasbourg dispose de plusieurs établissements d\'enseignement supérieur dans les domaines du commerce, de la gestion et des relations internationales. Ces institutions, avec une approche internationale, offrent des opportunités appropriées pour acquérir les compétences nécessaires sur le marché mondial du travail. Pour étudier à Strasbourg, il est essentiel d\'avoir un certificat de langue française (tel que TCF ou TEF). De plus, selon le niveau d\'études, vous pourrez avoir besoin de fournir des dossiers académiques, des lettres de recommandation et de participer à des examens d\'admission.',
 
+    // Section: Universities
+    'universities_heading' => 'Universités de Strasbourg',
+    'universities_paragraph' => 'Strasbourg abrite l\'une des universités les plus grandes et les plus multidisciplinaires de France, l\'Université de Strasbourg, qui attire chaque année des milliers d\'étudiants internationaux.',
+    'university_strasbourg' => 'Université de Strasbourg',
+    'student_life' => 'La vie étudiante à Strasbourg est dynamique et multiculturelle, avec de nombreux événements, des associations et un environnement très favorable au vélo.',
+    'programs_heading' => 'Programmes d\'Études Populaires',
+    'program_1' => 'Sciences Politiques et Relations Internationales',
+    'program_2' => 'Droit Européen',
+    'program_3' => 'Biotechnologie et Sciences de la Vie',
+    'program_4' => 'Médecine et Pharmacie',
+    'program_5' => 'Commerce et Gestion',
+    'program_6' => 'Ingénierie et Physique',
+    'program_7' => 'Architecture et Design',
+    'program_8' => 'Humanités et Sciences Sociales',
+    'program_9' => 'Langues et Communication Interculturelle',
+
     // Section: Living Costs
+    // Section: Student Living Costs
     'living_costs_heading' => 'Coûts de la Vie Étudiante à Strasbourg',
-    'living_costs_paragraph' => 'C\'est un paradis pour les étudiants. Presque toutes les installations d\'étude dans tous les domaines sont disponibles dans cette ville. Des collèges de langues aux niveaux supérieurs des universités sont accessibles. Les coûts d\'hébergement et de résidence pour un étudiant sont estimés entre 350 à 550 euros par mois, et en déposant une demande auprès de l\'organisation CAF, au moins 30% de votre loyer mensuel seront couverts par cette organisation ! Les frais alimentaires pour un étudiant sont également entre 100 à 150 euros par mois. Bien sûr, ce montant dépend quelque peu du mode de vie individuel. Les coûts de la vie à Strasbourg sont inférieurs à ceux de Paris et de Lyon. Cependant, en raison de la proximité de l\'Allemagne et de la Suisse, les prix de certains articles peuvent être légèrement plus élevés que dans d\'autres villes françaises. Avec une gestion appropriée du budget, vous pouvez vivre confortablement et de manière abordable à Strasbourg.',
+    'living_costs_paragraph' => 'C\'est un paradis pour les étudiants. Presque toutes les installations d\'étude dans tous les domaines sont disponibles dans cette ville. Des collèges de langues aux niveaux supérieurs des universités sont accessibles. Les coûts d\'hébergement et de résidence pour un étudiant sont estimés entre 350 à 550 euros per mois, et en déposant une demande auprès de l\'organisation CAF, au moins 30% de votre loyer mensuel seront couverts par cette organisation ! Les frais alimentaires pour un étudiant sont également entre 100 à 150 euros par mois. Bien sûr, ce montant dépend quelque peu du mode de vie individuel. Les coûts de la vie à Strasbourg sont inférieurs à ceux de Paris et de Lyon. Cependant, en raison de la proximité de l\'Allemagne et de la Suisse, les prix de certains articles peuvent être légèrement plus élevés que dans d\'autres villes françaises. Avec une gestion appropriée du budget, vous pouvez vivre confortablement et de manière abordable à Strasbourg.',
+
+    // Section: Housing
+    'housing_heading' => 'Logement à Strasbourg',
+    'housing_paragraph' => 'Trouver un logement à Strasbourg est plus facile qu\'à Paris, mais il est toujours conseillé de commencer les recherches tôt. De nombreux étudiants optent pour des résidences universitaires ou des colocations pour réduire les coûts.',
+
+    // Section: Daily Life
+    'daily_life_heading' => 'Vie Quotidienne et Services',
+    'daily_life_paragraph' => 'La vie quotidienne à Strasbourg se caractérise par une qualité de vie élevée, des transports publics efficaces et un accès facile à la fois à la nature et aux services urbains. La ville est très agréable à parcourir à pied et possède le plus grand réseau de pistes cyclables de France.',
 
     // Section: Climate
     'climate_heading' => 'Climat à Strasbourg',
@@ -46,6 +71,7 @@ return [
     // Section: Tourism
     'tourism_heading' => 'Attractions Touristiques à Strasbourg',
     'tourism_paragraph' => 'Strasbourg est la deuxième ville la plus touristique de France après Paris. Cette ville a trois attractions principales. D\'abord, la Cathédrale, deuxièmement la Cathédrale française qui est la plus célèbre après Notre-Dame de Paris. Et la troisième attraction est la Vieille Ville, qui est une zone historique et belle avec des maisons médiévales à colombages et des promenades au bord de l\'eau surplombant le Rhin, ainsi que la Maison Kammerzell, et des ponts couverts qui sont aussi précieux que la Tour Eiffel pour le tourisme à Paris. Pour visiter la ville et ses principaux bâtiments historiques, vous devriez prévoir un séjour de deux jours. Si vous envisagez de passer 3 jours ou plus dans cette belle ville, vous aurez assez de temps pour explorer les environs. Depuis 2020, selon l\'annonce officielle du gouvernement local, la ville de Strasbourg compte onze musées municipaux (dont Aubette), onze musées universitaires et au moins deux musées privés (le Musée Vaudou et le Musée du Bar). Cinq communes en zones urbaines exploitent également leurs propres musées, trois d\'entre eux étant consacrés à l\'histoire militaire et aux guerres de la France avec la Prusse.',
+    'tourism_paragraph_2' => 'Le quartier européen, où se trouvent des institutions comme le Parlement européen, est également un point d\'intérêt majeur pour les visiteurs intéressés par la politique et l\'histoire moderne.',
 
     // Section: Christmas Attractions
     'christmas_heading' => 'Attractions de Noël à Strasbourg',

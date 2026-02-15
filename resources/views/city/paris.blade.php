@@ -1,317 +1,207 @@
-@extends('layout')
+@extends('layouts.city')
+
+@php
+    $currentLocale = app()->getLocale();
+    $cityName = 'paris';
+@endphp
+
 @section('title', __('city/paris.title'))
 @section('keywords', __('city/paris.keywords'))
 @section('description', __('city/paris.description'))
-@section('content')
-    @php
-        $isRtl = in_array(app()->getLocale(), ['fa'], true);
-        $arrowClass = $isRtl ? 'flaticon-left-arrow' : 'flaticon-right-arrow';
-    @endphp
 
-    <div class="page-title-area">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{ __('city/paris.main_heading') }}</h2>
-                <ul>
-                    <li>
-                        <a href="{{url(app()->getLocale().'/')}}">
-                            {{ __('city/paris.breadcrumb_home') }}
-                        </a>
+@section('header_class', 'bg-paris-city')
+@section('breadcrumb_current', __('city/paris.breadcrumb_paris'))
+@section('page_title_heading', __('city/paris.main_heading'))
+
+@section('toc_title', __('city/paris.table_of_contents'))
+@section('contact_title', __('city/paris.contact_us'))
+@section('consultation_text', __('city/paris.consultation_request'))
+@section('ask_question_title', __('city/paris.ask_question'))
+
+@section('useful_links')
+    <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
+        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">{{ __('city/paris.useful_links') }}</h4>
+        <ul class="list-unstyled mb-0">
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Paris" target="_blank"
+                    class="d-flex align-items-center text-decoration-none">
+                    <i class="bx bxl-internet-explorer me-2 fs-5 text-primary"></i>
+                    <span>{{ __('city/paris.paris_wikipedia') }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+@endsection
+
+@section('city_content')
+    <section class="mb-5">
+        <h2 class="h3 fw-bold mb-4">{{ __('city/paris.intro_heading') }}</h2>
+        <div class="single-services-imgs mb-4">
+            <img src="{{ asset('assets/img/cities/Paris/paris5.webp') }}"
+                alt="{{ __('city/paris.breadcrumb_paris') }}" class="img-fluid rounded-4 shadow-sm w-100">
+        </div>
+        <p class="lead">{{ __('city/paris.intro_paragraph') }}</p>
+    </section>
+
+    <div class="rounded-4 overflow-hidden shadow-sm mb-5">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84004.81432415127!2d2.3499021!3d48.8553214!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1691146313133!5m2!1sfr!2sfr"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/paris.history_heading') }}</h3>
+        <p>{{ __('city/paris.history_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.climate_heading') }}</h3>
+        <p>{{ __('city/paris.climate_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.study_heading') }}</h3>
+        <p>{{ __('city/paris.study_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.universities_heading') }}</h3>
+        <p>{{ __('city/paris.universities_intro') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach ([
+                'pantheon-sorbonne' => 'university_pantheon_sorbonne',
+                'paris-cite' => 'university_paris_cite',
+                'paris-2' => 'university_pantheon_assas',
+                'paris-3' => 'university_sorbonne_nouvelle',
+                'paris-4-sorbonne' => 'university_sorbonne',
+                'paris-saclay-university' => 'university_paris_saclay',
+                'sorbonne-paris-nord' => 'university_sorbonne_paris_nord'
+            ] as $slug => $key)
+                <li class="list-group-item bg-transparent border-0 ps-0">
+                    <i class="bx bx-right-arrow-alt text-primary me-2"></i>
+                    <a href="{{ url($currentLocale . '/universities/' . $slug) }}"
+                        target="_blank">{{ __('city/paris.' . $key) }}</a>
+                </li>
+            @endforeach
+        </ul>
+    </section>
+
+    <div class="mb-5">
+        <img src="{{ asset('assets/img/cities/Paris/paris.webp') }}"
+            alt="{{ __('city/paris.breadcrumb_paris') }}" class="img-fluid rounded-4 shadow-sm w-100">
+    </div>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/paris.tourism_heading') }}</h3>
+        <p>{{ __('city/paris.tourism_paragraph_1') }}</p>
+        @if(is_array(__('city/paris.tourism_items')))
+            <ul class="list-group list-group-flush mb-4">
+                @foreach (__('city/paris.tourism_items') as $item)
+                    <li class="list-group-item bg-transparent border-0 ps-0">
+                        <i class="bx bx-camera text-primary me-2"></i>
+                        {{ $item }}
                     </li>
-                    <li><a href="{{url(app()->getLocale().'/cities')}}">
-                            {{ __('city/paris.breadcrumb_cities') }}
+                @endforeach
+            </ul>
+        @endif
+        <p>{{ __('city/paris.tourism_paragraph_2') }}</p>
 
-                        </a></li>
-                    <li>{{ __('city/paris.breadcrumb_paris') }}</li>
-                </ul>
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.economy_heading') }}</h3>
+        <p>{{ __('city/paris.economy_paragraph_1') }}</p>
+        @if(is_array(__('city/paris.economy_companies')))
+            <ul class="list-group list-group-flush mb-4">
+                @foreach (__('city/paris.economy_companies') as $company)
+                    <li class="list-group-item bg-transparent border-0 ps-0">
+                        <i class="bx bx-buildings text-primary me-2"></i>
+                        {{ $company }}
+                    </li>
+                @endforeach
+            </ul>
+        @endif
+        <p>{{ __('city/paris.economy_paragraph_2') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.living_costs_heading') }}</h3>
+        <p>{{ __('city/paris.living_costs_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.job_heading') }}</h3>
+        <p>{{ __('city/paris.job_paragraph_1') }}</p>
+        <p>{{ __('city/paris.job_paragraph_2') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.visa_heading') }}</h3>
+        <p>{{ __('city/paris.visa_paragraph') }}</p>
+    </section>
+
+    <div class="mb-5">
+        <img src="{{ asset('assets/img/cities/Paris/paris2.webp') }}"
+            alt="{{ __('city/paris.breadcrumb_paris') }}" class="img-fluid rounded-4 shadow-sm w-100">
+    </div>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/paris.conclusion_heading') }}</h3>
+        <p>{{ __('city/paris.conclusion_paragraph') }}</p>
+    </section>
+
+    <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0 mt-5">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <i class='bx bxs-city text-primary' style="font-size: 5rem;"></i>
+                <h4 class="h5 fw-bold mt-3">{{ __('city/paris.breadcrumb_paris') }}</h4>
+            </div>
+            <div class="col-lg-8">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/paris.intro_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/paris.study_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/paris.living_costs_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/paris.tourism_heading') }}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- End Page Title Area -->
-
-    <!-- End Service Details Area -->
-    <section class="service-details-area ptb-100">
-        <div class="container" id="mydiv">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="service-sidebar-area">
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">{{ __('city/paris.table_of_contents') }}</h4>
-                            <ol id="board">
-
-                            </ol>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">{{ __('city/paris.contact_us') }}</h4>
-                            <ul>
-                                <li>
-                                    <a href="{{url(app()->getLocale().'/consult')}}">
-                                        {{ __('city/paris.consultation_request') }}
-                                        <i class='bx bx-time'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:info@applyvipconseil.com">
-                                        info@applyvipconseil.com
-                                        <i class='bx bx-envelope'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service-list service-card">
-                            <h4 class="service-details-title">{{ __('city/paris.useful_links') }}</h4>
-                            <ul>
-                                <li>
-                                    <a href="https://en.wikipedia.org/wiki/Paris" target="_blank">
-                                        {{ __('city/paris.paris_wikipedia') }}
-                                        <i class="bx bxl-internet-explorer"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="service-details-wrap">
-
-
-                        <h2>{{ __('city/paris.intro_heading') }}</h2>
-                        <div class="single-services-imgs mb-30">
-                            <img src="{{asset("assets/img/cities/Paris/paris-slider.webp")}}"
-                                 alt="{{ __('city/paris.breadcrumb_paris') }}">
-                        </div>
-                        <p class="mt-30">
-                            {{ __('city/paris.intro_paragraph_1') }}
-                        </p>
-                        <p class="mb-30">
-                            {{ __('city/paris.intro_paragraph_2') }}
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d168015.65294043656!2d2.3236891!3d48.8535464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1691021825212!5m2!1sfr!2sfr"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <h3 class="mt-20">{{ __('city/paris.study_heading') }}</h3>
-                        <p>{{ __('city/paris.study_paragraph_1') }}</p>
-                        <p class="mb-30">
-                            {{ __('city/paris.study_paragraph_2') }}
-                        </p>
-                        <h3 class="mt-20">
-                            {{ __('city/paris.universities_heading') }}
-                        </h3>
-                        <p class="mb-30">{{ __('city/paris.universities_paragraph_1') }}
-                        <ul style="list-style: inside">
-                            <li><a href={{url(app()->getLocale().'/universities/sorbonne-paris-nord')}}
-                                   target="_blank">{{ __('city/paris.university_paris_north') }}</a></li>
-                            <li><a href={{url(app()->getLocale().'universities/paris-7')}} target="_blank">
-                                    {{ __('city/paris.university_paris_seven') }}</a></li>
-                            <li><a href={{url(app()->getLocale()."/universities/paris-4-sorbonne")}} target="_blank">
-                                    {{ __('city/paris.university_paris_four') }}</a></li>
-                            <li><a href={{url(app()->getLocale()."/universities/paris-3")}} target="_blank">
-                                    {{ __('city/paris.university_paris_three') }}</a></li>
-                            <li><a href={{url(app()->getLocale()."/universities/paris-2")}} target="_blank">
-                                    {{ __('city/paris.university_paris_two') }}</a></li>
-                            <li><a href={{url(app()->getLocale()."/universities/paris-2")}} target="_blank">
-                                    {{ __('city/paris.university_paris_two') }}</a></li>
-                            <li><a href={{url(app()->getLocale()."/universities/pantheon-sorbonne")}} target="_blank">
-                                    {{ __('city/paris.university_pantheon_sorbonne') }}</a></li>
-                        </ul>
-                        {{ __('city/paris.universities_paragraph_2') }}
-                        </p>
-                        <h3 class="mt-20">{{ __('city/paris.climate_heading') }}</h3>
-                        <p class="mb-30">{{ __('city/paris.climate_paragraph') }}</p>
-                        <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/cities/Paris/paris4.webp")}}"
-                                 alt="{{ __('city/paris.breadcrumb_paris') }}">
-                        </div>
-                        <h3 class="mt-20">{{ __('city/paris.living_costs_heading') }}</h3>
-                        <p class="mb-30">
-                            {{ __('city/paris.living_costs_paragraph') }}
-                        </p>
-
-                        <h3 class="mt-20">
-                            {{ __('city/paris.job_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            {{ __('city/paris.job_paragraph_1') }}
-
-                            {{ __('city/paris.job_paragraph_2') }}
-                        </p>
-                        <h3 class="mt-20">
-                            {{ __('city/paris.souvenirs_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            <b>{{ __('city/paris.souvenirs_intro') }}</b>
-                        <ul>
-                            <li>{{ __('city/paris.souvenir_1') }}</li>
-                            <li>{{ __('city/paris.souvenir_2') }}</li>
-                            <li>{{ __('city/paris.souvenir_3') }}</li>
-                            <li>{{ __('city/paris.souvenir_4') }}</li>
-                            <li>{{ __('city/paris.souvenir_5') }}</li>
-                            <li>{{ __('city/paris.souvenir_6') }}</li>
-                            <li>{{ __('city/paris.souvenir_7') }}</li>
-                            <li>{{ __('city/paris.souvenir_8') }}</li>
-                        </ul>
-                        </p>
-                        <h3>
-                            {{ __('city/paris.airports_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            {{ __('city/paris.airports_paragraph_1') }}
-
-                            {{ __('city/paris.airports_paragraph_2') }}
-                        </p>
-                        <div class="rooms-details mb-30">
-                            <img src="{{asset("assets/img/cities/Paris/paris6.webp")}}"
-                                 alt="{{ __('city/paris.breadcrumb_paris') }}">
-                        </div>
-                        <h3 class="mt-20">
-                            {{ __('city/paris.trains_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            {{ __('city/paris.trains_paragraph_1') }}
-
-                            {{ __('city/paris.trains_paragraph_2') }}
-
-                            {{ __('city/paris.trains_paragraph_3') }}
-                        </p>
-                        <h3 class="mt-20">
-                            {{ __('city/paris.investment_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            {{ __('city/paris.investment_paragraph_1') }}
-
-                            {{ __('city/paris.investment_paragraph_2') }}
-                        </p>
-                        <h3 class="mt-20">
-                            {{ __('city/paris.welfare_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                        {{ __('city/paris.welfare_paragraph_1') }}
-
-                        {{ __('city/paris.welfare_paragraph_2') }}
-                        <ul style="list-style: inside">
-                            <li>{{ __('city/paris.welfare_item_1') }}</li>
-                            <li>{{ __('city/paris.welfare_item_2') }}</li>
-                            <li>{{ __('city/paris.welfare_item_3') }}</li>
-                            <li>{{ __('city/paris.welfare_item_4') }}</li>
-                        </ul>
-                        {{ __('city/paris.welfare_paragraph_3') }}
-                        <ul style="list-style: inside">
-                            <li>{{ __('city/paris.benefit_1') }}</li>
-                            <li>{{ __('city/paris.benefit_2') }}</li>
-                            <li>{{ __('city/paris.benefit_3') }}</li>
-                            <li>{{ __('city/paris.benefit_4') }}</li>
-                            <li>{{ __('city/paris.benefit_5') }}</li>
-                            <li>{{ __('city/paris.benefit_6') }}</li>
-                            <li>{{ __('city/paris.benefit_7') }}</li>
-                        </ul>
-                        </p>
-                        <h3 class="mt-20">
-                            {{ __('city/paris.conclusion_heading') }}
-                        </h3>
-                        <p class="mb-30">
-                            {{ __('city/paris.conclusion_paragraph') }}
-                        </p>
-                        <div class="ask-question">
-                            <h3>{{ __('city/paris.ask_question') }}</h3>
-                            <form id="contactForm">
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" class="form-control" required
-                                                   data-error="{{ __('city/paris.form_error_name') }}"
-                                                   placeholder="{{ __('city/paris.form_name') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" class="form-control" required
-                                                   data-error="{{ __('city/paris.form_error_email') }}"
-                                                   placeholder="{{ __('city/paris.form_email') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required
-                                                   data-error="{{ __('city/paris.form_error_phone') }}"
-                                                   class="form-control"
-                                                   placeholder="{{ __('city/paris.form_phone') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                   required data-error="{{ __('city/paris.form_error_subject') }}"
-                                                   placeholder="{{ __('city/paris.form_subject') }}">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5"
-                                                  required data-error="{{ __('city/paris.form_error_message') }}"
-                                                  placeholder="{{ __('city/paris.form_message') }}"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-two">
-												<span class="label">
-													{{ __('city/paris.form_send') }}
-													<i class="flaticon-left-arrow"></i>
-												</span>
-                                        </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Service Details Area -->
-    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
-
 @endsection
-@push("json")
+
+@push('json')
+@verbatim
     <script type="application/ld+json">
-        @verbatim
-            {
-              "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://applyvipconseil.com/{{ app()->getLocale() }}/cities/paris"
-          },
-          "headline": "{{ __('city/paris.intro_heading') }}",
-          "image": "https://applyvipconseil.com/assets/img/cities/Paris/paris6.webp",
-          "author": {
-            "@type": "Organization",
-            "name": "{{ __('layout.site_title') }}",
-            "url": "https://applyvipconseil.com/"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "{{ __('layout.site_title') }}",
-            "logo": {
-              "@type": "ImageObject",
-              "url": ""
-            }
-          },
-          "datePublished": "2023-11-29",
-          "dateModified": "2024-03-12"
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://applyvipconseil.com/{{ app()->getLocale() }}/cities/paris"
+      },
+      "headline": "{{ __('city/paris.main_heading') }}",
+      "image": "https://applyvipconseil.com/assets/img/cities/Paris/paris.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ __('layout.site_title') }}",
+        "url": "https://applyvipconseil.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ __('layout.site_title') }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": ""
         }
-            @endverbatim
-        </script>
-    @endpush
+      },
+      "datePublished": "2023-11-29",
+      "dateModified": "2024-03-12"
+    }
+    </script>
+    @endverbatim
+@endpush
