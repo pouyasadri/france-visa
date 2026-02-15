@@ -1,0 +1,47 @@
+<?php
+
+return [
+    'consultation' => [
+        'submitted_subject' => 'New Consultation Request',
+        'confirmation_subject' => 'Consultation Request Received - Apply VIP Conseil',
+        'title' => 'New Consultation Request',
+        'greeting' => 'Hello, :name',
+        'intro_admin' => 'You have received a new consultation request.',
+        'intro_user' => 'Thank you for requesting a consultation with Apply VIP Conseil.',
+        'service_info' => 'We have received your request regarding **:service** and will get back to you shortly.',
+        'copy_details' => 'Copy of your details:',
+    ],
+    'contact' => [
+        'submitted_subject' => 'New Contact Form Submission',
+        'confirmation_subject' => 'Contact Request Received - Apply VIP Conseil',
+        'title' => 'New Contact Form Submission',
+        'greeting' => 'Hello, :name',
+        'intro_admin' => 'You have received a new contact form submission.',
+        'intro_user' => 'Thank you for contacting Apply VIP Conseil.',
+        'subject_info' => 'We have received your message regarding **:subject** and will get back to you shortly.',
+        'copy_message' => 'Copy of your message:',
+    ],
+    'question' => [
+        'submitted_subject' => 'New Question Submission',
+        'confirmation_subject' => 'Question Received - Apply VIP Conseil',
+        'title' => 'New Question Submission',
+        'greeting' => 'Hello, :name',
+        'intro_admin' => 'You have received a new question from the website.',
+        'intro_user' => 'Thank you for your question regarding **:name**.',
+        'success_info' => 'We have received your message and will get back to you shortly.',
+        'copy_message' => 'Copy of your message:',
+    ],
+    'labels' => [
+        'name' => 'Name',
+        'email' => 'Email',
+        'phone' => 'Phone',
+        'service' => 'Service',
+        'details' => 'Details',
+        'subject' => 'Subject',
+        'message' => 'Message',
+        'page_type' => 'Page Type',
+        'page_name' => 'Page Name',
+    ],
+    'regards' => 'Best regards,',
+    'team' => 'The Apply VIP Conseil Team',
+];

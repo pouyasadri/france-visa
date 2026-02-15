@@ -1,0 +1,47 @@
+<?php
+
+return [
+    'consultation' => [
+        'submitted_subject' => 'Nouvelle demande de consultation',
+        'confirmation_subject' => 'Demande de consultation reçue - Apply VIP Conseil',
+        'title' => 'Nouvelle demande de consultation',
+        'greeting' => 'Bonjour, :name',
+        'intro_admin' => 'Vous avez reçu une nouvelle demande de consultation.',
+        'intro_user' => 'Merci d\'avoir demandé une consultation auprès d\'Apply VIP Conseil.',
+        'service_info' => 'Nous avons bien reçu votre demande concernant **:service** et nous vous répondrons prochainement.',
+        'copy_details' => 'Copie de vos coordonnées :',
+    ],
+    'contact' => [
+        'submitted_subject' => 'Nouveau formulaire de contact',
+        'confirmation_subject' => 'Demande de contact reçue - Apply VIP Conseil',
+        'title' => 'Nouveau formulaire de contact',
+        'greeting' => 'Bonjour, :name',
+        'intro_admin' => 'Vous avez reçu un nouveau formulaire de contact.',
+        'intro_user' => 'Merci d\'avoir contacté Apply VIP Conseil.',
+        'subject_info' => 'Nous avons bien reçu votre message concernant **:subject** et nous vous répondrons prochainement.',
+        'copy_message' => 'Copie de votre message :',
+    ],
+    'question' => [
+        'submitted_subject' => 'Nouvelle question soumise',
+        'confirmation_subject' => 'Question reçue - Apply VIP Conseil',
+        'title' => 'Nouvelle question soumise',
+        'greeting' => 'Bonjour, :name',
+        'intro_admin' => 'Vous avez reçu une nouvelle question depuis le site web.',
+        'intro_user' => 'Merci pour votre question concernant **:name**.',
+        'success_info' => 'Nous avons bien reçu votre message et nous vous répondrons prochainement.',
+        'copy_message' => 'Copie de votre message :',
+    ],
+    'labels' => [
+        'name' => 'Nom',
+        'email' => 'Email',
+        'phone' => 'Téléphone',
+        'service' => 'Service',
+        'details' => 'Détails',
+        'subject' => 'Sujet',
+        'message' => 'Message',
+        'page_type' => 'Type de page',
+        'page_name' => 'Nom de la page',
+    ],
+    'regards' => 'Cordialement,',
+    'team' => 'L\'équipe Apply VIP Conseil',
+];
