@@ -10,32 +10,50 @@
     $isRtl = in_array($currentLocale, ['fa'], true);
 @endphp
 
-<section class="faq-area ptb-100 bg-f9f9f9">
+<section class="faq-area pt-100 pb-70">
     <div class="container">
         @if($title || $subtitle)
-            <div class="section-title text-center mb-5">
+            <div class="section-title text-center">
                 @if($subtitle)
-                    <span class="top-title">{{ $subtitle }}</span>
+                    <span>{{ $subtitle }}</span>
                 @endif
                 @if($title)
-                    <h2 class="mt-2">{{ $title }}</h2>
+                    <h2>{{ $title }}</h2>
                 @endif
             </div>
         @endif
 
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <div class="accordion custom-accordion" id="{{ $id }}">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="faq-accordion" id="{{ $id }}">
                     @foreach($items as $index => $item)
-                        <div class="accordion-item mb-3 border-0 rounded-4 shadow-sm overflow-hidden">
-                            <h2 class="accordion-header" id="heading-{{ $index }}">
-                                <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }} fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $index }}" aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" aria-controls="collapse-{{ $index }}">
-                                    {{ $item['question'] }}
-                                </button>
-                            </h2>
-                            <div id="collapse-{{ $index }}" class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" aria-labelledby="heading-{{ $index }}" data-bs-parent="#{{ $id }}">
-                                <div class="accordion-body bg-white text-muted py-3 px-4">
-                                    {!! $item['answer'] !!}
+                        <div class="faq-item mb-4">
+                            <div class="accordion-item border-0 rounded-4 shadow-sm overflow-hidden transition-all">
+                                <h3 class="accordion-header mb-0" id="heading-{{ $index }}">
+                                    <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }} d-flex align-items-center justify-content-between w-100 text-start border-0 bg-white p-4" 
+                                            type="button" 
+                                            data-bs-toggle="collapse" 
+                                            data-bs-target="#collapse-{{ $index }}" 
+                                            aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" 
+                                            aria-controls="collapse-{{ $index }}">
+                                        <span class="faq-question fw-bold">
+                                            <i class='bx bx-help-circle me-2 text-primary fs-5'></i>
+                                            {{ $item['question'] }}
+                                        </span>
+                                        <span class="faq-icon ms-3 flex-shrink-0">
+                                            <i class='bx bx-chevron-down fs-4 transition-transform'></i>
+                                        </span>
+                                    </button>
+                                </h3>
+                                <div id="collapse-{{ $index }}" 
+                                     class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" 
+                                     aria-labelledby="heading-{{ $index }}" 
+                                     data-bs-parent="#{{ $id }}">
+                                    <div class="accordion-body bg-light p-4 border-top">
+                                        <div class="faq-answer text-muted">
+                                            {!! $item['answer'] !!}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -57,24 +75,91 @@
 @endpush
 
 <style>
-    .custom-accordion .accordion-button {
-        background-color: #fff;
-        color: #111;
-        box-shadow: none;
+    /* FAQ Section Styling */
+    .faq-area {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+
+    .faq-accordion .accordion-item {
+        background: #ffffff;
         transition: all 0.3s ease;
     }
-    .custom-accordion .accordion-button:not(.collapsed) {
-        color: var(--main-color, #007bff);
+
+    .faq-accordion .accordion-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .faq-accordion .accordion-button {
+        font-size: 1.05rem;
+        color: #2c3e50;
+        transition: all 0.3s ease;
+        box-shadow: none !important;
+        position: relative;
+    }
+
+    .faq-accordion .accordion-button:hover {
+        color: #ff5d22;
+    }
+
+    .faq-accordion .accordion-button:not(.collapsed) {
         background-color: #fff;
+        color: #ff5d22;
     }
-    .custom-accordion .accordion-button::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+    .faq-accordion .accordion-button:not(.collapsed) .faq-icon i {
+        transform: rotate(180deg);
+        color: #ff5d22;
     }
-    .custom-accordion .accordion-button:not(.collapsed)::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007bff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+    .faq-accordion .accordion-button .faq-icon i {
+        transition: all 0.3s ease;
+        color: #6c757d;
     }
-    [dir="rtl"] .custom-accordion .accordion-button::after {
-        margin-left: initial;
-        margin-right: auto;
+
+    .faq-accordion .accordion-button::after {
+        display: none;
+    }
+
+    .faq-accordion .accordion-body {
+        background: #f8f9fa;
+        border-top: 2px solid #e9ecef;
+    }
+
+    .faq-answer {
+        line-height: 1.8;
+        font-size: 0.95rem;
+    }
+
+    .faq-answer p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* RTL Support */
+    [dir="rtl"] .faq-accordion .accordion-button .bx-help-circle {
+        margin-right: 0;
+        margin-left: 0.5rem;
+    }
+
+    [dir="rtl"] .faq-accordion .accordion-button .faq-icon {
+        margin-left: 0;
+        margin-right: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .faq-accordion .accordion-button {
+            font-size: 0.95rem;
+            padding: 1rem !important;
+        }
+
+        .faq-accordion .accordion-body {
+            padding: 1rem !important;
+        }
+    }
+
+    /* Animation for smooth expand/collapse */
+    .accordion-collapse {
+        transition: height 0.35s ease;
     }
 </style>
