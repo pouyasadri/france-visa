@@ -22,7 +22,7 @@ class SeoService
     public function setTitle(string $title, bool $appendSuffix = true): self
     {
         $suffix = $appendSuffix ? config('seo.defaults.title_suffix', '') : '';
-        $this->meta['title'] = $title . $suffix;
+        $this->meta['title'] = $title.$suffix;
         $this->openGraph['og:title'] = $title;
         $this->twitter['twitter:title'] = $title;
 
@@ -117,7 +117,7 @@ class SeoService
             }
         }
 
-        if (!empty($alternates)) {
+        if (! empty($alternates)) {
             $this->openGraph['og:locale:alternate'] = $alternates;
         }
 
@@ -207,7 +207,19 @@ class SeoService
      */
     public function getOpenGraph(): array
     {
-        return array_merge($this->getDefaultOpenGraph(), $this->openGraph);
+        $og = array_merge($this->getDefaultOpenGraph(), $this->openGraph);
+
+        if (empty($og['og:image'])) {
+            $og['og:image'] = $this->makeAbsoluteUrl(config('seo.images.default_og_image', config('seo.defaults.image')));
+        }
+        if (empty($og['og:url'])) {
+            $og['og:url'] = $this->getCanonical();
+        }
+        if (empty($og['og:type'])) {
+            $og['og:type'] = config('seo.defaults.type', 'website');
+        }
+
+        return $og;
     }
 
     /**
@@ -215,7 +227,16 @@ class SeoService
      */
     public function getTwitter(): array
     {
-        return array_merge($this->getDefaultTwitter(), $this->twitter);
+        $twitter = array_merge($this->getDefaultTwitter(), $this->twitter);
+
+        if (empty($twitter['twitter:card'])) {
+            $twitter['twitter:card'] = config('seo.social.twitter.card', 'summary_large_image');
+        }
+        if (empty($twitter['twitter:image'])) {
+            $twitter['twitter:image'] = $this->makeAbsoluteUrl(config('seo.images.default_twitter_image', config('seo.defaults.image')));
+        }
+
+        return $twitter;
     }
 
     /**
@@ -241,7 +262,7 @@ class SeoService
     {
         $translation = $blog->getTranslation($locale);
 
-        if (!$translation) {
+        if (! $translation) {
             return $this;
         }
 
@@ -254,7 +275,7 @@ class SeoService
 
         if ($blog->main_image) {
             $this->setImage(
-                asset('storage/' . $blog->main_image),
+                asset('storage/'.$blog->main_image),
                 $translation->title
             );
         }
@@ -276,13 +297,13 @@ class SeoService
     {
         $translation = $property->getTranslation($locale);
 
-        if (!$translation) {
+        if (! $translation) {
             return $this;
         }
 
         $title = $translation->name ?? 'Property';
         $description = strip_tags($translation->description ?? '') ?:
-            "Property in {$property->city}, {$property->country}. {$property->rooms} rooms, €" . number_format($property->price, 0);
+            "Property in {$property->city}, {$property->country}. {$property->rooms} rooms, €".number_format($property->price, 0);
 
         $this->setTitle($title)
             ->setDescription($description)
@@ -292,7 +313,7 @@ class SeoService
 
         if ($property->main_image) {
             $this->setImage(
-                asset('storage/' . $property->main_image),
+                asset('storage/'.$property->main_image),
                 $title
             );
         }
@@ -387,7 +408,7 @@ class SeoService
             return $text;
         }
 
-        return mb_substr($text, 0, $length - 3) . '...';
+        return mb_substr($text, 0, $length - 3).'...';
     }
 
     /**
