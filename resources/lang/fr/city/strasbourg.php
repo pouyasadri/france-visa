@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Strasbourg : Carrefour de l\'Europe | Guide des Plus Belles et Plus Visitées Villes de France',
     'keywords' => 'Strasbourg, ville de Strasbourg, attractions touristiques à Strasbourg, histoire de Strasbourg, culture strasbourgeoise, Strasbourg historique, Strasbourg culturelle, Strasbourg internationale, immigration à Strasbourg, étudier à Strasbourg, étudier en France, immobilier à Strasbourg',
-    'description' => 'Strasbourg, une ville dans l\'est de la France, est une ville historique et culturelle connue pour sa position géographique stratégique en tant que « Carrefour de l\'Europe ». Cette ville est située à la frontière de la France, de l\'Allemagne et du Luxembourg et est reconnue comme l\'une des capitales de l\'Union européenne.',
+    'description' => 'Découvrez Strasbourg en 2026 - la vibrante « Capitale de l\'Europe » où le charme français rencontre les opportunités internationales. Explorez des universités de classe mondiale, une vie étudiante abordable et un style de vie multiculturel dans cette ville alsacienne historique. Votre porte d\'entrée vers l\'éducation et la réussite professionnelle européenne commence ici.',
 
     // Page Content
     'main_heading' => 'Introduction à Strasbourg',
@@ -21,7 +21,7 @@ return [
 
     // Main Content
     'intro_heading' => 'Strasbourg, Capitale de l\'Europe : Une Ville avec Authenticité Française et Esprit International',
-    'intro_paragraph' => 'Strasbourg, une ville historique et belle dans l\'est de la France, est une destination unique pour les Iraniens intéressés par l\'immigration en France. Cette ville, avec son attrayante combinaison de culture française et allemande, de multiples institutions européennes et d\'une localisation géographique idéale, offre une expérience différente des autres villes françaises pour les immigrants.',
+    'intro_paragraph' => 'Bienvenue à Strasbourg - où les rêves européens prennent vie ! Nichée dans l\'est de la France, cette ville captivante n\'est pas qu\'une simple destination française ; c\'est là où les cultures se mélangent, les opportunités fleurissent et les étudiants internationaux s\'épanouissent. Imaginez étudier dans une ville qui accueille le Parlement européen, pédaler dans des rues médiévales et profiter d\'une qualité de vie qui ne videra pas votre portefeuille. Que vous planifiez d\'étudier, de travailler ou simplement d\'explorer, Strasbourg offre le mélange parfait d\'authenticité française et d\'esprit international. Prêt à commencer votre voyage ? Explorons ensemble ce qui rend cette ville si spéciale !',
 
     // Section: Language
     'language_heading' => 'Langue à Strasbourg',
@@ -50,7 +50,7 @@ return [
     // Section: Living Costs
     // Section: Student Living Costs
     'living_costs_heading' => 'Coûts de la Vie Étudiante à Strasbourg',
-    'living_costs_paragraph' => 'C\'est un paradis pour les étudiants. Presque toutes les installations d\'étude dans tous les domaines sont disponibles dans cette ville. Des collèges de langues aux niveaux supérieurs des universités sont accessibles. Les coûts d\'hébergement et de résidence pour un étudiant sont estimés entre 350 à 550 euros per mois, et en déposant une demande auprès de l\'organisation CAF, au moins 30% de votre loyer mensuel seront couverts par cette organisation ! Les frais alimentaires pour un étudiant sont également entre 100 à 150 euros par mois. Bien sûr, ce montant dépend quelque peu du mode de vie individuel. Les coûts de la vie à Strasbourg sont inférieurs à ceux de Paris et de Lyon. Cependant, en raison de la proximité de l\'Allemagne et de la Suisse, les prix de certains articles peuvent être légèrement plus élevés que dans d\'autres villes françaises. Avec une gestion appropriée du budget, vous pouvez vivre confortablement et de manière abordable à Strasbourg.',
+    'living_costs_paragraph' => 'Voici la bonne nouvelle : Strasbourg est vraiment abordable pour les étudiants en 2026 ! Le logement étudiant varie de 400 à 600 € par mois, et voici le meilleur : la CAF (aide au logement française) couvre jusqu\'à 30-40% de votre loyer. Votre budget alimentaire mensuel ? Environ 150-200 € si vous faites vos courses intelligemment dans les marchés locaux et les supermarchés étudiants. Au total, prévoyez un budget de 800 à 1 100 € par mois pour un style de vie étudiant confortable - nettement moins qu\'à Paris ou Lyon. Oui, certains articles coûtent un peu plus cher en raison de la proximité de l\'Allemagne et de la Suisse, mais la qualité de vie que vous obtenez en retour en vaut absolument la peine. Vous voulez savoir comment maximiser votre budget ? <a href="{{ url(app()->getLocale() . \'/consult\') }}">Planifiez une consultation gratuite</a> avec nos experts qui ont aidé des centaines d\'étudiants à s\'installer à Strasbourg !',
 
     // Section: Housing
     'housing_heading' => 'Logement à Strasbourg',
@@ -134,7 +134,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Conclusion',
-    'conclusion_paragraph' => 'Strasbourg, en offrant un environnement multiculturel, des opportunités éducatives et professionnelles appropriées dans des domaines internationaux, et des coûts de la vie raisonnables, est une option attrayante pour les Iraniens intéressés par la vie et le travail dans un espace européen avec l\'esprit français. Cette ville historique avec de nombreuses attractions et un emplacement géographique idéal offre une expérience unique pour les immigrants iraniens.',
+    'conclusion_paragraph' => 'Strasbourg n\'est pas qu\'une ville - c\'est votre tremplin vers le succès européen ! Avec son mélange parfait d\'excellence académique, de vie abordable, de culture riche et d\'opportunités de carrière internationales, cette « Capitale de l\'Europe » offre tout ce dont vous avez besoin pour prospérer. Des universités de renommée mondiale à la vie étudiante dynamique, du charme médiéval à l\'innovation moderne, Strasbourg a tout pour plaire. Des milliers d\'étudiants internationaux ont déjà découvert ce qui rend cette ville si spéciale. C\'est maintenant votre tour ! Prêt à faire de Strasbourg votre nouvelle maison ? <strong><a href="{{ url(app()->getLocale() . \'/consult\') }}">Réservez votre consultation personnalisée aujourd\'hui</a></strong> et laissez nos experts en immigration vous guider à chaque étape - des candidatures universitaires au traitement des visas et à l\'installation. Votre aventure européenne commence par un clic !',
 
     // Form Labels
     'ask_question' => 'Poser une Question',

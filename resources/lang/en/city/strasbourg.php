@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Strasbourg: Crossroads of Europe | Guide to Beautiful and Most Visited French Cities',
     'keywords' => 'Strasbourg, Strasbourg city, Strasbourg tourist attractions, Strasbourg history, Strasbourg culture, Strasbourg historical, Strasbourg cultural, Strasbourg international, immigration to Strasbourg, study in Strasbourg, study in France, real estate in Strasbourg',
-    'description' => 'Strasbourg, a city in eastern France, is a historic and cultural city known for its strategic geographical position as the "Crossroads of Europe". This city is located at the border of France, Germany, and Luxembourg and is recognized as one of the capitals of the European Union.',
+    'description' => 'Discover Strasbourg in 2026 - the vibrant "Capital of Europe" where French charm meets international opportunity. Explore world-class universities, affordable student living, and a multicultural lifestyle in this historic Alsatian city. Your gateway to European education and career success starts here.',
 
     // Page Content
     'main_heading' => 'Introduction to Strasbourg',
@@ -21,7 +21,7 @@ return [
 
     // Main Content
     'intro_heading' => 'Strasbourg, Capital of Europe: A City with French Authenticity and International Spirit',
-    'intro_paragraph' => 'Strasbourg, a historic and beautiful city in eastern France, is a unique destination for Iranians interested in immigration to France. This city, with its attractive combination of French and German culture, multiple European institutions, and ideal geographical location, offers a different experience from other French cities for immigrants.',
+    'intro_paragraph' => 'Welcome to Strasbourg - where European dreams come to life! Nestled in eastern France, this captivating city isn\'t just another French destination; it\'s where cultures blend, opportunities flourish, and international students thrive. Imagine studying in a city that hosts the European Parliament, cycling through medieval streets, and enjoying a quality of life that won\'t break the bank. Whether you\'re planning to study, work, or simply explore, Strasbourg offers the perfect blend of French authenticity and international spirit. Ready to start your journey? Let\'s explore what makes this city so special!',
 
     // Section: Language
     'language_heading' => 'Language in Strasbourg',
@@ -50,7 +50,7 @@ return [
     // Section: Living Costs
     // Section: Student Living Costs
     'living_costs_heading' => 'Student Living Costs in Strasbourg',
-    'living_costs_paragraph' => 'This is a paradise for students. Almost all fields of study facilities are available in this city. From language colleges to higher levels at universities are accessible. Accommodation and dormitory costs for a student are estimated between 350 to 550 euros per month, and by filing with the CAF organization, at least 30% of your monthly rent will be covered by this organization! Food costs for a student are also between 100 to 150 euros per month. Of course, this amount depends somewhat on the individual\'s lifestyle. Living costs in Strasbourg are lower than in Paris and Lyon. However, due to proximity to Germany and Switzerland, prices of some items may be slightly higher than other French cities. With proper budget management, you can experience comfortable and affordable living in Strasbourg.',
+    'living_costs_paragraph' => 'Here\'s the good news: Strasbourg is genuinely affordable for students in 2026! Student housing ranges from €400-600 per month, and here\'s the best part - CAF (French housing assistance) covers up to 30-40% of your rent. Your monthly food budget? Around €150-200 if you shop smart at local markets and student-friendly supermarkets. Overall, expect to budget €800-1,100 monthly for a comfortable student lifestyle - significantly less than Paris or Lyon. Yes, some items cost a bit more due to proximity to Germany and Switzerland, but the quality of life you get in return is absolutely worth it. Want to know how to maximize your budget? <a href="{{ url(app()->getLocale() . \'/consult\') }}">Schedule a free consultation</a> with our experts who\'ve helped hundreds of students settle in Strasbourg!',
 
     // Section: Housing
     'housing_heading' => 'Housing in Strasbourg',
@@ -134,7 +134,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Conclusion',
-    'conclusion_paragraph' => 'Strasbourg, by offering a multicultural environment, suitable educational and career opportunities in international fields, and reasonable living costs, is an attractive option for Iranians interested in living and working in a European space with French spirit. This historic city with numerous attractions and ideal geographical location offers a unique experience for Iranian immigrants.',
+    'conclusion_paragraph' => 'Strasbourg isn\'t just a city - it\'s your launchpad to European success! With its perfect blend of academic excellence, affordable living, rich culture, and international career opportunities, this "Capital of Europe" offers everything you need to thrive. From world-renowned universities to vibrant student life, from medieval charm to modern innovation, Strasbourg has it all. Thousands of international students have already discovered what makes this city special. Now it\'s your turn! Ready to make Strasbourg your new home? <strong><a href="{{ url(app()->getLocale() . \'/consult\') }}">Book your personalized consultation today</a></strong> and let our immigration experts guide you through every step - from university applications to visa processing and settling in. Your European adventure starts with one click!',
 
     // Form Labels
     'ask_question' => 'Ask a Question',
