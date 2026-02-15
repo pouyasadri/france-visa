@@ -3,178 +3,228 @@
 return [
     // Meta Tags
     'meta' => [
-        'title' => 'Migration, Study and Investment in France with A.V.C Institute | Expert Consultation & Services',
-        'keywords' => 'study in France,migrate to France,France residence,invest in France,live in France,A.V.C institute,France student visa,educational migration,buy property in France,Europe residence,higher education France,easy migration,investment visa,quality of life France,French universities,obtain France visa',
-        'description' => 'Migrate to France easily with A.V.C Institute. From education and living to investment, our specialized services provide simple and reliable solutions for obtaining French visas and European residence.',
+        'title' => 'France Immigration, Study & Investment | A.V.C Institute Expert Services',
+        'keywords' => 'study in France, migrate to France, France residence permit, invest in France, life in France, A.V.C institute, French student visa, Campus France, talent passport, buy property in France, Schengen visa, higher education France, French universities, immigration lawyer France',
+        'description' => 'Secure your future with A.V.C Institute. Expert guidance for French student visas (Campus France), Talent Passport, real estate investment, and permanent residence. Trusted immigration consultants for a seamless transition to life in France.',
+
+        // Open Graph
+        'og' => [
+            'site_name' => 'A.V.C Institute',
+            'title' => 'France Immigration, Study & Real Estate Investment',
+            'description' => 'Your trusted partner for moving to France. We specialize in student visas, residency permits, and investment opportunities. Start your journey today.',
+            'type' => 'website',
+            'locale' => 'en_US',
+        ],
+
+        // Twitter Card
+        'twitter' => [
+            'card' => 'summary_large_image',
+            'title' => 'Migrate, Study, and Invest in France',
+            'description' => 'Comprehensive French immigration services: Student visas, residence permits, and real estate consulting.',
+        ],
     ],
 
     // Slider Section
     'slider' => [
         'slide1' => [
-            'title' => 'Migrate to France with Expert Consultation',
-            'subtitle' => 'With our experienced consultants, migrate to France with ease and confidence',
-            'button' => 'Request Migration Consultation to France',
+            'title' => 'Migrate to France with Legal Experts',
+            'subtitle' => 'Navigate French immigration laws with confidence. Our certified consultants ensure a smooth application process for visas and residency.',
+            'button' => 'Book Your Migration Consultation',
         ],
         'slide2' => [
-            'title' => 'Study at Top Universities in France and Europe',
-            'subtitle' => 'With our consultants\' guidance, realize your dream of studying at France\'s best universities',
-            'button' => 'Specialized Study Consultation in France',
+            'title' => 'Study at Top French Universities',
+            'subtitle' => 'From Campus France procedures to university admission, we guide you to the best institutions like Sorbonne and École Polytechnique.',
+            'button' => 'Get Student Visa Guidance',
         ],
         'slide3' => [
-            'title' => 'Obtain France and Europe Residence Easily',
-            'subtitle' => 'With our specialized consultants, obtain France and Europe residence in the shortest time',
-            'button' => 'Request Consultation for France Residence',
+            'title' => 'French Residence & EU Citizenship',
+            'subtitle' => 'Fast-track your path to European residency through investment, talent passports, or long-stay visas.',
+            'button' => 'Check Residence Eligibility',
         ],
     ],
 
     // About Section
     'about' => [
-        'subtitle' => 'Apply VIP Conseil (A.V.C) Migration Company | Specialists in Migration, Study and Residence in France',
-        'title' => 'About Us',
-        'heading' => 'Your Path to a Bright Future with Apply VIP Conseil (A.V.C)',
-        'p1' => 'At A.V.C, we are not just migration consultants; we are your companions on this exciting journey towards a better life and success in France.',
-        'p2' => 'With decades of experience in French migration affairs, from visa acquisition to permanent residence, A.V.C is with you. Our team consists of experienced experts who guide you through every stage of migration, study, property purchase, and residence acquisition.',
-        'p3' => 'The A.V.C team provides all migration services, from student visa consultation to residence and investment in France with precision and complete knowledge.',
-        'p4' => 'By trusting A.V.C, turn your dreams of studying, living, and investing in France into reality. With decades of experience, we will be with you at every stage of this path to success.',
-        'button' => 'Learn More',
-        'image_alt' => 'Migration to France | Study in Paris | A.V.C Company',
+        'subtitle' => 'Apply VIP Conseil (A.V.C) | Premier French Immigration & Education Consultants',
+        'title' => 'About A.V.C',
+        'heading' => 'Your Trusted Partner for a New Life in France',
+        'p1' => 'At Apply VIP Conseil (A.V.C), we specialize in turning your French dreams into reality. Whether you are a student targeting the best universities, an investor looking for prime real estate, or a professional seeking a Talent Passport, we are your dedicated companions.',
+        'p2' => 'With decades of expertise in French immigration law and administrative procedures (Prefecture), we handle everything from VFS Global appointments to residence permit (Titre de Séjour) renewals. Our team ensures compliance with all French regulations.',
+        'p3' => 'We offer end-to-end services: student visa applications, accommodation hunting (CROUS & private), bank account opening, and health insurance registration (Ameli).',
+        'p4' => 'Trust A.V.C to simplify the complexities of moving to France. Our proven track record in visa success and client satisfaction makes us the preferred choice for immigration to France.',
+        'button' => 'More About Our Services',
+        'image_alt' => 'A.V.C Consultants Office - Immigration and Study in France',
     ],
 
     // Facilities Section
     'facilities' => [
-        'subtitle' => 'Specialized Consultation for France Residence with A.V.C',
-        'title' => 'From Zero to Hero: Migration to France',
+        'subtitle' => 'Comprehensive Support for Your French Journey',
+        'title' => 'End-to-End Immigration Solutions',
         'items' => [
             [
-                'label' => 'France Migration Consultation',
-                'title' => 'Residence in France with A.V.C',
-                'description' => 'Turn your dream of residence and living in France into reality with A.V.C\'s professional consultation. With over ten years of experience, we accompany you in the path of obtaining visas and residence in France.',
+                'label' => 'Immigration & Visa Consulting',
+                'title' => 'French Residence Permits',
+                'description' => 'Expert assistance for all visa types: Long-stay visitor, Talent Passport, Student, and Family Reunification. We guide you through the entire OFII and Prefecture process.',
             ],
             [
-                'label' => 'Educational Consultation for a Bright Future',
-                'title' => 'Specialized Study Consultation with A.V.C',
-                'description' => 'With A.V.C\'s educational consultation, choose the best universities in France and Europe to continue your studies and build your academic future path with sufficient knowledge.',
+                'label' => 'Higher Education Guidance',
+                'title' => 'University Admission',
+                'description' => 'Strategic advice for applying to Bachelors, Masters, and PhD programs. We help with motivation letters, CVs, and Campus France interviews.',
             ],
             [
-                'label' => 'Student Dormitory Reservation in France',
-                'title' => 'Student Dormitory with A.V.C',
-                'description' => 'Looking for suitable accommodation for studying in France? A.V.C helps you with specialized guidance to select and reserve the best student dormitory.',
+                'label' => 'Accommodation Services',
+                'title' => 'Housing in France',
+                'description' => 'Finding housing is tough. We secure student residences, private apartments, and handle lease guarantors (Garant) to ensure you have a home upon arrival.',
             ],
             [
-                'label' => 'Migration Psychology Consultation',
-                'title' => 'Migration Psychology with A.V.C',
-                'description' => 'With the help of A.V.C experts, move through all stages of migration to France with peace of mind and adapt properly to the new environment.',
+                'label' => 'Cultural Integration',
+                'title' => 'Settling in France',
+                'description' => 'Beyond paperwork, we help you adapt. From language courses to understanding French culture and bureaucracy, we ensure a smooth transition.',
             ],
         ],
     ],
 
     // Video Section
     'video' => [
-        'title_start' => 'Welcome to a Bright Future!',
-        'title_end' => 'Will you join our professional team at A.V.C today?',
-        'p1' => 'France is one of the top destinations for migration to Europe that attracts you with its unique facilities. From dynamic urban life and cultural diversity to an outstanding educational system and abundant career opportunities, France provides an ideal environment for your growth and progress.',
-        'p2' => 'The A.V.C specialized team will be with you at every stage of migration, study, residence, and investment in France. With our professional consultation, your migration experience will turn into a success story. Join us today and take your first step towards building a better life in France.',
-        'button' => 'Join Us Now',
-        'image_alt' => 'Migration to France',
+        'title_start' => 'Start Your Future in France Today',
+        'title_end' => 'Ready to build your life in Europe?',
+        'p1' => 'France offers world-class healthcare, education, and career opportunities. As a hub for innovation and culture in Europe, it is the perfect destination for students and professionals alike.',
+        'p2' => 'A.V.C removes the stress of immigration. diverse services cover every detail so you can focus on your goals. Join hundreds of successful clients who have made France their home with our help.',
+        'button' => 'Contact Us Now',
+        'image_alt' => 'Happy clients in Paris with A.V.C consultants',
     ],
 
     // Services Section
     'services' => [
-        'subtitle' => 'Professional Migration Services with A.V.C',
-        'title' => 'Our Specialized Migration Team Services',
+        'subtitle' => 'Tailored Services for Every Need',
+        'title' => 'Our Core Expertise',
         'items' => [
             [
-                'title' => 'France Residence Consultation',
-                'description' => 'Get the best guidance from our experience in residence in France. Our team is ready to accompany you at every stage of residence in this country. Our specialized consultation with precision and complete information helps you choose the right path and provides you with a better experience of residence in France.',
+                'title' => 'Residence Permit Assistance',
+                'description' => 'Full support for obtaining and renewing your Titre de Séjour. We handle the bureaucracy so you stay legal and worry-free.',
             ],
             [
-                'title' => 'Resume and Motivation Letter Writing',
-                'description' => 'Create your best resume and motivation letter with us. Our experience in this field will help you write attractive content aligned with your passion.',
+                'title' => 'CV & Motivation Letter (Lettre de Motivation)',
+                'description' => 'Professional writing services to make your application stand out to French universities and employers.',
             ],
             [
-                'title' => 'Easy Administrative Affairs Upon Arrival',
-                'description' => 'Benefit from our experience and expertise in administrative affairs. Our team is always ready to help you with administrative matters at any moment. Use our services at any time to experience a unique journey through administrative procedures.',
+                'title' => 'Arrival Administrative Support',
+                'description' => 'We handle the first-week essentials: Bank account, SIM card, CAF (housing aid), and social security registration.',
             ],
             [
-                'title' => 'Easy Document Translation',
-                'description' => 'Benefit from our expertise in document translation. Our services handle your document translation with ease and precision. We are always ready to bring you a good experience of document translation.',
+                'title' => 'Certified Translation',
+                'description' => 'Official translation of your academic and legal documents by sworn translators, accepted by all French authorities.',
             ],
             [
-                'title' => 'Educational Consultation',
-                'description' => 'Benefit from our experience in educational consultation. With precision and expertise, we are always at your service to create a positive experience of educational consultation for you.',
+                'title' => 'Educational Counseling',
+                'description' => 'Personalized roadmaps for your academic career in France, matching your profile with the best programs.',
             ],
             [
-                'title' => 'Accommodation Reservation',
-                'description' => 'Benefit from our experience in accommodation reservation. With precision and complete information, we are always at your service to experience a good accommodation reservation with us.',
+                'title' => 'Housing & CAF Assistance',
+                'description' => 'We find you a place to live and help you apply for government housing financial aid (CAF).',
             ],
             [
-                'title' => 'Educational Admission Acquisition',
-                'description' => 'Enjoy our expertise in obtaining educational admission. We always provide you with precision and experience so you can have a unique experience of obtaining educational admission with us.',
+                'title' => 'University Application Management',
+                'description' => 'We manage your submission on platforms like Études en France, Parcoursup, and e-Candidat.',
             ],
             [
-                'title' => 'Administrative Support in France',
-                'description' => 'We will be with you in advancing administrative matters in France. Experience the best support and accurate information with us.',
+                'title' => 'Administrative Advocacy',
+                'description' => 'We act as your representative in dealing with French administration, resolving complex issues efficiently.',
             ],
             [
-                'title' => 'Legal Services',
-                'description' => 'We have experienced and specialized lawyers in France and Iran who can handle all your legal matters in these two countries. We will proudly be by your side to solve your problems in France and Iran with the best legal services. We look forward to working with you.',
+                'title' => 'Legal & Litigation Support',
+                'description' => 'Access to specialized lawyers for visa refusals, appeals, and complex immigration cases in both France and your home country.',
             ],
         ],
     ],
 
     // Cities Section
     'cities' => [
-        'subtitle' => 'Popular French Cities for Migration and Living',
+        'subtitle' => 'Top Destinations for Expats & Students',
         'items' => [
             [
-                'title' => 'Paris: A Jewel in the Heart of France',
-                'description' => 'Paris, as the capital and most populous city of France, with its magnificence and unique attractions, is located on the banks of the Seine River. This beautiful city is situated in the Île-de-France region and is known as the Parisian region or "Paris Region". Paris has reached the peak of its beauty and culture in the heart of Île-de-France center, alongside the Seine River. With special historical and cultural achievements, Paris is recognized as one of the world\'s unique jewels.',
-                'button' => 'Discover More',
+                'title' => 'Paris: The City of Lights',
+                'description' => 'The economic and cultural heart of France. Ideal for students seeking top-tier universities and professionals looking for career growth in a global hub.',
+                'button' => 'Explore Paris',
             ],
             [
-                'title' => 'Strasbourg: Beauty and History in the Heart of France',
-                'description' => 'Strasbourg, as the second most popular French city after Paris, with all its attractions, has a special place in the heart of French tourism. This city has three main attractions that enjoy rich beauty and history. The Cathedral, representing the city\'s religious and artistic beliefs, the French Cathedral which is very famous after Notre Dame in Paris, and finally the antiquity and history in the streets and half-timbered houses of the old city area convey a different feeling to tourists. The quays facing the Rhine River, Maison Kammerzell, and covered bridges are among the unique attractions that are considered in the tourism value of this city as much as visiting the Eiffel Tower in Paris.',
-                'button' => 'Discover More',
+                'title' => 'Strasbourg: The European Capital',
+                'description' => 'Home to the European Parliament and renowned universities. A beautiful blend of French and German culture with a high quality of life.',
+                'button' => 'Explore Strasbourg',
             ],
             [
-                'title' => 'Lyon: Cultural and Historical Capital of France',
-                'description' => 'Lyon, one of the most attractive French cities, with rich history and culture, architectural beauties and harmony with technology, has become a unique experience. The city of Lyon is known as the tourism capital of France due to receiving tourism awards and providing a beautiful and historical environment. From historical to modernity, Lyon has been able to include unique attractions that have made it recognized as a top destination for travelers.',
-                'button' => 'Discover More',
+                'title' => 'Lyon: The Gastronomic Capital',
+                'description' => 'A major student city with dynamic industries in tech and biotech. Offers a perfect balance of urban energy and historical charm.',
+                'button' => 'Explore Lyon',
             ],
             [
-                'title' => 'Nice: Vibrant and Beautiful, A Destination for Enjoyable Tourism',
-                'description' => 'Nice, a beautiful coastal city, with lovely people and a sense of vitality, brings a special experience for visitors. This city, which was a popular destination for wealthy British dukes in the nineteenth century, is located on the Azure Sea coastline and is known for its mild climate; because Azure means sky blue. Nice is located in southeastern France, near the Italian border, and is recognized as the final point of the southeastern Mediterranean coast of France. Here you can experience part of the distinctive attractions of the Mediterranean Riviera up close.',
-                'button' => 'Discover More',
+                'title' => 'Nice: The French Riviera',
+                'description' => 'Enjoy the Mediterranean lifestyle while studying or working. famous for its tourism, luxury, and technology sectors (Sophia Antipolis).',
+                'button' => 'Explore Nice',
             ],
             [
-                'title' => 'Toulouse: Art, Industry and Education',
-                'description' => 'Toulouse, the fourth largest city in France, is characterized by its artistic, historical and cultural richness. In the twentieth century, Toulouse became a center for the aerospace industry in Europe, and part of this fame is devoted to the advancement of the aviation industry in this region. This city, located in southern France and near the Garonne River, is considered an attractive destination for enjoyable tourist experiences. Also, with important economic activities and rich diversity in providing education in its universities, Toulouse is introduced as an important point on the map of French education and culture.',
-                'button' => 'Discover More',
+                'title' => 'Toulouse: The Pink City',
+                'description' => 'The center of European aerospace (Airbus). A vibrant student city with a warm climate and affordable cost of living.',
+                'button' => 'Explore Toulouse',
             ],
         ],
     ],
 
     // Houses Section
     'houses' => [
-        'subtitle' => 'Obtain Europe and France Residence Through Investment',
-        'title' => 'Buy Property in France',
-        'price_contact' => 'Contact Us',
-        'button' => 'Explore More',
-        'no_houses' => 'No properties found!',
+        'subtitle' => 'Invest in French Real Estate',
+        'title' => 'Properties for Sale',
+        'price_contact' => 'Contact for Price',
+        'button' => 'View Property',
+        'no_houses' => 'No properties listed at the moment.',
+    ],
+
+    // Properties Section
+    'properties' => [
+        'subtitle' => 'Exclusive Listings',
+        'title' => 'Real Estate Investment Opportunities',
+        'rooms' => 'Bedrooms',
+        'garages' => 'Parking',
+        'button' => 'See Details',
+        'view_all' => 'Browse All Properties',
+        'no_properties' => 'No listings available.',
     ],
 
     // Blog Section
     'blogs' => [
-        'subtitle' => 'Latest Articles on Migration to France',
-        'title' => 'Migration to France Articles',
-        'button' => 'Read More',
-        'no_blogs' => 'No news found!',
+        'subtitle' => 'Immigration News & Guides',
+        'title' => 'Latest Updates',
+        'button' => 'Read Full Article',
+        'view_all' => 'View All Articles',
+        'uncategorized' => 'General',
+        'no_blogs' => 'No articles found.',
     ],
 
     // Schema
     'schema' => [
-        'name' => 'Study, Live, Invest: Your Dreams in France with A.V.C',
+        'name' => 'Apply VIP Conseil (A.V.C)',
+        'legalName' => 'Apply VIP Conseil',
         'url' => 'https://applyvipconseil.com/',
+        'logo' => 'https://applyvipconseil.com/images/logo.png',
+        'description' => 'Leading immigration consulting firm for France. Services include student visas, residency permits, and real estate investment.',
+        'address' => [
+            'streetAddress' => 'YOUR_OFFICE_ADDRESS', // Ideally this should be filled with real data
+            'addressLocality' => 'Paris',
+            'addressRegion' => 'Île-de-France',
+            'postalCode' => '75000',
+            'addressCountry' => 'FR',
+        ],
+        'contactPoint' => [
+            'telephone' => '+33-000-000-000', // Update with real phone
+            'contactType' => 'customer service',
+            'areaServed' => ['FR', 'IR'],
+            'availableLanguage' => ['English', 'French', 'Persian'],
+        ],
+        'sameAs' => [
+            'https://www.instagram.com/applyvipconseil',
+            'https://www.linkedin.com/company/applyvipconseil',
+            'https://www.facebook.com/applyvipconseil',
+        ],
     ],
 ];
 

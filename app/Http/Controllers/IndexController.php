@@ -2,26 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
-use App\Models\House;
+use App\Services\BlogService;
+use App\Services\PropertyService;
+use Illuminate\View\View;
 
 class IndexController extends Controller
 {
+    public function __construct(
+        protected BlogService $blogService,
+        protected PropertyService $propertyService
+    ) {
+        //
+    }
+
     /**
-     * Display the main page.
-     *
-     * @return \Illuminate\View\View
+     * Display the main page with latest blogs and properties.
      */
-    public function index()
+    public function index(): View
     {
-        // Fetch the latest 3 blogs
-        $blogs = Blog::latest()->take(3)->get();
+        // Fetch the latest 3 published blog posts with translations for current locale
+        $blogs = $this->blogService->getPublishedBlogs(app()->getLocale())->take(3);
 
-        // Fetch the latest 4 houses
-//        $houses = House::latest()->take(4)->get();
+        // PROPERTIES FEATURE DISABLED - COMING SOON
+        // Original: $properties = $this->propertyService->getPublishedProperties()->take(4);
+        // To re-enable: Uncomment the line above and remove the line below
+        // See PROPERTIES_DISABLED.md for full restoration guide
+        $properties = collect(); // Empty collection prevents errors in view
 
-        $houses = [];
-        // Load the "index" view and pass data to it
-        return view("index", compact('blogs', 'houses'));
+        return view('pages.home', compact('blogs', 'properties'));
     }
 }
