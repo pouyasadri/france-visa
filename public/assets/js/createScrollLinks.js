@@ -1,7 +1,7 @@
 // Reusable function to create a list of clickable links that scroll to sections
 function createScrollLinks(containerSelector, listSelector, offset = 100) {
     const containerElement = document.querySelector(containerSelector);
-    const listElement = containerElement.querySelector(listSelector);
+    const listElement = document.querySelector(listSelector);
 
     if (!containerElement || !listElement) {
         console.error("Container or list element not found.");
@@ -40,6 +40,6 @@ function scrollToOffsetTop(offsetTop) {
 }
 
 // Call the createScrollLinks function on DOM load
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     createScrollLinks("#mydiv", "#board", 100);
 });

@@ -1,10 +1,10 @@
 (function ($) {
     'use strict';
 
-    // Mean Menu JS
-    jQuery('.mean-menu').meanmenu({
-        meanScreenWidth: "991"
-    });
+    // Mean Menu JS - DISABLED: Using custom mobile menu overlay instead
+    // jQuery('.mean-menu').meanmenu({
+    //     meanScreenWidth: "991"
+    // });
 
     // Preloader JS
     jQuery(window).on('load', function () {
@@ -82,11 +82,11 @@
     $('.eorik-slider-five').owlCarousel({
         loop: true,
         nav: true,
-        thumbs: true,
         dots: false,
-        thumbsPrerendered: true,
         autoplayHoverPause: true,
         autoplay: true,
+        autoplayTimeout: 6000,
+        smartSpeed: 800,
         items: 1,
         navText: [
             "<i class='bx bx-chevron-left'></i>",
@@ -98,7 +98,7 @@
     $('.single-city-item').owlCarousel({
         loop: true,
         margin: 0,
-        nav: true,
+        nav: false,
         mouseDrag: true,
         items: 1,
         dots: false,
@@ -378,7 +378,7 @@
 
     // Click Event JS
     $('.go-top').on('click', function () {
-        $("html, body").animate({scrollTop: "0"}, 500);
+        $("html, body").animate({ scrollTop: "0" }, 500);
     });
 
     // FAQ Accordion
@@ -652,7 +652,51 @@
 
 
     // Switch Btn
-    $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
+    // $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
+
+    // Mobile Menu Toggle
+    (function () {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const menuOverlay = document.querySelector('.mobile-menu-overlay');
+        const menuClose = document.querySelector('.mobile-menu-close');
+        const menuLinks = document.querySelectorAll('.mobile-menu-nav a');
+
+        if (menuToggle && menuOverlay) {
+            // Open menu
+            menuToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close menu
+            if (menuClose) {
+                menuClose.addEventListener('click', function () {
+                    menuToggle.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close on link click
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    menuToggle.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close on escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && menuOverlay.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    })();
 
 })(jQuery);
 
