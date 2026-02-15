@@ -9,7 +9,7 @@ use Illuminate\Http\Response;
 class SitemapController extends Controller
 {
     /**
-     * Generate dynamic XML sitemap
+     * Generate dynamic XML sitemap with hreflang annotations
      */
     public function index(): Response
     {
@@ -21,20 +21,47 @@ class SitemapController extends Controller
 
         // PROPERTIES FEATURE DISABLED - COMING SOON
         // Original: $properties = Property::published()->with('translations')->get();
-        // To re-enable: Uncomment the line above and uncomment the URL generation below (lines 67-86)
+        // To re-enable: Uncomment the line above and uncomment the URL generation below
         // See PROPERTIES_DISABLED.md for full restoration guide
         $properties = collect(); // Empty collection prevents errors
 
         // Static pages (cities and universities)
         $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon'];
         $universities = [
-            'paris-saclay-university', 'sorbonne-paris-nord', 'paris-cite', 'paris-4-sorbonne',
-            'paris-3', 'paris-2', 'lyon-3', 'lyon-2', 'lyon-1', 'pantheon-sorbonne',
-            'cote-d-azure', 'toulouse', 'strasbourg',
+            'paris-saclay-university',
+            'sorbonne-paris-nord',
+            'paris-cite',
+            'paris-4-sorbonne',
+            'paris-3',
+            'paris-2',
+            'lyon-3',
+            'lyon-2',
+            'lyon-1',
+            'pantheon-sorbonne',
+            'cote-d-azure',
+            'toulouse',
+            'strasbourg',
         ];
 
-        // Build URLs
+        // Build URLs with hreflang alternates
         $urls = [];
+
+        // Helper function to generate hreflang alternates
+        $generateAlternates = function ($path) use ($locales, $baseUrl) {
+            $alternates = [];
+            foreach ($locales as $locale) {
+                $alternates[] = [
+                    'hreflang' => $locale,
+                    'href' => "{$baseUrl}/{$locale}{$path}",
+                ];
+            }
+            // Add x-default pointing to Persian (fa) version - the default language
+            $alternates[] = [
+                'hreflang' => 'x-default',
+                'href' => "{$baseUrl}/fa{$path}",
+            ];
+            return $alternates;
+        };
 
         // Homepage for each locale
         foreach ($locales as $locale) {
@@ -43,6 +70,7 @@ class SitemapController extends Controller
                 'lastmod' => now()->toAtomString(),
                 'changefreq' => config('seo.sitemap.changefreq.homepage', 'daily'),
                 'priority' => config('seo.sitemap.priorities.homepage', 1.0),
+                'alternates' => $generateAlternates(''),
             ];
         }
 
@@ -54,6 +82,7 @@ class SitemapController extends Controller
                 'lastmod' => $blogs->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
                 'changefreq' => 'daily',
                 'priority' => 0.9,
+                'alternates' => $generateAlternates('/blog'),
             ];
 
             // Individual blog posts
@@ -63,6 +92,7 @@ class SitemapController extends Controller
                     'lastmod' => $blog->updated_at->toAtomString(),
                     'changefreq' => config('seo.sitemap.changefreq.blog_post', 'weekly'),
                     'priority' => config('seo.sitemap.priorities.blog_post', 0.8),
+                    'alternates' => $generateAlternates("/blog/{$blog->id}"),
                 ];
             }
         }
@@ -83,6 +113,7 @@ class SitemapController extends Controller
                 'lastmod' => $properties->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
                 'changefreq' => 'daily',
                 'priority' => 0.9,
+                'alternates' => $generateAlternates('/properties'),
             ];
 
             // Individual properties
@@ -92,6 +123,7 @@ class SitemapController extends Controller
                     'lastmod' => $property->updated_at->toAtomString(),
                     'changefreq' => config('seo.sitemap.changefreq.property', 'weekly'),
                     'priority' => config('seo.sitemap.priorities.property', 0.8),
+                    'alternates' => $generateAlternates("/properties/{$property->id}"),
                 ];
             }
         }
@@ -109,6 +141,7 @@ class SitemapController extends Controller
                 'lastmod' => now()->toAtomString(),
                 'changefreq' => 'monthly',
                 'priority' => 0.8,
+                'alternates' => $generateAlternates('/cities'),
             ];
 
             // Individual cities
@@ -118,6 +151,7 @@ class SitemapController extends Controller
                     'lastmod' => now()->toAtomString(),
                     'changefreq' => config('seo.sitemap.changefreq.city', 'monthly'),
                     'priority' => config('seo.sitemap.priorities.city', 0.8),
+                    'alternates' => $generateAlternates("/cities/{$city}"),
                 ];
             }
         }
@@ -130,6 +164,7 @@ class SitemapController extends Controller
                 'lastmod' => now()->toAtomString(),
                 'changefreq' => 'monthly',
                 'priority' => 0.8,
+                'alternates' => $generateAlternates('/universities'),
             ];
 
             // Individual universities
@@ -139,6 +174,7 @@ class SitemapController extends Controller
                     'lastmod' => now()->toAtomString(),
                     'changefreq' => config('seo.sitemap.changefreq.university', 'monthly'),
                     'priority' => config('seo.sitemap.priorities.university', 0.75),
+                    'alternates' => $generateAlternates("/universities/{$university}"),
                 ];
             }
         }
@@ -152,6 +188,7 @@ class SitemapController extends Controller
                     'lastmod' => now()->toAtomString(),
                     'changefreq' => config('seo.sitemap.changefreq.static_page', 'monthly'),
                     'priority' => config('seo.sitemap.priorities.static_page', 0.6),
+                    'alternates' => $generateAlternates("/{$page}"),
                 ];
             }
         }
