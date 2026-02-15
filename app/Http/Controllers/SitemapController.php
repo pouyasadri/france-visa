@@ -14,7 +14,7 @@ class SitemapController extends Controller
     public function index(): Response
     {
         $locales = array_keys(config('seo.locales', ['en', 'fr', 'fa']));
-        $baseUrl = config('app.url', 'https://applyvipconseil.com');
+        $baseUrl = rtrim(config('app.url', 'https://applyvipconseil.com'), '/');
 
         // Get all published blogs
         $blogs = Blog::published()->with('translations')->get();
@@ -55,11 +55,14 @@ class SitemapController extends Controller
                     'href' => "{$baseUrl}/{$locale}{$path}",
                 ];
             }
-            // Add x-default pointing to Persian (fa) version - the default language
+
+            // Add x-default pointing to the configured default locale
+            $defaultLocale = config('seo.default_locale', 'fa');
             $alternates[] = [
                 'hreflang' => 'x-default',
-                'href' => "{$baseUrl}/fa{$path}",
+                'href' => "{$baseUrl}/{$defaultLocale}{$path}",
             ];
+
             return $alternates;
         };
 

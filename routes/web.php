@@ -14,12 +14,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-// Redirect root to preferred or default locale for SEO-friendly canonical URLs
-Route::get('/', function (Request $request) {
-    $localeDetector = app(LocaleDetector::class);
-    $locale = $localeDetector->detectLocale($request);
+// Redirect root to a stable default locale for SEO-friendly canonical URLs
+Route::get('/', function () {
+    $defaultLocale = config('seo.default_locale', 'fa');
 
-    return redirect("/$locale");
+    return redirect("/{$defaultLocale}", 301);
 })->name('root.redirect');
 
 // Keep sitemap at root (not locale-specific)
