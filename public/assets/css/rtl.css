@@ -4,19 +4,49 @@ body {
 }
 
 
-[type="email"], [type="number"], [type="tel"], [type="url"] {
-  direction: rtl;
+[type="email"],
+[type="number"],
+[type="tel"],
+[type="url"] {
+    direction: rtl;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, span, p, li, a {
-letter-spacing: 0px !important;
-font-family: "Vazirmatn RD FD", sans-serif;
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+a {
+    letter-spacing: 0px !important;
+    font-family: "Vazirmatn RD FD", sans-serif;
 }
-.odometer.odometer-auto-theme,.odometer.odometer-theme-default{direction: ltr;font-family: "Vazirmatn RD FD", sans-serif;}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    direction: ltr;
+    font-family: "Vazirmatn RD FD", sans-serif;
+}
+
 .coming-soon-area .coming-soon .list ul {
-  direction: ltr;
+    direction: ltr;
 }
-button, input, optgroup, select, textarea {
-font-family: "Vazirmatn RD FD", sans-serif;
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: "Vazirmatn RD FD", sans-serif;
 }
 
 
@@ -24,53 +54,70 @@ font-family: "Vazirmatn RD FD", sans-serif;
     left: auto;
     right: 0;
 }
+
 .datepicker {
     direction: rtl;
 }
+
 @media only screen and (max-width: 767px) {
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
-    left: 120px !important;
-    right: unset !important
+    .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+        left: 120px !important;
+        right: unset !important
+    }
 }
-}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
-    left: 360px !important;
-    right: unset !important
+    .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+        left: 360px !important;
+        right: unset !important
+    }
 }
-}
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
-    left: 600px !important;
-    right: unset !important
+    .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+        left: 600px !important;
+        right: unset !important
+    }
 }
-}
+
 @media only screen and (min-width: 1824px) {
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
-    left: 1000px !important;
-    right: unset !important
+    .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+        left: 1000px !important;
+        right: unset !important
+    }
 }
-}
+
 @media only screen and (min-width: 1200px) and (max-width: 1500px) {
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
-    left: 800px !important;
-    right: unset !important
+    .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+        left: 800px !important;
+        right: unset !important
+    }
 }
-}
+
 @media only screen and (min-width: 1500px) and (max-width: 1823px) {
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
-    left: 1000px !important;
-    right: unset !important
+    .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+        left: 1000px !important;
+        right: unset !important
+    }
 }
-}
+
 .modal-header .btn-close {
-  float: left;
+    float: left;
 }
-.odometer.odometer-auto-theme,.odometer.odometer-theme-default{direction: ltr;}
-.odometer.odometer-auto-theme,.odometer.odometer-theme-default{font-family:"Vazir-FD",sans-serif;}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    direction: ltr;
+}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: "Vazir-FD", sans-serif;
+}
+
 .news-details-area .comments-area .comments-title::before {
-  left: auto;
-  right: -25px;
+    left: auto;
+    right: -25px;
 }
 
 
@@ -78,66 +125,78 @@ font-family: "Vazirmatn RD FD", sans-serif;
 
 
 .single-news:hover .news-content-wrap .read-more i {
-  -webkit-animation: fadeInRight 1s linear;
-          animation: fadeInRight 1s linear;
+    -webkit-animation: fadeInRight 1s linear;
+    animation: fadeInRight 1s linear;
 }
+
 .news-details-area .widget-area .widget_meta ul li {
-  padding-left: auto;
-  padding-right: 17px;
+    padding-left: auto;
+    padding-right: 17px;
 }
+
 .news-details-area .widget-area .widget_meta ul li::before {
-  left: auto;
-  right: 0;
+    left: auto;
+    right: 0;
 }
+
 .product-details-area .product-details-desc .product-add-to-cart .input-counter span.minus-btn {
-  left: auto;
-  right: 0;
+    left: auto;
+    right: 0;
 }
+
 .product-details-area .product-details-desc .product-add-to-cart .input-counter span.plus-btn {
-  right: auto;
-  left: 0;
+    right: auto;
+    left: 0;
 }
+
 .product-details-area .product-details-desc .product-add-to-cart .default-btn {
-  float: left;
+    float: left;
 }
+
 .product-details-area .product-details-desc .product-add-to-cart .btn i {
-  margin-right: auto;
-  margin-left: 2px;
+    margin-right: auto;
+    margin-left: 2px;
 }
+
 .product-details-area .products-details-tab .tabs {
-  padding-left: auto;
-  padding-right: 0;
+    padding-left: auto;
+    padding-right: 0;
 }
+
 .product-details-area .products-details-tab .tabs li {
-  margin-right: auto;
-  margin-left: 5px;
+    margin-right: auto;
+    margin-left: 5px;
 }
+
 .product-details-area .products-details-tab .tabs li a {
-  padding-left: 30px;
-  padding-right: 48px;
+    padding-left: 30px;
+    padding-right: 48px;
 }
 
 .product-details-area .products-details-tab .tabs li a .dot {
-  left: auto;
-  right: 30px;
+    left: auto;
+    right: 30px;
 }
+
 .user-area-all-style .contact-form-action .account-desc a {
-  margin-left: auto;
-  margin-right: 10px;
+    margin-left: auto;
+    margin-right: 10px;
 }
+
 .user-area-all-style .contact-form-action form .col-lg-4:nth-child(3) .default-btn {
-  float: left;
+    float: left;
 }
+
 .news-details-area .comments-area .comment-respond .comment-form-author {
-  float: right;
-  padding-right: 0;
-  padding-left: 10px;
+    float: right;
+    padding-right: 0;
+    padding-left: 10px;
 }
 
 .news-details-area .comments-area .comment-respond .comment-form-email {
-  float: right;
-  padding-left: 0;
-  padding-right: 12px;
+    float: right;
+    padding-left: 0;
+    padding-right: 12px;
 }
 
 
@@ -145,207 +204,248 @@ font-family: "Vazirmatn RD FD", sans-serif;
 .navbar-brand {
     margin-right: 0;
 }
+
 .eorik-nav-style .others-option .call-us i {
     margin-left: 10px;
     margin-right: 0;
 }
+
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
     right: 0;
     left: auto;
     text-align: right;
 }
+
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu::before {
     right: 20px;
     left: auto;
 }
+
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a::before {
     right: 0;
     left: auto;
 }
+
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
     right: 102%;
     left: auto;
 }
+
 .eorik-nav-style .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a i {
     float: left;
 }
+
 .eorik-slider-area.eorik-slider-area-three .social-link {
     left: auto;
 }
+
 .mobile-nav.mean-container .mean-nav {
     text-align: right;
 }
+
 .mean-container .mean-nav ul li a {
     float: right;
     text-align: right !important;
 }
+
 .mean-container .mean-nav ul li a.mean-expand {
     text-align: left !important;
     left: 0;
     right: auto;
 }
-.nav-item.logo-three {
 
-}
+.nav-item.logo-three {}
+
 .eorik-slider-area .social-link {
     left: 50px;
     right: auto;
 }
+
 .default-btn i {
     right: 10px;
     left: auto;
 }
+
 .default-btn:hover i {
     animation: fadeInRight 1s linear;
 }
+
 .check-content .input-group i {
     left: 0;
     right: auto;
 }
-.check-content .form-group .nice-select .option {
 
-}
-.check-content .form-group .nice-select {
+.check-content .form-group .nice-select .option {}
 
-}
-.check-content .form-group .nice-select::after {
+.check-content .form-group .nice-select {}
 
-}
+.check-content .form-group .nice-select::after {}
+
 .ml-30 {
     margin-right: 30px;
     margin-left: 0;
 }
+
 .single-rooms .room-content {
     padding-right: 165px;
     padding-left: 0;
 }
+
 .single-rooms img {
     right: 23px;
     left: auto;
 }
+
 .single-rooms.current .room-content {
     animation: fadeInLeft 1s linear;
 }
+
 .single-restaurants::after {
     right: 0;
     left: auto;
 }
+
 .single-testimonials .testimonials-content {
     padding-right: 82px;
     padding-left: 0;
 }
+
 .single-testimonials .testimonials-content img {
     right: 0;
     left: auto;
 }
+
 .single-testimonials .testimonials-content::before {
     right: 65px;
     left: auto;
     border-right: 1px dashed #cccad7;
     border-left: none;
 }
+
 .read-more i {
     right: 8px;
     left: auto;
 }
+
 .single-news .news-content-wrap ul li {
     padding-left: 10px;
     padding-right: 0;
 }
+
 .single-news .news-content-wrap ul li a i {
     margin-left: 5px;
     margin-right: 0;
 }
+
 .footer-tops-area .subscribe-wrap .newsletter-form .input-tracking {
     margin-left: 20px;
     margin-right: 0;
 }
+
 .single-widget ul li a {
     padding-right: 20px;
     padding-left: 0;
 }
+
 .single-widget ul li a .right-icon {
     right: 0;
     left: auto;
 }
+
 .single-widget ul li a:hover i {
     animation: fadeInRight 0.5s linear;
 }
+
 .single-widget .social-icon li a {
     padding-right: 0;
 }
+
 .single-widget .information li a {
     padding-right: 0;
 }
+
 .single-widget .information li.address {
     padding-right: 30px;
     padding-left: 0;
 }
+
 .single-widget .information li.address i {
     right: 0;
     left: auto;
 }
+
 .footer-bottom-area .designed {
     text-align: left;
 }
+
 .go-top {
     left: 15px;
     right: auto;
 }
+
 .header-area .heder-top-area .location {
     float: left;
 }
-.mr-auto, .mx-auto {
+
+.mr-auto,
+.mx-auto {
     margin-left: auto !important;
     margin-right: 0 !important;
 }
+
 .header-area .heder-top-area .social-link li {
     margin-left: 5px;
     margin-right: 0;
 }
+
 .header-area .eorik-nav-style-two .navbar-area .main-nav nav .navbar-nav .nav-item a {
     margin: 0 0 0px 20px;
 }
+
 .header-area .eorik-nav-style-two .others-option .call-us i {
     right: -90px;
     left: auto;
 }
+
 .explore-img-two::before {
     right: 30px;
     left: auto;
 }
-.exclusive-area-two .exclusive-content .information {
 
-}
+.exclusive-area-two .exclusive-content .information {}
+
 .choose-restaurant-area .choose-restaurant-img::before {
     right: -30px;
     left: auto;
 }
+
 .choose-restaurant-area .choose-tab-wrap .choose-tab .tabs li {
     margin-left: 30px;
     margin-right: 0;
 }
-.exclusive-content ul li {
 
-}
-.exclusive-content ul li:first-child {
+.exclusive-content ul li {}
 
-}
+.exclusive-content ul li:first-child {}
+
 .testimonials-area-two .testimonials-content {
     padding-right: 82px;
     padding-left: 0;
 }
+
 .testimonials-area-two .testimonials-content img {
     right: 40px;
     left: auto;
 }
+
 .testimonials-area-two .testimonials-content::before {
     right: 110px;
     left: auto;
     border-right: 1px dashed #cccad7;
     border-left: none;
 }
-.single-news .news-img .dates span {
+
+/* .single-news .news-img .dates span {
     transform: rotate(40deg);
     right: -20px;
     left: auto;
@@ -354,470 +454,545 @@ font-family: "Vazirmatn RD FD", sans-serif;
     right: -1px;
     left: auto;
     clip-path: polygon(47% 0, 100% 0, 100% 100%, 0 0);
-}
+} */
 .eorik-slider-area-three::before {
     right: 0;
     left: auto;
 }
+
 .eorik-slider-area.eorik-slider-area-three .social-link {
     position: absolute;
     right: 40px;
 }
+
 .eorik-slider-area-three .social-link ul .follow {
     position: absolute;
     right: -16px;
     left: auto;
     top: -58px;
 }
+
 .eorik-slider-area .owl-next {
     left: 30px;
     right: auto;
     z-index: 99999;
 }
-.eorik-slider-area-three .owl-prev {
 
-}
+.eorik-slider-area-three .owl-prev {}
+
 .single-rooms-three .single-rooms-three-content .information {
     margin-right: 10px;
     margin-left: 0;
 }
-.exclusive-area .exclusive-content ul li {
 
-}
-.news-area-three .news-content-wrap {
+.exclusive-area .exclusive-content ul li {}
 
-}
-.news-area-three .news-content-wrap span {
+.news-area-three .news-content-wrap {}
 
-}
-.news-area-three .news-content-wrap::before {
+.news-area-three .news-content-wrap span {}
 
-}
+.news-area-three .news-content-wrap::before {}
+
 .footer-top-area-three .newsletter-form .default-btn {
     left: 0;
     right: auto;
 }
+
 .eorik-slider-area-four::before {
     left: 0;
     right: auto;
 }
+
 .eorik-slider-area-four::after {
     left: 0;
     right: auto;
 }
+
 .sidebar-modal .modal.right.fade.show .modal-dialog {
     left: 0;
     right: auto;
 }
+
 .sidebar-modal .modal.right.fade .modal-dialog {
     left: -320px;
     right: auto;
 }
+
 .sidebar-modal .modal.right .modal-body .sidebar-modal-widget .title::before {
     right: 0;
     left: auto;
 }
+
 .sidebar-modal .modal.right .modal-body .sidebar-modal-widget .social-list {
     text-align: right;
 }
+
 .sidebar-modal .modal.right .modal-body .sidebar-modal-widget ul.contact-info li {
     padding-right: 45px;
     padding-left: 0;
 }
+
 .sidebar-modal .modal.right .modal-body .sidebar-modal-widget ul.contact-info li i {
     right: 0;
     left: auto;
 }
-.restaurants-area-four .container-fluid {
 
-}
+.restaurants-area-four .container-fluid {}
+
 .counter-area::before {
     left: 0;
     right: auto;
 }
+
 .singles-facilities {
     padding-right: 100px;
     padding-left: 0;
 }
+
 .singles-facilities i {
     right: 0;
     left: auto;
 }
+
 .city-view-area-four .city-wrap {
     text-align: right;
 }
+
 .incredible-area-four::after {
     right: 0;
     left: auto;
 }
+
 .footer-menu-area ul {
     float: left;
 }
+
 .footer-top-area-four .newsletter-form .default-btn {
     left: 0;
     right: auto;
 }
+
 .footer-top-area-four .instagram-wrap li a {
     padding-right: 0;
 }
+
 .eorik-slider-area .owl-prev {
     right: 30px;
     left: auto;
 }
+
 .eorik-slider-area-five .owl-prev::before {
     right: 40px;
     left: auto;
 }
+
 .eorik-slider-area-five .owl-prev:hover::before {
     animation: fadeInLeft 1s linear;
 }
+
 .eorik-slider-area-five .owl-next::before {
     left: 20px;
     right: auto;
 }
+
 .eorik-slider-area-five .owl-next:hover::before {
     animation: fadeInRight 1s linear;
 }
-.booking-area-five::before {
 
-}
-.booking-area-five .section-title {
+.booking-area-five::before {}
 
-}
+.booking-area-five .section-title {}
+
 .city-view-area-five .container .tabs li {
     margin-left: 30px;
     margin-right: 0;
 }
+
 .facilities-area-five .facilities-right-wrap {
     border-radius: 0 0 100px 0;
     padding-right: 100px;
     padding-left: 0;
 }
+
 .subscribe-area .subscribe-wraps .subscribe-wrap .newsletter-form .input-tracking {
     margin-left: 20px;
     margin-right: 0;
 }
+
 .subscribe-area .subscribe-wraps .subscribe-wrap .newsletter-form .default-btn.active.disabled {
     left: 0;
     right: auto;
 }
+
 .page-title-area .page-title-content ul li::before {
     left: -3px;
     right: auto;
 }
+
 .expert-team-area .single-team ul {
     right: 0;
     left: auto;
 }
+
 .expert-team-area .single-team ul li {
     transform-origin: right;
 }
+
 .pricing-area .single-pricing ul li {
     padding-right: 25px;
     padding-left: 0;
     text-align: right;
 }
+
 .pricing-area .single-pricing ul li i {
     right: 0;
     left: auto;
 }
+
 #msgSubmit {
     left: 15px;
     right: auto;
 }
+
 .faq-accordion .accordion .accordion-title {
     padding: 20px 25px 17px 60px;
 }
+
 .faq-accordion .accordion .accordion-title i {
     left: 25px;
     right: auto;
 }
+
 .faq-accordion .accordion .accordion-content {
     padding-left: 60px;
     padding-right: 25px;
 }
-.product-area .woocommerce-topbar .woocommerce-topbar-ordering .nice-select .list .option {
 
-}
-.product-area .woocommerce-topbar .woocommerce-topbar-ordering .nice-select {
+.product-area .woocommerce-topbar .woocommerce-topbar-ordering .nice-select .list .option {}
 
-}
-.product-area .woocommerce-topbar .woocommerce-topbar-ordering .nice-select:after {
+.product-area .woocommerce-topbar .woocommerce-topbar-ordering .nice-select {}
 
-}
+.product-area .woocommerce-topbar .woocommerce-topbar-ordering .nice-select:after {}
+
 .form-check-input {
     margin-right: -1.25rem;
     margin-left: 0;
 }
+
 .form-check {
     padding-right: 1.25rem;
     padding-left: 0;
 }
-.checkout-area .billing-details .form-group .nice-select .list .option {
 
-}
-.checkout-area .billing-details .form-group .nice-select {
+.checkout-area .billing-details .form-group .nice-select .list .option {}
 
-}
-.checkout-area .billing-details .form-group .nice-select:after {
+.checkout-area .billing-details .form-group .nice-select {}
 
-}
-.checkout-area .order-details .payment-box .payment-method p [type="radio"]:checked + label {
+.checkout-area .billing-details .form-group .nice-select:after {}
+
+.checkout-area .order-details .payment-box .payment-method p [type="radio"]:checked+label {
     padding-right: 27px;
     padding-left: 0;
 }
-.checkout-area .order-details .payment-box .payment-method p [type="radio"]:checked + label::before {
+
+.checkout-area .order-details .payment-box .payment-method p [type="radio"]:checked+label::before {
     right: 0;
     left: auto;
 }
-.checkout-area .order-details .payment-box .payment-method p [type="radio"]:checked + label::after {
+
+.checkout-area .order-details .payment-box .payment-method p [type="radio"]:checked+label::after {
     right: 3px;
     left: auto;
 }
-.checkout-area .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label {
+
+.checkout-area .order-details .payment-box .payment-method p [type="radio"]:not(:checked)+label {
     padding-right: 27px;
     padding-left: 0;
 }
-.checkout-area .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::before {
+
+.checkout-area .order-details .payment-box .payment-method p [type="radio"]:not(:checked)+label::before {
     right: 0;
     left: auto;
 }
-.checkout-area .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::after {
+
+.checkout-area .order-details .payment-box .payment-method p [type="radio"]:not(:checked)+label::after {
     right: 3px;
     left: auto;
 }
+
 .cart-area .cart-table table tbody tr td.product-subtotal .remove {
     float: left;
 }
+
 .text-right {
     text-align: left !important;
 }
+
 .cart-area .cart-totals ul li span {
     float: left;
 }
-.nice-select .option {
 
-}
+.nice-select .option {}
+
 .product-details-area .product-details-desc .product-review .rating {
     padding-left: 5px;
     margin-right: 0;
 }
+
 .product-details-area .product-details-desc .buy-checkbox-btn .cbx span:last-child {
     padding-right: 4px;
     padding-left: 0;
 }
+
 .product-details-area .product-details-desc .custom-payment-options .payment-methods a img {
     margin-left: 5px;
     margin-right: 0;
 }
+
 .product-details-area .products-details-tab .tabs li {
     margin-left: 5px;
     margin-right: 0;
 }
+
 .product-details-area .products-details-tab .tab_content .tabs_item .products-details-tab-content .additional-information {
     text-align: right;
 }
+
 .product-details-area .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-title .btn {
     left: 0;
     right: auto;
 }
+
 .product-details-area .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item {
     padding-left: 200px;
     padding-right: 0;
 }
+
 .product-details-area .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item .review-report-link {
     left: 0;
     right: auto;
 }
-.user-area-all-style .contact-form-action .forget {
 
-}
-.user-area-all-style .contact-form-action .now-register {
+.user-area-all-style .contact-form-action .forget {}
 
-}
-.book-table-area-three .contact-info {
+.user-area-all-style .contact-form-action .now-register {}
 
-}
-.book-table-area-three .contact-info ul li a {
+.book-table-area-three .contact-info {}
 
-}
-.book-table-area-three .books-froms {
+.book-table-area-three .contact-info ul li a {}
 
-}
-.book-table-area-three .books-froms .form-group .nice-select {
+.book-table-area-three .books-froms {}
 
-}
-.book-table-area-three .contact-info ul li a i {
+.book-table-area-three .books-froms .form-group .nice-select {}
 
-}
+.book-table-area-three .contact-info ul li a i {}
+
 .book-from .select-box i {
     right: 20px;
     left: auto;
 }
-.book-from .form-group .nice-select:after {
 
-}
-.book-table-area-three .contact-info span {
+.book-from .form-group .nice-select:after {}
 
-}
-.book-table-area-three .contact-info span i {
+.book-table-area-three .contact-info span {}
 
-}
+.book-table-area-three .contact-info span i {}
+
 .coming-soon-area .coming-soon-content #timer div:first-child {
     margin-right: 0;
     margin-left: 35px;
 }
+
 .coming-soon-area .coming-soon-content #timer div:last-child {
     margin-left: 0;
     margin-right: 35px;
 }
+
 .coming-soon-area .coming-soon-content .newsletter-form button {
     left: 0;
     right: auto;
 }
+
 .coming-soon-area .coming-soon-content .newsletter-form .input-newsletter {
     padding-right: 15px;
     padding-left: 0;
 }
+
 .service-sidebar-area .service-list ul li i {
     float: left;
 }
+
 .service-details-wrap ul li {
     padding-right: 35px;
     padding-left: 0;
 }
+
 .service-details-wrap ul li i {
     right: 0;
     left: auto;
 }
+
 .single-gallery .gallery-image .price-wrap {
     left: 20px;
     text-align: right;
     right: auto;
 }
+
 .single-gallery .gallery-content {
     text-align: right;
 }
+
 .service-details-wrap ul .paint {
     margin-left: 30px;
     margin-right: 0;
 }
+
 .news-details-area .widget-area .widget_search form button {
     left: 0;
     right: auto;
 }
+
 .news-details-area .widget-area .widget .widget-title::before {
     right: 0;
     left: auto;
 }
+
 .news-details-area .widget-area .widget-peru-posts-thumb .item .thumb {
     float: right;
     margin-left: 15px;
     margin-right: 0;
 }
+
 .news-details-area .widget-area .widget_categories ul li a span {
     float: left;
 }
+
 .news-details-area .widget-area .widget_categories ul li {
     padding-right: 17px;
     padding-left: 0;
 }
+
 .news-details-area .widget-area .widget_categories ul li::before {
     right: 0;
     left: auto;
 }
+
 .news-details-area .news-details-desc .article-content .entry-meta ul li {
     margin-left: 21px;
     margin-right: 0;
 }
+
 .news-details-area .news-details-desc .article-content .entry-meta ul li::before {
     left: -15px;
     right: auto;
 }
+
 .news-details-area blockquote::before {
     right: 50px;
     left: auto;
 }
+
 .news-details-area blockquote::after {
     right: 0;
     left: auto;
 }
+
 .news-details-area .news-details-desc .article-footer .article-tags span {
     margin-left: 5px;
     margin-right: 0;
 }
+
 .news-details-area .news-details-desc .article-footer .article-share .social {
     text-align: left;
 }
+
 .news-details-area .post-navigation .navigation-links .nav-next {
     text-align: left;
 }
+
 .news-details-area .comments-area .comment-body {
     padding-right: 65px;
     padding-left: 0;
 }
+
 .news-details-area .comments-area .comment-author .avatar {
     right: -65px;
     left: auto;
 }
+
 .news-details-area .comments-area .children {
     margin-right: 40px;
     margin-left: 0;
 }
+
 .news-details-area .comments-area .comment-respond .comment-reply-title::before {
     right: -25px;
     left: auto;
 }
+
 .header-area .heder-top-area .location span {
     right: 5px;
     left: auto;
 }
+
 .product-area .single-product-box .product-image .sale-btn {
     right: 20px;
     left: auto;
 }
+
 .header-area .eorik-nav-style-two .others-option {
     left: 0;
     right: auto;
 }
+
 .eorik-slider-area-three .social-link ul .follow {
     right: -32px;
     top: -80px;
     width: 100px;
 }
-[type=email], [type=number], [type=tel], [type=url] {
+
+[type=email],
+[type=number],
+[type=tel],
+[type=url] {
     direction: unset;
 }
+
 .ask-question {
     position: relative;
 }
+
 .ask-question #msgSubmit {
     text-align: center;
     left: 0;
     right: 0;
     margin-bottom: 0;
 }
+
 .book-from .date:after {
     right: auto;
     left: 20px;
 }
+
 .service-sidebar-area {
     margin-left: 15px;
     margin-right: 0;
 }
+
 .news-details-area .widget-area {
     margin-left: 0;
     margin-right: 15px;
 }
+
 .news-details-area.left-sidebar .widget-area {
     margin-left: 15px;
     margin-right: 0;
 }
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
 
-}
-.service-details-area.room-details-right-sidebar .service-sidebar-area { 
-	margin-left: 0;
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {}
+
+.service-details-area.room-details-right-sidebar .service-sidebar-area {
+    margin-left: 0;
     margin-right: 15px;
 }
 
@@ -830,69 +1005,83 @@ Responsive CSS
         left: auto !important;
         text-align: right !important;
     }
+
     .mean-container a.meanmenu-reveal {
         left: 15px !important;
         right: auto !important;
     }
+
     .mean-container .mean-nav ul li a.mean-expand {
         width: 90%;
     }
+
     .ml-30 {
         margin-right: 0 !important;
     }
+
     .single-rooms .room-content {
         padding-right: 0 !important;
     }
-    .exclusive-content {
 
-    }
-    .exclusive-img {
+    .exclusive-content {}
 
-    }
+    .exclusive-img {}
+
     .singles-facilities {
         padding-right: 0 !important;
     }
+
     .eorik-slider-area-five .owl-next {
         left: 20px !important;
         right: auto !important;
     }
+
     .facilities-area-five .facilities-right-wrap {
         padding-right: 15px !important;
         padding-left: 0 !important;
     }
+
     .subscribe-area .subscribe-wraps .subscribe-wrap .newsletter-form .default-btn.active.disabled {
         left: 15px !important;
         right: auto !important;
     }
+
     .news-details-area .comments-area .comment-body {
         padding-right: 0 !important;
     }
+
     .news-details-area .comments-area .comment-author .avatar {
         right: 0 !important;
         left: auto !important;
     }
+
     .product-details-area .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item {
         padding-left: 0;
     }
+
     .footer-bottom-area .designed {
         text-align: center;
     }
+
     .service-sidebar-area {
         margin-left: 0;
         margin-right: 0;
     }
+
     .news-details-area .widget-area {
         margin-left: 0;
         margin-right: 0;
     }
+
     .news-details-area.left-sidebar .widget-area {
         margin-left: 0;
         margin-right: 0;
     }
-	.service-details-area.room-details-right-sidebar .service-sidebar-area { 
-		margin-left: 0;
+
+    .service-details-area.room-details-right-sidebar .service-sidebar-area {
+        margin-left: 0;
         margin-right: 0;
-	}
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -901,81 +1090,97 @@ Responsive CSS
         left: auto !important;
         text-align: right !important;
     }
+
     .mean-container a.meanmenu-reveal {
         left: 15px !important;
         right: auto !important;
     }
+
     .mean-container .mean-nav ul li a.mean-expand {
         width: 90%;
     }
+
     .ml-30 {
         margin-right: 0 !important;
     }
+
     .single-rooms .room-content {
         padding-right: 0 !important;
     }
-    .exclusive-content {
 
-    }
-    .exclusive-img {
+    .exclusive-content {}
 
-    }
+    .exclusive-img {}
+
     .single-rooms:nth-child(1) {
         margin-right: 120px !important;
         margin-left: 0 !important;
     }
+
     .single-rooms:nth-child(3) {
         margin-right: 120px !important;
         margin-left: 0 !important;
     }
+
     .single-rooms:nth-child(4) {
         margin-right: 30px !important;
         margin-left: 0 !important;
     }
+
     .single-rooms:nth-child(2) {
         margin-right: 30px !important;
         margin-left: 0 !important;
     }
+
     .singles-facilities {
         padding-right: 0 !important;
     }
+
     .our-rooms-area-two .single-rooms:nth-child(1) {
         margin-right: 0 !important;
     }
+
     .subscribe-area .subscribe-wraps .subscribe-wrap .newsletter-form .default-btn.active.disabled {
         left: 15px !important;
         right: auto !important;
     }
+
     .facilities-area-five .facilities-right-wrap {
         padding-right: 15px !important;
         padding-left: 0 !important;
     }
+
     .footer-bottom-area .designed {
         text-align: center;
     }
+
     .service-sidebar-area {
         margin-left: 0;
         margin-right: 0;
     }
+
     .news-details-area .widget-area {
         margin-left: 0;
         margin-right: 0;
     }
+
     .news-details-area.left-sidebar .widget-area {
         margin-left: 0;
         margin-right: 0;
     }
-	.service-details-area.room-details-right-sidebar .service-sidebar-area { 
-		margin-left: 0;
+
+    .service-details-area.room-details-right-sidebar .service-sidebar-area {
+        margin-left: 0;
         margin-right: 0;
-	}
+    }
 }
 
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
-   .single-rooms .room-content {
+    .single-rooms .room-content {
         padding-right: 110px !important;
         padding-left: 0 !important;
     }
+
     .header-area .eorik-nav-style-two .others-option .call-us i {
         right: -38px !important;
         left: auto !important;
