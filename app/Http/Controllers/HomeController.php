@@ -2,31 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
-use App\Models\House;
-use Illuminate\Http\Request;
+use App\Services\BlogService;
+use App\Services\PropertyService;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
+    public function __construct(
+        protected BlogService $blogService,
+        protected PropertyService $propertyService
+    ) {
         $this->middleware('auth');
     }
 
     /**
      * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(): View
     {
-        $houses = House::all();
-        $blogs = Blog::all();
-        return view('home',compact(['houses','blogs']));
+        // PROPERTIES FEATURE DISABLED - COMING SOON
+        // Original: $properties = $this->propertyService->getAllProperties();
+        // To re-enable: Uncomment the line above and remove the line below
+        // See PROPERTIES_DISABLED.md for full restoration guide
+        $properties = collect(); // Empty collection prevents errors in view
+
+        $blogs = $this->blogService->getAllBlogs();
+
+        return view('home', compact('properties', 'blogs'));
     }
 }
