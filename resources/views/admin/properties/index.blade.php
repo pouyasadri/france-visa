@@ -1,5 +1,5 @@
-@extends('layout')
-@section("title","پنل مدیریت وبلاگ")
+@extends('layouts.app')
+@section("title", "پنل مدیریت وبلاگ")
 @section("content")
 
     <!-- Start Log In Area -->
@@ -19,7 +19,7 @@
 
                                         <label for="house_name">نام ملک:</label>
                                         <input class="form-control" id="blog_title" type="text" name="house_name"
-                                               placeholder="نام ملک">
+                                            placeholder="نام ملک">
 
                                     </div>
                                 </div>
@@ -27,31 +27,28 @@
                                     <div class="form-group">
                                         <label for="house_price">قیمیت ملک</label>
                                         <input class="form-control" id="house_price" type="text" name="house_price"
-                                               placeholder="قیمیت ملک">
+                                            placeholder="قیمیت ملک">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="house_main_image">تصویر اصلی ملک:</label>
-                                        <input class="form-control" id="house_main_image" type="file"
-                                               name="blog_main_image"
-                                               placeholder="تصویر اصلی ملک:">
+                                        <input class="form-control" id="house_main_image" type="file" name="blog_main_image"
+                                            placeholder="تصویر اصلی ملک:">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="house_images">تصاویر ملک</label>
-                                        <input class="form-control" id="house_images" type="file"
-                                               name="house_images[]"
-                                               placeholder="تصاویر ملک">
+                                        <input class="form-control" id="house_images" type="file" name="house_images[]"
+                                            placeholder="تصاویر ملک">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="house_description">توضیحات ملک:</label>
                                         <textarea class="form-control" name="house_description" id="house_description"
-                                                  cols="30"
-                                                  rows="10" placeholder="توضیحات ملک:"></textarea>
+                                            cols="30" rows="10" placeholder="توضیحات ملک:"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -82,30 +79,28 @@
                                     <div class="form-group">
                                         <label for="house_region">منطقه ملک</label>
                                         <input class="form-control" id="house_region" type="text" name="house_region"
-                                               placeholder="موضوع وبلاگ">
+                                            placeholder="موضوع وبلاگ">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="house_postal_code">کدپستی</label>
                                         <input class="form-control" id="house_postal_code" type="text"
-                                               name="house_postal_code"
-                                               placeholder="موضوع وبلاگ">
+                                            name="house_postal_code" placeholder="موضوع وبلاگ">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="house_exact_location">ادرس ملک</label>
                                         <input class="form-control" id="house_exact_location" type="text"
-                                               name="house_exact_location"
-                                               placeholder="ادرس ملک">
+                                            name="house_exact_location" placeholder="ادرس ملک">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="house_id">شناسه ملک</label>
                                         <input class="form-control" id="house_id" type="text" name="house_id"
-                                               placeholder="شناسه ملک">
+                                            placeholder="شناسه ملک">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -132,45 +127,45 @@
                         <div class="cart-table table-responsive">
                             <table class="table table-bordered">
                                 <thead>
-                                <tr>
-                                    <th scope="col">ملک</th>
-                                    <th scope="col">نام ملک</th>
-                                    <th scope="col">قیمت</th>
-                                </tr>
+                                    <tr>
+                                        <th scope="col">ملک</th>
+                                        <th scope="col">نام ملک</th>
+                                        <th scope="col">قیمت</th>
+                                    </tr>
                                 </thead>
 
                                 <tbody>
-                                @forelse($houses as $house)
-                                    <tr>
-                                        <td class="product-thumbnail">
-                                            <a href="/house/{{$house}}">
-                                                <img src="{{asset("storage/images/house/".$house->house_main_image)}}"
-                                                     alt="{{$house->house_name}}">
-                                            </a>
-                                        </td>
+                                    @forelse($houses as $house)
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="/house/{{$house}}">
+                                                    <img src="{{asset("storage/images/property/" . $house->house_main_image)}}"
+                                                        alt="{{$house->house_name}}">
+                                                </a>
+                                            </td>
 
-                                        <td class="product-name">
-                                            <a href="/house/{{$house}}">{{$house->house_name}}</a>
-                                        </td>
+                                            <td class="product-name">
+                                                <a href="/house/{{$house}}">{{$house->house_name}}</a>
+                                            </td>
 
-                                        <td class="product-price">
-                                            <span class="unit-amount">{{$house->house_price}}</span>
-                                        </td>
-                                        <td class="product-subtotal">
-                                            <a href="/house/{{$house}}/delete" class="remove">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                @empty
-                                    <tr>
-                                        <td>
-                                            <div class="alert alert-danger" role="alert">
-                                                هیچ ملک پیدا نشد!
-                                            </div>
-                                        </td>
-                                    </tr>
-                                @endforelse
+                                            <td class="product-price">
+                                                <span class="unit-amount">{{$house->house_price}}</span>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <a href="/house/{{$house}}/delete" class="remove">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td>
+                                                <div class="alert alert-danger" role="alert">
+                                                    هیچ ملک پیدا نشد!
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>
