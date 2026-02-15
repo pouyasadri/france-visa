@@ -65,6 +65,16 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOY_PATH }}
             
+            # Ensure all required Laravel directories exist
+            mkdir -p storage/framework/cache/data
+            mkdir -p storage/framework/sessions
+            mkdir -p storage/framework/views
+            mkdir -p storage/logs
+            mkdir -p bootstrap/cache
+            
+            # Set proper permissions
+            chmod -R 775 storage bootstrap/cache
+            
             # Link storage if not already linked (idempotent-ish)
             php artisan storage:link || true
             
