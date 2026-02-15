@@ -25,22 +25,27 @@ return [
     // Form Fields
     'form' => [
         'name' => [
+            'label' => 'Full Name',
             'placeholder' => 'Your Name',
             'error' => 'Please enter your name',
         ],
         'email' => [
+            'label' => 'Email Address',
             'placeholder' => 'Your Email',
             'error' => 'Please enter your email',
         ],
         'phone' => [
+            'label' => 'Phone Number',
             'placeholder' => 'Phone',
             'error' => 'Please enter your phone',
         ],
         'subject' => [
+            'label' => 'Subject',
             'placeholder' => 'Subject',
             'error' => 'Please enter the message subject',
         ],
         'message' => [
+            'label' => 'Your Message',
             'placeholder' => 'Your Message',
             'error' => 'Please write your message',
         ],
@@ -57,6 +62,12 @@ return [
             'title' => 'Call Us:',
             'france' => '0033-780-95-33-33',
             'iran' => '0098-912-008-7194',
+            'france_label' => 'France',
+            'iran_label' => 'Iran',
+        ],
+        'hours' => [
+            'title' => 'Working Hours',
+            'description' => 'Monday - Friday: 9:00 AM - 6:00 PM',
         ],
     ],
 ];
