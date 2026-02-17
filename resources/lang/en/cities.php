@@ -11,7 +11,7 @@ return [
     // SEO Meta Tags
     'title' => 'Most Beautiful and Popular Cities in France | Study & Live in France',
     'keywords' => 'French cities, popular cities in France, Paris, Lyon, Nice, Toulouse, Strasbourg, immigration to France, best cities to live in France, immigration to Europe, study immigration, French residency, student life in Europe',
-    'description' => 'Discover the most beautiful and popular cities in France. These cities have many tourist attractions and millions of visitors from around the world visit them every year. Perfect destinations for students and immigrants.',
+    'description' => 'Discover the most beautiful and popular cities in France in 2026. From the lights of Paris to the tech hubs of Nice and Toulouse, explore the perfect destinations for study, life, and investment.',
 
     // Page Title & Breadcrumb
     'main_heading' => 'Introducing the Most Beautiful and Popular Cities in France',
@@ -26,23 +26,23 @@ return [
     // City Cards
     'paris_alt' => 'Most Beautiful Cities in France | Introduction to Paris',
     'paris_title' => 'Introduction to Paris',
-    'paris_description' => 'Living conditions and costs in the city of Paris',
+    'paris_description' => 'Experience the magic of Paris 2026: The global capital of art, fashion, and luxury awaits.',
 
     'lyon_alt' => 'Most Beautiful Cities in France | Introduction to Lyon',
     'lyon_title' => 'Introduction to Lyon',
-    'lyon_description' => 'Living conditions and costs in the city of Lyon',
+    'lyon_description' => 'Lyon 2026: France\'s culinary heart combining biotech innovation with a high quality of life.',
 
     'strasbourg_alt' => 'Most Beautiful Cities in France | Introduction to Strasbourg',
     'strasbourg_title' => 'Introduction to Strasbourg',
-    'strasbourg_description' => 'Living conditions and costs in Strasbourg',
+    'strasbourg_description' => 'Strasbourg 2026: The diplomatic crossroads of Europe, famous for its history and green innovation.',
 
     'nice_alt' => 'Most Beautiful Cities in France | Introduction to Nice',
     'nice_title' => 'Introduction to Nice',
-    'nice_description' => 'Living conditions and costs in the city of Nice',
+    'nice_description' => 'Nice 2026: Where Mediterranean luxury meets Europe\'s "Silicon Valley" tech boom.',
 
     'toulouse_alt' => 'Most Beautiful Cities in France | Introduction to Toulouse',
     'toulouse_title' => 'Introduction to Toulouse',
-    'toulouse_description' => 'Living conditions and costs in the city of Toulouse',
+    'toulouse_description' => 'Toulouse 2026: Reach for the stars in Europe\'s premier aerospace and student capital.',
 
     'read_more' => 'Read more',
 

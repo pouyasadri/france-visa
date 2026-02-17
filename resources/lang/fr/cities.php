@@ -11,7 +11,7 @@ return [
     // SEO Meta Tags
     'title' => 'Les plus belles et populaires villes de France | Étudier et Vivre en France',
     'keywords' => 'villes françaises, villes populaires en France, Paris, Lyon, Nice, Toulouse, Strasbourg, immigration en France, meilleures villes pour vivre en France, immigration en Europe, immigration étudiante, résidence française, vie étudiante en Europe',
-    'description' => 'Découvrez les plus belles et populaires villes de France. Ces villes possèdent de nombreuses attractions touristiques et des millions de visiteurs du monde entier les visitent chaque année. Destinations parfaites pour les étudiants et les immigrants.',
+    'description' => 'Découvrez les plus belles et populaires villes de France en 2026. Des lumières de Paris aux pôles technologiques de Nice et Toulouse, explorez les destinations idéales pour les études, la vie et l\'investissement.',
 
     // Page Title & Breadcrumb
     'main_heading' => 'Présentation des plus belles et populaires villes de France',
@@ -26,23 +26,23 @@ return [
     // City Cards
     'paris_alt' => 'Les plus belles villes de France | Présentation de Paris',
     'paris_title' => 'Présentation de Paris',
-    'paris_description' => 'Conditions de vie et coûts dans la ville de Paris',
+    'paris_description' => 'Découvrez la magie de Paris 2026 : La capitale mondiale de l\'art, de la mode et du luxe vous attend.',
 
     'lyon_alt' => 'Les plus belles villes de France | Présentation de Lyon',
     'lyon_title' => 'Présentation de Lyon',
-    'lyon_description' => 'Conditions de vie et coûts dans la ville de Lyon',
+    'lyon_description' => 'Lyon 2026 : Le cœur culinaire de la France alliant innovation biotech et qualité de vie élevée.',
 
     'strasbourg_alt' => 'Les plus belles villes de France | Présentation de Strasbourg',
     'strasbourg_title' => 'Présentation de Strasbourg',
-    'strasbourg_description' => 'Conditions de vie et coûts à Strasbourg',
+    'strasbourg_description' => 'Strasbourg 2026 : Le carrefour diplomatique de l\'Europe, célèbre pour son histoire et son innovation verte.',
 
     'nice_alt' => 'Les plus belles villes de France | Présentation de Nice',
     'nice_title' => 'Présentation de Nice',
-    'nice_description' => 'Conditions de vie et coûts dans la ville de Nice',
+    'nice_description' => 'Nice 2026 : Quand le luxe méditerranéen rencontre le boom technologique de la "Silicon Valley" européenne.',
 
     'toulouse_alt' => 'Les plus belles villes de France | Présentation de Toulouse',
     'toulouse_title' => 'Présentation de Toulouse',
-    'toulouse_description' => 'Conditions de vie et coûts à Toulouse',
+    'toulouse_description' => 'Toulouse 2026 : Visez les étoiles dans la première capitale européenne de l\'aéronautique et des étudiants.',
 
     'read_more' => 'En savoir plus',
 
