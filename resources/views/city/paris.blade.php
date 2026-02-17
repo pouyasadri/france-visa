@@ -40,7 +40,7 @@
             <img src="{{ asset('assets/img/cities/Paris/paris5.webp') }}"
                 alt="{{ __('city/paris.breadcrumb_paris') }}" class="img-fluid rounded-4 shadow-sm w-100">
         </div>
-        <p class="lead">{{ __('city/paris.intro_paragraph') }}</p>
+        <p class="lead">{!! __('city/paris.intro_paragraph') !!}</p>
     </section>
 
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
@@ -116,7 +116,7 @@
         <p>{{ __('city/paris.economy_paragraph_2') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.living_costs_heading') }}</h3>
-        <p>{{ __('city/paris.living_costs_paragraph') }}</p>
+        <p>{!! __('city/paris.living_costs_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.job_heading') }}</h3>
         <p>{{ __('city/paris.job_paragraph_1') }}</p>
@@ -133,7 +133,7 @@
 
     <section class="mb-5">
         <h3 class="h4 fw-bold mb-3">{{ __('city/paris.conclusion_heading') }}</h3>
-        <p>{{ __('city/paris.conclusion_paragraph') }}</p>
+        <p>{!! __('city/paris.conclusion_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
     </section>
 
     <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0 mt-5">
