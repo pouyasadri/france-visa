@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Lyon : Capitale Culturelle de la France | Guide des Plus Belles et Plus Visitées Villes de France',
     'keywords' => 'Lyon, ville de Lyon, attractions touristiques à Lyon, histoire de Lyon, culture de Lyon, Lyon culturel, Lyon historique, Lyon artistique, immigration à Lyon, études à Lyon, immobilier à Lyon, immigration en France',
-    'description' => 'Lyon, la deuxième plus grande ville de France, est une ville historique et culturelle connue pour ses nombreuses attractions touristiques et sa riche culture. Sur cette page, nous vous emmenons en voyage à Lyon pour découvrir l\'histoire, la culture et les attractions touristiques de cette belle ville.',
+    'description' => 'Découvrez Lyon en 2026 : L\'équilibre parfait entre gastronomie de classe mondiale, éducation d\'élite et vie abordable. Découvrez pourquoi la capitale culinaire de la France devient le premier choix des étudiants et professionnels internationaux à la recherche d\'un style de vie français authentique.',
 
     // Page Content
     'main_heading' => 'Introduction à la Ville de Lyon',
@@ -22,7 +22,7 @@ return [
 
     // Main Content
     'intro_heading' => 'Lyon, Trésor Caché de la France: Une Destination Idéale pour l\'Étude et la Vie des Iraniens',
-    'intro_paragraph' => 'Lyon, la troisième plus grande ville de France, est parfois oubliée à l\'ombre scintillante de Paris, mais cette belle ville offre des avantages uniques aux immigrants iraniens. Avec une combinaison attrayante d\'une histoire riche, d\'une culture dynamique, d\'excellentes opportunités éducatives et d\'un coût de la vie inférieur à celui de Paris, Lyon est une destination idéale pour les jeunes étudiants et professionnels.',
+    'intro_paragraph' => 'Bienvenue à Lyon 2026 - où des siècles d\'histoire rencontrent le pouls de l\'innovation moderne. Souvent appelée le "Petit Paris" avec un plus grand cœur, Lyon offre le point idéal : le dynamisme d\'une grande métropole européenne sans le rythme écrasant (ni le prix) de la capitale. Que vous soyez attiré par sa scène culinaire légendaire, ses industries biotechnologiques et numériques en plein essor ou son architecture classée par l\'UNESCO, Lyon vous invite à vivre authentiquement. Ici, vous n\'observez pas seulement la culture française ; vous faites partie d\'une communauté chaleureuse et dynamique. Prêt à trouver votre place dans la capitale de la gastronomie ? Explorons votre avenir à Lyon !',
 
     // Section: History
     'history_heading' => 'Histoire de Lyon',
@@ -75,7 +75,7 @@ return [
 
     // Section: Living Costs
     'living_costs_heading' => 'Coût de la Vie à Lyon',
-    'living_costs_paragraph' => 'Lyon a un coût de la vie inférieur à celui de Paris. Les coûts du logement, de la nourriture, des transports et des services publics dans cette ville sont nettement plus abordables. Cela fait de Lyon une option attrayante pour les personnes qui souhaitent vivre en France avec un budget plus raisonnable.',
+    'living_costs_paragraph' => 'En 2026, Lyon reste le choix judicieux pour ceux qui recherchent une qualité de vie élevée avec un budget raisonnable. Vous bénéficiez des avantages de la "grande ville" pour beaucoup moins cher qu\'à Paris. Pour les étudiants, un budget mensuel confortable se situe entre 1 000 € et 1 350 €. Le loyer pour un studio ou une chambre étudiante varie généralement de 500 € à 800 €, et oui, vous êtes pleinement éligible à l\'aide au logement CAF pour réduire ce coût jusqu\'à 40 %. L\'épicerie pour un mois ? Prévoyez environ 200-250 €, surtout si vous explorez les célèbres marchés lyonnais comme Les Halles. Les transports sont efficaces et adaptés aux étudiants. Vous voulez une ventilation détaillée pour faire fructifier votre argent à Lyon ? <a href=":consult_url"><strong>Réservez une consultation gratuite de planification financière</strong></a> avec nos experts pour concevoir votre budget personnalisé.',
 
     // Section: Job Opportunities
     'job_heading' => 'Opportunités d\'Emploi à Lyon',
@@ -88,7 +88,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Dernier Mot',
-    'conclusion_paragraph' => 'En offrant une combinaison d\'éducation excellente, d\'opportunités d\'emploi appropriées, de coûts de la vie abordables et d\'un espace de vie agréable, Lyon est une option attrayante pour les Iraniens intéressés par l\'immigration en France. Cette ville, en plus de ses attractions historiques et culturelles, offre un espace moderne et dynamique pour les jeunes et les professionnels.',
+    'conclusion_paragraph' => 'Lyon prouve que vous n\'avez pas à faire de compromis. Vous pouvez avoir une éducation de haut niveau, une carrière florissante et une vie culturelle riche tout en profitant d\'une atmosphère détendue et conviviale. En 2026, la ville est plus ouverte et internationale que jamais. Que vous lanciez une startup ou rédigiez votre thèse, Lyon fournit le terrain fertile dont vous avez besoin pour grandir. Ne laissez pas la logistique vous submerger. <strong><a href=":consult_url">Planifiez votre session personnalisée de feuille de route d\'immigration aujourd\'hui</a></strong>. Laissez-nous gérer la paperasse pour que vous puissiez vous concentrer sur la maîtrise de l\'art de vivre à la française. Votre voyage à Lyon commence ici !',
 
     // Contact Form
     'ask_question' => 'Poser une Question',

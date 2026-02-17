@@ -35,8 +35,8 @@
 
 @push('json')
     @php
-        $pageUrl = url($currentLocale.'/cities/lyon');
-        $cityId = $pageUrl.'#city';
+        $pageUrl = url($currentLocale . '/cities/lyon');
+        $cityId = $pageUrl . '#city';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
             $pageUrl,
@@ -57,8 +57,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale . '/cities')],
             ['name' => __('city/lyon.breadcrumb_lyon'), 'url' => $pageUrl],
         ]);
     @endphp
@@ -75,7 +75,7 @@
             <img src="{{ asset('assets/img/cities/Lyon/lyon1.webp') }}" alt="{{ __('city/lyon.breadcrumb_lyon') }}"
                 class="img-fluid rounded-4 shadow-sm w-100">
         </div>
-        <p class="lead">{{ __('city/lyon.intro_paragraph') }}</p>
+        <p class="lead">{!! __('city/lyon.intro_paragraph') !!}</p>
     </section>
 
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
@@ -152,7 +152,7 @@
         <p>{{ __('city/lyon.economy_paragraph_2') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.living_costs_heading') }}</h3>
-        <p>{{ __('city/lyon.living_costs_paragraph') }}</p>
+        <p>{!! __('city/lyon.living_costs_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.job_heading') }}</h3>
         <p>{{ __('city/lyon.job_paragraph_1') }}</p>
@@ -169,7 +169,7 @@
 
     <section class="mb-5">
         <h3 class="h4 fw-bold mb-3">{{ __('city/lyon.conclusion_heading') }}</h3>
-        <p>{{ __('city/lyon.conclusion_paragraph') }}</p>
+        <p>{!! __('city/lyon.conclusion_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
     </section>
 
     <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0 mt-5">

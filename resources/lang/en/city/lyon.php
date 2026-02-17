@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Lyon: Cultural Capital of France | Guide to Beautiful and Most Visited French Cities',
     'keywords' => 'Lyon, Lyon city, Lyon tourist attractions, Lyon history, Lyon culture, Lyon cultural, Lyon historical, Lyon art, immigration to Lyon, study in Lyon, real estate in Lyon, immigration to France',
-    'description' => 'Lyon, the second largest city in France, is a historical and cultural city known for its numerous tourist attractions and rich culture. On this page, we take you on a journey to Lyon to discover the history, culture, and tourist attractions of this beautiful city.',
+    'description' => 'Discover Lyon in 2026: The perfect balance of world-class gastronomy, elite education, and affordable living. Explore why France’s culinary capital is becoming the top choice for international students and professionals seeking an authentic French lifestyle.',
 
     // Page Content
     'main_heading' => 'Introduction to Lyon',
@@ -22,7 +22,7 @@ return [
 
     // Main Content
     'intro_heading' => 'Lyon, Hidden Gem of France: An Ideal Destination for Study and Life for Iranians',
-    'intro_paragraph' => 'Lyon, the third largest city in France, is sometimes overlooked in the dazzling shadow of Paris, but this beautiful city offers unique advantages for Iranian immigrants. With an attractive combination of rich history, vibrant culture, excellent educational opportunities, and lower cost of living compared to Paris, Lyon is an ideal destination for young students and professionals.',
+    'intro_paragraph' => 'Welcome to Lyon 2026 - where centuries of history meet the pulse of modern innovation. Often called the "Petit Paris" with a bigger heart, Lyon offers the perfect sweet spot: the dynamism of a major European metropolis without the overwhelming pace (or price tag) of the capital. Whether you’re drawn by its legendary culinary scene, its booming biotech and digital industries, or its UNESCO-listed architecture, Lyon invites you to live authentically. Here, you don’t just observe French culture; you become part of a warm, vibrant community. Ready to find your place in France’s capital of gastronomy? Let’s explore your future in Lyon!',
 
     // Section: History
     'history_heading' => 'History of Lyon',
@@ -75,7 +75,7 @@ return [
 
     // Section: Living Costs
     'living_costs_heading' => 'Cost of Living in Lyon',
-    'living_costs_paragraph' => 'Lyon has lower cost of living compared to Paris. Housing, food, transportation, and public service costs in this city are significantly more affordable. This makes Lyon an attractive option for people who want to live in France with a more reasonable budget.',
+    'living_costs_paragraph' => 'In 2026, Lyon remains the smart choice for those seeking high quality of life on a reasonable budget. You get the "big city" perks for significantly less than Paris. For students, a comfortable monthly budget sits between €1,000 and €1,350. Rent for a studio or student room typically ranges from €500 to €800, and yes, you are fully eligible for CAF housing assistance to lower that cost by up to 40%. Groceries for a month? Plan for about €200-250, especially if you explore Lyon’s famous markets like Les Halles. Transport is efficient and student-friendly. Want a detailed breakdown of how to make your money go further in Lyon? <a href=":consult_url"><strong>Book a free financial planning consultation</strong></a> with our experts to design your custom budget.',
 
     // Section: Job Opportunities
     'job_heading' => 'Job Opportunities in Lyon',
@@ -88,7 +88,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Final Word',
-    'conclusion_paragraph' => 'By offering a combination of excellent education, suitable job opportunities, affordable living costs, and pleasant living space, Lyon is an attractive option for Iranians interested in immigrating to France. This city, in addition to its historical and cultural attractions, provides a modern and vibrant space for young people and professionals.',
+    'conclusion_paragraph' => 'Lyon proves that you don’t have to compromise. You can have top-tier education, a thriving career, and a rich cultural life while still enjoying a relaxed, friendly atmosphere. In 2026, the city is more open and international than ever. Whether you\'re launching a startup or writing your thesis, Lyon provides the fertile ground you need to grow. Don\'t let the logistics overwhelm you. <strong><a href=":consult_url">Schedule your personalized immigration roadmap session today</a></strong>. Let us handle the paperwork so you can focus on mastering the art of French living. Your journey to Lyon starts here!',
 
     // Contact Form
     'ask_question' => 'Ask a Question',
