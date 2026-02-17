@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Nice: Beautiful Coastal City in Southern France | Guide to Beautiful and Most Visited French Cities',
     'keywords' => 'Nice, Nice city, Nice tourist attractions, Nice history, Nice culture, Nice coastal, Nice beautiful, Nice France, study in Nice, life in Nice, investment in Nice, study in France, real estate in Nice, France residence',
-    'description' => 'Nice, a city in southern France, is a beautiful coastal city known for its temperate Mediterranean climate, known as "Coastal Paris". This city has beautiful sandy beaches, crystal-clear waters, and warm and sunny weather. On this page, we take you on a journey to Nice to discover the history, culture, and tourist attractions of this beautiful city.',
+    'description' => 'Discover Nice in 2026: Europe\'s "Silicon Valley" with a sea view. Explore why the French Riviera\'s capital is the top choice for tech professionals, remote workers, and students seeking the perfect work-life balance.',
 
     // Page Content
     'main_heading' => 'Introduction to Nice',
@@ -21,11 +21,8 @@ return [
     'nice_wikipedia' => 'Nice - Wikipedia',
 
     // Main Content
-    'intro_heading' => 'Nice, Sunny Beaches of France: A City with Mediterranean Charm for Iranians',
-    'intro_paragraph_1' => 'Friendly and vibrant, these are beautiful words used to describe this beautiful coastal city. A tourist destination of wealthy British dukes in the nineteenth century, Nice on the shores of the Azure Sea has had global fame for more than two centuries because of its mild climate—Azure means blue.',
-    'intro_paragraph_2' => 'Nice is located in the far southeast of mainland France, near the border with Italy, actually within thirty kilometers of it. In one sense, it is part of the final stretch of the Mediterranean Riviera on the French side. If you are looking for a city with a pleasant climate, beautiful views, and diverse opportunities for study and work, Nice could be an ideal option.',
-    'intro_paragraph_3' => 'Nice, this coastal city with the nickname "Nissa la bella" (Nice the Beautiful) has warm and pleasant weather all year round, and because of its quiet and distinguished atmosphere and many places to see, it is a necessary place for every tourist who intends to see France and its attractions. Nice is historically very diverse; before becoming part of the Visigothic kingdom of Italy, then joining the Eastern Roman Empire and again under the flag of the kingdom of Italy (Holy Roman Empire), it became part of the lands of Genoa and Provence again, and finally French. So this popular coastal city has successively experienced being Ligurian, Greek and Roman in terms of identity. Today, Nice has a population of 341,000 and has claimed a part of Europe\'s tourism economy. In this article, we want to spend some time on the calm shores of Nice and learn more about this memorable place, its attractions and memorable moments.',
-    'intro_paragraph' => 'Nice, located on the French Riviera, is a city that captures the essence of Mediterranean life. With its stunning pebble beaches, vibrant markets, and rich artistic heritage, it has long been a favorite destination for travelers and expats alike.',
+    'intro_heading' => 'Nice 2026: Coastal Charm & Tech Innovation',
+    'intro_paragraph' => 'Welcome to Nice 2026 - where the Mediterranean lifestyle meets "La French Tech". No longer just a resort for the elite, Nice has transformed into a dynamic hub for innovation and green living. Picture this: coding your next startup idea with a view of the Promenade des Anglais, or attending lectures at Université Côte d\'Azur just minutes from the beach. With its Eco-Vallée project booming and a vibrant international community, Nice offers a unique proposition: high-speed career growth with a slow-living soul. Ready to trade the grey skies for 300 days of sunshine? Let\'s dive into your new life on the Riviera.',
 
     // Section: History
     'history_heading' => 'History of Nice',
@@ -72,7 +69,7 @@ return [
 
     // Section: Living Costs
     'living_costs_heading' => 'Cost of Living in Nice',
-    'living_costs_paragraph' => 'The cost of living in Nice is slightly higher than in Paris and Lyon, but still lower than other major European cities. Housing, food, and transportation costs can vary depending on the neighborhood and lifestyle. A rough estimate of the cost of living in Nice for a family of four is about $3,515 (€3,368) per month without rent. Monthly costs for one person without rent are estimated at about $975 (€934)—by this estimate, Nice is 23.63% cheaper than New York, without calculating rent.',
+    'living_costs_paragraph' => 'Living in paradise comes with a price, but in 2026, Nice remains surprisingly accessible compared to Paris. While slightly more expensive than Lyon, the quality of life is unmatched. For a single person, expect a monthly budget around €1,400 - €1,800. Studio apartments range from €650 to €950, but don\'t forget: as a resident or student, you can apply for CAF housing aid to significantly reduce this expense. Groceries and dining are comparable to other major French cities, but with fresher, local produce. Is the Riviera lifestyle within your reach? <a href=":consult_url"><strong>Book a free financial planning consultation</strong></a> to get a realistic, personalized budget breakdown.',
 
     // Section: Job Opportunities
     'jobs_heading' => 'Job Opportunities in Nice',
@@ -84,7 +81,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Final Word',
-    'conclusion_paragraph' => 'Nice, by offering a pleasant Mediterranean climate, diverse opportunities for beach and tourism activities, and a dynamic economy in the field of tourism and creative industries, is an attractive option for Iranians interested in experiencing a different lifestyle in France. This city with its rich culture and hospitable people provides a pleasant space for life and work for Iranian immigrants.',
+    'conclusion_paragraph' => 'Nice is more than just a postcard; it\'s a strategic choice for your future. It combines the prestige of the French Riviera with the opportunities of a modern European tech capital. Whether you are seeking world-class education, a career in green tech, or simply a happier, healthier life, Nice delivers. Don\'t let the dream stay a dream. <strong><a href=":consult_url">Schedule your personalized immigration roadmap session today</a></strong>. We will guide you through visas, housing, and integration, ensuring your move to the sunny south varies as smooth as the sea breeze.',
 
     // Contact Form
     'ask_question' => 'Ask a Question',

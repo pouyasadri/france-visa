@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Nice : Belle Ville Côtière du Sud de la France | Guide des Plus Belles et Plus Visitées Villes de France',
     'keywords' => 'Nice, ville de Nice, attractions touristiques à Nice, histoire de Nice, culture de Nice, Nice côtière, Nice belle, Nice France, études à Nice, vie à Nice, investissement à Nice, études en France, immobilier à Nice, résidence France',
-    'description' => 'Nice, une ville du sud de la France, est une belle ville côtière connue pour son climat méditerranéen tempéré, connue sous le nom de "Paris côtière". Cette ville possède de belles plages de sable, des eaux cristallines et un climat chaud et ensoleillé. Sur cette page, nous vous emmenons en voyage à Nice pour découvrir l\'histoire, la culture et les attractions touristiques de cette belle ville.',
+    'description' => 'Découvrez Nice en 2026 : La "Silicon Valley" de l\'Europe avec vue sur la mer. Découvrez pourquoi la capitale de la Côte d\'Azur est le premier choix des professionnels de la tech, des travailleurs à distance et des étudiants à la recherche d\'un équilibre travail-vie parfait.',
 
     // Page Content
     'main_heading' => 'Introduction à la Ville de Nice',
@@ -21,11 +21,8 @@ return [
     'nice_wikipedia' => 'Nice - Wikipédia',
 
     // Main Content
-    'intro_heading' => 'Nice, Plages Ensoleillées de la France : Une Ville au Charme Méditerranéen pour les Iraniens',
-    'intro_paragraph_1' => 'Amical et vibrant, ce sont de beaux mots utilisés pour décrire cette belle ville côtière. Destination touristique des riches ducs britanniques au dix-neuvième siècle, Nice sur les rives de la Mer Azur a joui d\'une célébrité mondiale pendant plus de deux siècles en raison de son climat doux—Azure signifie bleu.',
-    'intro_paragraph_2' => 'Nice est situé à l\'extrême sud-est de la France métropolitaine, près de la frontière avec l\'Italie, en réalité à trente kilomètres de celle-ci. En un sens, c\'est la dernière partie de la Côte d\'Azur du côté français. Si vous recherchez une ville avec un climat agréable, des vues magnifiques et diverses opportunités d\'études et de travail, Nice pourrait être une option idéale.',
-    'intro_paragraph_3' => 'Nice, cette ville côtière surnommée "Nissa la bella" (Nice la Belle) a un climat chaud et agréable toute l\'année et en raison de son atmosphère calme et distinguée et de nombreux lieux à voir, c\'est un endroit essentiel pour tout touriste qui envisage de voir la France et ses attractions. Nice est historiquement très diversifiée; avant de devenir une partie du royaume wisigothique d\'Italie, puis de rejoindre l\'Empire romain d\'Orient et à nouveau sous le drapeau du royaume d\'Italie (Saint-Empire romain), elle est devenue à nouveau une partie des terres de Gênes et de Provence, et finalement française. Donc cette ville côtière populaire a successivement connu d\'être ligurienne, grecque et romaine en termes d\'identité. Aujourd\'hui, Nice a une population de 341 000 habitants et a revendiqué une partie de l\'économie touristique de l\'Europe. Dans cet article, nous voulons passer du temps sur les rives calmes de Nice et en apprendre davantage sur ce lieu mémorable, ses attractions et ses moments mémorables.',
-    'intro_paragraph' => 'Nice, située sur la Côte d\'Azur, est une ville qui capture l\'essence de la vie méditerranéenne. Avec ses superbes plages de galets, ses marchés animés et son riche patrimoine artistique, elle est depuis longtemps une destination privilégiée pour les voyageurs et les expatriés.',
+    'intro_heading' => 'Nice 2026 : Charme Côtier et Innovation Technologique',
+    'intro_paragraph' => 'Bienvenue à Nice 2026 - où l\'art de vivre méditerranéen rencontre "La French Tech". Plus seulement une station balnéaire pour l\'élite, Nice s\'est transformée en un centre dynamique d\'innovation et de vie verte. Imaginez : coder votre prochaine idée de startup avec vue sur la Promenade des Anglais, ou assister à des cours à l\'Université Côte d\'Azur à quelques minutes de la plage. Avec son projet Éco-Vallée en plein essor et une communauté internationale dynamique, Nice offre une proposition unique : une croissance de carrière rapide avec une âme "slow-living". Prêt à échanger le ciel gris contre 300 jours de soleil ? Plongeons dans votre nouvelle vie sur la Riviera.',
 
     // Section: History
     'history_heading' => 'Histoire de Nice',
@@ -72,7 +69,7 @@ return [
 
     // Section: Living Costs
     'living_costs_heading' => 'Coût de la Vie à Nice',
-    'living_costs_paragraph' => 'Le coût de la vie à Nice est légèrement plus élevé qu\'à Paris et Lyon, mais reste inférieur à celui d\'autres grandes villes européennes. Les coûts du logement, de la nourriture et des transports peuvent varier en fonction du quartier et du style de vie. Une estimation approximative du coût de la vie à Nice pour une famille de quatre personnes est d\'environ 3 515 $ (3 368 €) par mois sans loyer. Les coûts mensuels pour une personne sans loyer sont estimés à environ 975 $ (934 €)—selon cette estimation, Nice est 23,63 % moins chère que New York, sans calculer le loyer.',
+    'living_costs_paragraph' => 'Vivre au paradis a un prix, mais en 2026, Nice reste étonnamment accessible par rapport à Paris. Bien que légèrement plus chère que Lyon, la qualité de vie est inégalée. Pour une personne seule, comptez un budget mensuel d\'environ 1 400 € à 1 800 €. Les studios varient de 650 € à 950 €, mais n\'oubliez pas : en tant que résident ou étudiant, vous pouvez demander l\'aide au logement CAF pour réduire considérablement cette dépense. L\'épicerie et les restaurants sont comparables aux autres grandes villes françaises, mais avec des produits locaux plus frais. Le style de vie de la Riviera est-il à votre portée ? <a href=":consult_url"><strong>Réservez une consultation gratuite de planification financière</strong></a> pour obtenir une ventilation budgétaire réaliste et personnalisée.',
 
     // Section: Job Opportunities
     'jobs_heading' => 'Opportunités d\'Emploi à Nice',
@@ -84,7 +81,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Dernier Mot',
-    'conclusion_paragraph' => 'Nice, en offrant un climat méditerranéen agréable, diverses opportunités d\'activités balnéaires et touristiques, et une économie dynamique dans le domaine du tourisme et des industries créatives, est une option attrayante pour les Iraniens intéressés par l\'expérience d\'un style de vie différent en France. Cette ville avec sa riche culture et ses gens hospitaliers offre un espace agréable pour vivre et travailler pour les immigrants iraniens.',
+    'conclusion_paragraph' => 'Nice est bien plus qu\'une carte postale ; c\'est un choix stratégique pour votre avenir. Elle allie le prestige de la Côte d\'Azur aux opportunités d\'une capitale technologique européenne moderne. Que vous recherchiez une éducation de classe mondiale, une carrière dans les technologies vertes ou simplement une vie plus heureuse et plus saine, Nice tient ses promesses. Ne laissez pas le rêve rester un rêve. <strong><a href=":consult_url">Planifiez votre session personnalisée de feuille de route d\'immigration aujourd\'hui</a></strong>. Nous vous guiderons à travers les visas, le logement et l\'intégration, en veillant à ce que votre déménagement vers le sud ensoleillé soit aussi doux que la brise marine.',
 
     // Contact Form
     'ask_question' => 'Poser une Question',
