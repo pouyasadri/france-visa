@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Toulouse : La Ville Rose du Sud de la France | Guide des Plus Belles et Plus Visitées Villes de France',
     'keywords' => 'Toulouse, ville de Toulouse, attractions touristiques à Toulouse, histoire de Toulouse, culture de Toulouse, Toulouse rose, Toulouse sud France, études à Toulouse, vie à Toulouse, investissement à Toulouse',
-    'description' => 'Toulouse, la quatrième plus grande ville de France et un pôle technologique et aérospatial dans le sud de la France, est une destination idéale pour les immigrants et les étudiants iraniens. Cette ville est connue pour sa belle architecture rose, sa culture riche et ses excellentes opportunités éducatives et professionnelles.',
+    'description' => 'Découvrez Toulouse en 2026 : Capitale européenne de l\'aéronautique et pôle étudiant dynamique. Découvrez pourquoi la "Ville Rose" est le premier choix des ingénieurs, des étudiants et des familles à la recherche d\'un mode de vie français dynamique mais abordable.',
 
     // Page Content
     'main_heading' => 'Introduction à Toulouse',
@@ -21,7 +21,7 @@ return [
 
     // Main Content
     'intro_heading' => 'Toulouse, Pôle Technologique et Aérospatial : Une Option Idéale pour les Spécialistes',
-    'intro_paragraph' => 'Toulouse, la quatrième plus grande ville de France, connue pour son art, son histoire et sa culture, s\'est transformée en centre de l\'industrie aérospatiale européenne au vingtième siècle. Cette partie de la ville est due au développement de l\'industrie aérospatiale, une ville sur la rivière Garonne dans le sud de la France et au sud-est de Bordeaux est un endroit très intéressant pour des expériences touristiques mémorables. Cette ville est connue pour ses activités économiques importantes et pour offrir une éducation très diversifiée dans ses universités.',
+    'intro_paragraph' => 'Bienvenue à Toulouse 2026 - où l\'histoire se peint en rose et l\'avenir se construit dans le ciel. En tant que capitale incontestée de l\'aéronautique européenne, la "Ville Rose" offre une énergie unique qui mêle la chaleur du sud de la France à l\'innovation de pointe. Imaginez travailler sur la prochaine génération d\'aviation durable le jour et profiter d\'un apéro au coucher du soleil au bord de la Garonne le soir. Avec une population étudiante massive et un secteur technologique en plein essor, Toulouse est jeune, intelligente et incroyablement accueillante. Ce n\'est pas juste un endroit pour étudier ou travailler ; c\'est un endroit pour lancer votre avenir. Prêt pour le décollage ?',
 
     // Section: Language
     'language_heading' => 'Langue Parlée',
@@ -54,7 +54,7 @@ return [
 
     // Section: Living Costs
     'living_costs_heading' => 'Coûts de la Vie à Toulouse',
-    'living_costs_paragraph' => 'Les coûts de la vie à Toulouse sont légèrement inférieurs à ceux de Paris et de Lyon, mais restent légèrement supérieurs à la moyenne nationale française. Le logement, la nourriture et les frais de transport peuvent varier selon le quartier et le mode de vie. Un résumé des frais de subsistance à Toulouse pour une famille de quatre personnes est estimé à 800 euros par mois sans loyer. Les frais mensuels pour un étudiant sans loyer sont estimés à 100 à 150 euros. En bref, cette ville est 32,09% moins chère que New York sans compter le logement dans cette estimation. De plus, cette ville vous permet d\'économiser de l\'argent en utilisant les transports en commun au lieu d\'une voiture personnelle.',
+    'living_costs_paragraph' => 'Toulouse offre une qualité de vie élevée sans le prix parisien. En 2026, elle reste l\'une des grandes villes les plus abordables de France. Un professionnel célibataire peut vivre confortablement avec 1 100 € à 1 450 € par mois. Les studios étudiants sont largement disponibles entre 450 € et 650 €, souvent entièrement éligibles à l\'aide au logement CAF. Ajoutez à cela les excellents transports en commun et les réductions pour étudiants, et votre budget va beaucoup plus loin ici. Vous voulez savoir exactement combien il vous faut pour emménager ici ? <a href=":consult_url"><strong>Réservez une consultation gratuite de planification financière</strong></a> pour obtenir une ventilation détaillée des coûts adaptée à votre situation.',
 
     // Section: Housing
     'housing_heading' => 'Logement',
@@ -89,7 +89,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Dernière Parole',
-    'conclusion_paragraph' => 'Dans cet article, nous avons essayé autant que possible de donner une image précise de la vie, de la promenade et de l\'étude à Toulouse. Confiez-nous votre immigration de zéro à cent. Si vous avez l\'intention d\'immigrer en France, contactez-nous maintenant sur l\'une des lignes téléphoniques ou via les réseaux sociaux.',
+    'conclusion_paragraph' => 'Toulouse est là où l\'ambition rencontre la qualité de vie. Que vous soyez un ingénieur cherchant à travailler chez Airbus, un étudiant visant les meilleures universités ou une famille cherchant un environnement chaleureux et convivial, la Ville Rose vous accueille à bras ouverts. Les opportunités en 2026 sont vastes, mais naviguer dans le déménagement nécessite un plan solide. Ne laissez pas votre avenir au hasard. <strong><a href=":consult_url">Planifiez votre session personnalisée de feuille de route d\'immigration aujourd\'hui</a></strong>. Transformons votre rêve français en un plan concret.',
 
     // Form Labels
     'ask_question' => 'Poser une Question',

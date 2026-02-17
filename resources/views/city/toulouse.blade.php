@@ -35,8 +35,8 @@
 
 @push('json')
     @php
-        $pageUrl = url($currentLocale.'/cities/toulouse');
-        $cityId = $pageUrl.'#city';
+        $pageUrl = url($currentLocale . '/cities/toulouse');
+        $cityId = $pageUrl . '#city';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
             $pageUrl,
@@ -57,8 +57,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale . '/cities')],
             ['name' => __('city/toulouse.breadcrumb_toulouse'), 'url' => $pageUrl],
         ]);
     @endphp
@@ -75,7 +75,7 @@
             <img src="{{ asset('assets/img/cities/Toulouse/toulouse1.webp') }}"
                 alt="{{ __('city/toulouse.breadcrumb_toulouse') }}" class="img-fluid rounded-4 shadow-sm w-100">
         </div>
-        <p class="lead">{{ __('city/toulouse.intro_paragraph') }}</p>
+        <p class="lead">{!! __('city/toulouse.intro_paragraph') !!}</p>
     </section>
 
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
@@ -127,7 +127,7 @@
 
     <section class="mb-5">
         <h3 class="h4 fw-bold mb-3">{{ __('city/toulouse.living_costs_heading') }}</h3>
-        <p>{{ __('city/toulouse.living_costs_paragraph') }}</p>
+        <p>{!! __('city/toulouse.living_costs_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.housing_heading') }}</h3>
         <p>{{ __('city/toulouse.housing_paragraph') }}</p>
@@ -166,7 +166,7 @@
         <p>{{ __('city/toulouse.jobs_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.conclusion_heading') }}</h3>
-        <p>{{ __('city/toulouse.conclusion_paragraph') }}</p>
+        <p>{!! __('city/toulouse.conclusion_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
     </section>
 
     <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0 mt-5">

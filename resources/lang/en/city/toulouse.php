@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Toulouse: The Pink City of Southern France | Guide to Beautiful and Most Visited French Cities',
     'keywords' => 'Toulouse, Toulouse city, Toulouse tourist attractions, Toulouse history, Toulouse culture, Pink Toulouse, Toulouse southern France, study in Toulouse, life in Toulouse, investment in Toulouse',
-    'description' => 'Toulouse, the fourth largest city in France and a hub for technology and aerospace in southern France, is an ideal destination for Iranian immigrants and students. This city is known for its beautiful pink architecture, rich culture, and excellent educational and career opportunities.',
+    'description' => 'Discover Toulouse in 2026: Europe\'s aerospace capital and a vibrant student hub. Explore why the "Pink City" is the top choice for engineers, students, and families seeking a dynamic yet affordable French lifestyle.',
 
     // Page Content
     'main_heading' => 'Introduction to Toulouse',
@@ -21,7 +21,7 @@ return [
 
     // Main Content
     'intro_heading' => 'Toulouse, Technology and Aerospace Hub: An Ideal Option for Specialists',
-    'intro_paragraph' => 'Toulouse, the fourth largest city in France, known for its art, history and culture, transformed into the center of Europe\'s aerospace industry in the twentieth century. This part of the city is due to the development of the aerospace industry, a city on the Garonne River in southern France and southeast of Bordeaux is a very interesting place for memorable tourist experiences. This city is known for its important economic activities and providing very diverse education at its universities.',
+    'intro_paragraph' => 'Welcome to Toulouse 2026 - where history is painted in pink and the future is built in the sky. As the undisputed aerospace capital of Europe, the "Ville Rose" offers a unique energy that blends southern French warmth with cutting-edge innovation. Imagine working on the next generation of sustainable aviation by day and enjoying a sunset apéro by the Garonne river by night. With a massive student population and a booming tech sector, Toulouse is young, brainy, and incredibly welcoming. It\'s not just a place to study or work; it\'s a place to launch your future. Ready for takeoff?',
 
     // Section: Language
     'language_heading' => 'Spoken Language',
@@ -54,7 +54,7 @@ return [
 
     // Section: Living Costs
     'living_costs_heading' => 'Living Costs in Toulouse',
-    'living_costs_paragraph' => 'Living costs in Toulouse are slightly lower than in Paris and Lyon, but still slightly above the French national average. Housing, food, and transportation costs can vary depending on the neighborhood and lifestyle. A summary of living costs in Toulouse for a family of four is estimated at 800 euros per month without rent. Monthly costs for a student without rent are estimated at 100 to 150 euros. In short, this city is 32.09% cheaper than New York without calculating housing in this estimate. Besides, this city allows you to save money by using public transportation instead of a personal car.',
+    'living_costs_paragraph' => 'Toulouse offers a high quality of life without the Parisian price tag. In 2026, it remains one of the most affordable major cities in France. A single professional can live comfortably on €1,100 - €1,450 per month. Student studios are widely available between €450 and €650, often fully eligible for CAF housing assistance. Factor in the excellent public transport and student discounts, and your budget goes much further here. Want to know exactly how much you need to move here? <a href=":consult_url"><strong>Book a free financial planning consultation</strong></a> to get a detailed cost breakdown tailored to your situation.',
 
     // Section: Housing
     'housing_heading' => 'Housing',
@@ -89,7 +89,7 @@ return [
 
     // Section: Conclusion
     'conclusion_heading' => 'Final Word',
-    'conclusion_paragraph' => 'In this article, we have tried as much as possible to provide an accurate picture of life, wandering and studying in Toulouse. Entrust your immigration from zero to a hundred to us. If you intend to immigrate to France, contact us now on one of the phone lines or through social networks.',
+    'conclusion_paragraph' => 'Toulouse is where ambition meets quality of life. Whether you are an engineer looking to work at Airbus, a student aiming for top-tier universities, or a family seeking a warm, friendly environment, the Pink City welcomes you with open arms. The opportunities in 2026 are vast, but navigating the move requires a solid plan. Don\'t leave your future to chance. <strong><a href=":consult_url">Schedule your personalized immigration roadmap session today</a></strong>. Let\'s turn your French dream into a concrete plan.',
 
     // Form Labels
     'ask_question' => 'Ask a Question',
