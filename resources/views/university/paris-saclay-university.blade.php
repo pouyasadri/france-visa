@@ -145,13 +145,15 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('university/paris-saclay-university.faq_title')" :subtitle="__('university/paris-saclay-university.faq_subtitle')"
+        :items="__('university/paris-saclay-university.faq_items')" id="saclay-faq" />
 @endsection
 
 @push("json")
     @php
         $currentLocale = app()->getLocale();
-        $pageUrl = url($currentLocale.'/universities/paris-saclay-university');
-        $universityId = $pageUrl.'#university';
+        $pageUrl = url($currentLocale . '/universities/paris-saclay-university');
+        $universityId = $pageUrl . '#university';
         $officialUrl = 'https://www.universite-paris-saclay.fr/';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
@@ -160,15 +162,15 @@
             __('university/paris-saclay-university.description'),
             $currentLocale,
             $universityId,
-            asset('assets/img/universities/Paris_Sud/paris_sud_logo.webp')
+            asset('assets/img/universities/Paris_Saclay/Paris_saclay_university_logo.webp')
         );
 
         $university = new \App\Services\StructuredData\UniversitySchema(
             $universityId,
-            __('universities.paris_saclay_name'),
+            __('university/paris-saclay-university.breadcrumb_current'),
             $officialUrl,
             __('university/paris-saclay-university.schema_description'),
-            asset('assets/img/universities/Paris_Sud/paris_sud_logo.webp'),
+            asset('assets/img/universities/Paris_Saclay/Paris_saclay_university_logo.webp'),
             [
                 $officialUrl,
                 'https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D9%BE%D8%A7%D8%B1%DB%8C%D8%B3_%D8%B3%D9%88%D8%AF',
@@ -176,8 +178,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/paris-saclay-university.breadcrumb_current'), 'url' => $pageUrl],
         ]);
     @endphp
