@@ -62,7 +62,7 @@ return [
         'Anthropology: 51-100 worldwide (1st in France)',
         'Social Policy and Administration: 101-120 worldwide (2nd in France)',
         'Accounting and Finance: 101-150 worldwide (5th in France)',
-        'Business and Management Studies: 101-150 worldwide (7th in France)'
+        'Business and Management Studies: 101-150 worldwide (7th in France)',
     ],
 
     'career_opportunities_title' => 'Career Opportunities After Graduation from Panthéon-Sorbonne University Paris',
@@ -79,7 +79,7 @@ return [
         'Letter of Recommendation (LOR)',
         'Curriculum Vitae (CV)',
         'French language proficiency certificate',
-        'English language proficiency certificate'
+        'English language proficiency certificate',
     ],
 
     'conclusion_title' => 'Conclusion',
@@ -91,7 +91,7 @@ return [
         'Diverse Specializations',
         'International Educational Environment',
         'Modern Facilities and Equipment',
-        'Outstanding Research'
+        'Outstanding Research',
     ],
 
     // Contact Form
@@ -110,5 +110,5 @@ return [
 
     // JSON-LD Schema
     'schema_headline' => 'Panthéon-Sorbonne University: Symbol of Scientific Excellence in France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C'
+    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
 ];

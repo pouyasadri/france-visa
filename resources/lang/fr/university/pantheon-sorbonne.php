@@ -62,7 +62,7 @@ return [
         'Anthropologie : 51-100 mondiale (1re en France)',
         'Politique Sociale et Administration : 101-120 mondiale (2e en France)',
         'Comptabilité et Finance : 101-150 mondiale (5e en France)',
-        'Études Commerciales et de Gestion : 101-150 mondiale (7e en France)'
+        'Études Commerciales et de Gestion : 101-150 mondiale (7e en France)',
     ],
 
     'career_opportunities_title' => 'Opportunités de Carrière Après l\'Obtention du Diplôme de l\'Université Panthéon-Sorbonne Paris',
@@ -79,7 +79,7 @@ return [
         'Lettre de Recommandation (LOR)',
         'Curriculum Vitae (CV)',
         'Certificat de compétence en français',
-        'Certificat de compétence en anglais'
+        'Certificat de compétence en anglais',
     ],
 
     'conclusion_title' => 'Conclusion',
@@ -91,7 +91,7 @@ return [
         'Spécialisations Diverses',
         'Environnement Éducatif International',
         'Installations et Équipements Modernes',
-        'Recherche Exceptionnelle'
+        'Recherche Exceptionnelle',
     ],
 
     // Contact Form
@@ -110,5 +110,5 @@ return [
 
     // JSON-LD Schema
     'schema_headline' => 'Université Panthéon-Sorbonne : Symbole de l\'Excellence Scientifique Française',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
 ];

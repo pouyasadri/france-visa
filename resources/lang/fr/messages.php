@@ -31,4 +31,3 @@ return [
     'question_success' => 'Votre question a été soumise avec succès ! Nous vous répondrons bientôt.',
     'question_error' => 'Une erreur s\'est produite lors de la soumission de votre question. Veuillez réessayer.',
 ];
-

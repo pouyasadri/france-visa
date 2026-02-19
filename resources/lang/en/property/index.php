@@ -42,4 +42,3 @@ return [
     'are_you_sure' => 'Are you sure?',
     'clear_all_filters' => 'Clear All Filters',
 ];
-

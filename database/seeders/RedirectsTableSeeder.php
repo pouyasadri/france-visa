@@ -92,7 +92,7 @@ class RedirectsTableSeeder extends Seeder
                 // We try to find the slug for this locale.
                 // If the old domain was 'en.applyvipconseil.com', we look for English slug.
                 $translation = $blog->translations->where('locale', $newLocale)->first();
-                if ($translation && !empty($translation->slug)) {
+                if ($translation && ! empty($translation->slug)) {
                     $fromSlugUrl = "https://{$oldDomain}/blog/{$translation->slug}";
                     Redirect::firstOrCreate(
                         ['from_url' => $fromSlugUrl],
@@ -120,8 +120,8 @@ class RedirectsTableSeeder extends Seeder
 
         // Clean up paths to ensure single leading slash for path part,
         // but not for the final URL construction.
-        $oldPath = '/' . ltrim($oldPath, '/');
-        $newPath = '/' . ltrim($newPath, '/');
+        $oldPath = '/'.ltrim($oldPath, '/');
+        $newPath = '/'.ltrim($newPath, '/');
 
         // Case 1: Root path special handling if needed (already covered by ltrim/slash logic)
         // en.applyvipconseil.com/ -> applyvipconseil.com/en
@@ -143,7 +143,6 @@ class RedirectsTableSeeder extends Seeder
         } else {
             $toUrl = "https://applyvipconseil.com/{$newLocale}{$newPath}";
         }
-
 
         // Check uniqueness before creating to avoid duplicate key errors if run multiple times
         // or if overlap exists.

@@ -36,7 +36,7 @@ return [
         'Bobigny : Là où l\'on invente la médecine et la santé de demain.',
         'Saint-Denis : Le rendez-vous de la technologie et des études professionnelles.',
         'La Plaine Saint-Denis : Un espace créatif dédié aux arts numériques.',
-        'Argenteuil : Un pôle d\'expertise pour les formations techniques.'
+        'Argenteuil : Un pôle d\'expertise pour les formations techniques.',
     ],
 
     'ranking_title' => 'Une Éducation de Qualité en laquelle vous pouvez avoir Confiance',
@@ -52,7 +52,7 @@ return [
         'Sciences et Technologie (Maths, Physique, Ingénierie)',
         'Sciences Juridiques et Politiques',
         'Humanités, Langues et Communication',
-        'Économie et Gestion'
+        'Économie et Gestion',
     ],
 
     'iranian_students_title' => 'Nous sommes aux côtés de nos Étudiants Internationaux',
@@ -76,7 +76,7 @@ return [
         'Top 5% mondial des universités',
         'Pôle d\'excellence Mondiale en Maths et Sciences',
         'Cinq Campus uniques et spécialisés',
-        'Lien direct avec les Industries de demain'
+        'Lien direct avec les Industries de demain',
     ],
 
     // Contact Form
@@ -103,23 +103,23 @@ return [
     'faq_items' => [
         [
             'question' => 'L\'USPN fait-elle partie de la "vraie" Sorbonne ?',
-            'answer' => 'Oui ! Nous sommes un membre fier de Sorbonne Alliance. Vous bénéficiez du prestige du nom Sorbonne allié à une approche moderne et innovante de la recherche.'
+            'answer' => 'Oui ! Nous sommes un membre fier de Sorbonne Alliance. Vous bénéficiez du prestige du nom Sorbonne allié à une approche moderne et innovante de la recherche.',
         ],
         [
             'question' => 'Peut-on étudier en anglais ?',
-            'answer' => 'Si la Licence est surtout en français, nous avons de nombreux Masters et Doctorats enseignés en anglais, notamment en Informatique et Santé Publique.'
+            'answer' => 'Si la Licence est surtout en français, nous avons de nombreux Masters et Doctorats enseignés en anglais, notamment en Informatique et Santé Publique.',
         ],
         [
             'question' => 'Quel campus dois-je choisir ?',
-            'answer' => 'Tout dépend de votre spécialité ! Bobigny est le cœur de la Santé, tandis que Villetaneuse est multidisciplinaire. Chaque campus a sa propre vie étudiante.'
+            'answer' => 'Tout dépend de votre spécialité ! Bobigny est le cœur de la Santé, tandis que Villetaneuse est multidisciplinaire. Chaque campus a sa propre vie étudiante.',
         ],
         [
             'question' => 'Quand postuler pour la rentrée 2026 ?',
-            'answer' => 'La plateforme Études en France ouvre généralement en octobre 2025. Nous conseillons toujours de s\'y prendre tôt pour finir l\'année sans stress !'
+            'answer' => 'La plateforme Études en France ouvre généralement en octobre 2025. Nous conseillons toujours de s\'y prendre tôt pour finir l\'année sans stress !',
         ],
         [
             'question' => 'La vie est-elle chère au nord de Paris ?',
-            'answer' => 'C\'est l\'avantage ! Se loger et vivre au nord de Paris est bien plus abordable qu\'au centre-ville. Avec les résidences CROUS, c\'est tout à fait accessible.'
-        ]
-    ]
+            'answer' => 'C\'est l\'avantage ! Se loger et vivre au nord de Paris est bien plus abordable qu\'au centre-ville. Avec les résidences CROUS, c\'est tout à fait accessible.',
+        ],
+    ],
 ];

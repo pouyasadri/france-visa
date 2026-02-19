@@ -54,4 +54,3 @@ return [
         'ps' => 'fa', // Pashto (close to Persian)
     ],
 ];
-

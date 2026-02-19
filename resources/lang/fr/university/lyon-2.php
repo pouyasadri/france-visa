@@ -59,7 +59,7 @@ L\'Université Jean Moulin Lyon 2 aide également ses diplômés dans les domain
         'Littérature Classique',
         'Langues Modernes Appliquées',
         'Arts du Spectacle',
-        'Information et Communication'
+        'Information et Communication',
     ],
 
     'conclusion_title' => 'Conclusion',
@@ -71,7 +71,7 @@ L\'Université Jean Moulin Lyon 2 aide également ses diplômés dans les domain
         'Spécialisations Diverses',
         'Environnement Éducatif International',
         'Installations et Équipements Modernes',
-        'Recherche Exceptionnelle'
+        'Recherche Exceptionnelle',
     ],
 
     // Contact Form
@@ -90,5 +90,5 @@ L\'Université Jean Moulin Lyon 2 aide également ses diplômés dans les domain
 
     // JSON-LD Schema
     'schema_headline' => 'Université Jean Moulin Lyon 2 : Une Université Leader en France',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
 ];

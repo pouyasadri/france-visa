@@ -110,8 +110,8 @@ class PropertyController extends Controller
                 'locale'
             ));
         } catch (\Exception $e) {
-            \Log::error('Property index error: ' . $e->getMessage(), [
-                'trace' => $e->getTraceAsString()
+            \Log::error('Property index error: '.$e->getMessage(), [
+                'trace' => $e->getTraceAsString(),
             ]);
 
             // Fallback: Return empty properties list
@@ -122,7 +122,7 @@ class PropertyController extends Controller
                 'maxRoomCount' => 5,
                 'maxGarageCount' => 3,
                 'regions' => collect(),
-                'locale' => app()->getLocale()
+                'locale' => app()->getLocale(),
             ])->with('error', __('An error occurred while filtering properties.'));
         }
     }
@@ -266,6 +266,7 @@ class PropertyController extends Controller
             // Transform data to include translated names
             $transformedData = $properties->map(function ($property) use ($locale) {
                 $translation = $property->getTranslation($locale);
+
                 return [
                     'id' => $property->id,
                     'name' => $translation ? $translation->name : 'No Name',
@@ -288,15 +289,15 @@ class PropertyController extends Controller
                 'last_page' => $properties->lastPage(),
             ]);
         } catch (\Exception $e) {
-            \Log::error('Property filter error: ' . $e->getMessage(), [
+            \Log::error('Property filter error: '.$e->getMessage(), [
                 'trace' => $e->getTraceAsString(),
-                'request' => $request->all()
+                'request' => $request->all(),
             ]);
 
             return response()->json([
                 'error' => true,
                 'message' => 'An error occurred while filtering properties.',
-                'data' => []
+                'data' => [],
             ], 500);
         }
     }

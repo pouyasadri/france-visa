@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\QuestionSubmission;
 use App\Http\Requests\StoreQuestionRequest;
-use Illuminate\Http\Request;
+use App\Mail\QuestionConfirmation;
+use App\Mail\QuestionSubmitted;
+use App\Models\QuestionSubmission;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\QuestionSubmitted;
-use App\Mail\QuestionConfirmation;
 
 class QuestionController extends Controller
 {
@@ -45,14 +44,15 @@ class QuestionController extends Controller
                 ->send(new QuestionConfirmation($submission));
 
             // Send Notification Email to Admin
-            $adminEmail = "info@applyvipconseil.com";
+            $adminEmail = 'info@applyvipconseil.com';
             Mail::to($adminEmail)
                 ->locale('fa')
                 ->send(new QuestionSubmitted($submission));
 
             return redirect()->back()->with('success', __('messages.question_success'));
         } catch (\Exception $e) {
-            Log::error("Error in question form submission: " . $e->getMessage());
+            Log::error('Error in question form submission: '.$e->getMessage());
+
             return redirect()->back()->with('error', __('messages.question_error'));
         }
     }

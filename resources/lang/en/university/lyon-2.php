@@ -59,7 +59,7 @@ Jean Moulin Lyon 2 University also helps its graduates in research fields. The u
         'Classical Literature',
         'Applied Modern Languages',
         'Performing Arts',
-        'Information and Communication'
+        'Information and Communication',
     ],
 
     'conclusion_title' => 'Conclusion',
@@ -71,7 +71,7 @@ Jean Moulin Lyon 2 University also helps its graduates in research fields. The u
         'Diverse Specializations',
         'International Educational Environment',
         'Modern Facilities and Equipment',
-        'Outstanding Research'
+        'Outstanding Research',
     ],
 
     // Contact Form
@@ -90,5 +90,5 @@ Jean Moulin Lyon 2 University also helps its graduates in research fields. The u
 
     // JSON-LD Schema
     'schema_headline' => 'Jean Moulin Lyon 2 University: A Leading University in France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C'
+    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
 ];

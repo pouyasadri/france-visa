@@ -19,16 +19,18 @@ class BlogCategoryService
         ]);
 
         // Support creating one or many translations
-        if (!empty($data['translations']) && is_array($data['translations'])) {
+        if (! empty($data['translations']) && is_array($data['translations'])) {
             foreach ($data['translations'] as $t) {
-                if (empty($t['locale'])) { continue; }
+                if (empty($t['locale'])) {
+                    continue;
+                }
                 $category->translations()->create([
                     'locale' => $t['locale'],
                     'name' => $t['name'] ?? '',
                     'slug' => $t['slug'] ?? '',
                 ]);
             }
-        } elseif (!empty($data['locale']) && (!empty($data['name']) || !empty($data['slug']))) {
+        } elseif (! empty($data['locale']) && (! empty($data['name']) || ! empty($data['slug']))) {
             $category->translations()->create([
                 'locale' => $data['locale'],
                 'name' => $data['name'] ?? '',
@@ -45,9 +47,11 @@ class BlogCategoryService
             'parent_id' => $data['parent_id'] ?? $category->parent_id,
         ]);
 
-        if (!empty($data['translations']) && is_array($data['translations'])) {
+        if (! empty($data['translations']) && is_array($data['translations'])) {
             foreach ($data['translations'] as $t) {
-                if (empty($t['locale'])) { continue; }
+                if (empty($t['locale'])) {
+                    continue;
+                }
                 $translation = $category->translations()->firstOrNew([
                     'locale' => $t['locale'],
                 ]);
@@ -55,7 +59,7 @@ class BlogCategoryService
                 $translation->slug = $t['slug'] ?? $translation->slug ?? '';
                 $translation->save();
             }
-        } elseif (!empty($data['locale'])) {
+        } elseif (! empty($data['locale'])) {
             $translation = $category->translations()->where('locale', $data['locale'])->first();
             if ($translation) {
                 $translation->update([

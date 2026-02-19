@@ -65,7 +65,7 @@ L\'Université Paris 2 Panthéon aide également ses diplômés dans les domaine
         '2. Spécialisations Diverses',
         '3. Environnement Éducatif International',
         '4. Installations et Équipements Modernes',
-        '5. Recherche Exceptionnelle'
+        '5. Recherche Exceptionnelle',
     ],
 
     // Contact Form
@@ -84,5 +84,5 @@ L\'Université Paris 2 Panthéon aide également ses diplômés dans les domaine
 
     // JSON-LD Schema
     'schema_headline' => 'Université Paris 2 Panthéon : Un Parcours Brillant pour Étudier au Cœur de la France',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
 ];

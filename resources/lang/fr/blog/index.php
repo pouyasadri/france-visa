@@ -21,4 +21,3 @@ return [
     'no_blogs_found' => 'Aucun article trouvé !',
     'no_blogs_in_locale' => 'Aucun article disponible dans la langue sélectionnée.',
 ];
-

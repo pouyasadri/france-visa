@@ -38,7 +38,7 @@ L\'Université Jean Moulin Lyon 3 occupe une position spéciale parmi les univer
         'Faculté de Philosophie',
         'Faculté de Gestion des Entreprises (IAE, Institut d\'Administration des Entreprises)',
         'Faculté des Arts',
-        'Faculté des Langues'
+        'Faculté des Langues',
     ],
     'faculties_additional' => 'L\'Université Lyon 3 collabore également avec 400 cadres dirigeants d\'entreprises privées et internationales au sein de la Faculté de Gestion (IAE) pour améliorer l\'éducation.',
 
@@ -52,7 +52,7 @@ L\'Université Jean Moulin Lyon 3 occupe une position spéciale parmi les univer
         'Lettre de Recommandation (LOR)',
         'Curriculum Vitae (CV)',
         'Certificat de compétence en français',
-        'Certificat de compétence en anglais'
+        'Certificat de compétence en anglais',
     ],
 
     'facilities_title' => 'Installations Éducatives et de Recherche à l\'Université Jean Moulin Lyon 3',
@@ -82,7 +82,7 @@ L\'Université Jean Moulin Lyon 3 aide également ses diplômés dans les domain
         'Spécialisations Diverses',
         'Environnement Éducatif International',
         'Installations et Équipements Modernes',
-        'Recherche Exceptionnelle'
+        'Recherche Exceptionnelle',
     ],
 
     // Contact Form
@@ -101,5 +101,5 @@ L\'Université Jean Moulin Lyon 3 aide également ses diplômés dans les domain
 
     // JSON-LD Schema
     'schema_headline' => 'Université Jean Moulin Lyon 3 : Une Université Leader en France',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
 ];

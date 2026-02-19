@@ -3,11 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Blog;
-use App\Models\Comment;
-use App\Models\ConsultingSubmission;
-use App\Models\QuestionSubmission;
-use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
@@ -21,7 +16,7 @@ class DashboardController extends Controller
             'pending_comments' => \App\Models\Comment::where('is_approved', false)->count(),
         ];
 
-        // Fetch recent activity (simple implementation: latest 5 from each, merged and sorted could be complex, 
+        // Fetch recent activity (simple implementation: latest 5 from each, merged and sorted could be complex,
         // starting with just latest 5 blogs/questions for now or just keeping it simple)
         $recentBlogs = \App\Models\Blog::latest()->take(5)->get();
 

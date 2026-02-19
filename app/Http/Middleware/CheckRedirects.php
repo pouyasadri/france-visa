@@ -30,13 +30,13 @@ class CheckRedirects
             // Build the new URL with locale prefix
             // If path is /, redirect to /locale
             // If path already has a locale prefix (like /fa), replace it
-            $newPath = $path === '/' ? "/{$locale}" : "/{$locale}" . $path;
+            $newPath = $path === '/' ? "/{$locale}" : "/{$locale}".$path;
 
-            $newUrl = $request->getScheme() . '://' . $newHost . $newPath;
+            $newUrl = $request->getScheme().'://'.$newHost.$newPath;
 
             // Preserve query string if present
             if ($request->getQueryString()) {
-                $newUrl .= '?' . $request->getQueryString();
+                $newUrl .= '?'.$request->getQueryString();
             }
 
             return redirect($newUrl, 301);

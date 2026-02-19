@@ -36,4 +36,3 @@ return [
     'comments_title' => 'Commentaires',
     'comment_submitted' => 'Votre commentaire a été soumis et est en attente d\'approbation.',
 ];
-

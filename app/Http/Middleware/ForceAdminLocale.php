@@ -16,6 +16,7 @@ class ForceAdminLocale
     public function handle(Request $request, Closure $next): Response
     {
         app()->setLocale('fr');
+
         return $next($request);
     }
 }

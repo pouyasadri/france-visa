@@ -20,4 +20,3 @@ class BlogCategoryResource extends JsonResource
         ];
     }
 }
-

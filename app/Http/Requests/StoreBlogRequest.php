@@ -27,4 +27,3 @@ class StoreBlogRequest extends FormRequest
         ];
     }
 }
-

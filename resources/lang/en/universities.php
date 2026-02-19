@@ -25,16 +25,13 @@ return [
     'paris_saclay_rank' => '13',
     'paris_saclay_description' => 'Paris-Saclay University, ranked 13th globally, is the #1 university in Continental Europe and a global leader in research.',
 
-
     'sorbonne_paris_nord_name' => 'Sorbonne Paris Nord University',
     'sorbonne_paris_nord_rank' => '1011',
     'sorbonne_paris_nord_description' => 'Sorbonne Paris Nord University, ranked in the top 5% globally, is a major center for innovation and healthcare research.',
 
-
     'paris_cite_name' => 'Paris Cité University',
     'paris_cite_rank' => '60',
     'paris_cite_description' => 'Paris Cité University, ranked 60th globally, is an elite research institution at the heart of French health and sciences.',
-
 
     'paris_4_name' => 'Paris 4 Sorbonne University',
     'paris_4_rank' => '232',

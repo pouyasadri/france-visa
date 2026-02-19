@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -22,10 +21,10 @@ class BlogsTableSeeder extends Seeder
         // Create sample blogs
         for ($i = 1; $i <= $numberOfBlogs; $i++) {
             DB::table('blogs')->insert([
-                'blog_title' => 'وبلاگ نمونه ' . $i,
-                'blog_category' => 'دسته بندی نمونه ' . $i,
-                'blog_slug' => Str::slug('وبلاگ نمونه ' . $i),
-                'blog_body' => 'این متن مطلب وبلاگ نمونه ' . $i . ' است.',
+                'blog_title' => 'وبلاگ نمونه '.$i,
+                'blog_category' => 'دسته بندی نمونه '.$i,
+                'blog_slug' => Str::slug('وبلاگ نمونه '.$i),
+                'blog_body' => 'این متن مطلب وبلاگ نمونه '.$i.' است.',
                 'blog_main_image' => '169126098291.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),

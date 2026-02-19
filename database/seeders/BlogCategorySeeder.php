@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\BlogCategory;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class BlogCategorySeeder extends Seeder
 {
@@ -47,8 +46,8 @@ class BlogCategorySeeder extends Seeder
         ];
 
         foreach ($categories as $catData) {
-            // Create Category (Parent) - Assuming we verify by the English slug or similar, 
-            // but here we don't have a unique key on the parent itself easily, 
+            // Create Category (Parent) - Assuming we verify by the English slug or similar,
+            // but here we don't have a unique key on the parent itself easily,
             // so we might need to check if a translation exists or just create if strictly needed.
             // A better approach for multi-language is to find by one of the unique slugs.
 

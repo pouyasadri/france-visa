@@ -73,7 +73,7 @@ return [
         'Adolf von Baeyer',
         'Max von Laue',
         'Pieter Zeeman',
-        'Jean-Pierre Sauvage'
+        'Jean-Pierre Sauvage',
     ],
 
     'conclusion_title' => 'Conclusion',
@@ -85,7 +85,7 @@ return [
         'Diverse Specializations',
         'International Educational Environment',
         'Modern Facilities and Equipment',
-        'Advanced Research'
+        'Advanced Research',
     ],
 
     // Contact Form
@@ -104,5 +104,5 @@ return [
 
     // JSON-LD Schema
     'schema_headline' => 'University of Strasbourg: Gateway to Science and Culture in the Heart of Europe',
-    'schema_author' => 'Study, Life, Investment: Your Dreams in France with A.V.C'
+    'schema_author' => 'Study, Life, Investment: Your Dreams in France with A.V.C',
 ];

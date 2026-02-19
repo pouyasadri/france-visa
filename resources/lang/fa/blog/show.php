@@ -36,5 +36,3 @@ return [
     'comments_title' => 'نظرات',
     'comment_submitted' => 'نظر شما با موفقیت ثبت شد و در انتظار تایید است.',
 ];
-
-

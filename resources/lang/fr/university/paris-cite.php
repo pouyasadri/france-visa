@@ -31,7 +31,7 @@ En tant qu\'étudiant ici, vous marcherez dans les pas de siècles d\'héritage 
         'Sciences de la Santé (Médecine, Pharmacie, Odontologie)',
         'Sciences et Technologies (Sciences Exactes, Ingénierie)',
         'Sciences Humaines et Sociales',
-        'Droit, Économie et Gestion'
+        'Droit, Économie et Gestion',
     ],
 
     'global_excellence_title' => 'Une Réputation Mondiale Interprétée pour Vous',
@@ -58,7 +58,7 @@ Ces distinctions témoignent de la qualité de notre recherche et de l\'environn
         'Magnifiques Bibliothèques Historiques et Numériques',
         'Restauration (CROUS) et Espaces Détente Conviviaux',
         'Centres Culturels et Ateliers d\'Art',
-        'Services de Santé et Soutien Psychologique'
+        'Services de Santé et Soutien Psychologique',
     ],
 
     'conclusion_title' => 'Votre Avenir au Cœur de Paris',
@@ -70,7 +70,7 @@ Ces distinctions témoignent de la qualité de notre recherche et de l\'environn
         'Héritage Médical et Scientifique d\'Élite',
         'Communauté Diverse et Pluridisciplinaire',
         'Campus Emblématiques à travers Paris',
-        'Liens Forts avec les Leaders Industriels'
+        'Liens Forts avec les Leaders Industriels',
     ],
 
     // Contact Form
@@ -97,23 +97,23 @@ Ces distinctions témoignent de la qualité de notre recherche et de l\'environn
     'faq_items' => [
         [
             'question' => 'Comment l\'Université Paris Cité est-elle née ?',
-            'answer' => 'L\'UPC est née en 2019 de la fusion inspirante de Paris Descartes et Paris Diderot. Nous avons uni le meilleur de ces deux mondes pour créer un pôle pluridisciplinaire d\'exception.'
+            'answer' => 'L\'UPC est née en 2019 de la fusion inspirante de Paris Descartes et Paris Diderot. Nous avons uni le meilleur de ces deux mondes pour créer un pôle pluridisciplinaire d\'exception.',
         ],
         [
             'question' => 'Est-ce le bon choix pour la médecine ?',
-            'answer' => 'Absolument. En tant qu\'héritière de la Faculté de Médecine de Paris, nous offrons l\'un des meilleurs cadres de formation et de recherche médicale au monde.'
+            'answer' => 'Absolument. En tant qu\'héritière de la Faculté de Médecine de Paris, nous offrons l\'un des meilleurs cadres de formation et de recherche médicale au monde.',
         ],
         [
             'question' => 'Peut-on étudier en anglais à l\'UPC ?',
-            'answer' => 'Si les licences sont majoritairement en français, nous proposons de nombreux Masters et Doctorats en anglais, notamment en Physique, Sciences Biomédicales et Économie.'
+            'answer' => 'Si les licences sont majoritairement en français, nous proposons de nombreux Masters et Doctorats en anglais, notamment en Physique, Sciences Biomédicales et Économie.',
         ],
         [
             'question' => 'Quand postuler pour la rentrée 2026 ?',
-            'answer' => 'Les candidatures sur "Études en France" ouvrent généralement en octobre 2025. Postulez tôt pour préparer sereinement votre visa et votre voyage !'
+            'answer' => 'Les candidatures sur "Études en France" ouvrent généralement en octobre 2025. Postulez tôt pour préparer sereinement votre visa et votre voyage !',
         ],
         [
             'question' => 'Où se situent les campus ?',
-            'answer' => 'Au cœur de Paris ! Vous serez entre le 5e et 6e arrondissement (Rive Gauche) pour les humanités et la santé, et le 13e (Grands Moulins) pour les sciences.'
-        ]
-    ]
+            'answer' => 'Au cœur de Paris ! Vous serez entre le 5e et 6e arrondissement (Rive Gauche) pour les humanités et la santé, et le 13e (Grands Moulins) pour les sciences.',
+        ],
+    ],
 ];

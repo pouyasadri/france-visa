@@ -60,7 +60,7 @@ L\'Université Paris 3 aide également ses diplômés dans les domaines de reche
         '2. Spécialisations Diverses',
         '3. Environnement Éducatif International',
         '4. Installations et Équipements Modernes',
-        '5. Recherche Exceptionnelle'
+        '5. Recherche Exceptionnelle',
     ],
 
     // Contact Form
@@ -79,5 +79,5 @@ L\'Université Paris 3 aide également ses diplômés dans les domaines de reche
 
     // JSON-LD Schema
     'schema_headline' => 'Université Paris 3 : Un Chemin Pionnier dans l\'Enseignement Supérieur',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
 ];

@@ -39,4 +39,3 @@ class UpdateBlogPostRequest extends FormRequest
         ];
     }
 }
-

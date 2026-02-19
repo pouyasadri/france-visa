@@ -42,4 +42,3 @@ class BlogCategoryPolicy
         return $user !== null;
     }
 }
-

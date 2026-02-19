@@ -59,7 +59,7 @@ return [
         'Systèmes ;',
         'Physique, Chimie et Sciences des Matériaux ;',
         'Mécanique, Énergie, Génie Civil et Procédés ;',
-        'Aéronautique et Astronautique.'
+        'Aéronautique et Astronautique.',
     ],
 
     'humanities_programs_intro' => 'Dans le domaine des sciences humaines et sociales :',
@@ -69,7 +69,7 @@ return [
         'Histoire, Géographie, Anthropologie ;',
         'Droit et Sciences Politiques ;',
         'Gestion ;',
-        'Économie.'
+        'Économie.',
     ],
 
     'achievements_title' => 'Réalisations et Excellence de l\'Université de Toulouse 1',
@@ -83,7 +83,7 @@ return [
         'Espagnol ;',
         'Chinois ;',
         'Italien ;',
-        'Allemand.'
+        'Allemand.',
     ],
 
     'alumni_title' => 'Anciens Étudiants Célèbres',
@@ -94,7 +94,7 @@ return [
         'Thomas Pesquet (né en 1978), qui a obtenu son diplôme de l\'Université ISAE en 2001 et travaille comme astronaute à l\'Agence Spatiale Européenne ;',
         'Armand Praviel (1875–1944), écrivain et journaliste français ;',
         'Henri de Puyjalon (1841–1905), chercheur en biologie et écologie ;',
-        'Salman Reza, linguiste et homme politique.'
+        'Salman Reza, linguiste et homme politique.',
     ],
 
     'conclusion_title' => 'Conclusion',
@@ -106,7 +106,7 @@ return [
         'Diversité des Spécialisations',
         'Environnement Éducatif Mondial',
         'Installations et Équipements Avancés',
-        'Recherche Exceptionnelle'
+        'Recherche Exceptionnelle',
     ],
 
     // Contact Form
@@ -125,5 +125,5 @@ return [
 
     // JSON-LD Schema
     'schema_headline' => 'Université de Toulouse 1 : Pôle Scientifique et Éducatif de France',
-    'schema_author' => 'Études, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_author' => 'Études, Vie, Investissement : Vos Rêves en France avec A.V.C',
 ];

@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Support\Str;
 
 class BlogCategoryTranslation extends Model
 {
@@ -17,10 +16,8 @@ class BlogCategoryTranslation extends Model
         'slug',
     ];
 
-
     public function category(): BelongsTo
     {
         return $this->belongsTo(BlogCategory::class, 'blog_category_id', 'id');
     }
 }
-

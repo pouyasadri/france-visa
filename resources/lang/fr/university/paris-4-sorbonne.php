@@ -67,7 +67,7 @@ L\'Université Paris IV Sorbonne aide également ses diplômés dans les domaine
         'Spécialisations Diverses',
         'Environnement Éducatif International',
         'Installations et Équipements Modernes',
-        'Recherche Exceptionnelle'
+        'Recherche Exceptionnelle',
     ],
 
     // Contact Form
@@ -86,5 +86,5 @@ L\'Université Paris IV Sorbonne aide également ses diplômés dans les domaine
 
     // JSON-LD Schema
     'schema_headline' => 'Université Paris IV Sorbonne : Un Parcours Brillant pour Étudier en France',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
 ];

@@ -36,7 +36,7 @@ return [
         'Bobigny: Where the future of Medicine and Health is made.',
         'Saint-Denis: The go-to spot for Technology and Professional studies.',
         'La Plaine Saint-Denis: A creative space for Digital Arts.',
-        'Argenteuil: Focusing on Vocational and Technical expertise.'
+        'Argenteuil: Focusing on Vocational and Technical expertise.',
     ],
 
     'ranking_title' => 'A Quality Education You Can Trust',
@@ -52,7 +52,7 @@ return [
         'Sciences & Technology (Mathematics, Physics, Engineering)',
         'Legal & Political Sciences',
         'Humanities, Languages, and Communication',
-        'Economics and Management'
+        'Economics and Management',
     ],
 
     'iranian_students_title' => 'We’re Here for Our International Students',
@@ -76,7 +76,7 @@ return [
         'A Global Top 5% University',
         'World-Class Math & Science Hubs',
         'Five Distinctive & Specialized Campuses',
-        'A Direct Link to Digital & Tech Industries'
+        'A Direct Link to Digital & Tech Industries',
     ],
 
     // Contact Form
@@ -103,23 +103,23 @@ return [
     'faq_items' => [
         [
             'question' => 'Is Sorbonne Paris Nord part of the real Sorbonne?',
-            'answer' => 'Yes! We are a proud member of the Sorbonne Alliance. You get the prestige of the Sorbonne name combined with a modern, innovative approach to teaching and research.'
+            'answer' => 'Yes! We are a proud member of the Sorbonne Alliance. You get the prestige of the Sorbonne name combined with a modern, innovative approach to teaching and research.',
         ],
         [
             'question' => 'Can I study in English if I don’t speak French yet?',
-            'answer' => 'While most of our undergraduate classes are in French, we have a growing list of Master\'s and PhD programs taught in English, especially in Computer Science and Public Health.'
+            'answer' => 'While most of our undergraduate classes are in French, we have a growing list of Master\'s and PhD programs taught in English, especially in Computer Science and Public Health.',
         ],
         [
             'question' => 'Which campus should I choose?',
-            'answer' => 'It depends on your major! Bobigny is the place for Health and Medicine, while Villetaneuse is our multidisciplinary heart. Each one has its own unique community and facilities.'
+            'answer' => 'It depends on your major! Bobigny is the place for Health and Medicine, while Villetaneuse is our multidisciplinary heart. Each one has its own unique community and facilities.',
         ],
         [
             'question' => 'When is the best time to apply for 2026?',
-            'answer' => 'October 2025 is usually when the "Études en France" window opens. We always suggest starting early so you can relax during the final steps!'
+            'answer' => 'October 2025 is usually when the "Études en France" window opens. We always suggest starting early so you can relax during the final steps!',
         ],
         [
             'question' => 'Will I be able to afford living in Paris?',
-            'answer' => 'Studying in northern Paris is actually much more affordable than the city center. Plus, with student discounts and our help with CROUS housing, it’s much easier on the wallet.'
-        ]
-    ]
+            'answer' => 'Studying in northern Paris is actually much more affordable than the city center. Plus, with student discounts and our help with CROUS housing, it’s much easier on the wallet.',
+        ],
+    ],
 ];

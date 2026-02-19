@@ -16,10 +16,6 @@ class LocaleDetector
      * 3. Browser Accept-Language header
      * 4. IP geolocation
      * 5. Config fallback
-     *
-     * @param Request $request
-     * @param string|null $routeLocale
-     * @return string
      */
     public function detectLocale(Request $request, ?string $routeLocale = null): string
     {
@@ -40,7 +36,7 @@ class LocaleDetector
             $detectionMethods[] = [
                 'locale' => $routeLocale,
                 'priority' => $priority['route'] ?? 100,
-                'source' => 'route'
+                'source' => 'route',
             ];
         }
 
@@ -50,7 +46,7 @@ class LocaleDetector
             $detectionMethods[] = [
                 'locale' => $sessionLocale,
                 'priority' => $priority['session'] ?? 90,
-                'source' => 'session'
+                'source' => 'session',
             ];
         }
 
@@ -60,7 +56,7 @@ class LocaleDetector
             $detectionMethods[] = [
                 'locale' => $browserLocale,
                 'priority' => $priority['browser'] ?? 80,
-                'source' => 'browser'
+                'source' => 'browser',
             ];
         }
 
@@ -71,7 +67,7 @@ class LocaleDetector
                 $detectionMethods[] = [
                     'locale' => $ipLocale,
                     'priority' => $priority['ip'] ?? 70,
-                    'source' => 'ip'
+                    'source' => 'ip',
                 ];
             }
         }
@@ -80,7 +76,7 @@ class LocaleDetector
         $detectionMethods[] = [
             'locale' => config('app.locale', 'en'),
             'priority' => $priority['config'] ?? 0,
-            'source' => 'config'
+            'source' => 'config',
         ];
 
         // Sort by priority (highest first) and return the best match
@@ -93,15 +89,12 @@ class LocaleDetector
 
     /**
      * Detect locale from browser Accept-Language header with quality values.
-     *
-     * @param Request $request
-     * @return string|null
      */
     public function detectFromBrowser(Request $request): ?string
     {
         $acceptLanguage = $request->server('HTTP_ACCEPT_LANGUAGE');
 
-        if (!$acceptLanguage) {
+        if (! $acceptLanguage) {
             return null;
         }
 
@@ -125,11 +118,11 @@ class LocaleDetector
             // Extract language and quality
             if (preg_match('/^([a-zA-Z]{2})(?:-[a-zA-Z]{2})?(?:;q=([0-9.]+))?$/', $part, $matches)) {
                 $lang = strtolower($matches[1]);
-                $quality = isset($matches[2]) ? (float)$matches[2] : 1.0;
+                $quality = isset($matches[2]) ? (float) $matches[2] : 1.0;
 
                 $languages[] = [
                     'lang' => $lang,
-                    'quality' => $quality
+                    'quality' => $quality,
                 ];
             }
         }
@@ -159,9 +152,6 @@ class LocaleDetector
 
     /**
      * Detect locale from IP geolocation.
-     *
-     * @param Request $request
-     * @return string|null
      */
     public function detectFromIp(Request $request): ?string
     {
@@ -175,7 +165,7 @@ class LocaleDetector
 
             $position = Location::get($ip);
 
-            if (!$position || !$position->countryCode) {
+            if (! $position || ! $position->countryCode) {
                 return null;
             }
 
@@ -187,20 +177,18 @@ class LocaleDetector
 
         } catch (\Exception $e) {
             // Log error but don't fail the request
-            \Log::warning('IP locale detection failed: ' . $e->getMessage());
+            \Log::warning('IP locale detection failed: '.$e->getMessage());
+
             return null;
         }
     }
 
     /**
      * Check if IP is a local/private address.
-     *
-     * @param string|null $ip
-     * @return bool
      */
     protected function isLocalIp(?string $ip): bool
     {
-        if (!$ip) {
+        if (! $ip) {
             return true;
         }
 
@@ -211,10 +199,6 @@ class LocaleDetector
 
     /**
      * Get locale detection info for debugging.
-     *
-     * @param Request $request
-     * @param string|null $routeLocale
-     * @return array
      */
     public function getDetectionInfo(Request $request, ?string $routeLocale = null): array
     {

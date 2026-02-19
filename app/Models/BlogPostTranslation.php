@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Support\Str;
 
 class BlogPostTranslation extends Model
 {
@@ -19,10 +18,8 @@ class BlogPostTranslation extends Model
         'body',
     ];
 
-
     public function post(): BelongsTo
     {
         return $this->belongsTo(Blog::class, 'blog_post_id', 'id');
     }
 }
-

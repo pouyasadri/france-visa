@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ContactSubmission;
 use App\Http\Requests\StoreContactRequest;
-use Illuminate\Http\Request;
+use App\Mail\ContactFormConfirmation;
+use App\Mail\ContactFormSubmitted;
+use App\Models\ContactSubmission;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactFormSubmitted;
-use App\Mail\ContactFormConfirmation;
 
 class ContactController extends Controller
 {
@@ -40,14 +39,15 @@ class ContactController extends Controller
                 ->send(new ContactFormConfirmation($submission));
 
             // Send Notification Email to Admin
-            $adminEmail = "info@applyvipconseil.com";
+            $adminEmail = 'info@applyvipconseil.com';
             Mail::to($adminEmail)
                 ->locale('fa')
                 ->send(new ContactFormSubmitted($submission));
 
             return redirect()->back()->with('success', __('messages.contact_success'));
         } catch (\Exception $e) {
-            Log::error("Error in contact form submission: " . $e->getMessage());
+            Log::error('Error in contact form submission: '.$e->getMessage());
+
             return redirect()->back()->with('error', __('messages.contact_error'));
         }
     }

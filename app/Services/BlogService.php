@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\ImageManager;
 
 class BlogService
 {
@@ -16,7 +16,7 @@ class BlogService
 
     public function __construct()
     {
-        $this->imageManager = new ImageManager(new Driver());
+        $this->imageManager = new ImageManager(new Driver);
     }
 
     public function getAllBlogs(bool $includeTrashed = false, ?string $locale = null): Collection
@@ -57,7 +57,7 @@ class BlogService
         $query = Blog::with(['translations', 'category', 'category.translations', 'author'])
             ->orderBy('published_at', 'desc');
 
-        if (!$includeTrashed) {
+        if (! $includeTrashed) {
             $query->published();
         } else {
             $query->withTrashed();
@@ -86,7 +86,7 @@ class BlogService
     {
         return DB::transaction(function () use ($validatedData) {
             $mainImagePath = null;
-            if (!empty($validatedData['blog_main_image'])) {
+            if (! empty($validatedData['blog_main_image'])) {
                 $mainImagePath = $this->uploadImage(
                     $validatedData['blog_main_image'],
                     config('app.blog_image_path')
@@ -102,9 +102,9 @@ class BlogService
             ]);
 
             // Create translations
-            if (!empty($validatedData['translations']) && is_array($validatedData['translations'])) {
+            if (! empty($validatedData['translations']) && is_array($validatedData['translations'])) {
                 foreach ($validatedData['translations'] as $translation) {
-                    if (!empty($translation['locale'])) {
+                    if (! empty($translation['locale'])) {
                         $slug = $translation['slug'] ?? $this->generateUniqueSlug(
                             $translation['title'] ?? '',
                             $translation['locale'],
@@ -130,7 +130,7 @@ class BlogService
     {
         return DB::transaction(function () use ($blog, $validatedData) {
             // Handle image replacement
-            if (!empty($validatedData['blog_main_image'])) {
+            if (! empty($validatedData['blog_main_image'])) {
                 if ($blog->main_image) {
                     Storage::delete($blog->main_image);
                 }
@@ -154,9 +154,9 @@ class BlogService
             ]);
 
             // Update translations
-            if (!empty($validatedData['translations']) && is_array($validatedData['translations'])) {
+            if (! empty($validatedData['translations']) && is_array($validatedData['translations'])) {
                 foreach ($validatedData['translations'] as $translation) {
-                    if (!empty($translation['locale'])) {
+                    if (! empty($translation['locale'])) {
                         $existingTranslation = $blog->translations()
                             ->where('locale', $translation['locale'])
                             ->first();
@@ -207,15 +207,17 @@ class BlogService
         if ($blog) {
             $blog->restore();
             $blog->load(['translations', 'category', 'author']);
+
             return $blog;
         }
+
         return null;
     }
 
     protected function uploadImage($file, string $path): string
     {
-        $filename = time() . '_' . Str::random(10) . '.' . $file->getClientOriginalExtension();
-        $fullPath = $path . $filename;
+        $filename = time().'_'.Str::random(10).'.'.$file->getClientOriginalExtension();
+        $fullPath = $path.$filename;
 
         $image = $this->imageManager->read($file);
 
@@ -237,7 +239,7 @@ class BlogService
         $counter = 1;
 
         while ($this->slugExists($slug, $locale, $excludeId)) {
-            $slug = $originalSlug . '-' . $counter;
+            $slug = $originalSlug.'-'.$counter;
             $counter++;
         }
 

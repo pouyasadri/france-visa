@@ -59,7 +59,7 @@ return [
         'Systems;',
         'Physics, Chemistry and Materials Science;',
         'Mechanics, Energy, Civil Engineering and Process;',
-        'Aeronautics and Astronautics.'
+        'Aeronautics and Astronautics.',
     ],
 
     'humanities_programs_intro' => 'In the field of humanities and social sciences:',
@@ -69,7 +69,7 @@ return [
         'History, Geography, Anthropology;',
         'Law and Political Science;',
         'Management;',
-        'Economics.'
+        'Economics.',
     ],
 
     'achievements_title' => 'Achievements and Excellence of University of Toulouse 1',
@@ -83,7 +83,7 @@ return [
         'Spanish;',
         'Chinese;',
         'Italian;',
-        'German.'
+        'German.',
     ],
 
     'alumni_title' => 'Famous Alumni',
@@ -94,7 +94,7 @@ return [
         'Thomas Pesquet (born 1978), who graduated from ISAE University in 2001 and works as an astronaut at the European Space Agency;',
         'Armand Praviel (1875–1944), French writer and journalist;',
         'Henri de Puyjalon (1841–1905), researcher in biology and ecology;',
-        'Salman Reza, linguist and politician.'
+        'Salman Reza, linguist and politician.',
     ],
 
     'conclusion_title' => 'Conclusion',
@@ -106,7 +106,7 @@ return [
         'Diversity of Specializations',
         'Global Educational Environment',
         'Advanced Facilities and Equipment',
-        'Outstanding Research'
+        'Outstanding Research',
     ],
 
     // Contact Form
@@ -125,5 +125,5 @@ return [
 
     // JSON-LD Schema
     'schema_headline' => 'University of Toulouse 1: Scientific and Educational Hub of France',
-    'schema_author' => 'Study, Life, Investment: Your Dreams in France with A.V.C'
+    'schema_author' => 'Study, Life, Investment: Your Dreams in France with A.V.C',
 ];

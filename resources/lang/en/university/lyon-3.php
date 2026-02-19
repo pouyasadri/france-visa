@@ -38,7 +38,7 @@ Jean Moulin Lyon 3 University holds a special position among world-renowned univ
         'Faculty of Philosophy',
         'Faculty of Business Management (IAE, Institut d\'Administration des Entreprises)',
         'Faculty of Arts',
-        'Faculty of Languages'
+        'Faculty of Languages',
     ],
     'faculties_additional' => 'Lyon 3 University also collaborates with 400 executive managers from private and international companies in the Management Faculty (IAE) to enhance education.',
 
@@ -52,7 +52,7 @@ Jean Moulin Lyon 3 University holds a special position among world-renowned univ
         'Letter of Recommendation (LOR)',
         'Curriculum Vitae (CV)',
         'French language proficiency certificate',
-        'English language proficiency certificate'
+        'English language proficiency certificate',
     ],
 
     'facilities_title' => 'Educational and Research Facilities at Jean Moulin Lyon 3 University',
@@ -82,7 +82,7 @@ Jean Moulin Lyon 3 University also helps its graduates in research fields. The u
         'Diverse Specializations',
         'International Educational Environment',
         'Modern Facilities and Equipment',
-        'Outstanding Research'
+        'Outstanding Research',
     ],
 
     // Contact Form
@@ -101,5 +101,5 @@ Jean Moulin Lyon 3 University also helps its graduates in research fields. The u
 
     // JSON-LD Schema
     'schema_headline' => 'Jean Moulin Lyon 3 University: A Leading University in France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C'
+    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
 ];

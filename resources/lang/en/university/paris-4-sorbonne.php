@@ -67,7 +67,7 @@ Paris IV Sorbonne University also helps its graduates in research fields. The un
         'Diverse Specializations',
         'International Educational Environment',
         'Modern Facilities and Equipment',
-        'Outstanding Research'
+        'Outstanding Research',
     ],
 
     // Contact Form
@@ -86,5 +86,5 @@ Paris IV Sorbonne University also helps its graduates in research fields. The un
 
     // JSON-LD Schema
     'schema_headline' => 'Paris IV Sorbonne University: A Brilliant Path to Study in France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C'
+    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
 ];

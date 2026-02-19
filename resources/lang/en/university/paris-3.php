@@ -60,7 +60,7 @@ Paris 3 University also helps its graduates in research fields. The university h
         '2. Diverse Specializations',
         '3. International Educational Environment',
         '4. Modern Facilities and Equipment',
-        '5. Outstanding Research'
+        '5. Outstanding Research',
     ],
 
     // Contact Form
@@ -79,5 +79,5 @@ Paris 3 University also helps its graduates in research fields. The university h
 
     // JSON-LD Schema
     'schema_headline' => 'Paris 3 University: A Pioneering Path in Higher Education',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C'
+    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
 ];

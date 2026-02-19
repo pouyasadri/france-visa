@@ -27,4 +27,3 @@ class UpdateBlogCategoryRequest extends FormRequest
         ];
     }
 }
-

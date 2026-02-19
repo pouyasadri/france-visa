@@ -4,11 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rule;
 use Illuminate\View\View;
-use Illuminate\Http\RedirectResponse;
 
 class AdminUserController extends Controller
 {
@@ -16,6 +15,7 @@ class AdminUserController extends Controller
     {
         // List only admins
         $admins = User::where('is_admin', true)->latest()->paginate(20);
+
         return view('admin.admins.index', compact('admins'));
     }
 
@@ -50,6 +50,7 @@ class AdminUserController extends Controller
         }
 
         $admin->delete();
+
         return redirect()->route('admin.admins.index')->with('success', 'Administrateur supprimé avec succès.');
     }
 }

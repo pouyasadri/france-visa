@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Str;
 
 class Blog extends Model
 {
@@ -30,7 +29,6 @@ class Blog extends Model
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',
     ];
-
 
     /**
      * Compatibility: service/controllers use blog_main_image; DB column is main_image
@@ -64,7 +62,7 @@ class Blog extends Model
     {
         $translation = $this->translations()->where('locale', $locale)->first();
 
-        if (!$translation && $fallback) {
+        if (! $translation && $fallback) {
             $translation = $this->translations()->where('locale', config('app.fallback_locale', 'en'))->first();
         }
 

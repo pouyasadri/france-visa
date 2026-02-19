@@ -65,7 +65,7 @@ class Property extends Model
     {
         $translation = $this->translations()->where('locale', $locale)->first();
 
-        if (!$translation && $fallback) {
+        if (! $translation && $fallback) {
             $translation = $this->translations()->where('locale', config('app.fallback_locale', 'en'))->first();
         }
 
@@ -83,4 +83,3 @@ class Property extends Model
         return $query->where('status', 'available');
     }
 }
-

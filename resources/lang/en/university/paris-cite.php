@@ -31,7 +31,7 @@ As a student here, you’ll be walking in the footsteps of centuries of medical 
         'Health Sciences (Medicine, Pharmacy, Dentistry)',
         'Science and Technology (Exact Sciences, Engineering)',
         'Humanities and Social Sciences',
-        'Law, Economics, and Management'
+        'Law, Economics, and Management',
     ],
 
     'global_excellence_title' => 'A World-Class Reputation, Built for You',
@@ -58,7 +58,7 @@ These rankings are a testament to the quality of research and the supportive aca
         'Beautiful Historic and Digital Libraries',
         'CROUS Dining and Cozy Student Lounges',
         'Cultural Centers and Art Workshops',
-        'Full Health and Counseling Services'
+        'Full Health and Counseling Services',
     ],
 
     'conclusion_title' => 'Your Future in the Heart of Paris',
@@ -70,7 +70,7 @@ These rankings are a testament to the quality of research and the supportive aca
         'Elite Medical and Scientific Heritage',
         'Diverse, Multidisciplinary Community',
         'Iconic Locations Across Paris',
-        'Strong Links to Global Industry Leaders'
+        'Strong Links to Global Industry Leaders',
     ],
 
     // Contact Form
@@ -97,23 +97,23 @@ These rankings are a testament to the quality of research and the supportive aca
     'faq_items' => [
         [
             'question' => 'How was Université Paris Cité created?',
-            'answer' => 'UPC was born in 2019 from the exciting merger of Paris Descartes and Paris Diderot. We’ve combined the best of both to create a truly multidisciplinary powerhouse.'
+            'answer' => 'UPC was born in 2019 from the exciting merger of Paris Descartes and Paris Diderot. We’ve combined the best of both to create a truly multidisciplinary powerhouse.',
         ],
         [
             'question' => 'Is this the right choice for medicine?',
-            'answer' => 'Absolutely. As the main heir to the historic Paris Medical School, we offer some of the best medical education and research opportunities in the world.'
+            'answer' => 'Absolutely. As the main heir to the historic Paris Medical School, we offer some of the best medical education and research opportunities in the world.',
         ],
         [
             'question' => 'Can I study in English here?',
-            'answer' => 'While undergraduate courses are mostly in French, we offer many Master’s and PhD programs in English, especially in Physics, Biomedical Sciences, and Economics.'
+            'answer' => 'While undergraduate courses are mostly in French, we offer many Master’s and PhD programs in English, especially in Physics, Biomedical Sciences, and Economics.',
         ],
         [
             'question' => 'When should I apply for the 2026 intake?',
-            'answer' => 'Applications via "Études en France" usually open in October 2025. We recommend applying early so you have plenty of time for your visa and prep!'
+            'answer' => 'Applications via "Études en France" usually open in October 2025. We recommend applying early so you have plenty of time for your visa and prep!',
         ],
         [
             'question' => 'Where will I be studying?',
-            'answer' => 'You’ll be in the heart of Paris! We have campuses in the 5th and 6th arrondissements (Left Bank) for Humanities and Health, and the 13th (Grands Moulins) for Sciences.'
-        ]
-    ]
+            'answer' => 'You’ll be in the heart of Paris! We have campuses in the 5th and 6th arrondissements (Left Bank) for Humanities and Health, and the 13th (Grands Moulins) for Sciences.',
+        ],
+    ],
 ];

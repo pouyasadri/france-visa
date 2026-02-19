@@ -44,7 +44,7 @@ Ces chiffres témoignent de la qualité de l\'accompagnement et des opportunité
         'Droit et Politiques Publiques (Votre carrière dans la Justice)',
         'Économie et Commerce International',
         'Management et Stratégie',
-        'Sciences Sociales et Humaines'
+        'Sciences Sociales et Humaines',
     ],
 
     'research_title' => 'Rejoignez une Communauté de Pionniers',
@@ -75,7 +75,7 @@ Ces chiffres témoignent de la qualité de l\'accompagnement et des opportunité
         'Laboratoires qui boostent la créativité',
         'Communauté Internationale soudée',
         'Lien direct avec les grands Groupes industriels',
-        'Un Campus vivant, conçu pour les Étudiants'
+        'Un Campus vivant, conçu pour les Étudiants',
     ],
 
     // Contact Form
@@ -103,23 +103,23 @@ Ces chiffres témoignent de la qualité de l\'accompagnement et des opportunité
     'faq_items' => [
         [
             'question' => 'Est-ce que Paris-Saclay est vraiment au top ?',
-            'answer' => 'Absolument ! Classée 13e mondiale et 1ère en Europe continentale, l\'université offre des ressources et un soutien que vous ne trouverez nulle part ailleurs.'
+            'answer' => 'Absolument ! Classée 13e mondiale et 1ère en Europe continentale, l\'université offre des ressources et un soutien que vous ne trouverez nulle part ailleurs.',
         ],
         [
             'question' => 'Peut-on étudier en anglais ?',
-            'answer' => 'Oui ! Si la Licence est surtout en français, nous proposons un très large choix de Masters et Doctorats intégralement en anglais, surtout en Sciences et Ingénierie.'
+            'answer' => 'Oui ! Si la Licence est surtout en français, nous proposons un très large choix de Masters et Doctorats intégralement en anglais, surtout en Sciences et Ingénierie.',
         ],
         [
             'question' => 'Comment est l\'ambiance de recherche ?',
-            'answer' => 'C\'est passionnant. Nous réalisons 15 % de la recherche française. Vous apprendrez aux côtés de médaillés Fields et de Prix Nobel. C\'est le meilleur endroit pour apprendre des meilleurs.'
+            'answer' => 'C\'est passionnant. Nous réalisons 15 % de la recherche française. Vous apprendrez aux côtés de médaillés Fields et de Prix Nobel. C\'est le meilleur endroit pour apprendre des meilleurs.',
         ],
         [
             'question' => 'Quand postuler pour la rentrée 2026 ?',
-            'answer' => 'Le plus tôt est le mieux ! Nous conseillons de commencer 6 à 9 mois à l\'avance pour avoir l\'esprit tranquille concernant le visa et les démarches.'
+            'answer' => 'Le plus tôt est le mieux ! Nous conseillons de commencer 6 à 9 mois à l\'avance pour avoir l\'esprit tranquille concernant le visa et les démarches.',
         ],
         [
             'question' => 'Est-ce facile de se loger ?',
-            'answer' => 'Comme partout en région parisienne, il faut s\'y prendre tôt. Mais pas de panique : notre "Welcome Desk" et le CROUS sont là pour vous aider à trouver votre futur foyer.'
-        ]
-    ]
+            'answer' => 'Comme partout en région parisienne, il faut s\'y prendre tôt. Mais pas de panique : notre "Welcome Desk" et le CROUS sont là pour vous aider à trouver votre futur foyer.',
+        ],
+    ],
 ];

@@ -20,6 +20,7 @@ class BlogCategoryController extends Controller
     public function index(): View
     {
         $categories = $this->service->getAllCategories();
+
         return view('blog.categories.index', compact('categories'));
     }
 
@@ -28,6 +29,7 @@ class BlogCategoryController extends Controller
         $this->authorize('create', BlogCategory::class);
 
         $parents = $this->service->getAllCategories();
+
         return view('blog.categories.create', compact('parents'));
     }
 
@@ -36,6 +38,7 @@ class BlogCategoryController extends Controller
         $this->authorize('create', BlogCategory::class);
 
         $this->service->storeCategory($request->validated());
+
         return redirect()->route('blog.categories.index')->with('success', __('messages.category_saved'));
     }
 
@@ -44,6 +47,7 @@ class BlogCategoryController extends Controller
         $this->authorize('update', $category);
 
         $parents = $this->service->getAllCategories();
+
         return view('blog.categories.edit', compact('category', 'parents'));
     }
 
@@ -52,6 +56,7 @@ class BlogCategoryController extends Controller
         $this->authorize('update', $category);
 
         $this->service->updateCategory($category, $request->validated());
+
         return redirect()->route('blog.categories.index')->with('success', __('messages.category_updated'));
     }
 
@@ -60,7 +65,7 @@ class BlogCategoryController extends Controller
         $this->authorize('delete', $category);
 
         $this->service->deleteCategory($category);
+
         return redirect()->route('blog.categories.index')->with('success', __('messages.category_deleted'));
     }
 }
-

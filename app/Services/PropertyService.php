@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\ImageManager;
 
 class PropertyService
 {
@@ -17,7 +17,7 @@ class PropertyService
 
     public function __construct()
     {
-        $this->imageManager = new ImageManager(new Driver());
+        $this->imageManager = new ImageManager(new Driver);
     }
 
     public function getAllProperties(bool $includeTrashed = false): Collection
@@ -52,7 +52,7 @@ class PropertyService
         return DB::transaction(function () use ($data) {
             // Handle main image upload
             $mainImagePath = null;
-            if (!empty($data['main_image'])) {
+            if (! empty($data['main_image'])) {
                 $mainImagePath = $this->uploadImage($data['main_image'], config('app.property_image_path'));
             }
 
@@ -73,9 +73,9 @@ class PropertyService
             ]);
 
             // Create translations
-            if (!empty($data['translations']) && is_array($data['translations'])) {
+            if (! empty($data['translations']) && is_array($data['translations'])) {
                 foreach ($data['translations'] as $translation) {
-                    if (!empty($translation['locale'])) {
+                    if (! empty($translation['locale'])) {
                         $slug = $translation['slug'] ?? $this->generateUniqueSlug(
                             $translation['name'] ?? '',
                             $translation['locale'],
@@ -93,7 +93,7 @@ class PropertyService
             }
 
             // Handle gallery images
-            if (!empty($data['gallery_images']) && is_array($data['gallery_images'])) {
+            if (! empty($data['gallery_images']) && is_array($data['gallery_images'])) {
                 foreach ($data['gallery_images'] as $index => $image) {
                     $imagePath = $this->uploadImage($image, config('app.property_gallery_path'));
                     $property->images()->create([
@@ -112,7 +112,7 @@ class PropertyService
     {
         return DB::transaction(function () use ($property, $data) {
             // Handle main image replacement
-            if (!empty($data['main_image'])) {
+            if (! empty($data['main_image'])) {
                 if ($property->main_image) {
                     Storage::delete($property->main_image);
                 }
@@ -138,9 +138,9 @@ class PropertyService
             ]);
 
             // Update translations
-            if (!empty($data['translations']) && is_array($data['translations'])) {
+            if (! empty($data['translations']) && is_array($data['translations'])) {
                 foreach ($data['translations'] as $translation) {
-                    if (!empty($translation['locale'])) {
+                    if (! empty($translation['locale'])) {
                         $existingTranslation = $property->translations()
                             ->where('locale', $translation['locale'])
                             ->first();
@@ -170,7 +170,7 @@ class PropertyService
             }
 
             // Handle new gallery images
-            if (!empty($data['gallery_images']) && is_array($data['gallery_images'])) {
+            if (! empty($data['gallery_images']) && is_array($data['gallery_images'])) {
                 $currentMaxPosition = $property->images()->max('position') ?? 0;
                 foreach ($data['gallery_images'] as $index => $image) {
                     $imagePath = $this->uploadImage($image, config('app.property_gallery_path'));
@@ -211,8 +211,10 @@ class PropertyService
         if ($property) {
             $property->restore();
             $property->load(['translations', 'images']);
+
             return $property;
         }
+
         return null;
     }
 
@@ -225,8 +227,8 @@ class PropertyService
     protected function uploadImage($file, string $path): string
     {
         // Generate unique filename with webp extension
-        $filename = time() . '_' . Str::random(10) . '.webp';
-        $fullPath = $path . $filename;
+        $filename = time().'_'.Str::random(10).'.webp';
+        $fullPath = $path.$filename;
 
         // Process and optimize image
         $image = $this->imageManager->read($file);
@@ -252,7 +254,7 @@ class PropertyService
         $counter = 1;
 
         while ($this->slugExists($slug, $locale, $excludeId)) {
-            $slug = $originalSlug . '-' . $counter;
+            $slug = $originalSlug.'-'.$counter;
             $counter++;
         }
 
@@ -272,4 +274,3 @@ class PropertyService
         return $query->exists();
     }
 }
-

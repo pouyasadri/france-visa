@@ -44,7 +44,7 @@ These aren’t just numbers—they represent the quality of support, research, a
         'Law & Public Policy (Your Career in Justice)',
         'Economics & Global Trade',
         'Management & Strategy',
-        'Social Sciences & Humanities'
+        'Social Sciences & Humanities',
     ],
 
     'research_title' => 'Join a Community of Pioneers',
@@ -63,7 +63,7 @@ These aren’t just numbers—they represent the quality of support, research, a
         'Innovative Hubs (Perfect for Teamwork)',
         'Cozy Cafes & Great Dining Options',
         'Theaters & Art Workshops',
-        'Libraries that Feel Like Home'
+        'Libraries that Feel Like Home',
     ],
 
     'conclusion_title' => 'Your Journey Starts Here',
@@ -75,7 +75,7 @@ These aren’t just numbers—they represent the quality of support, research, a
         'Labs that Spark Creativity',
         'A Friendly International Community',
         'Direct Links to Major Industries',
-        'A Campus Built for Student Life'
+        'A Campus Built for Student Life',
     ],
 
     // Contact Form
@@ -103,23 +103,23 @@ These aren’t just numbers—they represent the quality of support, research, a
     'faq_items' => [
         [
             'question' => 'How good is Paris-Saclay really?',
-            'answer' => 'It\'s actually one of the best in the world! Ranked #13 globally and #1 in Continental Europe, we offer top-tier support and resources that are rarely matched elsewhere.'
+            'answer' => 'It\'s actually one of the best in the world! Ranked #13 globally and #1 in Continental Europe, we offer top-tier support and resources that are rarely matched elsewhere.',
         ],
         [
             'question' => 'Can I study in English?',
-            'answer' => 'Absolutely! While most bachelor\'s degrees are in French, you’ll find a huge range of Master’s and PhD programs taught entirely in English, especially in Science and Engineering.'
+            'answer' => 'Absolutely! While most bachelor\'s degrees are in French, you’ll find a huge range of Master’s and PhD programs taught entirely in English, especially in Science and Engineering.',
         ],
         [
             'question' => 'What is the research environment like?',
-            'answer' => 'It’s incredibly vibrant. We handle about 15% of all research in France and are home to several Nobel and Fields Medalists. You’ll be learning from the best of the best.'
+            'answer' => 'It’s incredibly vibrant. We handle about 15% of all research in France and are home to several Nobel and Fields Medalists. You’ll be learning from the best of the best.',
         ],
         [
             'question' => 'When should I start my application for 2026?',
-            'answer' => 'The earlier, the better! We recommend starting at least 6 to 9 months before classes begin to give yourself plenty of time for the visa and transcripts.'
+            'answer' => 'The earlier, the better! We recommend starting at least 6 to 9 months before classes begin to give yourself plenty of time for the visa and transcripts.',
         ],
         [
             'question' => 'Will I find a place to live?',
-            'answer' => 'While housing in Paris is always in demand, we have a dedicated "Welcome Desk" and partners like CROUS to help you find a safe and comfortable place to call home.'
-        ]
-    ]
+            'answer' => 'While housing in Paris is always in demand, we have a dedicated "Welcome Desk" and partners like CROUS to help you find a safe and comfortable place to call home.',
+        ],
+    ],
 ];

@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBlogPostRequest;
 use App\Http\Requests\UpdateBlogPostRequest;
 use App\Models\Blog;
-use App\Services\BlogService;
 use App\Services\BlogCategoryService;
+use App\Services\BlogService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -14,6 +14,7 @@ use Illuminate\View\View;
 class BlogController extends Controller
 {
     protected BlogService $blogService;
+
     protected BlogCategoryService $categoryService;
 
     public function __construct(BlogService $blogService, BlogCategoryService $categoryService)
@@ -29,7 +30,7 @@ class BlogController extends Controller
         $blogs = $this->blogService->getPaginatedBlogs($perPage, app()->getLocale(), $includeTrashed);
         $locale = app()->getLocale();
 
-        return view("blog.index", compact('blogs', 'locale', 'includeTrashed'));
+        return view('blog.index', compact('blogs', 'locale', 'includeTrashed'));
     }
 
     public function show(string $locale, Blog $blog): View|RedirectResponse
@@ -38,7 +39,7 @@ class BlogController extends Controller
         $locale = app()->getLocale();
         $translation = $blog->getTranslation($locale, false);
 
-        if (!$translation) {
+        if (! $translation) {
             return redirect()->route('blog.index', ['locale' => $locale]);
         }
 
@@ -48,7 +49,7 @@ class BlogController extends Controller
         // Fetch 3 most recent published blogs (localized) for the sidebar
         $recentBlogs = $this->blogService->getPublishedBlogs($locale)->where('id', '!=', $blog->id)->take(3);
 
-        return view("blog.show", compact('blog', 'translation', 'locale', 'nextBlog', 'prevBlog', 'recentBlogs'));
+        return view('blog.show', compact('blog', 'translation', 'locale', 'nextBlog', 'prevBlog', 'recentBlogs'));
     }
 
     public function create(): View
@@ -58,7 +59,7 @@ class BlogController extends Controller
         $categories = $this->categoryService->getAllCategories();
         $locales = config('localization.supported_locales', ['en', 'fr', 'fa']);
 
-        return view("blog.create", compact('categories', 'locales'));
+        return view('blog.create', compact('categories', 'locales'));
     }
 
     public function store(StoreBlogPostRequest $request): RedirectResponse
@@ -80,7 +81,7 @@ class BlogController extends Controller
         $categories = $this->categoryService->getAllCategories();
         $locales = config('localization.supported_locales', ['en', 'fr', 'fa']);
 
-        return view("blog.edit", compact('blog', 'categories', 'locales'));
+        return view('blog.edit', compact('blog', 'categories', 'locales'));
     }
 
     public function update(string $locale, UpdateBlogPostRequest $request, Blog $blog): RedirectResponse

@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreConsultingRequest;
-use Illuminate\Http\Request;
+use App\Mail\ConsultationConfirmation;
+use App\Mail\ConsultationSubmitted;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ConsultationSubmitted;
-use App\Mail\ConsultationConfirmation;
 
 class ConsultController extends Controller
 {
@@ -45,7 +44,7 @@ class ConsultController extends Controller
                 ]));
 
             // Send Notification Email to Admin
-            $adminEmail = "info@applyvipconseil.com";
+            $adminEmail = 'info@applyvipconseil.com';
             Mail::to($adminEmail)
                 ->locale('fa')
                 ->send(new ConsultationSubmitted([
@@ -56,11 +55,12 @@ class ConsultController extends Controller
                     'user_details' => $userDetails,
                 ]));
 
-            return redirect("/")->with('success', 'Your request has been submitted successfully!');
+            return redirect('/')->with('success', 'Your request has been submitted successfully!');
         } catch (\Exception $e) {
             // Log the error message
-            Log::error("Error in submitting consultation request: " . $e->getMessage());
-            return redirect("/consult")->with('error', 'There was an error processing your request.');
+            Log::error('Error in submitting consultation request: '.$e->getMessage());
+
+            return redirect('/consult')->with('error', 'There was an error processing your request.');
         }
     }
 }
