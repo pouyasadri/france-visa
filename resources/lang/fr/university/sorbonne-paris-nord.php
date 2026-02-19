@@ -2,105 +2,124 @@
 
 return [
     // SEO Meta
-    'title' => 'Présentation des Meilleures Universités Françaises | Université Sorbonne Paris Nord',
-    'keywords' => 'Université Sorbonne Paris Nord,meilleures universités françaises,universités françaises,universités parisiennes,étudier en France,étudier à Sorbonne Paris Nord,meilleures universités françaises,classement Sorbonne Paris Nord,programmes Sorbonne Paris Nord,installations Sorbonne Paris Nord',
-    'description' => 'Vous cherchez une université avancée et dynamique avec une approche innovante de l\'éducation ? L\'Université Sorbonne Paris Nord, combinant l\'excellence scientifique de la Sorbonne avec l\'environnement dynamique du nord de Paris, vous offre des opportunités inégalées. Cette université avec plus de 25 000 étudiants offre un environnement dynamique et international pour l\'apprentissage, la recherche et l\'épanouissement de vos talents.',
+    'title' => 'Votre Avenir à Sorbonne Paris Nord | Guide Étudiant 2026',
+    'keywords' => 'Sorbonne Paris Nord, USPN, Paris 13, études en France 2026, vie étudiante Paris, admission étranger France, Sorbonne Nord classement',
+    'description' => 'Vous cherchez l\'excellence dans un cadre humain ? Découvrez l\'Université Sorbonne Paris Nord (USPN). Une université du top 5% mondial avec 5 campus spécialisés pour votre réussite en 2026.',
 
     // Page Title Area
-    'main_heading' => 'Présentation de l\'Université Sorbonne Paris Nord',
+    'main_heading' => 'Bienvenue à Sorbonne Paris Nord (USPN)',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_universities' => 'Meilleures Universités Françaises',
-    'breadcrumb_current' => 'Université Sorbonne Paris Nord',
+    'breadcrumb_universities' => 'Nos Universités Partenaires',
+    'breadcrumb_current' => 'Sorbonne Paris Nord',
 
     // Sidebar
-    'table_of_contents' => 'Table des Matières',
-    'contact_us' => 'Nous Contacter',
-    'consultation_request' => 'Demande de Consultation pour Migration Éducative vers la France',
-    'useful_links' => 'Liens Utiles',
-    'official_website' => 'Site Officiel de l\'Université Sorbonne Paris Nord',
-    'wikipedia_link' => 'Université Sorbonne Paris Nord sur Wikipédia',
-    'paris_city_guide' => 'Guide de la Ville de Paris',
+    'table_of_contents' => 'Ce qui vous attend',
+    'contact_us' => 'Discutez avec nos Experts',
+    'consultation_request' => 'Préparons ensemble votre dossier 2026',
+    'useful_links' => 'Ressources Pratiques',
+    'official_website' => 'Visiter le Portail Officiel',
+    'wikipedia_link' => 'Un peu d\'histoire',
+    'paris_city_guide' => 'Vivre à Paris : Guide de la Ville',
 
     // Main Content
-    'page_title' => 'Université Sorbonne Paris Nord : Paradis de Rêve pour l\'Éducation des Étudiants Iraniens en France',
+    'page_title' => 'Sorbonne Paris Nord : Un Hub Dynamique pour votre Réussite',
 
-    'history_title' => 'Histoire et Fondation',
-    'history_content' => 'L\'Université Sorbonne Paris Nord (Université Sorbonne Paris Nord) ou USPN en abrégé, est l\'une des universités de premier plan de France formée en 1970 par la fusion de plusieurs universités de la région capitale Île-de-France. Cette université avec plus de 25 000 étudiants à divers niveaux académiques est reconnue comme l\'une des plus grandes universités de France.
+    'history_title' => 'Prestige Académique et Énergie Moderne',
+    'history_content' => 'L\'Université Sorbonne Paris Nord (USPN) — ou Paris 13 pour les intimes — est un pilier de l\'enseignement parisien depuis 1970. Aujourd\'hui, c\'est une communauté vibrante de 25 000 étudiants. Nous sommes fiers de faire le lien entre le prestige historique du nom "Sorbonne" et les besoins concrets du monde de demain. Santé, tech ou sciences sociales : vous trouverez ici votre place pour grandir.',
 
-L\'USPN jouit d\'une réputation mondiale grâce à un enseignement de haute qualité, des recherches exceptionnelles et la diversité des programmes académiques. Cette université occupe une position spéciale parmi les universités prestigieuses du monde dans divers domaines des sciences, de l\'ingénierie, des sciences humaines et sociales.',
-
-    'location_title' => 'Situation Géographique de l\'Université Sorbonne Paris Nord',
-    'location_content' => 'L\'Université Sorbonne Paris Nord se compose de 5 campus (Villetaneuse, Bobigny, Saint-Denis, la Plaine Saint-Denis et Argenteuil). Cette université est située comme un centre d\'éducation multidisciplinaire au nord de Paris dans les zones de Villetaneuse, Saint-Denis, La Plaine Saint-Denis, Bobigny et Argenteuil.',
-    'campus_title' => 'Le campus universitaire est organisé en cinq campus :',
+    'location_title' => 'Cinq Campus, une seule Famille',
+    'location_content' => 'Vous nous trouverez partout au nord de Paris, sur cinq campus ayant chacun son atmosphère et son expertise. Nous avons choisi ces emplacements pour être au plus près des industries, vous offrant ainsi un accès privilégié au monde professionnel.',
+    'campus_title' => 'Explorez nos Pôles de Vie :',
 
     'campuses' => [
-        'Campus de Villetaneuse',
-        'Campus de Saint-Denis, Institut Universitaire de Technologie de Paris XIII (Institut universitaire de technologie de Paris XIII ou IUT en français)',
-        'Campus de La Plaine Saint-Denis',
-        'Campus de Bobigny - dispose d\'un institut de technologie et médical'
+        'Villetaneuse : Notre cœur battant, multidisciplinaire et vivant.',
+        'Bobigny : Là où l\'on invente la médecine et la santé de demain.',
+        'Saint-Denis : Le rendez-vous de la technologie et des études professionnelles.',
+        'La Plaine Saint-Denis : Un espace créatif dédié aux arts numériques.',
+        'Argenteuil : Un pôle d\'expertise pour les formations techniques.'
     ],
 
-    'ranking_title' => 'Classement et Réputation de l\'Université Sorbonne Paris Nord',
-    'ranking_content' => 'L\'Université Sorbonne Paris Nord a toujours eu une forte présence dans les classements universitaires mondiaux. Dans le classement QS 2022, l\'USPN s\'est classée 134e parmi les meilleures universités du monde, et dans le classement Times Higher Education 2023, cette université s\'est classée 154e parmi les meilleures universités du monde.',
+    'ranking_title' => 'Une Éducation de Qualité en laquelle vous pouvez avoir Confiance',
+    'ranking_content' => 'Rejoindre l\'USPN, c\'est intégrer une institution mondialement respectée. Nous figurons fièrement dans le top 5 % des meilleures universités mondiales (CWUR 2025). Mais ce qui fait notre fierté, c\'est surtout notre département de Mathématiques — classé dans le top 100 mondial — et nos recherches qui ont un impact réel sur la société.',
 
-    'facilities_title' => 'Installations Éducatives et de Recherche à l\'Université Sorbonne Paris Nord',
-    'facilities_content' => 'L\'USPN offre une large gamme de programmes académiques aux niveaux licence, master et doctorat. Cette université dispose également de plusieurs facultés et écoles spécialisées qui offrent un enseignement supérieur dans des domaines spécifiques tels que l\'ingénierie, les sciences, l\'économie et la gestion.
+    'facilities_title' => 'Des Installations pensées pour Vous',
+    'facilities_content' => 'Des laboratoires de pointe de l\'Institut Galilée à nos bibliothèques numériques modernes, nous avons créé un environnement où vous pouvez vraiment vous concentrer. Que vous soyez futur chercheur ou étudiant avec une idée de startup, notre incubateur est là pour booster votre innovation.',
 
-En plus d\'un enseignement de qualité, l\'Université Sorbonne Paris Nord se concentre fortement sur la recherche scientifique. Cette université dispose de plusieurs laboratoires de recherche avancés opérant dans divers domaines des sciences, de l\'ingénierie, des sciences humaines et sociales.',
-
-    'programs_title' => 'Programmes à l\'Université Sorbonne Paris Nord',
-    'programs_intro' => 'Les programmes les plus prestigieux de l\'Université Sorbonne Paris Nord comprennent :',
+    'programs_title' => 'Trouvez votre Passion',
+    'programs_intro' => 'Quelques-unes de nos filières les plus populaires pour votre rentrée 2026 :',
     'programs' => [
-        'Santé',
-        'Biologie Humaine et Médecine',
-        'Sciences Humaines, Langues et Littérature',
-        'Sciences Sociales, Droit et Sciences Politiques',
-        'Économie, Gestion et Communications'
+        'Santé et Médecine (Étudiez sur notre pôle de Bobigny)',
+        'Sciences et Technologie (Maths, Physique, Ingénierie)',
+        'Sciences Juridiques et Politiques',
+        'Humanités, Langues et Communication',
+        'Économie et Gestion'
     ],
 
-    'iranian_students_title' => 'Conditions d\'Études pour les Étudiants Iraniens à l\'Université Sorbonne Paris Nord',
-    'iranian_students_content' => 'Les étudiants iraniens doivent avoir des certificats de langue française valides pour étudier à l\'Université Sorbonne Paris Nord. De plus, les candidats doivent traduire et valider officiellement leurs documents académiques pour l\'admission à cette université.
+    'iranian_students_title' => 'Nous sommes aux côtés de nos Étudiants Internationaux',
+    'iranian_students_content' => 'Vous rêvez d\'étudier en France en 2026 ? Nous serions ravis de vous accueillir ! Si la plupart des cours sont en français (niveau B2/C1 requis), nous proposons plusieurs Masters enseignés intégralement en anglais. Notre équipe "International Welcome" est là pour que vous vous sentiez chez vous, des formalités au premier café sur le campus.',
 
-Les candidats iraniens doivent également obtenir un visa étudiant pour étudier en France. Pour les demandes de visa étudiant, les candidats doivent fournir divers documents tels que la lettre d\'acceptation universitaire, le certificat de capacité financière et l\'assurance santé.',
+    'tuition_title' => 'L\'Excellence Accessible',
+    'tuition_content' => 'En tant qu\'université publique, nous croyons qu\'une éducation de haut niveau ne doit pas être un luxe. Nos tarifs sont très compétitifs et beaucoup de nos étudiants internationaux bénéficient d\'exonérations. Nous vous épaulerons aussi pour vos recherches de bourses comme Eiffel ou les aides du CROUS.',
 
-    'tuition_title' => 'Frais de Scolarité à l\'Université Sorbonne Paris Nord',
-    'tuition_content' => 'Concernant les frais de scolarité à l\'Université Sorbonne Paris Nord, il convient de noter que le coût des études est l\'un des facteurs importants dans le choix des programmes académiques. Heureusement, cette université offre diverses bourses d\'études à ses étudiants. Pour des informations plus détaillées et les demandes de bourses, veuillez visiter le site officiel de l\'université.',
+    'career_title' => 'Plus qu\'un Diplôme, un Avenir',
+    'career_content' => 'Nous voulons que vous repartiez avec une feuille de route, pas juste un diplôme. Grâce à nos liens forts avec l\'économie locale, vous aurez un accès direct aux stages et emplois, surtout dans les secteurs porteurs du numérique et de la santé. Nos conseillers sont là pour vous aider à réussir vos entretiens et à trouver votre place sur le marché global.',
 
-    'career_title' => 'Opportunités de Carrière Après Graduation',
-    'career_content' => 'Les diplômés de l\'Université Sorbonne Paris Nord jouissent d\'excellentes opportunités de carrière. Cette université entretient de solides relations avec les employeurs du monde entier et aide ses diplômés à trouver un emploi.
+    'environment_title' => 'Un Lieu où l\'on se sent bien',
+    'environment_content' => 'Avec des étudiants de plus de 120 pays, vous ne serez jamais seul ici. Que vous vouliez rejoindre un club de robotique, une équipe de sport ou un atelier d\'art, il se passe toujours quelque chose. C\'est un espace bienveillant et riche de sa mixité.',
 
-L\'Université Sorbonne Paris Nord aide également ses diplômés dans les domaines de recherche. Cette université dispose de plusieurs centres d\'entrepreneuriat qui aident les diplômés à créer des entreprises.',
-
-    'environment_title' => 'Environnement Multiculturel et Installations de Bien-être',
-    'environment_content' => 'L\'Université Sorbonne Paris Nord est un environnement multiculturel avec des étudiants de plus de 100 pays présents dans cette université. Cette université dispose également de nombreuses installations de bien-être pour les étudiants internationaux, telles que des salles d\'étude, des cafétérias, des centres culturels et des bibliothèques bien équipées.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'L\'Université Sorbonne Paris Nord est une excellente université pour les étudiants internationaux qui souhaitent étudier en France. Cette université offre un enseignement de qualité, d\'excellentes installations de bien-être, de nombreuses opportunités de carrière pour les diplômés et un environnement multiculturel. Si vous êtes un étudiant iranien cherchant à étudier en France, l\'Université Sorbonne Paris Nord serait un excellent choix pour vous.',
+    'conclusion_title' => 'Votre Voyage commence maintenant',
+    'conclusion_content' => 'Sorbonne Paris Nord allie une renommée internationale à l\'atmosphère conviviale d\'une communauté à taille humaine. Si vous cherchez une université qui respecte les traditions tout en osant l\'innovation, nous avons hâte de vous rencontrer en 2026 !',
 
     // Features List
     'features' => [
-        'Histoire Prestigieuse',
-        'Spécialisations Diverses',
-        'Environnement Éducatif International',
-        'Installations et Équipements Modernes',
-        'Recherche Avancée'
+        'Membre fier de Sorbonne Alliance',
+        'Top 5% mondial des universités',
+        'Pôle d\'excellence Mondiale en Maths et Sciences',
+        'Cinq Campus uniques et spécialisés',
+        'Lien direct avec les Industries de demain'
     ],
 
     // Contact Form
-    'ask_question' => 'Poser une Question',
-    'name_placeholder' => 'Votre Nom',
-    'email_placeholder' => 'Votre Email',
-    'phone_placeholder' => 'Votre Téléphone',
-    'subject_placeholder' => 'Sujet',
-    'message_placeholder' => 'Votre Message',
-    'send_message' => 'Envoyer le Message',
-    'name_error' => 'Veuillez entrer votre nom',
-    'email_error' => 'Veuillez entrer votre email',
-    'phone_error' => 'Veuillez entrer votre numéro de téléphone',
-    'subject_error' => 'Veuillez entrer le sujet',
-    'message_error' => 'Veuillez entrer votre message',
+    'ask_question' => 'Une question ? Discutons-en !',
+    'name_placeholder' => 'Comment vous appelez-vous ?',
+    'email_placeholder' => 'Votre adresse email favorite',
+    'phone_placeholder' => 'La meilleure façon de vous joindre',
+    'subject_placeholder' => 'Quelle filière vous intéresse ?',
+    'message_placeholder' => 'Posez-nous votre question...',
+    'send_message' => 'Envoyer ma demande',
+    'name_error' => 'N\'oubliez pas de nous donner votre nom !',
+    'email_error' => 'Un email valide est nécessaire pour vous répondre.',
+    'phone_error' => 'Laissez-nous un numéro pour vous rappeler.',
+    'subject_error' => 'Précisez le sujet de votre demande.',
+    'message_error' => 'Votre message ne peut pas être vide.',
 
     // JSON-LD Schema
-    'schema_headline' => 'Présentation des Meilleures Universités Françaises | Université Sorbonne Paris Nord',
-    'schema_author' => 'Études, Vie, Investissement : Vos Rêves en France avec A.V.C'
+    'schema_headline' => 'Sorbonne Paris Nord : Votre guide pour réussir en 2026',
+    'schema_author' => 'A.V.C - Votre Guide Personnel pour vos études en France',
+
+    // FAQ Section
+    'faq_title' => 'Vos Questions, nos Réponses',
+    'faq_subtitle' => 'Conseils complices pour futurs étudiants',
+    'faq_items' => [
+        [
+            'question' => 'L\'USPN fait-elle partie de la "vraie" Sorbonne ?',
+            'answer' => 'Oui ! Nous sommes un membre fier de Sorbonne Alliance. Vous bénéficiez du prestige du nom Sorbonne allié à une approche moderne et innovante de la recherche.'
+        ],
+        [
+            'question' => 'Peut-on étudier en anglais ?',
+            'answer' => 'Si la Licence est surtout en français, nous avons de nombreux Masters et Doctorats enseignés en anglais, notamment en Informatique et Santé Publique.'
+        ],
+        [
+            'question' => 'Quel campus dois-je choisir ?',
+            'answer' => 'Tout dépend de votre spécialité ! Bobigny est le cœur de la Santé, tandis que Villetaneuse est multidisciplinaire. Chaque campus a sa propre vie étudiante.'
+        ],
+        [
+            'question' => 'Quand postuler pour la rentrée 2026 ?',
+            'answer' => 'La plateforme Études en France ouvre généralement en octobre 2025. Nous conseillons toujours de s\'y prendre tôt pour finir l\'année sans stress !'
+        ],
+        [
+            'question' => 'La vie est-elle chère au nord de Paris ?',
+            'answer' => 'C\'est l\'avantage ! Se loger et vivre au nord de Paris est bien plus abordable qu\'au centre-ville. Avec les résidences CROUS, c\'est tout à fait accessible.'
+        ]
+    ]
 ];

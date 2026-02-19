@@ -157,13 +157,16 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('university/sorbonne-paris-nord.faq_title')"
+        :subtitle="__('university/sorbonne-paris-nord.faq_subtitle')"
+        :items="__('university/sorbonne-paris-nord.faq_items')" id="nord-faq" />
 @endsection
 
 @push("json")
     @php
         $currentLocale = app()->getLocale();
-        $pageUrl = url($currentLocale.'/universities/sorbonne-paris-nord');
-        $universityId = $pageUrl.'#university';
+        $pageUrl = url($currentLocale . '/universities/sorbonne-paris-nord');
+        $universityId = $pageUrl . '#university';
         $officialUrl = 'https://www.univ-spn.fr/';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
@@ -177,9 +180,9 @@
 
         $university = new \App\Services\StructuredData\UniversitySchema(
             $universityId,
-            __('universities.sorbonne_paris_nord_name'),
+            __('university/sorbonne-paris-nord.breadcrumb_current'),
             $officialUrl,
-            __('university/sorbonne-paris-nord.introduction_content'),
+            __('university/sorbonne-paris-nord.description'),
             asset('assets/img/universities/Paris_Nord/paris_nord_logo.webp'),
             [
                 $officialUrl,
@@ -188,8 +191,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/sorbonne-paris-nord.breadcrumb_current'), 'url' => $pageUrl],
         ]);
     @endphp
