@@ -22,16 +22,19 @@ return [
 
     // Universities
     'paris_saclay_name' => 'Université Paris-Saclay',
-    'paris_saclay_rank' => '15',
-    'paris_saclay_description' => 'L\'Université Paris-Saclay avec le rang mondial 15, est l\'une des universités les plus prestigieuses et leaders en France et dans le monde.',
+    'paris_saclay_rank' => '13',
+    'paris_saclay_description' => 'L\'Université Paris-Saclay, classée 13e mondiale, est la 1ère université d\'Europe continentale et un leader de la recherche.',
+
 
     'sorbonne_paris_nord_name' => 'Université Sorbonne Paris Nord',
-    'sorbonne_paris_nord_rank' => '96',
-    'sorbonne_paris_nord_description' => 'L\'Université Sorbonne Paris Nord avec le rang mondial 96, est considérée comme l\'une des universités prestigieuses de Paris.',
+    'sorbonne_paris_nord_rank' => '1011',
+    'sorbonne_paris_nord_description' => 'L\'Université Sorbonne Paris Nord, dans le top 5% mondial, est un pôle majeur d\'innovation et de recherche en santé.',
+
 
     'paris_cite_name' => 'Université Paris Cité',
-    'paris_cite_rank' => '131',
-    'paris_cite_description' => 'L\'Université Paris Cité avec le rang mondial 131, est un centre important pour l\'éducation médicale et les sciences de la vie.',
+    'paris_cite_rank' => '60',
+    'paris_cite_description' => 'L\'Université Paris Cité, classée 60e mondiale, est une institution d\'élite au cœur de la santé et des sciences en France.',
+
 
     'paris_4_name' => 'Université Paris 4 Sorbonne',
     'paris_4_rank' => '232',
