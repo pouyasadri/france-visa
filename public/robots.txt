@@ -1,4 +1,6 @@
 User-agent: *
 Disallow:
+Disallow: /*?view=*
+Disallow: /*?status=*
 
 Sitemap: https://applyvipconseil.com/sitemap.xml
