@@ -1,66 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://applyvipconseil.com" target="_blank">
+    <img src="public/assets/img/logo/new-logo.png" width="300" alt="A.V.C Institute Logo">
+  </a>
 </p>
 
-## About Laravel
+<h1 align="center">A.V.C Institute (Apply VIP Conseil)</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <strong>Comprehensive France Immigration, Study & Real Estate Investment Services</strong>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <a href="#about-the-project">About</a> •
+  <a href="#key-features">Features</a> •
+  <a href="#technology-stack">Tech Stack</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#localization">Localization</a> •
+  <a href="#admin-dashboard">Admin Section</a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## About The Project
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**A.V.C Institute (Apply VIP Conseil)** is a premier consulting firm specializing in helping individuals navigate the complexities of moving to, studying in, and investing in France. From student visas (Campus France) to Talent Passports and real estate acquisition, A.V.C provides expert guidance for a seamless transition to life in France.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Key Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **🎓 Higher Education Guidance**: Expert assistance for university admissions, Campus France procedures, and student visa applications.
+- **🛂 Immigration Consulting**: Comprehensive support for residence permits (Titre de Séjour), Talent Passports, and legal appeals.
+- **🏠 Accommodation Services**: Securing housing in France, handling lease guarantors, and assisting with CAF financial aid.
+- **💼 Investment & Real Estate**: Guidance for real estate investment opportunities across France.
+- **📰 Multilingual Blog**: Up-to-date news and guides on French immigration laws and administrative updates.
+- **🛠️ Admin Dashboard**: Robust backend for managing blog posts, user questions, comments, and consultation requests.
 
-## Laravel Sponsors
+## Technology Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+The application is built using the latest web technologies:
 
-### Premium Partners
+- **Framework**: [Laravel 12.x](https://laravel.com)
+- **Language**: PHP 8.4+
+- **Frontend**: Blade Templates, Vanilla CSS, Vite
+- **Database**: Relational Database (integrated via Eloquent ORM)
+- **Packages**:
+  - `intervention/image` for image processing
+  - `stevebauman/location` for user geolocation
+  - `mews/purifier` for content sanitization
+  - `laravel/sanctum` for API authentication
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Getting Started
 
-## Contributing
+### Prerequisites
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP 8.4 or higher
+- Composer
+- Node.js & npm
 
-## Code of Conduct
+### Installation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd example-app
+   ```
 
-## Security Vulnerabilities
+2. **Install dependencies**:
+   ```bash
+   composer install
+   npm install
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. **Environment Setup**:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## License
+4. **Database & Storage**:
+   ```bash
+   php artisan migrate --seed
+   php artisan storage:link
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5. **Run the application**:
+   ```bash
+   npm run dev
+   # In another terminal
+   php artisan serve
+   ```
+
+## Localization
+
+The platform supports multiple languages to serve a diverse international clientele:
+- 🇬🇧 **English**
+- 🇫🇷 **French**
+- 🇮🇷 **Persian (Farsi)**
+
+Routes are locale-prefixed (e.g., `/en`, `/fr`, `/fa`).
+
+## Admin Dashboard
+
+The administrative section is accessible at `/admin` (locale-independent) and provides tools for:
+- Managing blog categories and articles.
+- Reviewing and responding to user questions.
+- Handling consultation bookings.
+- Managing administrative users.
+
+---
+
+<p align="center">
+  Developed by <strong>Apply VIP Conseil</strong>
+</p>
