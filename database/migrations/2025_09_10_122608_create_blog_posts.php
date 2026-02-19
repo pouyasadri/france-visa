@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('blog_posts', static function (Blueprint $table) {
-            $table->id('id')->primary();
+            $table->id();
             $table->unsignedBigInteger('category_id')->nullable()->index();
             $table->unsignedBigInteger('author_id')->nullable()->index();
             $table->string('main_image')->nullable();

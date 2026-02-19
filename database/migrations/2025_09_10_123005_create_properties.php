@@ -4,15 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('properties',static function (Blueprint $table) {
-            $table->id('id')->primary();
+        Schema::create('properties', static function (Blueprint $table) {
+            $table->id();
 
             // pricing, counts
             $table->decimal('price', 12); // EUR
@@ -20,8 +19,8 @@ return new class extends Migration
             $table->unsignedSmallInteger('garages')->default(0);
 
             // type & status — use ENUM or string + check
-            $table->enum('type', ['apartment','property','villa','studio','land','commercial'])->index();
-            $table->enum('status', ['available','reserved','sold','rented'])->default('available')->index();
+            $table->enum('type', ['apartment', 'property', 'villa', 'studio', 'land', 'commercial'])->index();
+            $table->enum('status', ['available', 'reserved', 'sold', 'rented'])->default('available')->index();
 
             // address
             $table->string('address_line')->nullable();
