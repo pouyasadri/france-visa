@@ -149,5 +149,31 @@ return [
     'form_error_phone' => 'Please enter your phone number',
     'form_error_subject' => 'Please enter your subject',
     'form_error_message' => 'Please enter your message',
+
+    // FAQ Section
+    'faq_title' => 'Frequently Asked Questions About Strasbourg',
+    'faq_subtitle' => 'Everything You Need to Know',
+    'faq_items' => [
+        [
+            'question' => 'Why is Strasbourg called the "Capital of Europe"?',
+            'answer' => 'Strasbourg hosts several key European institutions, including the European Parliament, the Council of Europe, and the European Court of Human Rights. This makes it uniquely positioned at the heart of European democracy and politics. For students in international relations, law, or political science, Strasbourg offers unrivaled access to these institutions for internships, events, and networking.',
+        ],
+        [
+            'question' => 'How much does it cost to live in Strasbourg as a student in 2026?',
+            'answer' => 'Strasbourg is one of the most affordable major cities in France. In 2026, expect a monthly student budget of €800–€1,100. Student housing ranges from €400–€600/month, reduced by up to 40% with CAF housing assistance. Monthly food costs around €150–€200 if you shop at local markets and discount supermarkets. A monthly tram pass costs around €25 for students. Overall, it\'s excellent value for a world-class European city.',
+        ],
+        [
+            'question' => 'What can I study at the University of Strasbourg?',
+            'answer' => 'The University of Strasbourg is one of the largest and most multidisciplinary universities in France, offering programs in Political Science, European Law, Biotechnology, Medicine, Pharmacy, Business, Engineering, Architecture, Humanities, and Languages. It hosts thousands of international students and offers many programs with English-language options. It has also produced several Nobel Prize winners.',
+        ],
+        [
+            'question' => 'Is Strasbourg a good place to live for a family?',
+            'answer' => 'Strasbourg is consistently ranked among France\'s most livable cities for families. The city is extremely bicycle-friendly (it has the largest bicycle network in France), has excellent public schools, safe neighborhoods, and is rich in green spaces. Its proximity to Germany, Switzerland, and the Black Forest region makes weekend trips easy and affordable. The multicultural environment ensures a warm welcome for international families.',
+        ],
+        [
+            'question' => 'Can I find work in Strasbourg as an international graduate?',
+            'answer' => 'Yes. Strasbourg\'s economy is driven by European institutions (diplomacy, administration), pharmaceuticals, information technology, food processing, and tourism. After graduating, France\'s 12-month APS post-study work permit allows you to job-search freely. Many graduates find opportunities in Strasbourg\'s international organizations, tech companies, or cross-border employers in Germany and Switzerland.',
+        ],
+    ],
 ];
 

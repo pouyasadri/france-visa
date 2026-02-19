@@ -96,5 +96,31 @@ return [
     'form_error_phone' => 'Veuillez entrer votre téléphone',
     'form_error_subject' => 'Veuillez entrer votre sujet',
     'form_error_message' => 'Veuillez entrer votre message',
+
+    // FAQ Section
+    'faq_title' => 'Questions Fr\u00e9quentes sur Nice',
+    'faq_subtitle' => 'Tout Ce Que Vous Devez Savoir',
+    'faq_items' => [
+        [
+            'question' => 'Pourquoi choisir Nice pour \u00e9tudier ou vivre en France en 2026 ?',
+            'answer' => 'Nice combine de mani\u00e8re unique le prestige de la C\u00f4te d\'Azur avec un \u00e9cosyst\u00e8me d\'innovation florissant. L\'Universit\u00e9 C\u00f4te d\'Azur est une universit\u00e9 de recherche tr\u00e8s class\u00e9e, et le parc technologique de Sophia Antipolis est le plus grand p\u00f4le scientifique et technologique d\'Europe. En 2026, le projet urbain \u00c9co-Vall\u00e9e cr\u00e9e de nouvelles opportunit\u00e9s en tech verte et en business durable. Ajoutez 300 jours de soleil et un art de vivre m\u00e9diterran\u00e9en : Nice est un endroit exceptionnel pour construire votre avenir.',
+        ],
+        [
+            'question' => 'Quel est le co\u00fbt de la vie \u00e0 Nice en 2026 ?',
+            'answer' => 'Nice se situe entre Lyon et Paris en termes de co\u00fbt de la vie. Pour une personne seule en 2026, pr\u00e9voyez un budget mensuel de 1 400 \u20ac \u00e0 1 800 \u20ac. Les studios vont de 650 \u20ac \u00e0 950 \u20ac, mais les \u00e9tudiants et r\u00e9sidents peuvent demander l\'aide au logement CAF pour r\u00e9duire ce co\u00fbt de fa\u00e7on significative. Les produits frais des march\u00e9s locaux permettent de maintenir les d\u00e9penses alimentaires autour de 200\u2013250 \u20ac/mois. Notre \u00e9quipe peut \u00e9tablir un budget personnalis\u00e9 pour votre situation.',
+        ],
+        [
+            'question' => 'Qu\'est-ce que Sophia Antipolis et quel est son int\u00e9r\u00eat pour ma carri\u00e8re ?',
+            'answer' => 'Sophia Antipolis, situ\u00e9 \u00e0 seulement 20 km de Nice, est le plus grand parc scientifique et technologique d\'Europe, accueillant plus de 2 400 entreprises dont Amadeus, Orange et SAP. Pour les dipl\u00f4m\u00e9s en technologie, ing\u00e9nierie, data science et gestion, il repr\u00e9sente un march\u00e9 de l\'emploi exceptionnel \u00e0 votre porte. De nombreux \u00e9tudiants de l\'Universit\u00e9 C\u00f4te d\'Azur r\u00e9alisent leur stage et trouvent leur premier emploi sur ce site.',
+        ],
+        [
+            'question' => 'Quel visa faut-il pour s\'installer \u00e0 Nice ?',
+            'answer' => 'Pour les s\u00e9jours de plus de 90 jours, un visa de long s\u00e9jour (VLS-TS) est n\u00e9cessaire. Les \u00e9tudiants effectuent leur demande via Campus France pour un VLS-TS \u00c9tudiant. Les professionnels peuvent demander un Passeport Talent avec une offre d\'emploi qualifi\u00e9e. Les citoyens UE/EEE n\'ont besoin d\'aucun visa. Nous g\u00e9rons l\'int\u00e9gralit\u00e9 du processus de visa pour vous, de l\'\u00e9valuation d\'\u00e9ligibilit\u00e9 au d\u00e9p\u00f4t du dossier.',
+        ],
+        [
+            'question' => 'Nice est-elle une ville s\u00fbre pour les \u00e9tudiants internationaux et les familles ?',
+            'answer' => 'Oui, Nice est g\u00e9n\u00e9ralement consid\u00e9r\u00e9e comme une ville s\u00fbre. Le centre-ville, les quartiers universitaires et les zones r\u00e9sidentielles sont bien s\u00e9curis\u00e9s et accueillants. Comme dans toute grande ville, il est prudent de rester vigilant en cas de vol \u00e0 la tire dans les zones touristiques anim\u00e9es. Pour la vie quotidienne, Nice offre un environnement relaxant et s\u00fbr. La ville figure \u00e9galement dans le top 10 fran\u00e7ais pour la qualit\u00e9 de vie.',
+        ],
+    ],
 ];
 

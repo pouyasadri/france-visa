@@ -96,5 +96,31 @@ return [
     'form_error_phone' => 'Please enter your phone',
     'form_error_subject' => 'Please enter your subject',
     'form_error_message' => 'Please enter your message',
+
+    // FAQ Section
+    'faq_title' => 'Frequently Asked Questions About Nice',
+    'faq_subtitle' => 'Everything You Need to Know',
+    'faq_items' => [
+        [
+            'question' => 'What makes Nice a top destination for international students in 2026?',
+            'answer' => 'Nice uniquely combines the prestige of the French Riviera with a thriving innovation ecosystem. Université Côte d\'Azur is a top-ranked research university, and the nearby Sophia Antipolis technology park is Europe\'s largest science and technology hub. In 2026, the city\'s Eco-Vallée urban development project continues to create new opportunities in green tech and sustainable business. Add 300 days of sunshine and a Mediterranean lifestyle, and you have a genuinely exceptional place to build your future.',
+        ],
+        [
+            'question' => 'How much does it cost to live in Nice in 2026?',
+            'answer' => 'Nice sits between Lyon and Paris in terms of cost of living. For a single person in 2026, budget between €1,400 and €1,800 per month. Studio apartments range from €650 to €950, but students and residents can apply for CAF housing assistance to reduce this cost significantly. Fresh produce from local markets keeps grocery costs reasonable at around €200–€250/month. Our team can calculate a personalized budget for your situation.',
+        ],
+        [
+            'question' => 'What is Sophia Antipolis and why does it matter for my career?',
+            'answer' => 'Sophia Antipolis, located just 20km from Nice, is Europe\'s largest science and technology park, home to over 2,400 companies including major names like Amadeus, Orange, and SAP. For technology, engineering, data science, and business graduates, it represents an outstanding job market right on your doorstep. Many Université Côte d\'Azur students complete internships and find their first job there.',
+        ],
+        [
+            'question' => 'What visa do I need to move to Nice?',
+            'answer' => 'For stays longer than 90 days, you need a French long-stay visa (VLS-TS). Students apply through Campus France for a VLS-TS Étudiant. Working professionals can apply for a Talent Passport (Passeport Talent) if they have a qualified job offer. Citizens of EU/EEA countries need no visa. We handle the entire visa process for you, from initial eligibility assessment to submission.',
+        ],
+        [
+            'question' => 'Is Nice safe for international students and families?',
+            'answer' => 'Yes, Nice is generally considered a safe city with a relatively low rate of violent crime. The city center, university districts, and residential neighborhoods are well-policed and welcoming. Like any major city, it\'s sensible to be aware of petty theft in busy tourist areas, but for day-to-day life, Nice offers a relaxed, secure environment. The city also ranked in France\'s top 10 for quality of life.',
+        ],
+    ],
 ];
 

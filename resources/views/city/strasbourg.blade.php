@@ -202,6 +202,8 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('city/strasbourg.faq_title')" :subtitle="__('city/strasbourg.faq_subtitle')"
+        :items="__('city/strasbourg.faq_items')" id="strasbourg-faq" />
 @endsection
 
 @push('json')

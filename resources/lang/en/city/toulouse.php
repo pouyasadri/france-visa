@@ -104,5 +104,31 @@ return [
     'form_error_phone' => 'Please enter your phone number',
     'form_error_subject' => 'Please enter your subject',
     'form_error_message' => 'Please enter your message',
+
+    // FAQ Section
+    'faq_title' => 'Frequently Asked Questions About Toulouse',
+    'faq_subtitle' => 'Everything You Need to Know',
+    'faq_items' => [
+        [
+            'question' => 'Why is Toulouse called the "Aerospace Capital of Europe"?',
+            'answer' => 'Toulouse is the headquarters of Airbus, the world\'s largest aircraft manufacturer, as well as major space agencies including CNES (French Space Agency) and Thales Alenia Space. The city also hosts ATR, Safran, and dozens of aerospace suppliers. This cluster of companies makes Toulouse the undisputed hub of European aerospace engineering, creating thousands of high-skilled jobs every year in engineering, data science, and project management.',
+        ],
+        [
+            'question' => 'How much does it cost to live in Toulouse as a student in 2026?',
+            'answer' => 'Toulouse is one of the most affordable major cities in France for students. In 2026, expect a monthly budget of €1,100–€1,450 for a professional, or €800–€1,100 for a student. Student studios are widely available between €450 and €650, often reduced by 30-40% with CAF housing assistance. Public transport is excellent and very cheap for under-26s. Overall, Toulouse offers great value for a dynamic, young European city.',
+        ],
+        [
+            'question' => 'What are the best engineering programs in Toulouse?',
+            'answer' => 'Toulouse offers world-class engineering education. Top institutions include INSA Toulouse (engineering, IT, and environmental science), Université Paul Sabatier - Toulouse III (science, engineering, health), and ISAE-SUPAERO (ranked #1 aerospace engineering school in the world). For business, Toulouse Business School (TBS) has an excellent reputation. The city consistently ranks among the top French cities for STEM graduates.',
+        ],
+        [
+            'question' => 'What is student life like in Toulouse?',
+            'answer' => 'With over 130,000 students, Toulouse is France\'s 4th largest student city, creating a vibrant, youthful atmosphere. The city center, Capitole square, and the banks of the Garonne river are buzzing with cafes, bars, concerts, and cultural events. The southern French climate means outdoor socializing almost year-round. Rugby is a local passion, and the city has a strong sports culture. It\'s consistently rated one of the best cities in France to be a student.',
+        ],
+        [
+            'question' => 'What job opportunities are available in Toulouse after graduation?',
+            'answer' => 'The job market in Toulouse is exceptional, particularly for STEM graduates. Airbus, Thales, ATR, Safran, and CNES regularly recruit from local universities. The city also has a growing digital and health-tech sector. After graduation, France\'s 12-month APS post-study work permit lets you search for employment freely. Many international graduates find that they receive a job offer from their internship company, making the transition from student to professional very smooth.',
+        ],
+    ],
 ];
 

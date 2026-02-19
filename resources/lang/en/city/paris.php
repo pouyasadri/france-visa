@@ -151,5 +151,31 @@ return [
     'form_error_phone' => 'Please enter your phone',
     'form_error_subject' => 'Please enter your subject',
     'form_error_message' => 'Please enter your message',
+
+    // FAQ Section
+    'faq_title' => 'Frequently Asked Questions About Paris',
+    'faq_subtitle' => 'Everything You Need to Know',
+    'faq_items' => [
+        [
+            'question' => 'Is Paris the right city for international students in 2026?',
+            'answer' => 'Absolutely! Paris remains the top destination for international students in 2026. With world-class universities like Sorbonne and Paris-Saclay, a thriving startup ecosystem in Station F, and unmatched cultural immersion, Paris gives you a competitive edge for your future career. Student life here is supported by excellent public transport (Navigo pass), CAF housing subsidies, and a vast expat community.',
+        ],
+        [
+            'question' => 'How much does it cost to live in Paris as a student in 2026?',
+            'answer' => 'Plan a monthly budget of €1,200–€1,600 in 2026. Housing in student residences (CROUS) typically costs €400–€600/month, while private rooms or shared apartments run €600–€900. Remember: CAF housing assistance can cover up to 40% of your rent! Add €200–€250 for groceries, €90 for a monthly Navigo transport pass, and you have a realistic picture. Our consultants can help you build a personalized budget plan.',
+        ],
+        [
+            'question' => 'What visa do I need to study or live in Paris?',
+            'answer' => 'For stays longer than 90 days, you need a French long-stay visa (VLS-TS). Students typically apply for a student visa (VLS-TS Étudiant) via Campus France. Non-EU applicants must complete the Campus France procedure before applying at the French embassy or consulate in their home country. We guide you through every step, from document preparation to your Campus France interview.',
+        ],
+        [
+            'question' => 'Can I work while studying in Paris?',
+            'answer' => 'Yes! International students in France are allowed to work up to 964 hours per year (approximately 20 hours per week during the academic term). Paris offers excellent part-time job opportunities, especially in hospitality, retail, technology, and tutoring. Many students also find paid internships (stages rémunérés) which are highly valued by employers.',
+        ],
+        [
+            'question' => 'What are the best neighborhoods in Paris for students?',
+            'answer' => 'The Latin Quarter (5th arrondissement) is the classic student hub, home to the Sorbonne and packed with affordable cafes and bookshops. The 13th and 14th arrondissements offer more affordable rents while staying well-connected. For a more modern feel, the 19th and 20th are popular among young internationals. Our team helps you find the right neighborhood based on your university location and budget.',
+        ],
+    ],
 ];
 

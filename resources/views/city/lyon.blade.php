@@ -208,4 +208,6 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('city/lyon.faq_title')" :subtitle="__('city/lyon.faq_subtitle')"
+        :items="__('city/lyon.faq_items')" id="lyon-faq" />
 @endsection

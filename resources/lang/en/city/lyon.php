@@ -103,5 +103,31 @@ return [
     'form_error_phone' => 'Please enter your phone',
     'form_error_subject' => 'Please enter your subject',
     'form_error_message' => 'Please enter your message',
+
+    // FAQ Section
+    'faq_title' => 'Frequently Asked Questions About Lyon',
+    'faq_subtitle' => 'Everything You Need to Know',
+    'faq_items' => [
+        [
+            'question' => 'Why choose Lyon over Paris for studying in France in 2026?',
+            'answer' => 'Lyon is the \"smart choice\" in 2026. You get elite universities (ENS Lyon, Lyon 1), a booming biotech and digital industry hub, and a UNESCO-listed historic city — all at 30-40% lower cost of living than Paris. The student community is warm, international, and highly connected. Lyon consistently ranks among Europe\'s best cities for quality of life, making it ideal for ambitious students who want substance over spectacle.',
+        ],
+        [
+            'question' => 'How much does it cost to live in Lyon as a student in 2026?',
+            'answer' => 'Lyon is significantly more affordable than Paris. In 2026, expect a monthly student budget of €1,000–€1,350. A studio or shared room typically costs €500–€800, which can be reduced by 30-40% with CAF housing assistance. Monthly groceries run €200–€250, especially if you shop at Lyon\'s vibrant local markets. A monthly transport pass costs around €60. Our team can help you plan a detailed budget.',
+        ],
+        [
+            'question' => 'What are the best universities in Lyon?',
+            'answer' => 'Lyon is home to three major universities: Université Claude Bernard Lyon 1 (sciences, medicine, technology), Université Lumière Lyon 2 (humanities, social sciences), and Université Jean Moulin Lyon 3 (law, languages, philosophy). For elite graduate programs, École Normale Supérieure de Lyon (ENS Lyon) is one of the most prestigious institutions in France. EM Lyon Business School is also a top-ranked business school.',
+        ],
+        [
+            'question' => 'Is Lyon a good city for finding a job after graduation?',
+            'answer' => 'Lyon is France\'s second economic engine after Paris, with a strong presence in pharmaceuticals (Sanofi, Mérial), biotech, digital technology, and hospitality. After graduation, France\'s 12-month post-study APS visa lets you search for work. Lyon\'s international business ecosystem and growing startup scene offer excellent opportunities, especially in technology, health sciences, and culinary/hospitality industries.',
+        ],
+        [
+            'question' => 'What is student life like in Lyon?',
+            'answer' => 'Lyon has a huge student population (over 150,000 students), creating a dynamic, affordable social scene. The city is famous for its \"bouchons\" (traditional restaurants), vibrant nightlife in the Croix-Rousse district, and beautiful parks along the Rhône riverbanks. Culturally, the Fête des Lumières (Festival of Lights) is a world-famous highlight every December. The city is very walkable and bike-friendly, making daily life convenient and enjoyable.',
+        ],
+    ],
 ];
 

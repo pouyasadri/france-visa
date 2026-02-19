@@ -103,5 +103,31 @@ return [
     'form_error_phone' => 'Veuillez entrer votre téléphone',
     'form_error_subject' => 'Veuillez entrer votre sujet',
     'form_error_message' => 'Veuillez entrer votre message',
+
+    // FAQ Section
+    'faq_title' => 'Questions Fr\u00e9quentes sur Lyon',
+    'faq_subtitle' => 'Tout Ce Que Vous Devez Savoir',
+    'faq_items' => [
+        [
+            'question' => 'Pourquoi choisir Lyon plut\u00f4t que Paris pour \u00e9tudier en France en 2026 ?',
+            'answer' => 'Lyon est le choix malin en 2026. Vous b\u00e9n\u00e9ficiez d\'universit\u00e9s d\'\u00e9lite (ENS Lyon, Lyon 1), d\'un hub en plein essor en biotechnologie et en industries num\u00e9riques, et d\'une ville historique class\u00e9e par l\'UNESCO \u2014 le tout \u00e0 un co\u00fbt de la vie inf\u00e9rieur de 30 \u00e0 40 % \u00e0 celui de Paris. La communaut\u00e9 \u00e9tudiante est chaleureuse, internationale et tr\u00e8s connect\u00e9e. Lyon figure r\u00e9guli\u00e8rement parmi les meilleures villes europ\u00e9ennes en termes de qualit\u00e9 de vie.',
+        ],
+        [
+            'question' => 'Quel est le co\u00fbt de la vie \u00e0 Lyon pour un \u00e9tudiant en 2026 ?',
+            'answer' => 'En 2026, pr\u00e9voyez un budget mensuel de 1 000 \u20ac \u00e0 1 350 \u20ac. Le loyer pour un studio ou une chambre \u00e9tudiante varie g\u00e9n\u00e9ralement de 500 \u20ac \u00e0 800 \u20ac/mois, et l\'aide au logement CAF peut couvrir jusqu\'\u00e0 40 % de cette somme. Les courses mensuelles : environ 200\u2013250 \u20ac si vous profitez des march\u00e9s lyonnais. Au total, Lyon offre un excellent rapport qualit\u00e9-prix pour une m\u00e9tropole europ\u00e9enne de premier plan.',
+        ],
+        [
+            'question' => 'Quelles sont les meilleures universit\u00e9s et \u00e9coles de Lyon ?',
+            'answer' => 'Lyon abrite plusieurs \u00e9tablissements d\'excellence : l\'ENS de Lyon (une des grandes \u00e9coles les plus prest\u00e9igieuses de France), l\'Universit\u00e9 Claude Bernard Lyon 1 (sciences et m\u00e9decine), l\'Universit\u00e9 Jean Moulin Lyon 3 (droit et \u00e9conomie) et em Lyon Business School. Pour les \u00e9tudiants en biotechnologie, en num\u00e9rique ou en \u00e9conomie cr\u00e9ative, Lyon est souvent le premier choix des meilleurs candidats fran\u00e7ais.',
+        ],
+        [
+            'question' => 'Est-il facile de trouver du travail \u00e0 Lyon apr\u00e8s les \u00e9tudes ?',
+            'answer' => 'Oui, Lyon poss\u00e8de un march\u00e9 du travail dynamique et diversifi\u00e9. La ville est le num\u00e9ro deux de France pour l\'investissement \u00e9tranger et abrite des si\u00e8ges de grandes entreprises comme Sanofi, Infosys et bioM\u00e9rieux. Apr\u00e8s l\'obtention du dipl\u00f4me, le permis de s\u00e9jour temporaire APS (12 mois) vous permet de rechercher librement un emploi. Beaucoup de nos clients ont re\u00e7u une offre de leur entreprise de stage.',
+        ],
+        [
+            'question' => 'Lyon est-elle une ville s\u00fbre et agr\u00e9able pour vivre ?',
+            'answer' => 'Absolument. Lyon est r\u00e9guli\u00e8rement class\u00e9e parmi les villes fran\u00e7aises les plus s\u00fbres et les plus agr\u00e9ables. La Presqu\'\u00eele, le Vieux Lyon et le quartier de la Croix-Rousse offrent une ambiance conviviale et culturellement riche. Les transports en commun (m\u00e9tro, tram, v\u00e9lo\'v) sont excellents et le r\u00e9seau de pistes cyclables est en constante expansion. C\'est une ville vivable au sens plein du terme.',
+        ],
+    ],
 ];
 

@@ -149,5 +149,31 @@ return [
     'form_error_phone' => 'Veuillez entrer votre numéro de téléphone',
     'form_error_subject' => 'Veuillez entrer votre sujet',
     'form_error_message' => 'Veuillez entrer votre message',
+
+    // FAQ Section
+    'faq_title' => 'Questions Fr\u00e9quentes sur Strasbourg',
+    'faq_subtitle' => 'Tout Ce Que Vous Devez Savoir',
+    'faq_items' => [
+        [
+            'question' => 'Pourquoi Strasbourg est-elle appel\u00e9e la \u00ab Capitale de l\'Europe \u00bb ?',
+            'answer' => 'Strasbourg accueille plusieurs institutions europ\u00e9ennes cl\u00e9s, dont le Parlement europ\u00e9en, le Conseil de l\'Europe et la Cour europ\u00e9enne des droits de l\'homme. Cela en fait un lieu unique au c\u0153ur de la d\u00e9mocratie europ\u00e9enne. Pour les \u00e9tudiants en relations internationales, en droit ou en sciences politiques, Strasbourg offre un acc\u00e8s incomparable \u00e0 ces institutions pour des stages et du r\u00e9seautage.',
+        ],
+        [
+            'question' => 'Quel est le co\u00fbt de la vie \u00e0 Strasbourg en 2026 ?',
+            'answer' => 'Strasbourg est l\'une des grandes villes fran\u00e7aises les plus abordables. Pr\u00e9voyez un budget \u00e9tudiant mensuel de 800 \u20ac \u00e0 1 100 \u20ac. Le logement \u00e9tudiant varie de 400 \u20ac \u00e0 600 \u20ac/mois, r\u00e9duit jusqu\'\u00e0 40 % gr\u00e2ce \u00e0 l\'aide CAF. L\'alimentation mensuelle co\u00fbte environ 150\u2013200 \u20ac avec des achats intelligents dans les march\u00e9s locaux. Un abonnement tram mensuel co\u00fbte environ 25 \u20ac pour les \u00e9tudiants.',
+        ],
+        [
+            'question' => 'Que peut-on \u00e9tudier \u00e0 l\'Universit\u00e9 de Strasbourg ?',
+            'answer' => 'L\'Universit\u00e9 de Strasbourg est l\'une des plus grandes universit\u00e9s multidisciplinaires de France, proposant des programmes en sciences politiques, droit europ\u00e9en, biotechnologie, m\u00e9decine, pharmacie, commerce, ing\u00e9nierie, architecture, sciences humaines et langues. Elle a \u00e9galement produit plusieurs laur\u00e9ats du prix Nobel. De nombreux programmes sont disponibles en anglais.',
+        ],
+        [
+            'question' => 'Strasbourg est-elle un bon endroit pour vivre en famille ?',
+            'answer' => 'Oui ! Strasbourg est r\u00e9guli\u00e8rement class\u00e9e parmi les villes fran\u00e7aises les plus agr\u00e9ables pour les familles. La ville est extr\u00eamement orient\u00e9e v\u00e9lo (le plus grand r\u00e9seau v\u00e9lo de France), dispose d\'excellentes \u00e9coles publiques et de nombreux espaces verts. Sa proximit\u00e9 avec l\'Allemagne et la Suisse facilite les escapades weekends. L\'environnement multiculturel assure un accueil chaleureux aux familles internationales.',
+        ],
+        [
+            'question' => 'Puis-je trouver du travail \u00e0 Strasbourg apr\u00e8s mes \u00e9tudes ?',
+            'answer' => 'Oui. L\'\u00e9conomie strasbourgeoise est port\u00e9e par les institutions europ\u00e9ennes, la pharmacie, l\'informatique, l\'agroalimentaire et le tourisme. Apr\u00e8s l\'obtention du dipl\u00f4me, le permis APS (12 mois) vous permet de rechercher un emploi librement en France. De nombreux dipl\u00f4m\u00e9s trouvent des opportunit\u00e9s dans les organisations internationales de Strasbourg ou chez des employeurs transfrontaliers en Allemagne et en Suisse.',
+        ],
+    ],
 ];
 

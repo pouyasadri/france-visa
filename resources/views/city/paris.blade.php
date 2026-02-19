@@ -172,6 +172,12 @@
             </div>
         </div>
     </div>
+    <x-sections.faq
+        :title="__('city/paris.faq_title')"
+        :subtitle="__('city/paris.faq_subtitle')"
+        :items="__('city/paris.faq_items')"
+        id="paris-faq"
+    />
 @endsection
 
 @push('json')

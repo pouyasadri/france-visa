@@ -173,4 +173,6 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('city/nice.faq_title')" :subtitle="__('city/nice.faq_subtitle')"
+        :items="__('city/nice.faq_items')" id="nice-faq" />
 @endsection

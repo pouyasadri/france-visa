@@ -151,5 +151,31 @@ return [
     'form_error_phone' => 'Veuillez entrer votre téléphone',
     'form_error_subject' => 'Veuillez entrer votre sujet',
     'form_error_message' => 'Veuillez entrer votre message',
+
+    // FAQ Section
+    'faq_title' => 'Questions Fr\u00e9quentes sur Paris',
+    'faq_subtitle' => 'Tout Ce Que Vous Devez Savoir',
+    'faq_items' => [
+        [
+            'question' => 'Paris est-elle la bonne ville pour les \u00e9tudiants internationaux en 2026 ?',
+            'answer' => 'Absolument ! Paris reste la destination num\u00e9ro un pour les \u00e9tudiants internationaux en 2026. Avec des universit\u00e9s de rang mondial comme la Sorbonne et Paris-Saclay, un \u00e9cosyst\u00e8me dynamique de startups centr\u00e9 sur Station F, et une immersion culturelle incomparable, Paris vous offre un avantage concurrentiel pour votre carri\u00e8re. La vie \u00e9tudiante est soutenue par d\'excellents transports (passe Navigo), des aides CAF au logement, et une vaste communaut\u00e9 d\'expatri\u00e9s.',
+        ],
+        [
+            'question' => 'Quel est le co\u00fbt de la vie \u00e0 Paris pour un \u00e9tudiant en 2026 ?',
+            'answer' => 'Pr\u00e9voyez un budget mensuel de 1 200\u20ac \u00e0 1 600\u20ac en 2026. Le logement en r\u00e9sidences \u00e9tudiantes (CROUS) co\u00fbte g\u00e9n\u00e9ralement 400\u20ac\u2013600\u20ac/mois, tandis que les chambres priv\u00e9es ou collocations vont de 600\u20ac \u00e0 900\u20ac. N\'oubliez pas : l\'aide CAF peut couvrir jusqu\'\u00e0 40 % de votre loyer ! Ajoutez 200\u20ac\u2013250\u20ac pour l\'alimentation, 90\u20ac pour le passe Navigo mensuel. Nos conseillers peuvent vous aider \u00e0 \u00e9tablir un budget personnalis\u00e9.',
+        ],
+        [
+            'question' => 'Quel visa faut-il pour \u00e9tudier ou vivre \u00e0 Paris ?',
+            'answer' => 'Pour les s\u00e9jours de plus de 90 jours, un visa de long s\u00e9jour (VLS-TS) est requis. Les \u00e9tudiants font g\u00e9n\u00e9ralement une demande de VLS-TS \u00c9tudiant via Campus France. Les candidats non-UE doivent compl\u00e9ter la proc\u00e9dure Campus France avant de d\u00e9poser leur dossier \u00e0 l\'ambassade ou au consulat fran\u00e7ais. Nous vous accompagnons \u00e0 chaque \u00e9tape, de la pr\u00e9paration des documents \u00e0 l\'entretien Campus France.',
+        ],
+        [
+            'question' => 'Puis-je travailler pendant mes \u00e9tudes \u00e0 Paris ?',
+            'answer' => 'Oui ! Les \u00e9tudiants internationaux en France peuvent travailler jusqu\'\u00e0 964 heures par an (environ 20 heures par semaine pendant l\'ann\u00e9e universitaire). Paris offre d\'excellentes opportunit\u00e9s d\'emploi \u00e0 temps partiel dans l\'h\u00f4tellerie, le commerce, la technologie et le tutorat. De nombreux \u00e9tudiants trouvent \u00e9galement des stages r\u00e9mun\u00e9r\u00e9s, tr\u00e8s appr\u00e9ci\u00e9s par les employeurs.',
+        ],
+        [
+            'question' => 'Quels sont les meilleurs quartiers de Paris pour les \u00e9tudiants ?',
+            'answer' => 'Le Quartier Latin (5e arrondissement) est l\'\u00e9picentre \u00e9tudiant classique, abritant la Sorbonne et rempli de caf\u00e9s et de librairies abordables. Les 13e et 14e arrondissements offrent des loyers plus accessibles tout en restant bien desservis. Pour une ambiance plus moderne, les 19e et 20e sont populaires aupr\u00e8s des jeunes internationaux. Notre \u00e9quipe vous aide \u00e0 trouver le bon quartier selon votre universit\u00e9 et votre budget.',
+        ],
+    ],
 ];
 

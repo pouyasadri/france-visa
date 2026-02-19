@@ -104,5 +104,31 @@ return [
     'form_error_phone' => 'Veuillez entrer votre numéro de téléphone',
     'form_error_subject' => 'Veuillez entrer votre sujet',
     'form_error_message' => 'Veuillez entrer votre message',
+
+    // FAQ Section
+    'faq_title' => 'Questions Fr\u00e9quentes sur Toulouse',
+    'faq_subtitle' => 'Tout Ce Que Vous Devez Savoir',
+    'faq_items' => [
+        [
+            'question' => 'Pourquoi Toulouse est-elle appel\u00e9e la \u00ab Capitale a\u00e9rospatiale de l\'Europe \u00bb ?',
+            'answer' => 'Toulouse est le si\u00e8ge d\'Airbus, le plus grand fabricant d\'avions au monde, ainsi que d\'agences spatiales majeures comme le CNES (Centre national d\'\u00e9tudes spatiales) et Thales Alenia Space. La ville accueille \u00e9galement ATR, Safran et des dizaines de sous-traitants a\u00e9ronautiques. Ce cluster fait de Toulouse le hub incontesté de l\'ing\u00e9nierie a\u00e9rospatiale europ\u00e9enne, cr\u00e9ant chaque ann\u00e9e des milliers d\'emplois hautement qualifi\u00e9s.',
+        ],
+        [
+            'question' => 'Quel est le co\u00fbt de la vie \u00e0 Toulouse pour un \u00e9tudiant en 2026 ?',
+            'answer' => 'Toulouse est l\'une des grandes villes les plus abordables de France pour les \u00e9tudiants. En 2026, pr\u00e9voyez un budget mensuel de 1 100 \u20ac \u00e0 1 450 \u20ac pour un professionnel, ou de 800 \u20ac \u00e0 1 100 \u20ac pour un \u00e9tudiant. Des studios \u00e9tudiants sont largement disponibles entre 450 \u20ac et 650 \u20ac, souvent \u00e9ligibles \u00e0 l\'aide CAF \u00e0 hauteur de 30\u201340 %. Les transports en commun sont excellents et tr\u00e8s avantageux pour les moins de 26 ans.',
+        ],
+        [
+            'question' => 'Quels sont les meilleurs programmes d\'ing\u00e9nierie \u00e0 Toulouse ?',
+            'answer' => 'Toulouse propose une \u00e9ducation en ing\u00e9nierie de haut niveau. Parmi les \u00e9tablissements incontournables : l\'INSA Toulouse (ing\u00e9nierie, informatique, environnement), l\'Universit\u00e9 Paul Sabatier - Toulouse III (sciences, ing\u00e9nierie, sant\u00e9), et l\'ISAE-SUPAERO (class\u00e9e num\u00e9ro 1 mondial en a\u00e9rospatiale). Pour le management, Toulouse Business School (TBS) jouit d\'une excellente r\u00e9putation internationale.',
+        ],
+        [
+            'question' => 'Comment est la vie \u00e9tudiante \u00e0 Toulouse ?',
+            'answer' => 'Avec plus de 130 000 \u00e9tudiants, Toulouse est la 4e ville \u00e9tudiante de France, ce qui cr\u00e9e une atmosph\u00e8re jeune et dynamique. Le centre-ville, la place du Capitole et les bords de la Garonne sont anim\u00e9s de caf\u00e9s, bars, concerts et \u00e9v\u00e9nements culturels. Le climat du sud de la France favorise la convivialit\u00e9 en ext\u00e9rieur presque toute l\'ann\u00e9e. Toulouse est r\u00e9guli\u00e8rement \u00e9lue l\'une des meilleures villes \u00e9tudiantes de France.',
+        ],
+        [
+            'question' => 'Quelles sont les opportunit\u00e9s d\'emploi \u00e0 Toulouse apr\u00e8s les \u00e9tudes ?',
+            'answer' => 'Le march\u00e9 du travail \u00e0 Toulouse est exceptionnel, notamment pour les dipl\u00f4m\u00e9s en STEM. Airbus, Thales, ATR, Safran et le CNES recrutent r\u00e9guli\u00e8rement dans les universit\u00e9s locales. La ville dispose \u00e9galement d\'un secteur num\u00e9rique et de m\u00e9decine de pr\u00e9cision en plein essor. Apr\u00e8s l\'obtention du dipl\u00f4me, le permis APS (12 mois) vous permet de rechercher librement un emploi. Beaucoup de nos clients internationaux ont re\u00e7u une offre directement depuis leur entreprise de stage.',
+        ],
+    ],
 ];
 
