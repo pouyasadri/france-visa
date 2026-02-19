@@ -5,7 +5,6 @@ namespace Tests\Unit;
 use App\Services\LocaleDetector;
 use Illuminate\Http\Request;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class LocaleDetectorTest extends TestCase
 {
@@ -15,10 +14,10 @@ class LocaleDetectorTest extends TestCase
     public function test_detects_locale_from_browser_accept_language()
     {
         $request = Request::create('/', 'GET', [], [], [], [
-            'HTTP_ACCEPT_LANGUAGE' => 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7'
+            'HTTP_ACCEPT_LANGUAGE' => 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
         ]);
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectFromBrowser($request);
 
         $this->assertEquals('fr', $locale);
@@ -30,10 +29,10 @@ class LocaleDetectorTest extends TestCase
     public function test_detects_persian_locale_from_browser()
     {
         $request = Request::create('/', 'GET', [], [], [], [
-            'HTTP_ACCEPT_LANGUAGE' => 'fa-IR,fa;q=0.9'
+            'HTTP_ACCEPT_LANGUAGE' => 'fa-IR,fa;q=0.9',
         ]);
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectFromBrowser($request);
 
         $this->assertEquals('fa', $locale);
@@ -46,10 +45,10 @@ class LocaleDetectorTest extends TestCase
     {
         // French has higher quality than English
         $request = Request::create('/', 'GET', [], [], [], [
-            'HTTP_ACCEPT_LANGUAGE' => 'en;q=0.5,fr;q=0.9'
+            'HTTP_ACCEPT_LANGUAGE' => 'en;q=0.5,fr;q=0.9',
         ]);
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectFromBrowser($request);
 
         $this->assertEquals('fr', $locale);
@@ -61,10 +60,10 @@ class LocaleDetectorTest extends TestCase
     public function test_returns_null_for_unsupported_browser_locale()
     {
         $request = Request::create('/', 'GET', [], [], [], [
-            'HTTP_ACCEPT_LANGUAGE' => 'de-DE,de;q=0.9' // German not supported
+            'HTTP_ACCEPT_LANGUAGE' => 'de-DE,de;q=0.9', // German not supported
         ]);
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectFromBrowser($request);
 
         $this->assertNull($locale);
@@ -78,14 +77,12 @@ class LocaleDetectorTest extends TestCase
      */
     public function test_returns_null_when_no_accept_language_header()
     {
-        // Create a mock request that explicitly has no HTTP_ACCEPT_LANGUAGE
-        $request = $this->createMock(Request::class);
-        $request->expects($this->once())
-            ->method('server')
-            ->with('HTTP_ACCEPT_LANGUAGE')
-            ->willReturn(null);
+        // Create a real request that explicitly has no HTTP_ACCEPT_LANGUAGE header
+        $request = Request::create('/', 'GET');
+        // Ensure the header is not set
+        $request->server->remove('HTTP_ACCEPT_LANGUAGE');
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectFromBrowser($request);
 
         $this->assertNull($locale);
@@ -97,12 +94,12 @@ class LocaleDetectorTest extends TestCase
     public function test_route_parameter_has_highest_priority()
     {
         $request = Request::create('/fr', 'GET', [], [], [], [
-            'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+            'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9',
         ]);
 
         session(['locale' => 'en']);
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectLocale($request, 'fr'); // Route locale is 'fr'
 
         $this->assertEquals('fr', $locale);
@@ -114,12 +111,12 @@ class LocaleDetectorTest extends TestCase
     public function test_session_has_priority_over_browser()
     {
         $request = Request::create('/', 'GET', [], [], [], [
-            'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+            'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9',
         ]);
 
         session(['locale' => 'fr']);
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectLocale($request);
 
         $this->assertEquals('fr', $locale);
@@ -134,7 +131,7 @@ class LocaleDetectorTest extends TestCase
 
         $request = Request::create('/', 'GET');
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectLocale($request);
 
         $this->assertEquals('en', $locale);
@@ -146,12 +143,12 @@ class LocaleDetectorTest extends TestCase
     public function test_get_detection_info_returns_all_sources()
     {
         $request = Request::create('/', 'GET', [], [], [], [
-            'HTTP_ACCEPT_LANGUAGE' => 'fr-FR,fr;q=0.9'
+            'HTTP_ACCEPT_LANGUAGE' => 'fr-FR,fr;q=0.9',
         ]);
 
         session(['locale' => 'fr']);
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $info = $detector->getDetectionInfo($request);
 
         $this->assertArrayHasKey('detected_locale', $info);
@@ -169,7 +166,7 @@ class LocaleDetectorTest extends TestCase
         $request = Request::create('/', 'GET');
         $request->server->set('REMOTE_ADDR', '127.0.0.1');
 
-        $detector = new LocaleDetector();
+        $detector = new LocaleDetector;
         $locale = $detector->detectFromIp($request);
 
         $this->assertNull($locale);

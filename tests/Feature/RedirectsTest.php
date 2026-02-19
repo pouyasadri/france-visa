@@ -13,8 +13,8 @@ class RedirectsTest extends TestCase
 
     public function test_redirects_middleware_redirects_legacy_urls()
     {
-        // 1. Create a redirect record
-        $fromUrl = 'https://en.applyvipconseil.com/some-old-page';
+        // 1. Create a redirect record (avoid subdomain branch so DB lookup runs)
+        $fromUrl = 'http://applyvipconseil.com/some-old-page';
         $toUrl = 'https://applyvipconseil.com/en/new-page';
 
         Redirect::create([
@@ -41,7 +41,7 @@ class RedirectsTest extends TestCase
             ->andReturn(new Redirect([
                 'from_url' => 'https://cached.com/old',
                 'to_url' => 'https://new.com/new',
-                'http_code' => 302
+                'http_code' => 302,
             ]));
 
         $response = $this->get('https://cached.com/old');
