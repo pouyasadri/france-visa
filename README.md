@@ -60,8 +60,8 @@ The application is built using the latest web technologies:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd example-app
+   git clone git@github.com:pouyasadri/avc-institute.git
+   cd avc-institute
    ```
 
 2. **Install dependencies**:
